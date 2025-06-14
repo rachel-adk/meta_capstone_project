@@ -6,7 +6,7 @@
 - **Intern Manager:** Daniel Liu
 - **Intern Director:** Clare Yip
 - **Peer(s):** [George Gong](mailto:gong@meta.com), Kyle Kolodziej
-- **GitHub Repository Link:** [Link]
+- **GitHub Repository Link:** https://github.com/rachel-adk/meta_capstone_project
 
 ## Overview
 This project aims to address the challenge of paper-based medical records in Ghana, which complicates access to patient history during emergencies and hospital transfers. The web app will enable families to manage medical records, track symptoms, and log allergies, transforming analog health records into a connected, intelligent ecosystem to improve healthcare in Ghana.
