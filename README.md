@@ -1,5 +1,5 @@
 # meta_capstone_project
-# [Project Name]
+
 
 ## Intern Details
 - **Intern:** Rachel Adorkor
