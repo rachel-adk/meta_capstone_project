@@ -1,4 +1,5 @@
 # meta_capstone_project
+[https://docs.google.com/document/d/1OuxD-0EHRsij-i9TRxmnC31e1u6vqAc9EU_3NCtQ3Wk/edit?tab=t.0]
 
 
 ## Intern Details
