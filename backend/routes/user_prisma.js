@@ -1,6 +1,4 @@
 const express = require("express");
-
-const cors = require("cors");
 const bcrypt = require("bcrypt");
 const { PrismaClient } = require("./src/generated/prisma");
 const session = require("express-session");
@@ -10,25 +8,29 @@ const app = express();
 
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-  })
-);
+// Middleware to check if user is logged in
+const isAuthenticated = (req, res, next) => {
+  if (!req.session.userId) {
+    return res
+      .status(401)
+      .json({ error: "You need to log in before you can perform this action" });
+  }
+  next();
+};
 
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is listening on port http://localhost:${PORT}`);
 });
 
-
-app.use(session({
-  secret: 'secret_key',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure:true }
-}))
+app.use(
+  session({
+    secret: "secret_key",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true },
+  })
+);
 
 // Signup Router
 app.post("/signup", async (req, res) => {
@@ -110,7 +112,7 @@ app.post("/login", async (req, res) => {
 });
 
 // Checking to see if user is logged in
-app.get("/me", async (req, res) => {
+app.get("/me", isAuthenticated, async (req, res) => {
   if (!req.session.userId) {
     return res.status(401).json({ message: "Not logged in" });
   }
@@ -137,6 +139,5 @@ app.post("/logout", (req, res) => {
     res.json({ message: "Logout successful" });
   });
 });
-
 
 module.exports = app;
