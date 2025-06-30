@@ -1,7 +1,6 @@
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 import { Link } from "react-router-dom";
-// import "./Homepage.css";
 
 const HomePage = () => {
   return (
