@@ -1,5 +1,6 @@
 import { useState } from "react"
-import './styles/SignupForm.css'
+
+
 
 const SignupForm = () => {
     const [formData, setFormData] = useState({ username: "", password: "", })
@@ -40,8 +41,10 @@ const SignupForm = () => {
     }
 
     return (
-        <form className="signup-form" onSubmit={handleSubmit}>
-            <label htmlFor="username">Username</label>
+        <form className="flex flex-col flex w full max width-w-md p-4 bg-white object-center rounded-xl shadow-xl absolute top-1/3 left-1/2 right-1/8 -translate-x-1/2 -translate-y-1/8 outline md:outline-cyan-700"
+            onSubmit={handleSubmit}>
+            <label class="p-5 text-left"
+                htmlFor="username">Username: </label>
             <input
                 type="text"
                 id="username"
@@ -49,7 +52,8 @@ const SignupForm = () => {
                 value={formData.username}
                 onChange={handleChange}
             />
-            <label htmlFor="password">Password</label>
+            <label class="p-5"
+            htmlFor="password">Password: </label>
             <input
                 type="password"
                 id="password"
@@ -57,15 +61,17 @@ const SignupForm = () => {
                 value={formData.password}
                 onChange={handleChange}
             />
-            <div className="form-buttons">
-                <button type="submit">Sign Up</button>
+
+            <button class="bg-cyan-700 hover:bg-cyan-900 focus:outline-2 text-stone-50 m-8"
+            type="submit">Sign Up</button>
+
+        {message && (
+            <div className={`message ${message.type}`}>
+                {message.text}
             </div>
-            {message && (
-                <div className={`message ${message.type}`}>
-                    {message.text}
-                </div>
-            )}
+        )}
         </form>
+
     )
 
 }
