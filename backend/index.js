@@ -41,10 +41,10 @@ app.post("/signup", async (req, res) => {
         .json({ error: "Username and password are required" });
     }
 
-    if (password.length < 10) {
+    if (password.length < 8) {
       return res
         .status(400)
-        .json({ error: "Password must be at least 10 characters long" });
+        .json({ error: "Password must be at least 8 characters long" });
     }
 
     const oldUser = await prisma.user.findUnique({
@@ -87,13 +87,13 @@ app.post("/login", async (req, res) => {
     });
 
     if (!user) {
-      return res.status(401).json({ error: "Invalid username or password" });
+      return res.status(401).json({ error: "User does not exist" });
     }
 
     const validPassword = await bcrypt.compare(password, user.password);
 
     if (!validPassword) {
-      return res.status(401).json({ error: "Password is invalid" });
+      return res.status(401).json({ error: "Password is incorrect" });
     }
 
     // Storing user ID and username
