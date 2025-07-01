@@ -7,10 +7,12 @@ const prisma = new PrismaClient();
 const app = express();
 const cors = require("cors");
 
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 
 // Middleware to check if user is logged in
 const isAuthenticated = (req, res, next) => {
@@ -35,10 +37,8 @@ app.use(
     cookie: {
       httpOnly: true,
       secure: false,
-      sameSite: "lax"
-
-       },
-
+      sameSite: "lax",
+    },
   })
 );
 
@@ -115,7 +115,6 @@ app.post("/login", async (req, res) => {
     req.session.username = user.username;
 
     res.json({ id: user.id, username: user.username });
-
   } catch (error) {
     console.error(error);
     res
@@ -136,11 +135,7 @@ app.get("/me", async (req, res) => {
       select: { username: true },
     });
 
-
     res.json({ id: req.session.userId, username: req.session.username });
-
-
-
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error fetching user session data" });
@@ -153,7 +148,6 @@ app.get("/med_history", async (req, res) => {
     return res.status(401).json({ error: "Not logged in" });
   }
   try {
-
     const userId = req.session.userId;
 
     const entries = await prisma.medicalHistory.findMany({
@@ -161,39 +155,33 @@ app.get("/med_history", async (req, res) => {
       orderBy: { createdAt: "desc" },
     });
     res.status(200).json(entries);
-
   } catch (error) {
     res.status(500).json({ error: "Error getting your medical history" });
   }
 });
 
+// Adding more entries to medical history
+app.post("/med_history", isAuthenticated, async (req, res) => {
+  const { condition, notes, diagnosisDate, medication } = req.body;
 
-
-// Adding more data to medical history
-app.post("/med_history", async (req, res) => {
-  const userId = parseInt(req.params.id);
-  const { condition, notes, Diagnosisdate, medication } = req.body;
-
-  if (!condition || !notes || !Diagnosisdate) {
-    return res.status(400).json({ error: "Missing required fields" });
-  }
-
-  try{
-    const userExists = await prisma.user.findUnique({
-      where: { id: userId }
-  });
-  if (!userExists) {
-    return res.status(404).json({ error: "User not found" });
-  }
-  const newHistory = await prisma.medicalHistory.create({
-    data: {  condition, notes, Diagnosisdate, medication },
-  });
-  res.status(200).json(newHistory);
+  try {
+    const newEntry = await prisma.medicalHistory.create({
+      data: {
+        condition,
+        notes,
+        diagnosisDate: new Date(diagnosisDate),
+        medication,
+        userId: req.session.userId,
+      },
+    });
+    return res.status(201).json(newEntry);
   } catch (error) {
-    res.status(500).json({ error: "Error adding to your medical history" });
+    console.error("Error adding new entry", error);
   }
+  return res
+    .status(500)
+    .json({ error: "Error adding to your medical history" });
 });
-
 
 // Logging out
 app.post("/logout", (req, res) => {
