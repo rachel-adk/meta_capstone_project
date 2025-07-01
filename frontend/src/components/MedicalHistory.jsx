@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+
 import { getMedicalHistory } from "../utils/data";
 
 const MedicalHistory = () => {
-  const { id: userId } = useParams();
   const [entries, setEntries] = useState([]);
 
   //   const handleChange = (event) => {
@@ -38,11 +37,14 @@ const MedicalHistory = () => {
     //     }
 
   useEffect(() => {
-    if (!userId) return;
-    getMedicalHistory(userId)
-      .then((data) => setEntries(data))
-      .catch(console.error);
-  }, [userId]);
+    const getEntries = async () => {
+        const info = await getMedicalHistory();
+        setEntries(info)
+        };
+        getEntries();
+
+    }, []);
+
 
   return (
     <div className=" max-w-4x1 mx-auto p-6 bg-cyan-50 min-h-[calc(100vh-10rem)]">
@@ -56,15 +58,15 @@ const MedicalHistory = () => {
          </button>
        {entries.length === 0 ? (
       <p className="text-center text-teal-900 border-3 py-5 my-9">No entries found</p> ) : (
-            <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-xl flex flex-col gap-2">
+            <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-xl flex flex-row gap-8">
             {entries.map((entry) => (
                 <div
                  key={entry.id}
-                 className="bg-white p-5 rounded-lg shadow border border-gray-200 hover:shadow-lg transition duration-200">
-                 <h3 className="text-lg font-bold mb-2">{entry.condtion}</h3>
-                 <p className="text-gray-700">Medication:{entry.medication}</p>
-                <p className="text-gray-700">Diagnosed: {new Date(entry.Diagnosisdate).toLocaleDateString()}</p>
-                <p className="text-gray-700">{entry.notes}</p>
+                 className="bg-white p-5 rounded-lg shadow border border-gray-200 hover:shadow-lg transition duration-200 ">
+                 <h3 className="text-lg font-bold mb-2 text-red uppercase">{entry.condition}</h3>
+                 <p className="text-gray-700 my-4">Medication:{entry.medication}</p>
+                <p className="text-gray-700 my-3">Diagnosed: {new Date(entry.Diagnosisdate).toLocaleDateString()}</p>
+                <p className="text-gray-700">Notes: {entry.notes}</p>
 
                 </div>
             ))}

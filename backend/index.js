@@ -1,36 +1,50 @@
 const express = require("express");
-
-const cors = require("cors");
 const bcrypt = require("bcrypt");
 const { PrismaClient } = require("./src/generated/prisma");
 const session = require("express-session");
 
 const prisma = new PrismaClient();
 const app = express();
+const cors = require("cors");
 
-app.use(express.json());
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+}));
 
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-  })
-);
+// Middleware to check if user is logged in
+const isAuthenticated = (req, res, next) => {
+  if (!req.session.userId) {
+    return res
+      .status(401)
+      .json({ error: "You need to log in before you can perform this action" });
+  }
+  next();
+};
 
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is listening on port http://localhost:${PORT}`);
 });
 
+app.use(
+  session({
+    secret: "your-secret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: false,
+      sameSite: "lax"
 
-app.use(session({
-  secret: 'secret_key',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure:true }
-}))
+       },
 
-// Signup Router
+  })
+);
+
+app.use(express.json());
+
+// Signup Route
 app.post("/signup", async (req, res) => {
   const { username, password } = req.body;
 
@@ -41,10 +55,10 @@ app.post("/signup", async (req, res) => {
         .json({ error: "Username and password are required" });
     }
 
-    if (password.length < 8) {
+    if (password.length < 10) {
       return res
         .status(400)
-        .json({ error: "Password must be at least 8 characters long" });
+        .json({ error: "Password must be at least 10 characters long" });
     }
 
     const oldUser = await prisma.user.findUnique({
@@ -98,9 +112,10 @@ app.post("/login", async (req, res) => {
 
     // Storing user ID and username
     req.session.userId = user.id;
-    // req.session.username = user.username;
+    req.session.username = user.username;
 
     res.json({ id: user.id, username: user.username });
+
   } catch (error) {
     console.error(error);
     res
@@ -120,12 +135,65 @@ app.get("/me", async (req, res) => {
       where: { id: req.session.userId },
       select: { username: true },
     });
+
+
     res.json({ id: req.session.userId, username: req.session.username });
+
+
+
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error fetching user session data" });
   }
 });
+
+// Getting user's medical history
+app.get("/med_history", async (req, res) => {
+  if (!req.session.userId) {
+    return res.status(401).json({ error: "Not logged in" });
+  }
+  try {
+
+    const userId = req.session.userId;
+
+    const entries = await prisma.medicalHistory.findMany({
+      where: { userId: userId },
+      orderBy: { createdAt: "desc" },
+    });
+    res.status(200).json(entries);
+
+  } catch (error) {
+    res.status(500).json({ error: "Error getting your medical history" });
+  }
+});
+
+
+
+// Adding more data to medical history
+app.post("/med_history", async (req, res) => {
+  const userId = parseInt(req.params.id);
+  const { condition, notes, Diagnosisdate, medication } = req.body;
+
+  if (!condition || !notes || !Diagnosisdate) {
+    return res.status(400).json({ error: "Missing required fields" });
+  }
+
+  try{
+    const userExists = await prisma.user.findUnique({
+      where: { id: userId }
+  });
+  if (!userExists) {
+    return res.status(404).json({ error: "User not found" });
+  }
+  const newHistory = await prisma.medicalHistory.create({
+    data: {  condition, notes, Diagnosisdate, medication },
+  });
+  res.status(200).json(newHistory);
+  } catch (error) {
+    res.status(500).json({ error: "Error adding to your medical history" });
+  }
+});
+
 
 // Logging out
 app.post("/logout", (req, res) => {
@@ -137,6 +205,5 @@ app.post("/logout", (req, res) => {
     res.json({ message: "Logout successful" });
   });
 });
-
 
 module.exports = app;
