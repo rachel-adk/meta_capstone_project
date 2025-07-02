@@ -50,22 +50,17 @@ export async function getMedicalHistory() {
 }
 
 // adding entries to medical history
-export async function newMedicalEntry(data) {
-    const url = new URL(`${BASE_URL}/med_history`);
-    try {
-        const res = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
-        if (!res.ok) {
-            throw new Error(`Something went wrong: ${res.status}`);
-        }
-        const json = await res.json();
-        console.log(json);
-    } catch(error) {
-        console.error(error);
+export async function newMedicalEntry(entry) {
+    const res = await fetch(`${BASE_URL}/med_history`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify(data)
+    });
+    if (!res.ok) {
+        throw new Error(`Something went wrong: ${res.status}`);
     }
+    return await res.json();
 }
