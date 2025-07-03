@@ -10,6 +10,8 @@ datasource db {
 
 model MedicalHistory {
   id            Int      @id @default(autoincrement())
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @default(now())
   userId        Int
   condition     String
   diagnosisDate DateTime
