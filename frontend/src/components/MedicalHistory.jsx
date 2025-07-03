@@ -59,29 +59,28 @@ const MedicalHistory = () => {
           No entries found
         </p>
       ) : (
-
-          <div className="flex flex-wrap gap-4 justify-center">
-            {entries.map((entry) => (
-              <div
-                key={entry.id}
-                className="bg-white p-5 w-72 rounded-lg shadow border border-gray-200 hover:shadow-lg transition duration-200 "
-              >
-                <h3 className="text-lg font-bold mb-2 text-teal-800 uppercase">
-                  {entry.condition}
-                </h3>
-                <p className="text-gray-700 my-4">
-                  Medication:{entry.medications || "None"}
-                </p>
-                <p className="text-gray-700 my-3">
-                  Diagnosed:
-                  {entry.diagnosisDate
-                    ? new Date(entry.diagnosisDate).toLocaleDateString(): "Unknown"}
-                </p>
-                <p className="text-gray-700">Notes: {entry.notes || "N/A"}</p>
-              </div>
-            ))}
-          </div>
-
+        <div className="flex flex-wrap gap-4 justify-center">
+          {entries.map((entry) => (
+            <div
+              key={entry.id}
+              className="bg-white p-5 w-72 rounded-lg shadow border border-gray-200 hover:shadow-lg transition duration-200 "
+            >
+              <h3 className="text-lg font-bold mb-2 text-teal-800 uppercase">
+                {entry.condition}
+              </h3>
+              <p className="text-gray-700 my-4">
+                Medication:{entry.medications || "None"}
+              </p>
+              <p className="text-gray-700 my-3">
+                Diagnosed:
+                {entry.diagnosisDate
+                  ? new Date(entry.diagnosisDate).toLocaleDateString()
+                  : "Unknown"}
+              </p>
+              <p className="text-gray-700">Notes: {entry.notes || "N/A"}</p>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );

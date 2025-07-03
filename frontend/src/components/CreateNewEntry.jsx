@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 const CreateNewEntry = ({ onCreate }) => {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
