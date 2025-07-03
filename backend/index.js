@@ -162,15 +162,15 @@ app.get("/med_history", async (req, res) => {
 
 // Adding more entries to medical history
 app.post("/med_history", isAuthenticated, async (req, res) => {
-  const { condition, notes, diagnosisDate, medication } = req.body;
+  const { condition, notes, diagnosisDate, medications } = req.body;
 
   try {
     const newEntry = await prisma.medicalHistory.create({
       data: {
         condition,
         notes,
-        diagnosisDate: new Date(diagnosisDate),
-        medication,
+        diagnosisDate,
+        medications,
         userId: req.session.userId,
       },
     });
@@ -182,6 +182,48 @@ app.post("/med_history", isAuthenticated, async (req, res) => {
     .status(500)
     .json({ error: "Error adding to your medical history" });
 });
+
+// Getting user's symptom logs
+app.get("/symptoms", async (req, res) => {
+  if (!req.session.userId) {
+    return res.status(401).json({ error: "Not logged in" });
+  }
+  try {
+    const userId = req.session.userId;
+
+    const entries = await prisma.symptoms.findMany({
+      where: { userId: userId },
+      orderBy: { date: "desc" },
+    });
+    res.status(200).json(entries);
+  } catch (error) {
+    res.status(500).json({ error: "Error getting your symptom logs" });
+  }
+});
+
+// Adding more entries to symptom logs
+app.post("/symptoms", isAuthenticated, async (req, res) => {
+  const { name, severity, duration, notes } = req.body;
+
+  try {
+    const newEntry = await prisma.symptoms.create({
+      data: {
+        name,
+        severity,
+        duration,
+        notes,
+        userId: req.session.userId,
+      },
+    });
+    return res.status(201).json(newEntry);
+  } catch (error) {
+    console.error("Error adding new log", error);
+  }
+  return res
+    .status(500)
+    .json({ error: "Error adding to your symptom logs" });
+});
+
 
 // Logging out
 app.post("/logout", (req, res) => {
