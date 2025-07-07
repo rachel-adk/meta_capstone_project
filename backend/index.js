@@ -224,6 +224,48 @@ app.post("/symptoms", isAuthenticated, async (req, res) => {
     .json({ error: "Error adding to your symptom logs" });
 });
 
+// Getting user's allergies logs
+app.get("/allergies", async (req, res) => {
+  if (!req.session.userId) {
+    return res.status(401).json({ error: "Not logged in" });
+  }
+  try {
+    const userId = req.session.userId;
+
+    const entries = await prisma.allergies.findMany({
+      where: { userId: userId },
+      orderBy: { date: "desc" },
+    });
+    res.status(200).json(entries);
+  } catch (error) {
+    res.status(500).json({ error: "Error getting your allergy logs" });
+  }
+});
+
+// Adding more entries to allergy logs
+app.post("/allergies", isAuthenticated, async (req, res) => {
+  const { trigger, severity, reaction, notes } = req.body;
+
+  try {
+    const newEntry = await prisma.allergies.create({
+      data: {
+        trigger,
+        severity,
+        reaction,
+        notes,
+        userId: req.session.userId,
+      },
+    });
+    return res.status(201).json(newEntry);
+  } catch (error) {
+    console.error("Error adding new log", error);
+  }
+  return res
+    .status(500)
+    .json({ error: "Error adding to your allergy logs" });
+});
+
+
 
 // Logging out
 app.post("/logout", (req, res) => {
