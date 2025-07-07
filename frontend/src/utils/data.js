@@ -57,7 +57,7 @@ export async function newMedicalEntry(entry) {
             "Content-Type": "application/json"
         },
         credentials: "include",
-        body: JSON.stringify(data)
+        body: JSON.stringify(entry)
     });
     if (!res.ok) {
         throw new Error(`Something went wrong: ${res.status}`);

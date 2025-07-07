@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { getMedicalHistory } from "../utils/data";
+import { getMedicalHistory, newMedicalEntry } from "../utils/data";
 import CreateNewEntry from "./CreateNewEntry";
 
 const MedicalHistory = () => {
@@ -22,9 +22,9 @@ const MedicalHistory = () => {
   //         console.error(error);
   //     }
 
-  const handleCreate = async (newEntries) => {
+  const handleCreate = async (newEntry, userId) => {
     try {
-      await newMedicalEntry(newEntries, userId);
+      await newMedicalEntry(newEntry);
       const newEntries = await getMedicalHistory(userId);
       setEntries(newEntries);
     } catch (error) {
@@ -59,30 +59,29 @@ const MedicalHistory = () => {
           No entries found
         </p>
       ) : (
-        <div className="w-full flex flex-row gap-5 justify-center">
-          <div className="w-full max-w-md bg-white p-4 rounded-xl w-80 shadow-xl flex-row flex-wrap justify center gap-4">
+
+          <div className="flex flex-wrap gap-4 justify-center">
             {entries.map((entry) => (
               <div
                 key={entry.id}
-                className="bg-white p-5 rounded-lg shadow border border-gray-200 hover:shadow-lg transition duration-200 "
+                className="bg-white p-5 w-72 rounded-lg shadow border border-gray-200 hover:shadow-lg transition duration-200 "
               >
-                <h3 className="text-lg font-bold mb-2 text-red uppercase">
+                <h3 className="text-lg font-bold mb-2 text-teal-800 uppercase">
                   {entry.condition}
                 </h3>
                 <p className="text-gray-700 my-4">
-                  Medication:{entry.medications}
+                  Medication:{entry.medications || "None"}
                 </p>
                 <p className="text-gray-700 my-3">
-                  Diagnosed:{" "}
-                  {entry.Diagnosisdate
-                    ? new Date(entry.diagnosisDate).toLocaleDateString()
-                    : "Unknown"}
+                  Diagnosed:
+                  {entry.diagnosisDate
+                    ? new Date(entry.diagnosisDate).toLocaleDateString(): "Unknown"}
                 </p>
-                <p className="text-gray-700">Notes: {entry.notes}</p>
+                <p className="text-gray-700">Notes: {entry.notes || "N/A"}</p>
               </div>
             ))}
           </div>
-        </div>
+
       )}
     </div>
   );
