@@ -6,7 +6,6 @@ const session = require("express-session");
 const prisma = new PrismaClient();
 const app = express();
 
-app.use(express.json());
 
 // Middleware to check if user is logged in
 const isAuthenticated = (req, res, next) => {
@@ -28,9 +27,13 @@ app.use(
     secret: "secret_key",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true },
+    cookie: {
+      secure: true
+       },
   })
 );
+
+app.use(express.json());
 
 // Signup Router
 app.post("/signup", async (req, res) => {
@@ -122,7 +125,7 @@ app.get("/me", isAuthenticated, async (req, res) => {
       where: { id: req.session.userId },
       select: { username: true },
     });
-    res.json({ id: req.session.userId, username: req.session.username });
+    res.json({ id: user.id, username: user.username });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error fetching user session data" });
