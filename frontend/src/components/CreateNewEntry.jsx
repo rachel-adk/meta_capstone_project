@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const CreateNewEntry = () => {
+const CreateNewEntry = ({ onCreate }) => {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     condition: "",
-    medication: "",
+    medications: "",
     diagnosisDate: "",
     notes: "",
   });
@@ -35,7 +35,7 @@ const CreateNewEntry = () => {
       setShowModal(false);
       setFormData({
         condition: "",
-        medication: "",
+        medications: "",
         diagnosisDate: "",
         notes: "",
       });
@@ -50,7 +50,6 @@ const CreateNewEntry = () => {
         onClick={() => setShowModal(true)}
         className="bg-teal-700 text-white py-2 px-4 rounded hover:bg-teal-600"
       >
-        {" "}
         + Add a New Entry
       </button>
       {showModal && (
@@ -71,9 +70,9 @@ const CreateNewEntry = () => {
                 />
               </div>
               <div>
-                <label className="block text-gray-700">Medication:</label>
+                <label className="block text-gray-700">Medication: </label>
                 <input
-                  name="medication"
+                  name="medications"
                   value={formData.medications}
                   onChange={handleChange}
                   required
@@ -83,10 +82,20 @@ const CreateNewEntry = () => {
               <div>
                 <label className="block text-gray-700">Diagnosis Date:</label>
                 <input
+                  type="date"
                   name="diagnosisDate"
                   value={formData.diagnosisDate}
                   onChange={handleChange}
                   required
+                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-teal-500 focus:ring"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700">Notes:</label>
+                <input
+                  name="notes"
+                  value={formData.notes}
+                  onChange={handleChange}
                   className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-teal-500 focus:ring"
                 />
               </div>
