@@ -82,3 +82,28 @@ export async function newSymptomLog(log) {
     }
     return await res.json();
   }
+
+  // fetching allergy logs for user
+export async function getAllergyLogs() {
+  const res = await fetch(`${BASE_URL}/allergies`, {
+    method: "GET",
+    credentials: "include",
+  });
+  return await res.json();
+}
+
+// adding entries to allergy logs
+export async function newAllergyLog(log) {
+  const res = await fetch(`${BASE_URL}/allergies`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "include",
+    body: JSON.stringify(log),
+  });
+  if (!res.ok) {
+    throw new Error(`Something went wrong: ${res.status}`);
+  }
+  return await res.json();
+}

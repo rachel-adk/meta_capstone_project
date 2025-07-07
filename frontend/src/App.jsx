@@ -4,6 +4,7 @@ import LoginForm from "./components/LoginForm";
 import HomePage from "./components/HomePage";
 import MedicalHistory from "./components/MedicalHistory";
 import SymptomsPage from "./components/SymptomsPage";
+import AllergiesPage from "./components/AllergiesPage";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/login" element={<LoginForm />} />
             <Route path="/med_history" element={<MedicalHistory />} />
             <Route path="/symptoms" element={<SymptomsPage />} />
+            <Route path="/allergies" element={<AllergiesPage />} />
           </Routes>
           <div className="bg-teal-700 text-white py-2 px-3 text-left">
             <p>2025 HealthConnect</p>
