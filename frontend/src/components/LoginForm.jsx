@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import { useUser } from '../contexts/UserContext';
-import "./styles/LoginForm.css";
+
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
@@ -31,7 +31,7 @@ const LoginForm = () => {
 
       if (response.ok) {
         setMessage({ type: "success", text: "Login successful!" });
-        navigate("/");
+        navigate("/med_history");
       } else {
         setMessage({ type: "error", text: data.error || "Login failed." });
       }
