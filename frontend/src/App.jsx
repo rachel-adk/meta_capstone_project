@@ -13,17 +13,20 @@ const App = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex flex-col min-h-screen w-full">
+    <div className="flex flex-col w-full">
       <Router>
         <header className="bg-teal-700 flex justify-center items-center p-8">
           <h1 className="text-white text-6xl font-bold">🩺 HealthConnect 🩺</h1>
+
         </header>
+        <h2 className="text-4xl font-bold text-center my-7 text-teal-800">
+        Your Personal Health Tracking Companion</h2>
 
 
         <div className="flex">
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         <main
-        className={`flex-grow transition-all duration-300 ${
+        className={`flex-grow h-screen transition-all duration-300 ${
           isOpen ? "ml-60" : "ml-0"
         }`}>
           <Routes>
@@ -34,7 +37,7 @@ const App = () => {
             <Route path="/symptoms" element={<SymptomsPage />} />
             <Route path="/allergies" element={<AllergiesPage />} />
           </Routes>
-          <div className="bg-teal-700 text-white py-2 px-3 text-left">
+          <div className="bg-teal-700 text-white py-2 px-3 text-left sticky bottom-0">
             <p>©2025 HealthConnect</p>
           </div>
         </main>
