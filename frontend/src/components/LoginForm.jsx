@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { useUser } from '../contexts/UserContext';
+import { Link } from "react-router-dom";
 
 
 const LoginForm = () => {
@@ -44,15 +44,22 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="min-h-[calc(100vh-10rem)] bg-cyan-50 flex items-center justify-center">
+    <div className="h-screen bg-cyan-50 flex items-center justify-center">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-white p-8 rounded-xl shadow-xl flex flex-col gap-4"
+        className="w-full max-w-md bg-white p-8 rounded-xl shadow-xl flex flex-col gap-4 -mt-60"
       >
+         <h1 className="text-8x1 font-semibold uppercase text-teal-700 text-center">
+          Welcome back!
+        </h1>
+        <h1 className="text-8x1 font-semibold text-teal-700 text-center">
+          Sign into your account here!
+        </h1>
+
         <div>
           <label
             htmlFor="username"
-            className="block text-sm font-medium text-gray-700 mb-1"
+            className="block text-sm py-0 font-medium mb-1 text-teal-700"
           >
             Username:
           </label>
@@ -67,10 +74,11 @@ const LoginForm = () => {
           required
           className="w-full border border-teal-400 bg-cyan-50 rounded-md px-4 py-2 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-teal-500 focus:border-transparent transition"
         />
+
         <div>
           <label
             htmlFor="password"
-            className="block text-sm font-medium text-gray-700 mb-1"
+            className="block text-sm font-medium mb-1 py-2 text-teal-700"
           >
             Password:
           </label>
@@ -101,6 +109,12 @@ const LoginForm = () => {
             {message.text}
           </div>
         )}
+        <Link
+          to="/signup"
+          className="border rounded hover:bg-cyan-50 text-teal-700 text-lg py-3 text-center transition duration-300"
+        >
+          Don't have an account? Sign up here!
+        </Link>
       </form>
     </div>
   );
