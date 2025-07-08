@@ -6,7 +6,7 @@ const LogNewAllergy = ({ onCreate }) => {
     trigger: "",
     reaction: "",
     date: "",
-    severity: 0,
+    severity: "",
     notes: "",
   });
 
@@ -19,6 +19,7 @@ const LogNewAllergy = ({ onCreate }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const response = await fetch("http://localhost:3000/allergies", {
         method: "POST",
@@ -26,7 +27,10 @@ const LogNewAllergy = ({ onCreate }) => {
           "Content-Type": "application/json",
         },
         credentials: "include",
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+            ...formData,
+            severity: parseInt(formData.severity),
+        }),
       });
 
       if (!response.ok) throw new Error("Failed to create new log");
@@ -85,7 +89,6 @@ const LogNewAllergy = ({ onCreate }) => {
                 <label className="block text-gray-700">Severity: </label>
                 <input
                   name="severity"
-                  type= "number"
                   value={formData.severity}
                   onChange={handleChange}
                   required
