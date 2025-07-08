@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
@@ -42,11 +43,18 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="min-h-[calc(100vh-10rem)] bg-cyan-50 flex items-center justify-center">
+    <div className="h-screen bg-cyan-50 flex items-center justify-center">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-white p-8 rounded-xl shadow-xl flex flex-col gap-4"
+        className="w-full max-w-md bg-white p-8 rounded-xl shadow-xl flex flex-col gap-4 -mt-60"
       >
+        <h1 className="text-8x1 font-semibold uppercase text-teal-700 text-center">
+          Join HealthConnect
+        </h1>
+        <h1 className="text-8x1 font-semibold text-teal-700 text-center">
+          Create you health tracking account here!
+        </h1>
+
         <div>
           <label
             htmlFor="username"
@@ -99,6 +107,12 @@ const SignupForm = () => {
             {message.text}
           </div>
         )}
+        <Link
+          to="/login"
+          className="border rounded hover:bg-cyan-50 text-teal-700 text-lg py-3 text-center transition duration-300"
+        >
+          Already have an account? Sign in here!
+        </Link>
       </form>
     </div>
   );
