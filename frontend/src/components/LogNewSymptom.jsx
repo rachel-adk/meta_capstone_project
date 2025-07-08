@@ -26,7 +26,10 @@ const LogNewSymptom = ({ onCreate }) => {
           "Content-Type": "application/json",
         },
         credentials: "include",
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+            severity: parseInt(formData.severity),
+        }),
       });
 
       if (!response.ok) throw new Error("Failed to create new log");
