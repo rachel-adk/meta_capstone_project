@@ -49,7 +49,7 @@ A mother living in an urban area who has to keep track of her children’s medic
 ### Screen Archetypes
 - **Authentication Screen:** Welcome Screen -> Login/Sign up screen -> Profile setup screen
 - **Medical Dashboard:** Home/Dashboard with their recent logs
-- **Medical Records Screen:** Medical History Form -> Lab Results (a folder with the files that have been uploaded and an option to upload more)
+- **Medical Records Screen:** Medical History Form 
 - **Symptom/Allergy Tracker:** System Entry Screen (to log in new symptoms/allergic reactions) -> Symptom History Viewer
 - **Map:** Showing the hospitals/clinics near your location
 
