@@ -153,6 +153,33 @@ app.post("/logout", (req, res) => {
   })
 })
 
+// Getting user's dashboard
+app.get("/dashboard", isAuthenticated, async (req, res) => {
+  try {
+    const userId = req.session.userId;
+
+    const entries = await prisma.medicalHistory.findMany({
+      where: { userId: userId },
+      select: {
+        name: true,
+        age: true,
+        age: true,
+        height: true,
+        weight: true,
+        conditions: true,
+
+       },
+    });
+    if (!user) {
+      return res.status(404).json({ error: "User not found"})
+    }
+    res.json({ user });
+  } catch (error) {
+    console.error("Dashboard error:", err)
+    res.status(500).json({ error: "Something went wrong" });
+  }
+});
+
 // Getting user's medical history
 app.get("/med_history", async (req, res) => {
   if (!req.session.userId) {
