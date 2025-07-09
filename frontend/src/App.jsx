@@ -36,6 +36,7 @@ const App = () => {
             <Route path="/med_history" element={<MedicalHistory />} />
             <Route path="/symptoms" element={<SymptomsPage />} />
             <Route path="/allergies" element={<AllergiesPage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
           <div className="bg-teal-700 text-white py-2 px-3 text-left sticky bottom-0">
             <p>©2025 HealthConnect</p>
