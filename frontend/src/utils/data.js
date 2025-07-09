@@ -33,6 +33,19 @@ export async function getCurrentUser() {
   return data;
 }
 
+// logging the user out
+export async function logout() {
+  const res = await fetch(`${BASE_URL}/logout`, {
+    method: "POST",
+    credentials: "include",
+  });
+
+  if (!res.ok) {
+    throw new Error(`Something went wrong: ${res.status}`);
+  }
+  return await res.json();
+}
+
 //fetching data from dashboard for user
 export async function getDashboard() {
   const res = await fetch(`${BASE_URL}/dashboard`, {
