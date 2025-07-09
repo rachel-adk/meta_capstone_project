@@ -1,8 +1,8 @@
-import { withAuth } from "./WithAuth";
 import { useNavigate } from "react-router-dom";
+import { useUser } from "../contexts/UserContext"; 
 
 const Dashboard = () => {
-  const { user } = withAuth();
+  const { user } = useUser();
   const navigate = useNavigate();
 
   return (

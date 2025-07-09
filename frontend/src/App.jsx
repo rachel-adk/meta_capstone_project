@@ -7,6 +7,8 @@ import MedicalHistory from "./components/MedicalHistory";
 import SymptomsPage from "./components/SymptomsPage";
 import AllergiesPage from "./components/AllergiesPage";
 import Sidebar from "./components/Sidebar";
+import Dashboard from "./components/Dashboard";
+import WithAuth from "./components/WithAuth";
 
 
 const App = () => {
