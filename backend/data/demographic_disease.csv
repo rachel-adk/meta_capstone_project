@@ -1,0 +1,1961 @@
+disease,age_group,gender,bmi_category,risk_score
+hypertension,0-19,male,underweight,0.027
+hypertension,0-19,male,normal,0.046
+hypertension,0-19,male,overweight,0.033
+hypertension,0-19,male,obese,0.028
+hypertension,0-19,female,underweight,0.029
+hypertension,0-19,female,normal,0.082
+hypertension,0-19,female,overweight,0.086
+hypertension,0-19,female,obese,0.043
+hypertension,20-39,male,underweight,0.076
+hypertension,20-39,male,normal,0.02
+hypertension,20-39,male,overweight,0.073
+hypertension,20-39,male,obese,0.086
+hypertension,20-39,female,underweight,0.064
+hypertension,20-39,female,normal,0.076
+hypertension,20-39,female,overweight,0.023
+hypertension,20-39,female,obese,0.075
+hypertension,40-59,male,underweight,0.048
+hypertension,40-59,male,normal,0.093
+hypertension,40-59,male,overweight,0.065
+hypertension,40-59,male,obese,0.102
+hypertension,40-59,female,underweight,0.074
+hypertension,40-59,female,normal,0.057
+hypertension,40-59,female,overweight,0.097
+hypertension,40-59,female,obese,0.063
+hypertension,60-79,male,underweight,0.022
+hypertension,60-79,male,normal,0.031
+hypertension,60-79,male,overweight,0.061
+hypertension,60-79,male,obese,0.168
+hypertension,60-79,female,underweight,0.048
+hypertension,60-79,female,normal,0.032
+hypertension,60-79,female,overweight,0.14
+hypertension,60-79,female,obese,0.223
+hypertension,80+,male,underweight,0.068
+hypertension,80+,male,normal,0.129
+hypertension,80+,male,overweight,0.101
+hypertension,80+,male,obese,0.146
+hypertension,80+,female,underweight,0.123
+hypertension,80+,female,normal,0.122
+hypertension,80+,female,overweight,0.153
+hypertension,80+,female,obese,0.243
+type 2 diabetes,0-19,male,underweight,0.095
+type 2 diabetes,0-19,male,normal,0.023
+type 2 diabetes,0-19,male,overweight,0.021
+type 2 diabetes,0-19,male,obese,0.05
+type 2 diabetes,0-19,female,underweight,0.027
+type 2 diabetes,0-19,female,normal,0.073
+type 2 diabetes,0-19,female,overweight,0.097
+type 2 diabetes,0-19,female,obese,0.079
+type 2 diabetes,20-39,male,underweight,0.027
+type 2 diabetes,20-39,male,normal,0.017
+type 2 diabetes,20-39,male,overweight,0.065
+type 2 diabetes,20-39,male,obese,0.033
+type 2 diabetes,20-39,female,underweight,0.069
+type 2 diabetes,20-39,female,normal,0.07
+type 2 diabetes,20-39,female,overweight,0.035
+type 2 diabetes,20-39,female,obese,0.098
+type 2 diabetes,40-59,male,underweight,0.078
+type 2 diabetes,40-59,male,normal,0.068
+type 2 diabetes,40-59,male,overweight,0.096
+type 2 diabetes,40-59,male,obese,0.08
+type 2 diabetes,40-59,female,underweight,0.036
+type 2 diabetes,40-59,female,normal,0.041
+type 2 diabetes,40-59,female,overweight,0.087
+type 2 diabetes,40-59,female,obese,0.021
+type 2 diabetes,60-79,male,underweight,0.042
+type 2 diabetes,60-79,male,normal,0.031
+type 2 diabetes,60-79,male,overweight,0.133
+type 2 diabetes,60-79,male,obese,0.164
+type 2 diabetes,60-79,female,underweight,0.086
+type 2 diabetes,60-79,female,normal,0.127
+type 2 diabetes,60-79,female,overweight,0.161
+type 2 diabetes,60-79,female,obese,0.104
+type 2 diabetes,80+,male,underweight,0.156
+type 2 diabetes,80+,male,normal,0.082
+type 2 diabetes,80+,male,overweight,0.048
+type 2 diabetes,80+,male,obese,0.108
+type 2 diabetes,80+,female,underweight,0.084
+type 2 diabetes,80+,female,normal,0.063
+type 2 diabetes,80+,female,overweight,0.055
+type 2 diabetes,80+,female,obese,0.052
+coronary heart disease,0-19,male,underweight,0.027
+coronary heart disease,0-19,male,normal,0.042
+coronary heart disease,0-19,male,overweight,0.078
+coronary heart disease,0-19,male,obese,0.077
+coronary heart disease,0-19,female,underweight,0.1
+coronary heart disease,0-19,female,normal,0.051
+coronary heart disease,0-19,female,overweight,0.054
+coronary heart disease,0-19,female,obese,0.132
+coronary heart disease,20-39,male,underweight,0.035
+coronary heart disease,20-39,male,normal,0.093
+coronary heart disease,20-39,male,overweight,0.031
+coronary heart disease,20-39,male,obese,0.053
+coronary heart disease,20-39,female,underweight,0.063
+coronary heart disease,20-39,female,normal,0.026
+coronary heart disease,20-39,female,overweight,0.07
+coronary heart disease,20-39,female,obese,0.061
+coronary heart disease,40-59,male,underweight,0.017
+coronary heart disease,40-59,male,normal,0.046
+coronary heart disease,40-59,male,overweight,0.068
+coronary heart disease,40-59,male,obese,0.068
+coronary heart disease,40-59,female,underweight,0.035
+coronary heart disease,40-59,female,normal,0.059
+coronary heart disease,40-59,female,overweight,0.021
+coronary heart disease,40-59,female,obese,0.053
+coronary heart disease,60-79,male,underweight,0.048
+coronary heart disease,60-79,male,normal,0.03
+coronary heart disease,60-79,male,overweight,0.097
+coronary heart disease,60-79,male,obese,0.202
+coronary heart disease,60-79,female,underweight,0.064
+coronary heart disease,60-79,female,normal,0.13
+coronary heart disease,60-79,female,overweight,0.166
+coronary heart disease,60-79,female,obese,0.098
+coronary heart disease,80+,male,underweight,0.148
+coronary heart disease,80+,male,normal,0.033
+coronary heart disease,80+,male,overweight,0.094
+coronary heart disease,80+,male,obese,0.069
+coronary heart disease,80+,female,underweight,0.036
+coronary heart disease,80+,female,normal,0.084
+coronary heart disease,80+,female,overweight,0.042
+coronary heart disease,80+,female,obese,0.031
+stroke,0-19,male,underweight,0.072
+stroke,0-19,male,normal,0.011
+stroke,0-19,male,overweight,0.098
+stroke,0-19,male,obese,0.103
+stroke,0-19,female,underweight,0.093
+stroke,0-19,female,normal,0.022
+stroke,0-19,female,overweight,0.056
+stroke,0-19,female,obese,0.094
+stroke,20-39,male,underweight,0.019
+stroke,20-39,male,normal,0.037
+stroke,20-39,male,overweight,0.052
+stroke,20-39,male,obese,0.098
+stroke,20-39,female,underweight,0.023
+stroke,20-39,female,normal,0.096
+stroke,20-39,female,overweight,0.073
+stroke,20-39,female,obese,0.135
+stroke,40-59,male,underweight,0.048
+stroke,40-59,male,normal,0.056
+stroke,40-59,male,overweight,0.043
+stroke,40-59,male,obese,0.096
+stroke,40-59,female,underweight,0.046
+stroke,40-59,female,normal,0.012
+stroke,40-59,female,overweight,0.098
+stroke,40-59,female,obese,0.096
+stroke,60-79,male,underweight,0.115
+stroke,60-79,male,normal,0.077
+stroke,60-79,male,overweight,0.142
+stroke,60-79,male,obese,0.14
+stroke,60-79,female,underweight,0.09
+stroke,60-79,female,normal,0.122
+stroke,60-79,female,overweight,0.119
+stroke,60-79,female,obese,0.136
+stroke,80+,male,underweight,0.11
+stroke,80+,male,normal,0.069
+stroke,80+,male,overweight,0.035
+stroke,80+,male,obese,0.133
+stroke,80+,female,underweight,0.181
+stroke,80+,female,normal,0.083
+stroke,80+,female,overweight,0.066
+stroke,80+,female,obese,0.025
+chronic kidney disease,0-19,male,underweight,0.028
+chronic kidney disease,0-19,male,normal,0.083
+chronic kidney disease,0-19,male,overweight,0.052
+chronic kidney disease,0-19,male,obese,0.021
+chronic kidney disease,0-19,female,underweight,0.074
+chronic kidney disease,0-19,female,normal,0.025
+chronic kidney disease,0-19,female,overweight,0.075
+chronic kidney disease,0-19,female,obese,0.075
+chronic kidney disease,20-39,male,underweight,0.03
+chronic kidney disease,20-39,male,normal,0.095
+chronic kidney disease,20-39,male,overweight,0.033
+chronic kidney disease,20-39,male,obese,0.029
+chronic kidney disease,20-39,female,underweight,0.097
+chronic kidney disease,20-39,female,normal,0.02
+chronic kidney disease,20-39,female,overweight,0.026
+chronic kidney disease,20-39,female,obese,0.114
+chronic kidney disease,40-59,male,underweight,0.056
+chronic kidney disease,40-59,male,normal,0.087
+chronic kidney disease,40-59,male,overweight,0.072
+chronic kidney disease,40-59,male,obese,0.043
+chronic kidney disease,40-59,female,underweight,0.098
+chronic kidney disease,40-59,female,normal,0.032
+chronic kidney disease,40-59,female,overweight,0.1
+chronic kidney disease,40-59,female,obese,0.079
+chronic kidney disease,60-79,male,underweight,0.157
+chronic kidney disease,60-79,male,normal,0.125
+chronic kidney disease,60-79,male,overweight,0.084
+chronic kidney disease,60-79,male,obese,0.141
+chronic kidney disease,60-79,female,underweight,0.034
+chronic kidney disease,60-79,female,normal,0.141
+chronic kidney disease,60-79,female,overweight,0.141
+chronic kidney disease,60-79,female,obese,0.278
+chronic kidney disease,80+,male,underweight,0.145
+chronic kidney disease,80+,male,normal,0.058
+chronic kidney disease,80+,male,overweight,0.079
+chronic kidney disease,80+,male,obese,0.21
+chronic kidney disease,80+,female,underweight,0.034
+chronic kidney disease,80+,female,normal,0.121
+chronic kidney disease,80+,female,overweight,0.119
+chronic kidney disease,80+,female,obese,0.155
+osteoporosis,0-19,male,underweight,0.094
+osteoporosis,0-19,male,normal,0.049
+osteoporosis,0-19,male,overweight,0.066
+osteoporosis,0-19,male,obese,0.092
+osteoporosis,0-19,female,underweight,0.086
+osteoporosis,0-19,female,normal,0.047
+osteoporosis,0-19,female,overweight,0.08
+osteoporosis,0-19,female,obese,0.067
+osteoporosis,20-39,male,underweight,0.032
+osteoporosis,20-39,male,normal,0.093
+osteoporosis,20-39,male,overweight,0.015
+osteoporosis,20-39,male,obese,0.015
+osteoporosis,20-39,female,underweight,0.038
+osteoporosis,20-39,female,normal,0.073
+osteoporosis,20-39,female,overweight,0.067
+osteoporosis,20-39,female,obese,0.09
+osteoporosis,40-59,male,underweight,0.038
+osteoporosis,40-59,male,normal,0.093
+osteoporosis,40-59,male,overweight,0.079
+osteoporosis,40-59,male,obese,0.125
+osteoporosis,40-59,female,underweight,0.04
+osteoporosis,40-59,female,normal,0.079
+osteoporosis,40-59,female,overweight,0.096
+osteoporosis,40-59,female,obese,0.124
+osteoporosis,60-79,male,underweight,0.113
+osteoporosis,60-79,male,normal,0.061
+osteoporosis,60-79,male,overweight,0.034
+osteoporosis,60-79,male,obese,0.231
+osteoporosis,60-79,female,underweight,0.021
+osteoporosis,60-79,female,normal,0.145
+osteoporosis,60-79,female,overweight,0.079
+osteoporosis,60-79,female,obese,0.158
+osteoporosis,80+,male,underweight,0.146
+osteoporosis,80+,male,normal,0.137
+osteoporosis,80+,male,overweight,0.036
+osteoporosis,80+,male,obese,0.023
+osteoporosis,80+,female,underweight,0.069
+osteoporosis,80+,female,normal,0.063
+osteoporosis,80+,female,overweight,0.08
+osteoporosis,80+,female,obese,0.131
+breast cancer,0-19,male,underweight,0.078
+breast cancer,0-19,male,normal,0.087
+breast cancer,0-19,male,overweight,0.075
+breast cancer,0-19,male,obese,0.127
+breast cancer,0-19,female,underweight,0.042
+breast cancer,0-19,female,normal,0.027
+breast cancer,0-19,female,overweight,0.056
+breast cancer,0-19,female,obese,0.1
+breast cancer,20-39,male,underweight,0.085
+breast cancer,20-39,male,normal,0.074
+breast cancer,20-39,male,overweight,0.072
+breast cancer,20-39,male,obese,0.034
+breast cancer,20-39,female,underweight,0.043
+breast cancer,20-39,female,normal,0.028
+breast cancer,20-39,female,overweight,0.049
+breast cancer,20-39,female,obese,0.029
+breast cancer,40-59,male,underweight,0.07
+breast cancer,40-59,male,normal,0.055
+breast cancer,40-59,male,overweight,0.081
+breast cancer,40-59,male,obese,0.086
+breast cancer,40-59,female,underweight,0.015
+breast cancer,40-59,female,normal,0.085
+breast cancer,40-59,female,overweight,0.075
+breast cancer,40-59,female,obese,0.051
+breast cancer,60-79,male,underweight,0.138
+breast cancer,60-79,male,normal,0.063
+breast cancer,60-79,male,overweight,0.055
+breast cancer,60-79,male,obese,0.085
+breast cancer,60-79,female,underweight,0.028
+breast cancer,60-79,female,normal,0.105
+breast cancer,60-79,female,overweight,0.153
+breast cancer,60-79,female,obese,0.205
+breast cancer,80+,male,underweight,0.074
+breast cancer,80+,male,normal,0.026
+breast cancer,80+,male,overweight,0.027
+breast cancer,80+,male,obese,0.185
+breast cancer,80+,female,underweight,0.126
+breast cancer,80+,female,normal,0.154
+breast cancer,80+,female,overweight,0.062
+breast cancer,80+,female,obese,0.102
+lung cancer,0-19,male,underweight,0.069
+lung cancer,0-19,male,normal,0.059
+lung cancer,0-19,male,overweight,0.029
+lung cancer,0-19,male,obese,0.026
+lung cancer,0-19,female,underweight,0.061
+lung cancer,0-19,female,normal,0.079
+lung cancer,0-19,female,overweight,0.054
+lung cancer,0-19,female,obese,0.073
+lung cancer,20-39,male,underweight,0.025
+lung cancer,20-39,male,normal,0.046
+lung cancer,20-39,male,overweight,0.097
+lung cancer,20-39,male,obese,0.055
+lung cancer,20-39,female,underweight,0.064
+lung cancer,20-39,female,normal,0.029
+lung cancer,20-39,female,overweight,0.036
+lung cancer,20-39,female,obese,0.093
+lung cancer,40-59,male,underweight,0.089
+lung cancer,40-59,male,normal,0.059
+lung cancer,40-59,male,overweight,0.011
+lung cancer,40-59,male,obese,0.114
+lung cancer,40-59,female,underweight,0.012
+lung cancer,40-59,female,normal,0.012
+lung cancer,40-59,female,overweight,0.058
+lung cancer,40-59,female,obese,0.073
+lung cancer,60-79,male,underweight,0.14
+lung cancer,60-79,male,normal,0.03
+lung cancer,60-79,male,overweight,0.035
+lung cancer,60-79,male,obese,0.2
+lung cancer,60-79,female,underweight,0.115
+lung cancer,60-79,female,normal,0.094
+lung cancer,60-79,female,overweight,0.086
+lung cancer,60-79,female,obese,0.171
+lung cancer,80+,male,underweight,0.032
+lung cancer,80+,male,normal,0.132
+lung cancer,80+,male,overweight,0.095
+lung cancer,80+,male,obese,0.225
+lung cancer,80+,female,underweight,0.136
+lung cancer,80+,female,normal,0.123
+lung cancer,80+,female,overweight,0.036
+lung cancer,80+,female,obese,0.164
+copd,0-19,male,underweight,0.063
+copd,0-19,male,normal,0.031
+copd,0-19,male,overweight,0.064
+copd,0-19,male,obese,0.051
+copd,0-19,female,underweight,0.038
+copd,0-19,female,normal,0.053
+copd,0-19,female,overweight,0.048
+copd,0-19,female,obese,0.018
+copd,20-39,male,underweight,0.096
+copd,20-39,male,normal,0.043
+copd,20-39,male,overweight,0.037
+copd,20-39,male,obese,0.027
+copd,20-39,female,underweight,0.05
+copd,20-39,female,normal,0.027
+copd,20-39,female,overweight,0.029
+copd,20-39,female,obese,0.036
+copd,40-59,male,underweight,0.033
+copd,40-59,male,normal,0.017
+copd,40-59,male,overweight,0.098
+copd,40-59,male,obese,0.137
+copd,40-59,female,underweight,0.071
+copd,40-59,female,normal,0.029
+copd,40-59,female,overweight,0.077
+copd,40-59,female,obese,0.017
+copd,60-79,male,underweight,0.087
+copd,60-79,male,normal,0.098
+copd,60-79,male,overweight,0.164
+copd,60-79,male,obese,0.21
+copd,60-79,female,underweight,0.02
+copd,60-79,female,normal,0.164
+copd,60-79,female,overweight,0.075
+copd,60-79,female,obese,0.196
+copd,80+,male,underweight,0.076
+copd,80+,male,normal,0.128
+copd,80+,male,overweight,0.126
+copd,80+,male,obese,0.18
+copd,80+,female,underweight,0.046
+copd,80+,female,normal,0.13
+copd,80+,female,overweight,0.025
+copd,80+,female,obese,0.05
+asthma,0-19,male,underweight,0.07
+asthma,0-19,male,normal,0.086
+asthma,0-19,male,overweight,0.078
+asthma,0-19,male,obese,0.128
+asthma,0-19,female,underweight,0.037
+asthma,0-19,female,normal,0.013
+asthma,0-19,female,overweight,0.018
+asthma,0-19,female,obese,0.131
+asthma,20-39,male,underweight,0.028
+asthma,20-39,male,normal,0.018
+asthma,20-39,male,overweight,0.097
+asthma,20-39,male,obese,0.063
+asthma,20-39,female,underweight,0.02
+asthma,20-39,female,normal,0.031
+asthma,20-39,female,overweight,0.086
+asthma,20-39,female,obese,0.099
+asthma,40-59,male,underweight,0.038
+asthma,40-59,male,normal,0.084
+asthma,40-59,male,overweight,0.012
+asthma,40-59,male,obese,0.104
+asthma,40-59,female,underweight,0.056
+asthma,40-59,female,normal,0.027
+asthma,40-59,female,overweight,0.025
+asthma,40-59,female,obese,0.095
+asthma,60-79,male,underweight,0.143
+asthma,60-79,male,normal,0.016
+asthma,60-79,male,overweight,0.064
+asthma,60-79,male,obese,0.074
+asthma,60-79,female,underweight,0.065
+asthma,60-79,female,normal,0.149
+asthma,60-79,female,overweight,0.137
+asthma,60-79,female,obese,0.232
+asthma,80+,male,underweight,0.082
+asthma,80+,male,normal,0.136
+asthma,80+,male,overweight,0.182
+asthma,80+,male,obese,0.028
+asthma,80+,female,underweight,0.129
+asthma,80+,female,normal,0.085
+asthma,80+,female,overweight,0.082
+asthma,80+,female,obese,0.158
+depression,0-19,male,underweight,0.055
+depression,0-19,male,normal,0.041
+depression,0-19,male,overweight,0.055
+depression,0-19,male,obese,0.08
+depression,0-19,female,underweight,0.078
+depression,0-19,female,normal,0.033
+depression,0-19,female,overweight,0.027
+depression,0-19,female,obese,0.118
+depression,20-39,male,underweight,0.05
+depression,20-39,male,normal,0.012
+depression,20-39,male,overweight,0.012
+depression,20-39,male,obese,0.035
+depression,20-39,female,underweight,0.046
+depression,20-39,female,normal,0.075
+depression,20-39,female,overweight,0.094
+depression,20-39,female,obese,0.102
+depression,40-59,male,underweight,0.048
+depression,40-59,male,normal,0.078
+depression,40-59,male,overweight,0.093
+depression,40-59,male,obese,0.111
+depression,40-59,female,underweight,0.078
+depression,40-59,female,normal,0.071
+depression,40-59,female,overweight,0.047
+depression,40-59,female,obese,0.037
+depression,60-79,male,underweight,0.023
+depression,60-79,male,normal,0.044
+depression,60-79,male,overweight,0.132
+depression,60-79,male,obese,0.238
+depression,60-79,female,underweight,0.128
+depression,60-79,female,normal,0.149
+depression,60-79,female,overweight,0.087
+depression,60-79,female,obese,0.074
+depression,80+,male,underweight,0.096
+depression,80+,male,normal,0.049
+depression,80+,male,overweight,0.043
+depression,80+,male,obese,0.047
+depression,80+,female,underweight,0.087
+depression,80+,female,normal,0.099
+depression,80+,female,overweight,0.053
+depression,80+,female,obese,0.266
+alzheimers disease,0-19,male,underweight,0.033
+alzheimers disease,0-19,male,normal,0.059
+alzheimers disease,0-19,male,overweight,0.018
+alzheimers disease,0-19,male,obese,0.068
+alzheimers disease,0-19,female,underweight,0.031
+alzheimers disease,0-19,female,normal,0.098
+alzheimers disease,0-19,female,overweight,0.053
+alzheimers disease,0-19,female,obese,0.017
+alzheimers disease,20-39,male,underweight,0.062
+alzheimers disease,20-39,male,normal,0.087
+alzheimers disease,20-39,male,overweight,0.019
+alzheimers disease,20-39,male,obese,0.109
+alzheimers disease,20-39,female,underweight,0.069
+alzheimers disease,20-39,female,normal,0.063
+alzheimers disease,20-39,female,overweight,0.051
+alzheimers disease,20-39,female,obese,0.086
+alzheimers disease,40-59,male,underweight,0.032
+alzheimers disease,40-59,male,normal,0.011
+alzheimers disease,40-59,male,overweight,0.068
+alzheimers disease,40-59,male,obese,0.037
+alzheimers disease,40-59,female,underweight,0.033
+alzheimers disease,40-59,female,normal,0.04
+alzheimers disease,40-59,female,overweight,0.092
+alzheimers disease,40-59,female,obese,0.138
+alzheimers disease,60-79,male,underweight,0.053
+alzheimers disease,60-79,male,normal,0.161
+alzheimers disease,60-79,male,overweight,0.026
+alzheimers disease,60-79,male,obese,0.038
+alzheimers disease,60-79,female,underweight,0.134
+alzheimers disease,60-79,female,normal,0.112
+alzheimers disease,60-79,female,overweight,0.071
+alzheimers disease,60-79,female,obese,0.145
+alzheimers disease,80+,male,underweight,0.028
+alzheimers disease,80+,male,normal,0.082
+alzheimers disease,80+,male,overweight,0.13
+alzheimers disease,80+,male,obese,0.164
+alzheimers disease,80+,female,underweight,0.098
+alzheimers disease,80+,female,normal,0.039
+alzheimers disease,80+,female,overweight,0.079
+alzheimers disease,80+,female,obese,0.053
+parkinsons disease,0-19,male,underweight,0.026
+parkinsons disease,0-19,male,normal,0.092
+parkinsons disease,0-19,male,overweight,0.065
+parkinsons disease,0-19,male,obese,0.037
+parkinsons disease,0-19,female,underweight,0.02
+parkinsons disease,0-19,female,normal,0.039
+parkinsons disease,0-19,female,overweight,0.035
+parkinsons disease,0-19,female,obese,0.015
+parkinsons disease,20-39,male,underweight,0.042
+parkinsons disease,20-39,male,normal,0.024
+parkinsons disease,20-39,male,overweight,0.079
+parkinsons disease,20-39,male,obese,0.032
+parkinsons disease,20-39,female,underweight,0.011
+parkinsons disease,20-39,female,normal,0.01
+parkinsons disease,20-39,female,overweight,0.032
+parkinsons disease,20-39,female,obese,0.028
+parkinsons disease,40-59,male,underweight,0.075
+parkinsons disease,40-59,male,normal,0.098
+parkinsons disease,40-59,male,overweight,0.039
+parkinsons disease,40-59,male,obese,0.11
+parkinsons disease,40-59,female,underweight,0.054
+parkinsons disease,40-59,female,normal,0.067
+parkinsons disease,40-59,female,overweight,0.037
+parkinsons disease,40-59,female,obese,0.066
+parkinsons disease,60-79,male,underweight,0.118
+parkinsons disease,60-79,male,normal,0.111
+parkinsons disease,60-79,male,overweight,0.049
+parkinsons disease,60-79,male,obese,0.114
+parkinsons disease,60-79,female,underweight,0.05
+parkinsons disease,60-79,female,normal,0.029
+parkinsons disease,60-79,female,overweight,0.119
+parkinsons disease,60-79,female,obese,0.12
+parkinsons disease,80+,male,underweight,0.023
+parkinsons disease,80+,male,normal,0.027
+parkinsons disease,80+,male,overweight,0.062
+parkinsons disease,80+,male,obese,0.062
+parkinsons disease,80+,female,underweight,0.029
+parkinsons disease,80+,female,normal,0.09
+parkinsons disease,80+,female,overweight,0.02
+parkinsons disease,80+,female,obese,0.103
+liver cirrhosis,0-19,male,underweight,0.064
+liver cirrhosis,0-19,male,normal,0.078
+liver cirrhosis,0-19,male,overweight,0.063
+liver cirrhosis,0-19,male,obese,0.051
+liver cirrhosis,0-19,female,underweight,0.047
+liver cirrhosis,0-19,female,normal,0.09
+liver cirrhosis,0-19,female,overweight,0.097
+liver cirrhosis,0-19,female,obese,0.103
+liver cirrhosis,20-39,male,underweight,0.06
+liver cirrhosis,20-39,male,normal,0.051
+liver cirrhosis,20-39,male,overweight,0.075
+liver cirrhosis,20-39,male,obese,0.075
+liver cirrhosis,20-39,female,underweight,0.079
+liver cirrhosis,20-39,female,normal,0.015
+liver cirrhosis,20-39,female,overweight,0.044
+liver cirrhosis,20-39,female,obese,0.022
+liver cirrhosis,40-59,male,underweight,0.031
+liver cirrhosis,40-59,male,normal,0.053
+liver cirrhosis,40-59,male,overweight,0.047
+liver cirrhosis,40-59,male,obese,0.082
+liver cirrhosis,40-59,female,underweight,0.018
+liver cirrhosis,40-59,female,normal,0.093
+liver cirrhosis,40-59,female,overweight,0.012
+liver cirrhosis,40-59,female,obese,0.091
+liver cirrhosis,60-79,male,underweight,0.112
+liver cirrhosis,60-79,male,normal,0.054
+liver cirrhosis,60-79,male,overweight,0.151
+liver cirrhosis,60-79,male,obese,0.159
+liver cirrhosis,60-79,female,underweight,0.168
+liver cirrhosis,60-79,female,normal,0.08
+liver cirrhosis,60-79,female,overweight,0.168
+liver cirrhosis,60-79,female,obese,0.093
+liver cirrhosis,80+,male,underweight,0.116
+liver cirrhosis,80+,male,normal,0.069
+liver cirrhosis,80+,male,overweight,0.023
+liver cirrhosis,80+,male,obese,0.146
+liver cirrhosis,80+,female,underweight,0.031
+liver cirrhosis,80+,female,normal,0.153
+liver cirrhosis,80+,female,overweight,0.055
+liver cirrhosis,80+,female,obese,0.158
+colorectal cancer,0-19,male,underweight,0.084
+colorectal cancer,0-19,male,normal,0.017
+colorectal cancer,0-19,male,overweight,0.054
+colorectal cancer,0-19,male,obese,0.053
+colorectal cancer,0-19,female,underweight,0.039
+colorectal cancer,0-19,female,normal,0.034
+colorectal cancer,0-19,female,overweight,0.1
+colorectal cancer,0-19,female,obese,0.021
+colorectal cancer,20-39,male,underweight,0.062
+colorectal cancer,20-39,male,normal,0.085
+colorectal cancer,20-39,male,overweight,0.027
+colorectal cancer,20-39,male,obese,0.115
+colorectal cancer,20-39,female,underweight,0.085
+colorectal cancer,20-39,female,normal,0.041
+colorectal cancer,20-39,female,overweight,0.091
+colorectal cancer,20-39,female,obese,0.075
+colorectal cancer,40-59,male,underweight,0.033
+colorectal cancer,40-59,male,normal,0.083
+colorectal cancer,40-59,male,overweight,0.082
+colorectal cancer,40-59,male,obese,0.136
+colorectal cancer,40-59,female,underweight,0.051
+colorectal cancer,40-59,female,normal,0.093
+colorectal cancer,40-59,female,overweight,0.02
+colorectal cancer,40-59,female,obese,0.037
+colorectal cancer,60-79,male,underweight,0.064
+colorectal cancer,60-79,male,normal,0.065
+colorectal cancer,60-79,male,overweight,0.098
+colorectal cancer,60-79,male,obese,0.123
+colorectal cancer,60-79,female,underweight,0.094
+colorectal cancer,60-79,female,normal,0.109
+colorectal cancer,60-79,female,overweight,0.155
+colorectal cancer,60-79,female,obese,0.222
+colorectal cancer,80+,male,underweight,0.15
+colorectal cancer,80+,male,normal,0.024
+colorectal cancer,80+,male,overweight,0.067
+colorectal cancer,80+,male,obese,0.182
+colorectal cancer,80+,female,underweight,0.157
+colorectal cancer,80+,female,normal,0.17
+colorectal cancer,80+,female,overweight,0.037
+colorectal cancer,80+,female,obese,0.038
+prostate cancer,0-19,male,underweight,0.086
+prostate cancer,0-19,male,normal,0.072
+prostate cancer,0-19,male,overweight,0.071
+prostate cancer,0-19,male,obese,0.088
+prostate cancer,0-19,female,underweight,0.092
+prostate cancer,0-19,female,normal,0.042
+prostate cancer,0-19,female,overweight,0.036
+prostate cancer,0-19,female,obese,0.121
+prostate cancer,20-39,male,underweight,0.076
+prostate cancer,20-39,male,normal,0.073
+prostate cancer,20-39,male,overweight,0.041
+prostate cancer,20-39,male,obese,0.14
+prostate cancer,20-39,female,underweight,0.046
+prostate cancer,20-39,female,normal,0.037
+prostate cancer,20-39,female,overweight,0.051
+prostate cancer,20-39,female,obese,0.093
+prostate cancer,40-59,male,underweight,0.01
+prostate cancer,40-59,male,normal,0.059
+prostate cancer,40-59,male,overweight,0.071
+prostate cancer,40-59,male,obese,0.126
+prostate cancer,40-59,female,underweight,0.022
+prostate cancer,40-59,female,normal,0.064
+prostate cancer,40-59,female,overweight,0.018
+prostate cancer,40-59,female,obese,0.104
+prostate cancer,60-79,male,underweight,0.157
+prostate cancer,60-79,male,normal,0.112
+prostate cancer,60-79,male,overweight,0.05
+prostate cancer,60-79,male,obese,0.184
+prostate cancer,60-79,female,underweight,0.097
+prostate cancer,60-79,female,normal,0.131
+prostate cancer,60-79,female,overweight,0.15
+prostate cancer,60-79,female,obese,0.159
+prostate cancer,80+,male,underweight,0.05
+prostate cancer,80+,male,normal,0.078
+prostate cancer,80+,male,overweight,0.064
+prostate cancer,80+,male,obese,0.215
+prostate cancer,80+,female,underweight,0.104
+prostate cancer,80+,female,normal,0.141
+prostate cancer,80+,female,overweight,0.09
+prostate cancer,80+,female,obese,0.023
+ulcerative colitis,0-19,male,underweight,0.034
+ulcerative colitis,0-19,male,normal,0.06
+ulcerative colitis,0-19,male,overweight,0.063
+ulcerative colitis,0-19,male,obese,0.082
+ulcerative colitis,0-19,female,underweight,0.092
+ulcerative colitis,0-19,female,normal,0.073
+ulcerative colitis,0-19,female,overweight,0.056
+ulcerative colitis,0-19,female,obese,0.071
+ulcerative colitis,20-39,male,underweight,0.088
+ulcerative colitis,20-39,male,normal,0.012
+ulcerative colitis,20-39,male,overweight,0.051
+ulcerative colitis,20-39,male,obese,0.095
+ulcerative colitis,20-39,female,underweight,0.018
+ulcerative colitis,20-39,female,normal,0.077
+ulcerative colitis,20-39,female,overweight,0.056
+ulcerative colitis,20-39,female,obese,0.118
+ulcerative colitis,40-59,male,underweight,0.087
+ulcerative colitis,40-59,male,normal,0.069
+ulcerative colitis,40-59,male,overweight,0.074
+ulcerative colitis,40-59,male,obese,0.051
+ulcerative colitis,40-59,female,underweight,0.093
+ulcerative colitis,40-59,female,normal,0.038
+ulcerative colitis,40-59,female,overweight,0.025
+ulcerative colitis,40-59,female,obese,0.044
+ulcerative colitis,60-79,male,underweight,0.156
+ulcerative colitis,60-79,male,normal,0.073
+ulcerative colitis,60-79,male,overweight,0.188
+ulcerative colitis,60-79,male,obese,0.051
+ulcerative colitis,60-79,female,underweight,0.043
+ulcerative colitis,60-79,female,normal,0.156
+ulcerative colitis,60-79,female,overweight,0.039
+ulcerative colitis,60-79,female,obese,0.084
+ulcerative colitis,80+,male,underweight,0.055
+ulcerative colitis,80+,male,normal,0.106
+ulcerative colitis,80+,male,overweight,0.165
+ulcerative colitis,80+,male,obese,0.206
+ulcerative colitis,80+,female,underweight,0.106
+ulcerative colitis,80+,female,normal,0.168
+ulcerative colitis,80+,female,overweight,0.055
+ulcerative colitis,80+,female,obese,0.206
+pancreatitis,0-19,male,underweight,0.069
+pancreatitis,0-19,male,normal,0.085
+pancreatitis,0-19,male,overweight,0.026
+pancreatitis,0-19,male,obese,0.08
+pancreatitis,0-19,female,underweight,0.034
+pancreatitis,0-19,female,normal,0.034
+pancreatitis,0-19,female,overweight,0.094
+pancreatitis,0-19,female,obese,0.078
+pancreatitis,20-39,male,underweight,0.035
+pancreatitis,20-39,male,normal,0.093
+pancreatitis,20-39,male,overweight,0.052
+pancreatitis,20-39,male,obese,0.034
+pancreatitis,20-39,female,underweight,0.081
+pancreatitis,20-39,female,normal,0.093
+pancreatitis,20-39,female,overweight,0.051
+pancreatitis,20-39,female,obese,0.118
+pancreatitis,40-59,male,underweight,0.067
+pancreatitis,40-59,male,normal,0.073
+pancreatitis,40-59,male,overweight,0.015
+pancreatitis,40-59,male,obese,0.129
+pancreatitis,40-59,female,underweight,0.053
+pancreatitis,40-59,female,normal,0.027
+pancreatitis,40-59,female,overweight,0.074
+pancreatitis,40-59,female,obese,0.054
+pancreatitis,60-79,male,underweight,0.084
+pancreatitis,60-79,male,normal,0.121
+pancreatitis,60-79,male,overweight,0.118
+pancreatitis,60-79,male,obese,0.219
+pancreatitis,60-79,female,underweight,0.136
+pancreatitis,60-79,female,normal,0.096
+pancreatitis,60-79,female,overweight,0.097
+pancreatitis,60-79,female,obese,0.022
+pancreatitis,80+,male,underweight,0.126
+pancreatitis,80+,male,normal,0.034
+pancreatitis,80+,male,overweight,0.147
+pancreatitis,80+,male,obese,0.207
+pancreatitis,80+,female,underweight,0.079
+pancreatitis,80+,female,normal,0.079
+pancreatitis,80+,female,overweight,0.021
+pancreatitis,80+,female,obese,0.065
+kidney stones,0-19,male,underweight,0.036
+kidney stones,0-19,male,normal,0.084
+kidney stones,0-19,male,overweight,0.079
+kidney stones,0-19,male,obese,0.084
+kidney stones,0-19,female,underweight,0.03
+kidney stones,0-19,female,normal,0.029
+kidney stones,0-19,female,overweight,0.095
+kidney stones,0-19,female,obese,0.085
+kidney stones,20-39,male,underweight,0.067
+kidney stones,20-39,male,normal,0.037
+kidney stones,20-39,male,overweight,0.098
+kidney stones,20-39,male,obese,0.051
+kidney stones,20-39,female,underweight,0.042
+kidney stones,20-39,female,normal,0.08
+kidney stones,20-39,female,overweight,0.055
+kidney stones,20-39,female,obese,0.057
+kidney stones,40-59,male,underweight,0.084
+kidney stones,40-59,male,normal,0.066
+kidney stones,40-59,male,overweight,0.048
+kidney stones,40-59,male,obese,0.049
+kidney stones,40-59,female,underweight,0.03
+kidney stones,40-59,female,normal,0.055
+kidney stones,40-59,female,overweight,0.043
+kidney stones,40-59,female,obese,0.049
+kidney stones,60-79,male,underweight,0.122
+kidney stones,60-79,male,normal,0.131
+kidney stones,60-79,male,overweight,0.036
+kidney stones,60-79,male,obese,0.029
+kidney stones,60-79,female,underweight,0.118
+kidney stones,60-79,female,normal,0.099
+kidney stones,60-79,female,overweight,0.03
+kidney stones,60-79,female,obese,0.076
+kidney stones,80+,male,underweight,0.082
+kidney stones,80+,male,normal,0.188
+kidney stones,80+,male,overweight,0.161
+kidney stones,80+,male,obese,0.171
+kidney stones,80+,female,underweight,0.025
+kidney stones,80+,female,normal,0.086
+kidney stones,80+,female,overweight,0.074
+kidney stones,80+,female,obese,0.185
+inflammatory bowel disease,0-19,male,underweight,0.013
+inflammatory bowel disease,0-19,male,normal,0.05
+inflammatory bowel disease,0-19,male,overweight,0.031
+inflammatory bowel disease,0-19,male,obese,0.038
+inflammatory bowel disease,0-19,female,underweight,0.054
+inflammatory bowel disease,0-19,female,normal,0.036
+inflammatory bowel disease,0-19,female,overweight,0.051
+inflammatory bowel disease,0-19,female,obese,0.072
+inflammatory bowel disease,20-39,male,underweight,0.097
+inflammatory bowel disease,20-39,male,normal,0.036
+inflammatory bowel disease,20-39,male,overweight,0.063
+inflammatory bowel disease,20-39,male,obese,0.024
+inflammatory bowel disease,20-39,female,underweight,0.011
+inflammatory bowel disease,20-39,female,normal,0.059
+inflammatory bowel disease,20-39,female,overweight,0.024
+inflammatory bowel disease,20-39,female,obese,0.092
+inflammatory bowel disease,40-59,male,underweight,0.075
+inflammatory bowel disease,40-59,male,normal,0.089
+inflammatory bowel disease,40-59,male,overweight,0.073
+inflammatory bowel disease,40-59,male,obese,0.107
+inflammatory bowel disease,40-59,female,underweight,0.012
+inflammatory bowel disease,40-59,female,normal,0.043
+inflammatory bowel disease,40-59,female,overweight,0.091
+inflammatory bowel disease,40-59,female,obese,0.057
+inflammatory bowel disease,60-79,male,underweight,0.062
+inflammatory bowel disease,60-79,male,normal,0.144
+inflammatory bowel disease,60-79,male,overweight,0.066
+inflammatory bowel disease,60-79,male,obese,0.121
+inflammatory bowel disease,60-79,female,underweight,0.153
+inflammatory bowel disease,60-79,female,normal,0.067
+inflammatory bowel disease,60-79,female,overweight,0.064
+inflammatory bowel disease,60-79,female,obese,0.053
+inflammatory bowel disease,80+,male,underweight,0.099
+inflammatory bowel disease,80+,male,normal,0.045
+inflammatory bowel disease,80+,male,overweight,0.157
+inflammatory bowel disease,80+,male,obese,0.14
+inflammatory bowel disease,80+,female,underweight,0.124
+inflammatory bowel disease,80+,female,normal,0.076
+inflammatory bowel disease,80+,female,overweight,0.045
+inflammatory bowel disease,80+,female,obese,0.037
+cataracts,0-19,male,underweight,0.015
+cataracts,0-19,male,normal,0.068
+cataracts,0-19,male,overweight,0.04
+cataracts,0-19,male,obese,0.099
+cataracts,0-19,female,underweight,0.015
+cataracts,0-19,female,normal,0.028
+cataracts,0-19,female,overweight,0.051
+cataracts,0-19,female,obese,0.017
+cataracts,20-39,male,underweight,0.064
+cataracts,20-39,male,normal,0.064
+cataracts,20-39,male,overweight,0.059
+cataracts,20-39,male,obese,0.125
+cataracts,20-39,female,underweight,0.063
+cataracts,20-39,female,normal,0.013
+cataracts,20-39,female,overweight,0.025
+cataracts,20-39,female,obese,0.032
+cataracts,40-59,male,underweight,0.04
+cataracts,40-59,male,normal,0.036
+cataracts,40-59,male,overweight,0.063
+cataracts,40-59,male,obese,0.038
+cataracts,40-59,female,underweight,0.092
+cataracts,40-59,female,normal,0.028
+cataracts,40-59,female,overweight,0.017
+cataracts,40-59,female,obese,0.065
+cataracts,60-79,male,underweight,0.142
+cataracts,60-79,male,normal,0.042
+cataracts,60-79,male,overweight,0.057
+cataracts,60-79,male,obese,0.192
+cataracts,60-79,female,underweight,0.138
+cataracts,60-79,female,normal,0.087
+cataracts,60-79,female,overweight,0.021
+cataracts,60-79,female,obese,0.155
+cataracts,80+,male,underweight,0.028
+cataracts,80+,male,normal,0.037
+cataracts,80+,male,overweight,0.057
+cataracts,80+,male,obese,0.091
+cataracts,80+,female,underweight,0.059
+cataracts,80+,female,normal,0.119
+cataracts,80+,female,overweight,0.1
+cataracts,80+,female,obese,0.161
+skin cancer,0-19,male,underweight,0.07
+skin cancer,0-19,male,normal,0.015
+skin cancer,0-19,male,overweight,0.097
+skin cancer,0-19,male,obese,0.056
+skin cancer,0-19,female,underweight,0.077
+skin cancer,0-19,female,normal,0.035
+skin cancer,0-19,female,overweight,0.078
+skin cancer,0-19,female,obese,0.127
+skin cancer,20-39,male,underweight,0.015
+skin cancer,20-39,male,normal,0.048
+skin cancer,20-39,male,overweight,0.061
+skin cancer,20-39,male,obese,0.118
+skin cancer,20-39,female,underweight,0.052
+skin cancer,20-39,female,normal,0.028
+skin cancer,20-39,female,overweight,0.051
+skin cancer,20-39,female,obese,0.083
+skin cancer,40-59,male,underweight,0.019
+skin cancer,40-59,male,normal,0.073
+skin cancer,40-59,male,overweight,0.026
+skin cancer,40-59,male,obese,0.016
+skin cancer,40-59,female,underweight,0.058
+skin cancer,40-59,female,normal,0.016
+skin cancer,40-59,female,overweight,0.07
+skin cancer,40-59,female,obese,0.036
+skin cancer,60-79,male,underweight,0.073
+skin cancer,60-79,male,normal,0.063
+skin cancer,60-79,male,overweight,0.129
+skin cancer,60-79,male,obese,0.096
+skin cancer,60-79,female,underweight,0.031
+skin cancer,60-79,female,normal,0.159
+skin cancer,60-79,female,overweight,0.149
+skin cancer,60-79,female,obese,0.239
+skin cancer,80+,male,underweight,0.155
+skin cancer,80+,male,normal,0.063
+skin cancer,80+,male,overweight,0.084
+skin cancer,80+,male,obese,0.223
+skin cancer,80+,female,underweight,0.142
+skin cancer,80+,female,normal,0.082
+skin cancer,80+,female,overweight,0.025
+skin cancer,80+,female,obese,0.181
+atrial fibrillation,0-19,male,underweight,0.07
+atrial fibrillation,0-19,male,normal,0.096
+atrial fibrillation,0-19,male,overweight,0.091
+atrial fibrillation,0-19,male,obese,0.116
+atrial fibrillation,0-19,female,underweight,0.021
+atrial fibrillation,0-19,female,normal,0.073
+atrial fibrillation,0-19,female,overweight,0.031
+atrial fibrillation,0-19,female,obese,0.035
+atrial fibrillation,20-39,male,underweight,0.022
+atrial fibrillation,20-39,male,normal,0.098
+atrial fibrillation,20-39,male,overweight,0.093
+atrial fibrillation,20-39,male,obese,0.042
+atrial fibrillation,20-39,female,underweight,0.036
+atrial fibrillation,20-39,female,normal,0.06
+atrial fibrillation,20-39,female,overweight,0.068
+atrial fibrillation,20-39,female,obese,0.047
+atrial fibrillation,40-59,male,underweight,0.048
+atrial fibrillation,40-59,male,normal,0.071
+atrial fibrillation,40-59,male,overweight,0.083
+atrial fibrillation,40-59,male,obese,0.079
+atrial fibrillation,40-59,female,underweight,0.089
+atrial fibrillation,40-59,female,normal,0.029
+atrial fibrillation,40-59,female,overweight,0.09
+atrial fibrillation,40-59,female,obese,0.135
+atrial fibrillation,60-79,male,underweight,0.083
+atrial fibrillation,60-79,male,normal,0.045
+atrial fibrillation,60-79,male,overweight,0.045
+atrial fibrillation,60-79,male,obese,0.096
+atrial fibrillation,60-79,female,underweight,0.159
+atrial fibrillation,60-79,female,normal,0.116
+atrial fibrillation,60-79,female,overweight,0.161
+atrial fibrillation,60-79,female,obese,0.074
+atrial fibrillation,80+,male,underweight,0.106
+atrial fibrillation,80+,male,normal,0.046
+atrial fibrillation,80+,male,overweight,0.039
+atrial fibrillation,80+,male,obese,0.223
+atrial fibrillation,80+,female,underweight,0.087
+atrial fibrillation,80+,female,normal,0.155
+atrial fibrillation,80+,female,overweight,0.044
+atrial fibrillation,80+,female,obese,0.213
+dementia,0-19,male,underweight,0.089
+dementia,0-19,male,normal,0.056
+dementia,0-19,male,overweight,0.017
+dementia,0-19,male,obese,0.042
+dementia,0-19,female,underweight,0.096
+dementia,0-19,female,normal,0.053
+dementia,0-19,female,overweight,0.059
+dementia,0-19,female,obese,0.022
+dementia,20-39,male,underweight,0.036
+dementia,20-39,male,normal,0.029
+dementia,20-39,male,overweight,0.096
+dementia,20-39,male,obese,0.138
+dementia,20-39,female,underweight,0.064
+dementia,20-39,female,normal,0.021
+dementia,20-39,female,overweight,0.035
+dementia,20-39,female,obese,0.141
+dementia,40-59,male,underweight,0.055
+dementia,40-59,male,normal,0.074
+dementia,40-59,male,overweight,0.024
+dementia,40-59,male,obese,0.046
+dementia,40-59,female,underweight,0.042
+dementia,40-59,female,normal,0.086
+dementia,40-59,female,overweight,0.055
+dementia,40-59,female,obese,0.048
+dementia,60-79,male,underweight,0.103
+dementia,60-79,male,normal,0.021
+dementia,60-79,male,overweight,0.099
+dementia,60-79,male,obese,0.073
+dementia,60-79,female,underweight,0.047
+dementia,60-79,female,normal,0.108
+dementia,60-79,female,overweight,0.056
+dementia,60-79,female,obese,0.04
+dementia,80+,male,underweight,0.031
+dementia,80+,male,normal,0.081
+dementia,80+,male,overweight,0.152
+dementia,80+,male,obese,0.08
+dementia,80+,female,underweight,0.114
+dementia,80+,female,normal,0.018
+dementia,80+,female,overweight,0.043
+dementia,80+,female,obese,0.156
+migraine,0-19,male,underweight,0.056
+migraine,0-19,male,normal,0.062
+migraine,0-19,male,overweight,0.095
+migraine,0-19,male,obese,0.015
+migraine,0-19,female,underweight,0.07
+migraine,0-19,female,normal,0.036
+migraine,0-19,female,overweight,0.098
+migraine,0-19,female,obese,0.115
+migraine,20-39,male,underweight,0.017
+migraine,20-39,male,normal,0.067
+migraine,20-39,male,overweight,0.098
+migraine,20-39,male,obese,0.109
+migraine,20-39,female,underweight,0.055
+migraine,20-39,female,normal,0.058
+migraine,20-39,female,overweight,0.019
+migraine,20-39,female,obese,0.118
+migraine,40-59,male,underweight,0.059
+migraine,40-59,male,normal,0.011
+migraine,40-59,male,overweight,0.099
+migraine,40-59,male,obese,0.101
+migraine,40-59,female,underweight,0.013
+migraine,40-59,female,normal,0.088
+migraine,40-59,female,overweight,0.032
+migraine,40-59,female,obese,0.052
+migraine,60-79,male,underweight,0.062
+migraine,60-79,male,normal,0.086
+migraine,60-79,male,overweight,0.099
+migraine,60-79,male,obese,0.1
+migraine,60-79,female,underweight,0.065
+migraine,60-79,female,normal,0.025
+migraine,60-79,female,overweight,0.123
+migraine,60-79,female,obese,0.097
+migraine,80+,male,underweight,0.068
+migraine,80+,male,normal,0.111
+migraine,80+,male,overweight,0.072
+migraine,80+,male,obese,0.03
+migraine,80+,female,underweight,0.113
+migraine,80+,female,normal,0.062
+migraine,80+,female,overweight,0.058
+migraine,80+,female,obese,0.231
+arthritis,0-19,male,underweight,0.039
+arthritis,0-19,male,normal,0.076
+arthritis,0-19,male,overweight,0.073
+arthritis,0-19,male,obese,0.021
+arthritis,0-19,female,underweight,0.084
+arthritis,0-19,female,normal,0.092
+arthritis,0-19,female,overweight,0.027
+arthritis,0-19,female,obese,0.038
+arthritis,20-39,male,underweight,0.066
+arthritis,20-39,male,normal,0.043
+arthritis,20-39,male,overweight,0.026
+arthritis,20-39,male,obese,0.083
+arthritis,20-39,female,underweight,0.071
+arthritis,20-39,female,normal,0.025
+arthritis,20-39,female,overweight,0.077
+arthritis,20-39,female,obese,0.031
+arthritis,40-59,male,underweight,0.027
+arthritis,40-59,male,normal,0.079
+arthritis,40-59,male,overweight,0.035
+arthritis,40-59,male,obese,0.107
+arthritis,40-59,female,underweight,0.047
+arthritis,40-59,female,normal,0.057
+arthritis,40-59,female,overweight,0.054
+arthritis,40-59,female,obese,0.104
+arthritis,60-79,male,underweight,0.077
+arthritis,60-79,male,normal,0.163
+arthritis,60-79,male,overweight,0.048
+arthritis,60-79,male,obese,0.034
+arthritis,60-79,female,underweight,0.095
+arthritis,60-79,female,normal,0.119
+arthritis,60-79,female,overweight,0.067
+arthritis,60-79,female,obese,0.051
+arthritis,80+,male,underweight,0.091
+arthritis,80+,male,normal,0.176
+arthritis,80+,male,overweight,0.07
+arthritis,80+,male,obese,0.025
+arthritis,80+,female,underweight,0.133
+arthritis,80+,female,normal,0.128
+arthritis,80+,female,overweight,0.066
+arthritis,80+,female,obese,0.161
+psoriasis,0-19,male,underweight,0.068
+psoriasis,0-19,male,normal,0.011
+psoriasis,0-19,male,overweight,0.08
+psoriasis,0-19,male,obese,0.115
+psoriasis,0-19,female,underweight,0.07
+psoriasis,0-19,female,normal,0.019
+psoriasis,0-19,female,overweight,0.087
+psoriasis,0-19,female,obese,0.065
+psoriasis,20-39,male,underweight,0.09
+psoriasis,20-39,male,normal,0.097
+psoriasis,20-39,male,overweight,0.022
+psoriasis,20-39,male,obese,0.054
+psoriasis,20-39,female,underweight,0.079
+psoriasis,20-39,female,normal,0.018
+psoriasis,20-39,female,overweight,0.095
+psoriasis,20-39,female,obese,0.035
+psoriasis,40-59,male,underweight,0.016
+psoriasis,40-59,male,normal,0.04
+psoriasis,40-59,male,overweight,0.072
+psoriasis,40-59,male,obese,0.06
+psoriasis,40-59,female,underweight,0.1
+psoriasis,40-59,female,normal,0.076
+psoriasis,40-59,female,overweight,0.042
+psoriasis,40-59,female,obese,0.109
+psoriasis,60-79,male,underweight,0.056
+psoriasis,60-79,male,normal,0.109
+psoriasis,60-79,male,overweight,0.064
+psoriasis,60-79,male,obese,0.179
+psoriasis,60-79,female,underweight,0.123
+psoriasis,60-79,female,normal,0.182
+psoriasis,60-79,female,overweight,0.111
+psoriasis,60-79,female,obese,0.096
+psoriasis,80+,male,underweight,0.084
+psoriasis,80+,male,normal,0.034
+psoriasis,80+,male,overweight,0.155
+psoriasis,80+,male,obese,0.149
+psoriasis,80+,female,underweight,0.067
+psoriasis,80+,female,normal,0.059
+psoriasis,80+,female,overweight,0.059
+psoriasis,80+,female,obese,0.199
+sleep apnea,0-19,male,underweight,0.073
+sleep apnea,0-19,male,normal,0.047
+sleep apnea,0-19,male,overweight,0.08
+sleep apnea,0-19,male,obese,0.068
+sleep apnea,0-19,female,underweight,0.044
+sleep apnea,0-19,female,normal,0.02
+sleep apnea,0-19,female,overweight,0.076
+sleep apnea,0-19,female,obese,0.017
+sleep apnea,20-39,male,underweight,0.014
+sleep apnea,20-39,male,normal,0.068
+sleep apnea,20-39,male,overweight,0.066
+sleep apnea,20-39,male,obese,0.05
+sleep apnea,20-39,female,underweight,0.029
+sleep apnea,20-39,female,normal,0.044
+sleep apnea,20-39,female,overweight,0.09
+sleep apnea,20-39,female,obese,0.074
+sleep apnea,40-59,male,underweight,0.01
+sleep apnea,40-59,male,normal,0.011
+sleep apnea,40-59,male,overweight,0.034
+sleep apnea,40-59,male,obese,0.132
+sleep apnea,40-59,female,underweight,0.068
+sleep apnea,40-59,female,normal,0.056
+sleep apnea,40-59,female,overweight,0.085
+sleep apnea,40-59,female,obese,0.036
+sleep apnea,60-79,male,underweight,0.15
+sleep apnea,60-79,male,normal,0.089
+sleep apnea,60-79,male,overweight,0.034
+sleep apnea,60-79,male,obese,0.135
+sleep apnea,60-79,female,underweight,0.029
+sleep apnea,60-79,female,normal,0.123
+sleep apnea,60-79,female,overweight,0.018
+sleep apnea,60-79,female,obese,0.046
+sleep apnea,80+,male,underweight,0.126
+sleep apnea,80+,male,normal,0.033
+sleep apnea,80+,male,overweight,0.066
+sleep apnea,80+,male,obese,0.177
+sleep apnea,80+,female,underweight,0.09
+sleep apnea,80+,female,normal,0.07
+sleep apnea,80+,female,overweight,0.144
+sleep apnea,80+,female,obese,0.035
+obesity,0-19,male,underweight,0.088
+obesity,0-19,male,normal,0.082
+obesity,0-19,male,overweight,0.016
+obesity,0-19,male,obese,0.017
+obesity,0-19,female,underweight,0.047
+obesity,0-19,female,normal,0.078
+obesity,0-19,female,overweight,0.055
+obesity,0-19,female,obese,0.074
+obesity,20-39,male,underweight,0.03
+obesity,20-39,male,normal,0.026
+obesity,20-39,male,overweight,0.061
+obesity,20-39,male,obese,0.045
+obesity,20-39,female,underweight,0.029
+obesity,20-39,female,normal,0.045
+obesity,20-39,female,overweight,0.09
+obesity,20-39,female,obese,0.066
+obesity,40-59,male,underweight,0.066
+obesity,40-59,male,normal,0.06
+obesity,40-59,male,overweight,0.095
+obesity,40-59,male,obese,0.02
+obesity,40-59,female,underweight,0.026
+obesity,40-59,female,normal,0.071
+obesity,40-59,female,overweight,0.013
+obesity,40-59,female,obese,0.064
+obesity,60-79,male,underweight,0.043
+obesity,60-79,male,normal,0.055
+obesity,60-79,male,overweight,0.024
+obesity,60-79,male,obese,0.228
+obesity,60-79,female,underweight,0.143
+obesity,60-79,female,normal,0.074
+obesity,60-79,female,overweight,0.02
+obesity,60-79,female,obese,0.037
+obesity,80+,male,underweight,0.164
+obesity,80+,male,normal,0.083
+obesity,80+,male,overweight,0.151
+obesity,80+,male,obese,0.101
+obesity,80+,female,underweight,0.068
+obesity,80+,female,normal,0.136
+obesity,80+,female,overweight,0.021
+obesity,80+,female,obese,0.157
+anemia,0-19,male,underweight,0.062
+anemia,0-19,male,normal,0.049
+anemia,0-19,male,overweight,0.075
+anemia,0-19,male,obese,0.088
+anemia,0-19,female,underweight,0.049
+anemia,0-19,female,normal,0.031
+anemia,0-19,female,overweight,0.08
+anemia,0-19,female,obese,0.035
+anemia,20-39,male,underweight,0.051
+anemia,20-39,male,normal,0.046
+anemia,20-39,male,overweight,0.027
+anemia,20-39,male,obese,0.096
+anemia,20-39,female,underweight,0.047
+anemia,20-39,female,normal,0.043
+anemia,20-39,female,overweight,0.015
+anemia,20-39,female,obese,0.037
+anemia,40-59,male,underweight,0.076
+anemia,40-59,male,normal,0.081
+anemia,40-59,male,overweight,0.051
+anemia,40-59,male,obese,0.105
+anemia,40-59,female,underweight,0.09
+anemia,40-59,female,normal,0.059
+anemia,40-59,female,overweight,0.079
+anemia,40-59,female,obese,0.124
+anemia,60-79,male,underweight,0.104
+anemia,60-79,male,normal,0.131
+anemia,60-79,male,overweight,0.091
+anemia,60-79,male,obese,0.126
+anemia,60-79,female,underweight,0.025
+anemia,60-79,female,normal,0.13
+anemia,60-79,female,overweight,0.15
+anemia,60-79,female,obese,0.085
+anemia,80+,male,underweight,0.129
+anemia,80+,male,normal,0.136
+anemia,80+,male,overweight,0.092
+anemia,80+,male,obese,0.134
+anemia,80+,female,underweight,0.08
+anemia,80+,female,normal,0.127
+anemia,80+,female,overweight,0.093
+anemia,80+,female,obese,0.09
+chronic fatigue syndrome,0-19,male,underweight,0.091
+chronic fatigue syndrome,0-19,male,normal,0.065
+chronic fatigue syndrome,0-19,male,overweight,0.081
+chronic fatigue syndrome,0-19,male,obese,0.12
+chronic fatigue syndrome,0-19,female,underweight,0.031
+chronic fatigue syndrome,0-19,female,normal,0.071
+chronic fatigue syndrome,0-19,female,overweight,0.036
+chronic fatigue syndrome,0-19,female,obese,0.075
+chronic fatigue syndrome,20-39,male,underweight,0.093
+chronic fatigue syndrome,20-39,male,normal,0.043
+chronic fatigue syndrome,20-39,male,overweight,0.078
+chronic fatigue syndrome,20-39,male,obese,0.124
+chronic fatigue syndrome,20-39,female,underweight,0.082
+chronic fatigue syndrome,20-39,female,normal,0.056
+chronic fatigue syndrome,20-39,female,overweight,0.021
+chronic fatigue syndrome,20-39,female,obese,0.119
+chronic fatigue syndrome,40-59,male,underweight,0.028
+chronic fatigue syndrome,40-59,male,normal,0.061
+chronic fatigue syndrome,40-59,male,overweight,0.043
+chronic fatigue syndrome,40-59,male,obese,0.027
+chronic fatigue syndrome,40-59,female,underweight,0.033
+chronic fatigue syndrome,40-59,female,normal,0.085
+chronic fatigue syndrome,40-59,female,overweight,0.013
+chronic fatigue syndrome,40-59,female,obese,0.052
+chronic fatigue syndrome,60-79,male,underweight,0.128
+chronic fatigue syndrome,60-79,male,normal,0.021
+chronic fatigue syndrome,60-79,male,overweight,0.052
+chronic fatigue syndrome,60-79,male,obese,0.037
+chronic fatigue syndrome,60-79,female,underweight,0.064
+chronic fatigue syndrome,60-79,female,normal,0.146
+chronic fatigue syndrome,60-79,female,overweight,0.125
+chronic fatigue syndrome,60-79,female,obese,0.191
+chronic fatigue syndrome,80+,male,underweight,0.088
+chronic fatigue syndrome,80+,male,normal,0.056
+chronic fatigue syndrome,80+,male,overweight,0.044
+chronic fatigue syndrome,80+,male,obese,0.054
+chronic fatigue syndrome,80+,female,underweight,0.065
+chronic fatigue syndrome,80+,female,normal,0.136
+chronic fatigue syndrome,80+,female,overweight,0.063
+chronic fatigue syndrome,80+,female,obese,0.239
+glaucoma,0-19,male,underweight,0.093
+glaucoma,0-19,male,normal,0.054
+glaucoma,0-19,male,overweight,0.095
+glaucoma,0-19,male,obese,0.119
+glaucoma,0-19,female,underweight,0.046
+glaucoma,0-19,female,normal,0.089
+glaucoma,0-19,female,overweight,0.071
+glaucoma,0-19,female,obese,0.088
+glaucoma,20-39,male,underweight,0.069
+glaucoma,20-39,male,normal,0.021
+glaucoma,20-39,male,overweight,0.02
+glaucoma,20-39,male,obese,0.058
+glaucoma,20-39,female,underweight,0.057
+glaucoma,20-39,female,normal,0.013
+glaucoma,20-39,female,overweight,0.052
+glaucoma,20-39,female,obese,0.084
+glaucoma,40-59,male,underweight,0.057
+glaucoma,40-59,male,normal,0.039
+glaucoma,40-59,male,overweight,0.091
+glaucoma,40-59,male,obese,0.11
+glaucoma,40-59,female,underweight,0.046
+glaucoma,40-59,female,normal,0.072
+glaucoma,40-59,female,overweight,0.098
+glaucoma,40-59,female,obese,0.043
+glaucoma,60-79,male,underweight,0.079
+glaucoma,60-79,male,normal,0.171
+glaucoma,60-79,male,overweight,0.109
+glaucoma,60-79,male,obese,0.079
+glaucoma,60-79,female,underweight,0.138
+glaucoma,60-79,female,normal,0.169
+glaucoma,60-79,female,overweight,0.141
+glaucoma,60-79,female,obese,0.113
+glaucoma,80+,male,underweight,0.175
+glaucoma,80+,male,normal,0.101
+glaucoma,80+,male,overweight,0.155
+glaucoma,80+,male,obese,0.243
+glaucoma,80+,female,underweight,0.051
+glaucoma,80+,female,normal,0.066
+glaucoma,80+,female,overweight,0.136
+glaucoma,80+,female,obese,0.168
+osteoarthritis,0-19,male,underweight,0.055
+osteoarthritis,0-19,male,normal,0.094
+osteoarthritis,0-19,male,overweight,0.048
+osteoarthritis,0-19,male,obese,0.08
+osteoarthritis,0-19,female,underweight,0.027
+osteoarthritis,0-19,female,normal,0.087
+osteoarthritis,0-19,female,overweight,0.061
+osteoarthritis,0-19,female,obese,0.108
+osteoarthritis,20-39,male,underweight,0.092
+osteoarthritis,20-39,male,normal,0.041
+osteoarthritis,20-39,male,overweight,0.059
+osteoarthritis,20-39,male,obese,0.038
+osteoarthritis,20-39,female,underweight,0.067
+osteoarthritis,20-39,female,normal,0.041
+osteoarthritis,20-39,female,overweight,0.086
+osteoarthritis,20-39,female,obese,0.062
+osteoarthritis,40-59,male,underweight,0.098
+osteoarthritis,40-59,male,normal,0.06
+osteoarthritis,40-59,male,overweight,0.032
+osteoarthritis,40-59,male,obese,0.037
+osteoarthritis,40-59,female,underweight,0.04
+osteoarthritis,40-59,female,normal,0.083
+osteoarthritis,40-59,female,overweight,0.034
+osteoarthritis,40-59,female,obese,0.082
+osteoarthritis,60-79,male,underweight,0.17
+osteoarthritis,60-79,male,normal,0.111
+osteoarthritis,60-79,male,overweight,0.07
+osteoarthritis,60-79,male,obese,0.22
+osteoarthritis,60-79,female,underweight,0.073
+osteoarthritis,60-79,female,normal,0.053
+osteoarthritis,60-79,female,overweight,0.156
+osteoarthritis,60-79,female,obese,0.121
+osteoarthritis,80+,male,underweight,0.049
+osteoarthritis,80+,male,normal,0.021
+osteoarthritis,80+,male,overweight,0.092
+osteoarthritis,80+,male,obese,0.048
+osteoarthritis,80+,female,underweight,0.095
+osteoarthritis,80+,female,normal,0.126
+osteoarthritis,80+,female,overweight,0.029
+osteoarthritis,80+,female,obese,0.026
+eczema,0-19,male,underweight,0.017
+eczema,0-19,male,normal,0.083
+eczema,0-19,male,overweight,0.033
+eczema,0-19,male,obese,0.081
+eczema,0-19,female,underweight,0.066
+eczema,0-19,female,normal,0.08
+eczema,0-19,female,overweight,0.026
+eczema,0-19,female,obese,0.126
+eczema,20-39,male,underweight,0.076
+eczema,20-39,male,normal,0.036
+eczema,20-39,male,overweight,0.013
+eczema,20-39,male,obese,0.032
+eczema,20-39,female,underweight,0.04
+eczema,20-39,female,normal,0.041
+eczema,20-39,female,overweight,0.043
+eczema,20-39,female,obese,0.015
+eczema,40-59,male,underweight,0.023
+eczema,40-59,male,normal,0.018
+eczema,40-59,male,overweight,0.059
+eczema,40-59,male,obese,0.122
+eczema,40-59,female,underweight,0.091
+eczema,40-59,female,normal,0.017
+eczema,40-59,female,overweight,0.046
+eczema,40-59,female,obese,0.034
+eczema,60-79,male,underweight,0.043
+eczema,60-79,male,normal,0.062
+eczema,60-79,male,overweight,0.149
+eczema,60-79,male,obese,0.215
+eczema,60-79,female,underweight,0.05
+eczema,60-79,female,normal,0.023
+eczema,60-79,female,overweight,0.183
+eczema,60-79,female,obese,0.104
+eczema,80+,male,underweight,0.088
+eczema,80+,male,normal,0.117
+eczema,80+,male,overweight,0.095
+eczema,80+,male,obese,0.068
+eczema,80+,female,underweight,0.038
+eczema,80+,female,normal,0.032
+eczema,80+,female,overweight,0.068
+eczema,80+,female,obese,0.105
+hepatitis b,0-19,male,underweight,0.089
+hepatitis b,0-19,male,normal,0.047
+hepatitis b,0-19,male,overweight,0.02
+hepatitis b,0-19,male,obese,0.061
+hepatitis b,0-19,female,underweight,0.048
+hepatitis b,0-19,female,normal,0.095
+hepatitis b,0-19,female,overweight,0.02
+hepatitis b,0-19,female,obese,0.116
+hepatitis b,20-39,male,underweight,0.099
+hepatitis b,20-39,male,normal,0.064
+hepatitis b,20-39,male,overweight,0.019
+hepatitis b,20-39,male,obese,0.039
+hepatitis b,20-39,female,underweight,0.029
+hepatitis b,20-39,female,normal,0.07
+hepatitis b,20-39,female,overweight,0.079
+hepatitis b,20-39,female,obese,0.116
+hepatitis b,40-59,male,underweight,0.079
+hepatitis b,40-59,male,normal,0.038
+hepatitis b,40-59,male,overweight,0.026
+hepatitis b,40-59,male,obese,0.06
+hepatitis b,40-59,female,underweight,0.054
+hepatitis b,40-59,female,normal,0.018
+hepatitis b,40-59,female,overweight,0.096
+hepatitis b,40-59,female,obese,0.076
+hepatitis b,60-79,male,underweight,0.12
+hepatitis b,60-79,male,normal,0.157
+hepatitis b,60-79,male,overweight,0.036
+hepatitis b,60-79,male,obese,0.116
+hepatitis b,60-79,female,underweight,0.085
+hepatitis b,60-79,female,normal,0.149
+hepatitis b,60-79,female,overweight,0.1
+hepatitis b,60-79,female,obese,0.201
+hepatitis b,80+,male,underweight,0.155
+hepatitis b,80+,male,normal,0.178
+hepatitis b,80+,male,overweight,0.072
+hepatitis b,80+,male,obese,0.126
+hepatitis b,80+,female,underweight,0.1
+hepatitis b,80+,female,normal,0.029
+hepatitis b,80+,female,overweight,0.034
+hepatitis b,80+,female,obese,0.041
+hepatitis c,0-19,male,underweight,0.063
+hepatitis c,0-19,male,normal,0.025
+hepatitis c,0-19,male,overweight,0.052
+hepatitis c,0-19,male,obese,0.074
+hepatitis c,0-19,female,underweight,0.076
+hepatitis c,0-19,female,normal,0.014
+hepatitis c,0-19,female,overweight,0.097
+hepatitis c,0-19,female,obese,0.08
+hepatitis c,20-39,male,underweight,0.038
+hepatitis c,20-39,male,normal,0.027
+hepatitis c,20-39,male,overweight,0.099
+hepatitis c,20-39,male,obese,0.091
+hepatitis c,20-39,female,underweight,0.056
+hepatitis c,20-39,female,normal,0.013
+hepatitis c,20-39,female,overweight,0.062
+hepatitis c,20-39,female,obese,0.061
+hepatitis c,40-59,male,underweight,0.092
+hepatitis c,40-59,male,normal,0.098
+hepatitis c,40-59,male,overweight,0.087
+hepatitis c,40-59,male,obese,0.032
+hepatitis c,40-59,female,underweight,0.012
+hepatitis c,40-59,female,normal,0.087
+hepatitis c,40-59,female,overweight,0.044
+hepatitis c,40-59,female,obese,0.134
+hepatitis c,60-79,male,underweight,0.109
+hepatitis c,60-79,male,normal,0.089
+hepatitis c,60-79,male,overweight,0.04
+hepatitis c,60-79,male,obese,0.137
+hepatitis c,60-79,female,underweight,0.079
+hepatitis c,60-79,female,normal,0.052
+hepatitis c,60-79,female,overweight,0.043
+hepatitis c,60-79,female,obese,0.181
+hepatitis c,80+,male,underweight,0.087
+hepatitis c,80+,male,normal,0.036
+hepatitis c,80+,male,overweight,0.135
+hepatitis c,80+,male,obese,0.154
+hepatitis c,80+,female,underweight,0.033
+hepatitis c,80+,female,normal,0.13
+hepatitis c,80+,female,overweight,0.145
+hepatitis c,80+,female,obese,0.092
+tuberculosis,0-19,male,underweight,0.025
+tuberculosis,0-19,male,normal,0.053
+tuberculosis,0-19,male,overweight,0.089
+tuberculosis,0-19,male,obese,0.073
+tuberculosis,0-19,female,underweight,0.014
+tuberculosis,0-19,female,normal,0.07
+tuberculosis,0-19,female,overweight,0.087
+tuberculosis,0-19,female,obese,0.086
+tuberculosis,20-39,male,underweight,0.1
+tuberculosis,20-39,male,normal,0.071
+tuberculosis,20-39,male,overweight,0.025
+tuberculosis,20-39,male,obese,0.126
+tuberculosis,20-39,female,underweight,0.057
+tuberculosis,20-39,female,normal,0.013
+tuberculosis,20-39,female,overweight,0.026
+tuberculosis,20-39,female,obese,0.082
+tuberculosis,40-59,male,underweight,0.049
+tuberculosis,40-59,male,normal,0.044
+tuberculosis,40-59,male,overweight,0.076
+tuberculosis,40-59,male,obese,0.081
+tuberculosis,40-59,female,underweight,0.039
+tuberculosis,40-59,female,normal,0.029
+tuberculosis,40-59,female,overweight,0.023
+tuberculosis,40-59,female,obese,0.09
+tuberculosis,60-79,male,underweight,0.171
+tuberculosis,60-79,male,normal,0.071
+tuberculosis,60-79,male,overweight,0.149
+tuberculosis,60-79,male,obese,0.066
+tuberculosis,60-79,female,underweight,0.093
+tuberculosis,60-79,female,normal,0.031
+tuberculosis,60-79,female,overweight,0.103
+tuberculosis,60-79,female,obese,0.053
+tuberculosis,80+,male,underweight,0.136
+tuberculosis,80+,male,normal,0.089
+tuberculosis,80+,male,overweight,0.056
+tuberculosis,80+,male,obese,0.172
+tuberculosis,80+,female,underweight,0.114
+tuberculosis,80+,female,normal,0.116
+tuberculosis,80+,female,overweight,0.043
+tuberculosis,80+,female,obese,0.196
+hepatomegaly,0-19,male,underweight,0.073
+hepatomegaly,0-19,male,normal,0.085
+hepatomegaly,0-19,male,overweight,0.06
+hepatomegaly,0-19,male,obese,0.015
+hepatomegaly,0-19,female,underweight,0.065
+hepatomegaly,0-19,female,normal,0.098
+hepatomegaly,0-19,female,overweight,0.06
+hepatomegaly,0-19,female,obese,0.067
+hepatomegaly,20-39,male,underweight,0.076
+hepatomegaly,20-39,male,normal,0.065
+hepatomegaly,20-39,male,overweight,0.086
+hepatomegaly,20-39,male,obese,0.014
+hepatomegaly,20-39,female,underweight,0.077
+hepatomegaly,20-39,female,normal,0.046
+hepatomegaly,20-39,female,overweight,0.026
+hepatomegaly,20-39,female,obese,0.069
+hepatomegaly,40-59,male,underweight,0.09
+hepatomegaly,40-59,male,normal,0.062
+hepatomegaly,40-59,male,overweight,0.015
+hepatomegaly,40-59,male,obese,0.143
+hepatomegaly,40-59,female,underweight,0.069
+hepatomegaly,40-59,female,normal,0.053
+hepatomegaly,40-59,female,overweight,0.054
+hepatomegaly,40-59,female,obese,0.033
+hepatomegaly,60-79,male,underweight,0.063
+hepatomegaly,60-79,male,normal,0.049
+hepatomegaly,60-79,male,overweight,0.077
+hepatomegaly,60-79,male,obese,0.151
+hepatomegaly,60-79,female,underweight,0.043
+hepatomegaly,60-79,female,normal,0.102
+hepatomegaly,60-79,female,overweight,0.087
+hepatomegaly,60-79,female,obese,0.242
+hepatomegaly,80+,male,underweight,0.12
+hepatomegaly,80+,male,normal,0.148
+hepatomegaly,80+,male,overweight,0.175
+hepatomegaly,80+,male,obese,0.118
+hepatomegaly,80+,female,underweight,0.078
+hepatomegaly,80+,female,normal,0.091
+hepatomegaly,80+,female,overweight,0.085
+hepatomegaly,80+,female,obese,0.086
+bronchitis,0-19,male,underweight,0.084
+bronchitis,0-19,male,normal,0.05
+bronchitis,0-19,male,overweight,0.089
+bronchitis,0-19,male,obese,0.119
+bronchitis,0-19,female,underweight,0.058
+bronchitis,0-19,female,normal,0.023
+bronchitis,0-19,female,overweight,0.017
+bronchitis,0-19,female,obese,0.102
+bronchitis,20-39,male,underweight,0.024
+bronchitis,20-39,male,normal,0.092
+bronchitis,20-39,male,overweight,0.089
+bronchitis,20-39,male,obese,0.047
+bronchitis,20-39,female,underweight,0.069
+bronchitis,20-39,female,normal,0.097
+bronchitis,20-39,female,overweight,0.015
+bronchitis,20-39,female,obese,0.022
+bronchitis,40-59,male,underweight,0.04
+bronchitis,40-59,male,normal,0.066
+bronchitis,40-59,male,overweight,0.024
+bronchitis,40-59,male,obese,0.08
+bronchitis,40-59,female,underweight,0.086
+bronchitis,40-59,female,normal,0.016
+bronchitis,40-59,female,overweight,0.1
+bronchitis,40-59,female,obese,0.051
+bronchitis,60-79,male,underweight,0.087
+bronchitis,60-79,male,normal,0.061
+bronchitis,60-79,male,overweight,0.103
+bronchitis,60-79,male,obese,0.224
+bronchitis,60-79,female,underweight,0.114
+bronchitis,60-79,female,normal,0.105
+bronchitis,60-79,female,overweight,0.057
+bronchitis,60-79,female,obese,0.07
+bronchitis,80+,male,underweight,0.118
+bronchitis,80+,male,normal,0.041
+bronchitis,80+,male,overweight,0.155
+bronchitis,80+,male,obese,0.193
+bronchitis,80+,female,underweight,0.124
+bronchitis,80+,female,normal,0.027
+bronchitis,80+,female,overweight,0.054
+bronchitis,80+,female,obese,0.092
+allergic rhinitis,0-19,male,underweight,0.043
+allergic rhinitis,0-19,male,normal,0.076
+allergic rhinitis,0-19,male,overweight,0.091
+allergic rhinitis,0-19,male,obese,0.06
+allergic rhinitis,0-19,female,underweight,0.09
+allergic rhinitis,0-19,female,normal,0.036
+allergic rhinitis,0-19,female,overweight,0.04
+allergic rhinitis,0-19,female,obese,0.027
+allergic rhinitis,20-39,male,underweight,0.043
+allergic rhinitis,20-39,male,normal,0.084
+allergic rhinitis,20-39,male,overweight,0.042
+allergic rhinitis,20-39,male,obese,0.11
+allergic rhinitis,20-39,female,underweight,0.019
+allergic rhinitis,20-39,female,normal,0.098
+allergic rhinitis,20-39,female,overweight,0.043
+allergic rhinitis,20-39,female,obese,0.099
+allergic rhinitis,40-59,male,underweight,0.061
+allergic rhinitis,40-59,male,normal,0.021
+allergic rhinitis,40-59,male,overweight,0.046
+allergic rhinitis,40-59,male,obese,0.128
+allergic rhinitis,40-59,female,underweight,0.014
+allergic rhinitis,40-59,female,normal,0.06
+allergic rhinitis,40-59,female,overweight,0.1
+allergic rhinitis,40-59,female,obese,0.134
+allergic rhinitis,60-79,male,underweight,0.028
+allergic rhinitis,60-79,male,normal,0.05
+allergic rhinitis,60-79,male,overweight,0.069
+allergic rhinitis,60-79,male,obese,0.028
+allergic rhinitis,60-79,female,underweight,0.155
+allergic rhinitis,60-79,female,normal,0.126
+allergic rhinitis,60-79,female,overweight,0.144
+allergic rhinitis,60-79,female,obese,0.208
+allergic rhinitis,80+,male,underweight,0.1
+allergic rhinitis,80+,male,normal,0.151
+allergic rhinitis,80+,male,overweight,0.069
+allergic rhinitis,80+,male,obese,0.158
+allergic rhinitis,80+,female,underweight,0.028
+allergic rhinitis,80+,female,normal,0.049
+allergic rhinitis,80+,female,overweight,0.119
+allergic rhinitis,80+,female,obese,0.133
+peptic ulcer disease,0-19,male,underweight,0.091
+peptic ulcer disease,0-19,male,normal,0.012
+peptic ulcer disease,0-19,male,overweight,0.035
+peptic ulcer disease,0-19,male,obese,0.043
+peptic ulcer disease,0-19,female,underweight,0.013
+peptic ulcer disease,0-19,female,normal,0.01
+peptic ulcer disease,0-19,female,overweight,0.082
+peptic ulcer disease,0-19,female,obese,0.044
+peptic ulcer disease,20-39,male,underweight,0.012
+peptic ulcer disease,20-39,male,normal,0.078
+peptic ulcer disease,20-39,male,overweight,0.058
+peptic ulcer disease,20-39,male,obese,0.1
+peptic ulcer disease,20-39,female,underweight,0.084
+peptic ulcer disease,20-39,female,normal,0.044
+peptic ulcer disease,20-39,female,overweight,0.023
+peptic ulcer disease,20-39,female,obese,0.054
+peptic ulcer disease,40-59,male,underweight,0.079
+peptic ulcer disease,40-59,male,normal,0.055
+peptic ulcer disease,40-59,male,overweight,0.061
+peptic ulcer disease,40-59,male,obese,0.103
+peptic ulcer disease,40-59,female,underweight,0.021
+peptic ulcer disease,40-59,female,normal,0.016
+peptic ulcer disease,40-59,female,overweight,0.037
+peptic ulcer disease,40-59,female,obese,0.084
+peptic ulcer disease,60-79,male,underweight,0.103
+peptic ulcer disease,60-79,male,normal,0.096
+peptic ulcer disease,60-79,male,overweight,0.122
+peptic ulcer disease,60-79,male,obese,0.158
+peptic ulcer disease,60-79,female,underweight,0.117
+peptic ulcer disease,60-79,female,normal,0.039
+peptic ulcer disease,60-79,female,overweight,0.066
+peptic ulcer disease,60-79,female,obese,0.064
+peptic ulcer disease,80+,male,underweight,0.1
+peptic ulcer disease,80+,male,normal,0.087
+peptic ulcer disease,80+,male,overweight,0.145
+peptic ulcer disease,80+,male,obese,0.135
+peptic ulcer disease,80+,female,underweight,0.154
+peptic ulcer disease,80+,female,normal,0.103
+peptic ulcer disease,80+,female,overweight,0.114
+peptic ulcer disease,80+,female,obese,0.164
+gallstones,0-19,male,underweight,0.096
+gallstones,0-19,male,normal,0.016
+gallstones,0-19,male,overweight,0.05
+gallstones,0-19,male,obese,0.072
+gallstones,0-19,female,underweight,0.099
+gallstones,0-19,female,normal,0.02
+gallstones,0-19,female,overweight,0.084
+gallstones,0-19,female,obese,0.071
+gallstones,20-39,male,underweight,0.054
+gallstones,20-39,male,normal,0.055
+gallstones,20-39,male,overweight,0.078
+gallstones,20-39,male,obese,0.063
+gallstones,20-39,female,underweight,0.046
+gallstones,20-39,female,normal,0.01
+gallstones,20-39,female,overweight,0.059
+gallstones,20-39,female,obese,0.101
+gallstones,40-59,male,underweight,0.012
+gallstones,40-59,male,normal,0.054
+gallstones,40-59,male,overweight,0.091
+gallstones,40-59,male,obese,0.04
+gallstones,40-59,female,underweight,0.098
+gallstones,40-59,female,normal,0.07
+gallstones,40-59,female,overweight,0.035
+gallstones,40-59,female,obese,0.065
+gallstones,60-79,male,underweight,0.072
+gallstones,60-79,male,normal,0.091
+gallstones,60-79,male,overweight,0.076
+gallstones,60-79,male,obese,0.18
+gallstones,60-79,female,underweight,0.152
+gallstones,60-79,female,normal,0.067
+gallstones,60-79,female,overweight,0.143
+gallstones,60-79,female,obese,0.12
+gallstones,80+,male,underweight,0.113
+gallstones,80+,male,normal,0.073
+gallstones,80+,male,overweight,0.1
+gallstones,80+,male,obese,0.12
+gallstones,80+,female,underweight,0.079
+gallstones,80+,female,normal,0.071
+gallstones,80+,female,overweight,0.039
+gallstones,80+,female,obese,0.075
+hypothyroidism,0-19,male,underweight,0.053
+hypothyroidism,0-19,male,normal,0.096
+hypothyroidism,0-19,male,overweight,0.021
+hypothyroidism,0-19,male,obese,0.095
+hypothyroidism,0-19,female,underweight,0.013
+hypothyroidism,0-19,female,normal,0.062
+hypothyroidism,0-19,female,overweight,0.019
+hypothyroidism,0-19,female,obese,0.044
+hypothyroidism,20-39,male,underweight,0.014
+hypothyroidism,20-39,male,normal,0.052
+hypothyroidism,20-39,male,overweight,0.035
+hypothyroidism,20-39,male,obese,0.104
+hypothyroidism,20-39,female,underweight,0.056
+hypothyroidism,20-39,female,normal,0.079
+hypothyroidism,20-39,female,overweight,0.027
+hypothyroidism,20-39,female,obese,0.119
+hypothyroidism,40-59,male,underweight,0.068
+hypothyroidism,40-59,male,normal,0.044
+hypothyroidism,40-59,male,overweight,0.087
+hypothyroidism,40-59,male,obese,0.061
+hypothyroidism,40-59,female,underweight,0.082
+hypothyroidism,40-59,female,normal,0.013
+hypothyroidism,40-59,female,overweight,0.048
+hypothyroidism,40-59,female,obese,0.024
+hypothyroidism,60-79,male,underweight,0.055
+hypothyroidism,60-79,male,normal,0.111
+hypothyroidism,60-79,male,overweight,0.076
+hypothyroidism,60-79,male,obese,0.114
+hypothyroidism,60-79,female,underweight,0.043
+hypothyroidism,60-79,female,normal,0.038
+hypothyroidism,60-79,female,overweight,0.039
+hypothyroidism,60-79,female,obese,0.177
+hypothyroidism,80+,male,underweight,0.069
+hypothyroidism,80+,male,normal,0.047
+hypothyroidism,80+,male,overweight,0.121
+hypothyroidism,80+,male,obese,0.159
+hypothyroidism,80+,female,underweight,0.12
+hypothyroidism,80+,female,normal,0.11
+hypothyroidism,80+,female,overweight,0.079
+hypothyroidism,80+,female,obese,0.224
+hyperthyroidism,0-19,male,underweight,0.087
+hyperthyroidism,0-19,male,normal,0.069
+hyperthyroidism,0-19,male,overweight,0.085
+hyperthyroidism,0-19,male,obese,0.042
+hyperthyroidism,0-19,female,underweight,0.04
+hyperthyroidism,0-19,female,normal,0.012
+hyperthyroidism,0-19,female,overweight,0.067
+hyperthyroidism,0-19,female,obese,0.015
+hyperthyroidism,20-39,male,underweight,0.044
+hyperthyroidism,20-39,male,normal,0.065
+hyperthyroidism,20-39,male,overweight,0.088
+hyperthyroidism,20-39,male,obese,0.091
+hyperthyroidism,20-39,female,underweight,0.05
+hyperthyroidism,20-39,female,normal,0.044
+hyperthyroidism,20-39,female,overweight,0.08
+hyperthyroidism,20-39,female,obese,0.014
+hyperthyroidism,40-59,male,underweight,0.021
+hyperthyroidism,40-59,male,normal,0.026
+hyperthyroidism,40-59,male,overweight,0.045
+hyperthyroidism,40-59,male,obese,0.043
+hyperthyroidism,40-59,female,underweight,0.084
+hyperthyroidism,40-59,female,normal,0.033
+hyperthyroidism,40-59,female,overweight,0.023
+hyperthyroidism,40-59,female,obese,0.101
+hyperthyroidism,60-79,male,underweight,0.036
+hyperthyroidism,60-79,male,normal,0.157
+hyperthyroidism,60-79,male,overweight,0.072
+hyperthyroidism,60-79,male,obese,0.23
+hyperthyroidism,60-79,female,underweight,0.061
+hyperthyroidism,60-79,female,normal,0.065
+hyperthyroidism,60-79,female,overweight,0.152
+hyperthyroidism,60-79,female,obese,0.117
+hyperthyroidism,80+,male,underweight,0.151
+hyperthyroidism,80+,male,normal,0.088
+hyperthyroidism,80+,male,overweight,0.128
+hyperthyroidism,80+,male,obese,0.173
+hyperthyroidism,80+,female,underweight,0.05
+hyperthyroidism,80+,female,normal,0.032
+hyperthyroidism,80+,female,overweight,0.1
+hyperthyroidism,80+,female,obese,0.122
+lymphoma,0-19,male,underweight,0.097
+lymphoma,0-19,male,normal,0.025
+lymphoma,0-19,male,overweight,0.015
+lymphoma,0-19,male,obese,0.116
+lymphoma,0-19,female,underweight,0.058
+lymphoma,0-19,female,normal,0.067
+lymphoma,0-19,female,overweight,0.098
+lymphoma,0-19,female,obese,0.017
+lymphoma,20-39,male,underweight,0.042
+lymphoma,20-39,male,normal,0.08
+lymphoma,20-39,male,overweight,0.068
+lymphoma,20-39,male,obese,0.114
+lymphoma,20-39,female,underweight,0.024
+lymphoma,20-39,female,normal,0.034
+lymphoma,20-39,female,overweight,0.077
+lymphoma,20-39,female,obese,0.023
+lymphoma,40-59,male,underweight,0.041
+lymphoma,40-59,male,normal,0.055
+lymphoma,40-59,male,overweight,0.028
+lymphoma,40-59,male,obese,0.049
+lymphoma,40-59,female,underweight,0.023
+lymphoma,40-59,female,normal,0.082
+lymphoma,40-59,female,overweight,0.036
+lymphoma,40-59,female,obese,0.11
+lymphoma,60-79,male,underweight,0.049
+lymphoma,60-79,male,normal,0.076
+lymphoma,60-79,male,overweight,0.049
+lymphoma,60-79,male,obese,0.186
+lymphoma,60-79,female,underweight,0.153
+lymphoma,60-79,female,normal,0.081
+lymphoma,60-79,female,overweight,0.026
+lymphoma,60-79,female,obese,0.112
+lymphoma,80+,male,underweight,0.097
+lymphoma,80+,male,normal,0.154
+lymphoma,80+,male,overweight,0.096
+lymphoma,80+,male,obese,0.137
+lymphoma,80+,female,underweight,0.083
+lymphoma,80+,female,normal,0.119
+lymphoma,80+,female,overweight,0.065
+lymphoma,80+,female,obese,0.045
+leukemia,0-19,male,underweight,0.06
+leukemia,0-19,male,normal,0.029
+leukemia,0-19,male,overweight,0.03
+leukemia,0-19,male,obese,0.037
+leukemia,0-19,female,underweight,0.041
+leukemia,0-19,female,normal,0.045
+leukemia,0-19,female,overweight,0.039
+leukemia,0-19,female,obese,0.1
+leukemia,20-39,male,underweight,0.025
+leukemia,20-39,male,normal,0.051
+leukemia,20-39,male,overweight,0.049
+leukemia,20-39,male,obese,0.06
+leukemia,20-39,female,underweight,0.06
+leukemia,20-39,female,normal,0.094
+leukemia,20-39,female,overweight,0.079
+leukemia,20-39,female,obese,0.093
+leukemia,40-59,male,underweight,0.051
+leukemia,40-59,male,normal,0.014
+leukemia,40-59,male,overweight,0.029
+leukemia,40-59,male,obese,0.089
+leukemia,40-59,female,underweight,0.057
+leukemia,40-59,female,normal,0.097
+leukemia,40-59,female,overweight,0.013
+leukemia,40-59,female,obese,0.046
+leukemia,60-79,male,underweight,0.068
+leukemia,60-79,male,normal,0.034
+leukemia,60-79,male,overweight,0.033
+leukemia,60-79,male,obese,0.083
+leukemia,60-79,female,underweight,0.064
+leukemia,60-79,female,normal,0.125
+leukemia,60-79,female,overweight,0.057
+leukemia,60-79,female,obese,0.165
+leukemia,80+,male,underweight,0.152
+leukemia,80+,male,normal,0.128
+leukemia,80+,male,overweight,0.12
+leukemia,80+,male,obese,0.031
+leukemia,80+,female,underweight,0.027
+leukemia,80+,female,normal,0.063
+leukemia,80+,female,overweight,0.131
+leukemia,80+,female,obese,0.101
+pancreatic cancer,0-19,male,underweight,0.072
+pancreatic cancer,0-19,male,normal,0.086
+pancreatic cancer,0-19,male,overweight,0.054
+pancreatic cancer,0-19,male,obese,0.023
+pancreatic cancer,0-19,female,underweight,0.056
+pancreatic cancer,0-19,female,normal,0.071
+pancreatic cancer,0-19,female,overweight,0.031
+pancreatic cancer,0-19,female,obese,0.052
+pancreatic cancer,20-39,male,underweight,0.029
+pancreatic cancer,20-39,male,normal,0.017
+pancreatic cancer,20-39,male,overweight,0.054
+pancreatic cancer,20-39,male,obese,0.019
+pancreatic cancer,20-39,female,underweight,0.013
+pancreatic cancer,20-39,female,normal,0.068
+pancreatic cancer,20-39,female,overweight,0.07
+pancreatic cancer,20-39,female,obese,0.108
+pancreatic cancer,40-59,male,underweight,0.022
+pancreatic cancer,40-59,male,normal,0.042
+pancreatic cancer,40-59,male,overweight,0.047
+pancreatic cancer,40-59,male,obese,0.018
+pancreatic cancer,40-59,female,underweight,0.056
+pancreatic cancer,40-59,female,normal,0.057
+pancreatic cancer,40-59,female,overweight,0.097
+pancreatic cancer,40-59,female,obese,0.117
+pancreatic cancer,60-79,male,underweight,0.133
+pancreatic cancer,60-79,male,normal,0.172
+pancreatic cancer,60-79,male,overweight,0.047
+pancreatic cancer,60-79,male,obese,0.101
+pancreatic cancer,60-79,female,underweight,0.062
+pancreatic cancer,60-79,female,normal,0.145
+pancreatic cancer,60-79,female,overweight,0.172
+pancreatic cancer,60-79,female,obese,0.167
+pancreatic cancer,80+,male,underweight,0.15
+pancreatic cancer,80+,male,normal,0.084
+pancreatic cancer,80+,male,overweight,0.104
+pancreatic cancer,80+,male,obese,0.198
+pancreatic cancer,80+,female,underweight,0.093
+pancreatic cancer,80+,female,normal,0.068
+pancreatic cancer,80+,female,overweight,0.09
+pancreatic cancer,80+,female,obese,0.027
+endometrial cancer,0-19,male,underweight,0.028
+endometrial cancer,0-19,male,normal,0.094
+endometrial cancer,0-19,male,overweight,0.087
+endometrial cancer,0-19,male,obese,0.1
+endometrial cancer,0-19,female,underweight,0.086
+endometrial cancer,0-19,female,normal,0.023
+endometrial cancer,0-19,female,overweight,0.076
+endometrial cancer,0-19,female,obese,0.103
+endometrial cancer,20-39,male,underweight,0.074
+endometrial cancer,20-39,male,normal,0.052
+endometrial cancer,20-39,male,overweight,0.048
+endometrial cancer,20-39,male,obese,0.035
+endometrial cancer,20-39,female,underweight,0.018
+endometrial cancer,20-39,female,normal,0.059
+endometrial cancer,20-39,female,overweight,0.03
+endometrial cancer,20-39,female,obese,0.031
+endometrial cancer,40-59,male,underweight,0.033
+endometrial cancer,40-59,male,normal,0.041
+endometrial cancer,40-59,male,overweight,0.061
+endometrial cancer,40-59,male,obese,0.029
+endometrial cancer,40-59,female,underweight,0.011
+endometrial cancer,40-59,female,normal,0.021
+endometrial cancer,40-59,female,overweight,0.055
+endometrial cancer,40-59,female,obese,0.035
+endometrial cancer,60-79,male,underweight,0.116
+endometrial cancer,60-79,male,normal,0.169
+endometrial cancer,60-79,male,overweight,0.143
+endometrial cancer,60-79,male,obese,0.103
+endometrial cancer,60-79,female,underweight,0.169
+endometrial cancer,60-79,female,normal,0.173
+endometrial cancer,60-79,female,overweight,0.06
+endometrial cancer,60-79,female,obese,0.036
+endometrial cancer,80+,male,underweight,0.172
+endometrial cancer,80+,male,normal,0.107
+endometrial cancer,80+,male,overweight,0.067
+endometrial cancer,80+,male,obese,0.029
+endometrial cancer,80+,female,underweight,0.091
+endometrial cancer,80+,female,normal,0.13
+endometrial cancer,80+,female,overweight,0.101
+endometrial cancer,80+,female,obese,0.036
+cervical cancer,0-19,male,underweight,0.098
+cervical cancer,0-19,male,normal,0.071
+cervical cancer,0-19,male,overweight,0.014
+cervical cancer,0-19,male,obese,0.112
+cervical cancer,0-19,female,underweight,0.088
+cervical cancer,0-19,female,normal,0.054
+cervical cancer,0-19,female,overweight,0.047
+cervical cancer,0-19,female,obese,0.027
+cervical cancer,20-39,male,underweight,0.03
+cervical cancer,20-39,male,normal,0.054
+cervical cancer,20-39,male,overweight,0.056
+cervical cancer,20-39,male,obese,0.082
+cervical cancer,20-39,female,underweight,0.017
+cervical cancer,20-39,female,normal,0.093
+cervical cancer,20-39,female,overweight,0.077
+cervical cancer,20-39,female,obese,0.129
+cervical cancer,40-59,male,underweight,0.015
+cervical cancer,40-59,male,normal,0.065
+cervical cancer,40-59,male,overweight,0.087
+cervical cancer,40-59,male,obese,0.037
+cervical cancer,40-59,female,underweight,0.019
+cervical cancer,40-59,female,normal,0.058
+cervical cancer,40-59,female,overweight,0.022
+cervical cancer,40-59,female,obese,0.063
+cervical cancer,60-79,male,underweight,0.132
+cervical cancer,60-79,male,normal,0.038
+cervical cancer,60-79,male,overweight,0.031
+cervical cancer,60-79,male,obese,0.164
+cervical cancer,60-79,female,underweight,0.085
+cervical cancer,60-79,female,normal,0.064
+cervical cancer,60-79,female,overweight,0.022
+cervical cancer,60-79,female,obese,0.127
+cervical cancer,80+,male,underweight,0.037
+cervical cancer,80+,male,normal,0.026
+cervical cancer,80+,male,overweight,0.118
+cervical cancer,80+,male,obese,0.147
+cervical cancer,80+,female,underweight,0.155
+cervical cancer,80+,female,normal,0.119
+cervical cancer,80+,female,overweight,0.094
+cervical cancer,80+,female,obese,0.15
