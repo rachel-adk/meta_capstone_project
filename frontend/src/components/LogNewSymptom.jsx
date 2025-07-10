@@ -1,7 +1,8 @@
 import { useState } from "react";
+import DropdownMenu from "./DropdownMenu";
 
 
-const LogNewSymptom = ({ onSubmit }) => {
+const LogNewSymptom = ({ onCreate }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [symptom, setSymptom] = useState("")
   const [severity, setSeverity] = useState(1)
@@ -10,7 +11,7 @@ const LogNewSymptom = ({ onSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault()
     if (!symptom) return alert("Symptom cannot be empty")
-    onSubmit({symptom: symptom, severity, frequency})
+    onCreate({symptom: symptom, severity, frequency})
     setSymptom("")
     setSeverity(1)
     setFrequency("daily")
@@ -29,7 +30,7 @@ const LogNewSymptom = ({ onSubmit }) => {
     {/* Modal display */}
     {isOpen && (
       <div
-      className="fixed inset-0 bg-black bg-opacity-25 flex items-center justify-center z-50"
+      className="fixed inset-0 flex items-center justify-center z-50"
       onClick={() => setIsOpen(false)}
       >
       <div
@@ -47,9 +48,8 @@ const LogNewSymptom = ({ onSubmit }) => {
       <h2 className="text-xl font-semibold mb-4">Log a new symptom</h2>
     <form onSubmit={handleSubmit} className="p-4 space-y-4">
       <DropdownMenu
-      allSymptoms="/backend/data/conditions.json"
       value={symptom}
-      onSelect={setymptom} />
+      onSelect={setSymptom} />
 
       <div>
         <label className="block mb-1">Severity: {severity}</label>
@@ -64,7 +64,7 @@ const LogNewSymptom = ({ onSubmit }) => {
           />
       </div>
       <div>
-        <label className="block mb-1">Severity: {severity}</label>
+        <label className="block mb-1">Frequency: {frequency}</label>
         <select
         value={frequency}
         onChange={e => setFrequency(e.target.value)}

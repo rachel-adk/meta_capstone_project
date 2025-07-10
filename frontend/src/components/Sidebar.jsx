@@ -17,11 +17,11 @@ const Sidebar = () => {
     }
   }
 
-  useEffect(() => {
-    if (!user) {
-        navigate("/login", { replace: true });
-    }
-  }, [user, navigate])
+//   useEffect(() => {
+//     if (!user) {
+//         navigate("/signup", { replace: true });
+//     }
+//   }, [user, navigate])
 
   return (
     <>
