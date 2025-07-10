@@ -17,6 +17,12 @@ function cleanDataset() {
         .filter((key) => key.startsWith("Symptom") && row[key])
         .map((key) => row[key].trim().toLowerCase());
 
+      const totalSymptoms = symptoms.length;
+      const weights = {}
+      symptoms.forEach((symptom, index) => {
+        weights[symptom] = totalSymptoms - index
+      })
+
       if (condition && symptoms.length > 0) {
         if (!conditionMap[condition]) {
           conditionMap[condition] = {
@@ -25,6 +31,14 @@ function cleanDataset() {
             symptomWeights: {},
           };
         }
+
+        const data = conditionMap[condition];
+        symptoms.forEach((symptom => {
+            if (!data.symptoms.includes(symptom)) {
+              data.symptoms.push(symptom);
+            }
+            data.symptomWeights[symptom] = weights[symptom]
+          }))
         for (const symptom of symptoms) {
           if (!conditionMap[condition].symptoms.includes(symptom)) {
             conditionMap[condition].symptoms.push(symptom);

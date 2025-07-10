@@ -8,9 +8,9 @@
       "dischromic _patches"
     ],
     "symptomWeights": {
-      "itching": 1,
-      "skin_rash": 1,
-      "nodal_skin_eruptions": 1,
+      "itching": 4,
+      "skin_rash": 3,
+      "nodal_skin_eruptions": 2,
       "dischromic _patches": 1
     }
   },
@@ -23,9 +23,9 @@
       "watering_from_eyes"
     ],
     "symptomWeights": {
-      "continuous_sneezing": 1,
-      "shivering": 1,
-      "chills": 1,
+      "continuous_sneezing": 4,
+      "shivering": 3,
+      "chills": 2,
       "watering_from_eyes": 1
     }
   },
@@ -40,11 +40,11 @@
       "chest_pain"
     ],
     "symptomWeights": {
-      "stomach_pain": 1,
-      "acidity": 1,
-      "ulcers_on_tongue": 1,
-      "vomiting": 1,
-      "cough": 1,
+      "stomach_pain": 6,
+      "acidity": 5,
+      "ulcers_on_tongue": 4,
+      "vomiting": 3,
+      "cough": 2,
       "chest_pain": 1
     }
   },
@@ -60,12 +60,12 @@
       "yellowing_of_eyes"
     ],
     "symptomWeights": {
-      "itching": 1,
-      "vomiting": 1,
-      "yellowish_skin": 1,
-      "nausea": 1,
-      "loss_of_appetite": 1,
-      "abdominal_pain": 1,
+      "itching": 7,
+      "vomiting": 6,
+      "yellowish_skin": 5,
+      "nausea": 4,
+      "loss_of_appetite": 3,
+      "abdominal_pain": 2,
       "yellowing_of_eyes": 1
     }
   },
@@ -79,10 +79,10 @@
       "spotting_ urination"
     ],
     "symptomWeights": {
-      "itching": 1,
-      "skin_rash": 1,
-      "stomach_pain": 1,
-      "burning_micturition": 1,
+      "itching": 5,
+      "skin_rash": 4,
+      "stomach_pain": 3,
+      "burning_micturition": 2,
       "spotting_ urination": 1
     }
   },
@@ -97,12 +97,12 @@
       "indigestion"
     ],
     "symptomWeights": {
-      "vomiting": 1,
-      "loss_of_appetite": 1,
-      "abdominal_pain": 1,
-      "passage_of_gases": 1,
+      "vomiting": 6,
+      "loss_of_appetite": 4,
+      "abdominal_pain": 3,
+      "passage_of_gases": 2,
       "internal_itching": 1,
-      "indigestion": 1
+      "indigestion": 5
     }
   },
   {
@@ -114,9 +114,9 @@
       "extra_marital_contacts"
     ],
     "symptomWeights": {
-      "muscle_wasting": 1,
-      "patches_in_throat": 1,
-      "high_fever": 1,
+      "muscle_wasting": 4,
+      "patches_in_throat": 3,
+      "high_fever": 2,
       "extra_marital_contacts": 1
     }
   },
@@ -135,15 +135,15 @@
       "polyuria"
     ],
     "symptomWeights": {
-      "fatigue": 1,
-      "weight_loss": 1,
-      "restlessness": 1,
-      "lethargy": 1,
-      "irregular_sugar_level": 1,
-      "blurred_and_distorted_vision": 1,
-      "obesity": 1,
-      "excessive_hunger": 1,
-      "increased_appetite": 1,
+      "fatigue": 10,
+      "weight_loss": 9,
+      "restlessness": 8,
+      "lethargy": 7,
+      "irregular_sugar_level": 6,
+      "blurred_and_distorted_vision": 5,
+      "obesity": 4,
+      "excessive_hunger": 3,
+      "increased_appetite": 2,
       "polyuria": 1
     }
   },
@@ -156,9 +156,9 @@
       "diarrhoea"
     ],
     "symptomWeights": {
-      "vomiting": 1,
-      "sunken_eyes": 1,
-      "dehydration": 1,
+      "vomiting": 4,
+      "sunken_eyes": 3,
+      "dehydration": 2,
       "diarrhoea": 1
     }
   },
@@ -173,11 +173,11 @@
       "mucoid_sputum"
     ],
     "symptomWeights": {
-      "fatigue": 1,
-      "cough": 1,
-      "high_fever": 1,
-      "breathlessness": 1,
-      "family_history": 1,
+      "fatigue": 6,
+      "cough": 5,
+      "high_fever": 4,
+      "breathlessness": 3,
+      "family_history": 2,
       "mucoid_sputum": 1
     }
   },
@@ -191,10 +191,10 @@
       "lack_of_concentration"
     ],
     "symptomWeights": {
-      "headache": 1,
-      "chest_pain": 1,
-      "dizziness": 1,
-      "loss_of_balance": 1,
+      "headache": 5,
+      "chest_pain": 4,
+      "dizziness": 3,
+      "loss_of_balance": 2,
       "lack_of_concentration": 1
     }
   },
@@ -212,14 +212,14 @@
       "visual_disturbances"
     ],
     "symptomWeights": {
-      "acidity": 1,
-      "indigestion": 1,
-      "headache": 1,
-      "blurred_and_distorted_vision": 1,
-      "excessive_hunger": 1,
-      "stiff_neck": 1,
-      "depression": 1,
-      "irritability": 1,
+      "acidity": 9,
+      "indigestion": 8,
+      "headache": 7,
+      "blurred_and_distorted_vision": 6,
+      "excessive_hunger": 5,
+      "stiff_neck": 4,
+      "depression": 3,
+      "irritability": 2,
       "visual_disturbances": 1
     }
   },
@@ -233,10 +233,10 @@
       "loss_of_balance"
     ],
     "symptomWeights": {
-      "back_pain": 1,
-      "weakness_in_limbs": 1,
-      "neck_pain": 1,
-      "dizziness": 1,
+      "back_pain": 5,
+      "weakness_in_limbs": 4,
+      "neck_pain": 3,
+      "dizziness": 2,
       "loss_of_balance": 1
     }
   },
@@ -249,9 +249,9 @@
       "altered_sensorium"
     ],
     "symptomWeights": {
-      "vomiting": 1,
-      "headache": 1,
-      "weakness_of_one_body_side": 1,
+      "vomiting": 4,
+      "headache": 3,
+      "weakness_of_one_body_side": 2,
       "altered_sensorium": 1
     }
   },
@@ -268,13 +268,13 @@
       "abdominal_pain"
     ],
     "symptomWeights": {
-      "itching": 1,
-      "vomiting": 1,
-      "fatigue": 1,
-      "weight_loss": 1,
-      "high_fever": 1,
-      "yellowish_skin": 1,
-      "dark_urine": 1,
+      "itching": 8,
+      "vomiting": 7,
+      "fatigue": 6,
+      "weight_loss": 5,
+      "high_fever": 4,
+      "yellowish_skin": 3,
+      "dark_urine": 2,
       "abdominal_pain": 1
     }
   },
@@ -291,14 +291,14 @@
       "diarrhoea"
     ],
     "symptomWeights": {
-      "chills": 1,
-      "vomiting": 1,
-      "high_fever": 1,
-      "sweating": 1,
-      "headache": 1,
-      "nausea": 1,
+      "chills": 8,
+      "vomiting": 7,
+      "high_fever": 6,
+      "sweating": 5,
+      "headache": 4,
+      "nausea": 3,
       "muscle_pain": 1,
-      "diarrhoea": 1
+      "diarrhoea": 2
     }
   },
   {
@@ -317,16 +317,16 @@
       "red_spots_over_body"
     ],
     "symptomWeights": {
-      "itching": 1,
-      "skin_rash": 1,
-      "fatigue": 1,
-      "lethargy": 1,
-      "high_fever": 1,
-      "headache": 1,
-      "loss_of_appetite": 1,
-      "mild_fever": 1,
-      "swelled_lymph_nodes": 1,
-      "malaise": 1,
+      "itching": 11,
+      "skin_rash": 10,
+      "fatigue": 9,
+      "lethargy": 8,
+      "high_fever": 7,
+      "headache": 6,
+      "loss_of_appetite": 5,
+      "mild_fever": 4,
+      "swelled_lymph_nodes": 3,
+      "malaise": 2,
       "red_spots_over_body": 1
     }
   },
@@ -349,20 +349,20 @@
       "malaise"
     ],
     "symptomWeights": {
-      "skin_rash": 1,
-      "chills": 1,
-      "joint_pain": 1,
-      "vomiting": 1,
-      "fatigue": 1,
-      "high_fever": 1,
-      "headache": 1,
-      "nausea": 1,
-      "loss_of_appetite": 1,
-      "pain_behind_the_eyes": 1,
-      "back_pain": 1,
-      "muscle_pain": 1,
+      "skin_rash": 14,
+      "chills": 13,
+      "joint_pain": 12,
+      "vomiting": 11,
+      "fatigue": 10,
+      "high_fever": 9,
+      "headache": 8,
+      "nausea": 7,
+      "loss_of_appetite": 6,
+      "pain_behind_the_eyes": 5,
+      "back_pain": 4,
+      "muscle_pain": 2,
       "red_spots_over_body": 1,
-      "malaise": 1
+      "malaise": 3
     }
   },
   {
@@ -381,17 +381,17 @@
       "headache"
     ],
     "symptomWeights": {
-      "chills": 1,
-      "vomiting": 1,
-      "fatigue": 1,
-      "high_fever": 1,
-      "nausea": 1,
-      "constipation": 1,
-      "abdominal_pain": 1,
-      "diarrhoea": 1,
-      "toxic_look_(typhos)": 1,
+      "chills": 11,
+      "vomiting": 10,
+      "fatigue": 9,
+      "high_fever": 8,
+      "nausea": 6,
+      "constipation": 5,
+      "abdominal_pain": 4,
+      "diarrhoea": 3,
+      "toxic_look_(typhos)": 2,
       "belly_pain": 1,
-      "headache": 1
+      "headache": 7
     }
   },
   {
@@ -410,16 +410,16 @@
       "muscle_pain"
     ],
     "symptomWeights": {
-      "joint_pain": 1,
-      "vomiting": 1,
-      "yellowish_skin": 1,
-      "dark_urine": 1,
-      "nausea": 1,
-      "loss_of_appetite": 1,
-      "abdominal_pain": 1,
-      "diarrhoea": 1,
-      "mild_fever": 1,
-      "yellowing_of_eyes": 1,
+      "joint_pain": 11,
+      "vomiting": 10,
+      "yellowish_skin": 9,
+      "dark_urine": 8,
+      "nausea": 7,
+      "loss_of_appetite": 6,
+      "abdominal_pain": 5,
+      "diarrhoea": 4,
+      "mild_fever": 3,
+      "yellowing_of_eyes": 2,
       "muscle_pain": 1
     }
   },
@@ -440,17 +440,17 @@
       "receiving_unsterile_injections"
     ],
     "symptomWeights": {
-      "itching": 1,
-      "fatigue": 1,
-      "lethargy": 1,
-      "yellowish_skin": 1,
-      "dark_urine": 1,
-      "loss_of_appetite": 1,
-      "abdominal_pain": 1,
-      "yellow_urine": 1,
-      "yellowing_of_eyes": 1,
-      "malaise": 1,
-      "receiving_blood_transfusion": 1,
+      "itching": 12,
+      "fatigue": 11,
+      "lethargy": 10,
+      "yellowish_skin": 9,
+      "dark_urine": 8,
+      "loss_of_appetite": 7,
+      "abdominal_pain": 6,
+      "yellow_urine": 5,
+      "yellowing_of_eyes": 4,
+      "malaise": 3,
+      "receiving_blood_transfusion": 2,
       "receiving_unsterile_injections": 1
     }
   },
@@ -465,12 +465,12 @@
       "yellowing_of_eyes"
     ],
     "symptomWeights": {
-      "fatigue": 1,
-      "yellowish_skin": 1,
-      "nausea": 1,
-      "loss_of_appetite": 1,
+      "fatigue": 6,
+      "yellowish_skin": 5,
+      "nausea": 4,
+      "loss_of_appetite": 3,
       "family_history": 1,
-      "yellowing_of_eyes": 1
+      "yellowing_of_eyes": 2
     }
   },
   {
@@ -487,14 +487,14 @@
       "yellowing_of_eyes"
     ],
     "symptomWeights": {
-      "joint_pain": 1,
-      "vomiting": 1,
-      "fatigue": 1,
-      "yellowish_skin": 1,
-      "dark_urine": 1,
-      "nausea": 1,
-      "loss_of_appetite": 1,
-      "abdominal_pain": 1,
+      "joint_pain": 9,
+      "vomiting": 8,
+      "fatigue": 7,
+      "yellowish_skin": 6,
+      "dark_urine": 5,
+      "nausea": 4,
+      "loss_of_appetite": 3,
+      "abdominal_pain": 2,
       "yellowing_of_eyes": 1
     }
   },
@@ -516,19 +516,19 @@
       "acute_liver_failure"
     ],
     "symptomWeights": {
-      "joint_pain": 1,
-      "vomiting": 1,
-      "fatigue": 1,
-      "high_fever": 1,
-      "yellowish_skin": 1,
-      "dark_urine": 1,
-      "nausea": 1,
-      "loss_of_appetite": 1,
-      "abdominal_pain": 1,
-      "yellowing_of_eyes": 1,
-      "coma": 1,
+      "joint_pain": 13,
+      "vomiting": 12,
+      "fatigue": 11,
+      "high_fever": 10,
+      "yellowish_skin": 9,
+      "dark_urine": 8,
+      "nausea": 7,
+      "loss_of_appetite": 6,
+      "abdominal_pain": 5,
+      "yellowing_of_eyes": 4,
+      "coma": 2,
       "stomach_bleeding": 1,
-      "acute_liver_failure": 1
+      "acute_liver_failure": 3
     }
   },
   {
@@ -543,12 +543,12 @@
       "fluid_overload"
     ],
     "symptomWeights": {
-      "vomiting": 1,
-      "yellowish_skin": 1,
-      "abdominal_pain": 1,
-      "swelling_of_stomach": 1,
-      "distention_of_abdomen": 1,
-      "history_of_alcohol_consumption": 1,
+      "vomiting": 7,
+      "yellowish_skin": 6,
+      "abdominal_pain": 5,
+      "swelling_of_stomach": 4,
+      "distention_of_abdomen": 3,
+      "history_of_alcohol_consumption": 2,
       "fluid_overload": 1
     }
   },
@@ -573,21 +573,21 @@
       "blood_in_sputum"
     ],
     "symptomWeights": {
-      "chills": 1,
-      "vomiting": 1,
-      "fatigue": 1,
-      "weight_loss": 1,
-      "cough": 1,
-      "high_fever": 1,
-      "breathlessness": 1,
-      "sweating": 1,
-      "loss_of_appetite": 1,
-      "mild_fever": 1,
-      "yellowing_of_eyes": 1,
-      "swelled_lymph_nodes": 1,
-      "malaise": 1,
-      "phlegm": 1,
-      "chest_pain": 1,
+      "chills": 16,
+      "vomiting": 15,
+      "fatigue": 14,
+      "weight_loss": 13,
+      "cough": 12,
+      "high_fever": 11,
+      "breathlessness": 10,
+      "sweating": 9,
+      "loss_of_appetite": 8,
+      "mild_fever": 7,
+      "yellowing_of_eyes": 6,
+      "swelled_lymph_nodes": 5,
+      "malaise": 4,
+      "phlegm": 3,
+      "chest_pain": 2,
       "blood_in_sputum": 1
     }
   },
@@ -613,22 +613,22 @@
       "muscle_pain"
     ],
     "symptomWeights": {
-      "continuous_sneezing": 1,
-      "chills": 1,
-      "fatigue": 1,
-      "cough": 1,
-      "high_fever": 1,
-      "headache": 1,
-      "swelled_lymph_nodes": 1,
-      "malaise": 1,
-      "phlegm": 1,
-      "throat_irritation": 1,
-      "redness_of_eyes": 1,
-      "sinus_pressure": 1,
-      "runny_nose": 1,
-      "congestion": 1,
-      "chest_pain": 1,
-      "loss_of_smell": 1,
+      "continuous_sneezing": 17,
+      "chills": 16,
+      "fatigue": 15,
+      "cough": 14,
+      "high_fever": 13,
+      "headache": 12,
+      "swelled_lymph_nodes": 11,
+      "malaise": 10,
+      "phlegm": 9,
+      "throat_irritation": 8,
+      "redness_of_eyes": 7,
+      "sinus_pressure": 6,
+      "runny_nose": 5,
+      "congestion": 4,
+      "chest_pain": 3,
+      "loss_of_smell": 2,
       "muscle_pain": 1
     }
   },
@@ -648,17 +648,17 @@
       "phlegm"
     ],
     "symptomWeights": {
-      "chills": 1,
-      "fatigue": 1,
-      "cough": 1,
-      "high_fever": 1,
-      "breathlessness": 1,
-      "sweating": 1,
-      "malaise": 1,
-      "chest_pain": 1,
-      "fast_heart_rate": 1,
+      "chills": 11,
+      "fatigue": 10,
+      "cough": 9,
+      "high_fever": 8,
+      "breathlessness": 7,
+      "sweating": 6,
+      "malaise": 5,
+      "chest_pain": 3,
+      "fast_heart_rate": 2,
       "rusty_sputum": 1,
-      "phlegm": 1
+      "phlegm": 4
     }
   },
   {
@@ -671,10 +671,10 @@
       "irritation_in_anus"
     ],
     "symptomWeights": {
-      "constipation": 1,
-      "pain_during_bowel_movements": 1,
-      "pain_in_anal_region": 1,
-      "bloody_stool": 1,
+      "constipation": 5,
+      "pain_during_bowel_movements": 4,
+      "pain_in_anal_region": 3,
+      "bloody_stool": 2,
       "irritation_in_anus": 1
     }
   },
@@ -687,9 +687,9 @@
       "chest_pain"
     ],
     "symptomWeights": {
-      "vomiting": 1,
-      "breathlessness": 1,
-      "sweating": 1,
+      "vomiting": 4,
+      "breathlessness": 3,
+      "sweating": 2,
       "chest_pain": 1
     }
   },
@@ -705,12 +705,12 @@
       "prominent_veins_on_calf"
     ],
     "symptomWeights": {
-      "fatigue": 1,
-      "cramps": 1,
-      "bruising": 1,
-      "obesity": 1,
-      "swollen_legs": 1,
-      "swollen_blood_vessels": 1,
+      "fatigue": 7,
+      "cramps": 6,
+      "bruising": 5,
+      "obesity": 4,
+      "swollen_legs": 3,
+      "swollen_blood_vessels": 2,
       "prominent_veins_on_calf": 1
     }
   },
@@ -732,18 +732,18 @@
       "abnormal_menstruation"
     ],
     "symptomWeights": {
-      "fatigue": 1,
-      "weight_gain": 1,
-      "cold_hands_and_feets": 1,
-      "mood_swings": 1,
-      "lethargy": 1,
-      "dizziness": 1,
-      "puffy_face_and_eyes": 1,
-      "enlarged_thyroid": 1,
-      "brittle_nails": 1,
-      "swollen_extremeties": 1,
-      "depression": 1,
-      "irritability": 1,
+      "fatigue": 13,
+      "weight_gain": 12,
+      "cold_hands_and_feets": 11,
+      "mood_swings": 10,
+      "lethargy": 9,
+      "dizziness": 8,
+      "puffy_face_and_eyes": 7,
+      "enlarged_thyroid": 6,
+      "brittle_nails": 5,
+      "swollen_extremeties": 4,
+      "depression": 3,
+      "irritability": 2,
       "abnormal_menstruation": 1
     }
   },
@@ -763,16 +763,16 @@
       "abnormal_menstruation"
     ],
     "symptomWeights": {
-      "fatigue": 1,
-      "mood_swings": 1,
-      "weight_loss": 1,
-      "restlessness": 1,
-      "sweating": 1,
-      "diarrhoea": 1,
-      "fast_heart_rate": 1,
-      "excessive_hunger": 1,
-      "muscle_weakness": 1,
-      "irritability": 1,
+      "fatigue": 11,
+      "mood_swings": 10,
+      "weight_loss": 9,
+      "restlessness": 8,
+      "sweating": 7,
+      "diarrhoea": 6,
+      "fast_heart_rate": 5,
+      "excessive_hunger": 4,
+      "muscle_weakness": 3,
+      "irritability": 2,
       "abnormal_menstruation": 1
     }
   },
@@ -793,18 +793,18 @@
       "drying_and_tingling_lips"
     ],
     "symptomWeights": {
-      "vomiting": 1,
-      "fatigue": 1,
-      "anxiety": 1,
-      "sweating": 1,
-      "headache": 1,
-      "nausea": 1,
-      "blurred_and_distorted_vision": 1,
-      "excessive_hunger": 1,
-      "slurred_speech": 1,
-      "irritability": 1,
+      "vomiting": 12,
+      "fatigue": 11,
+      "anxiety": 10,
+      "sweating": 9,
+      "headache": 8,
+      "nausea": 7,
+      "blurred_and_distorted_vision": 6,
+      "excessive_hunger": 5,
+      "slurred_speech": 3,
+      "irritability": 2,
       "palpitations": 1,
-      "drying_and_tingling_lips": 1
+      "drying_and_tingling_lips": 4
     }
   },
   {
@@ -818,11 +818,11 @@
       "painful_walking"
     ],
     "symptomWeights": {
-      "joint_pain": 1,
-      "neck_pain": 1,
-      "knee_pain": 1,
-      "hip_joint_pain": 1,
-      "swelling_joints": 1,
+      "joint_pain": 6,
+      "neck_pain": 5,
+      "knee_pain": 4,
+      "hip_joint_pain": 3,
+      "swelling_joints": 2,
       "painful_walking": 1
     }
   },
@@ -836,10 +836,10 @@
       "painful_walking"
     ],
     "symptomWeights": {
-      "muscle_weakness": 1,
-      "stiff_neck": 1,
-      "swelling_joints": 1,
-      "movement_stiffness": 1,
+      "muscle_weakness": 5,
+      "stiff_neck": 4,
+      "swelling_joints": 3,
+      "movement_stiffness": 2,
       "painful_walking": 1
     }
   },
@@ -854,11 +854,11 @@
       "unsteadiness"
     ],
     "symptomWeights": {
-      "vomiting": 1,
-      "headache": 1,
-      "nausea": 1,
-      "spinning_movements": 1,
-      "loss_of_balance": 1,
+      "vomiting": 6,
+      "headache": 5,
+      "nausea": 4,
+      "spinning_movements": 3,
+      "loss_of_balance": 2,
       "unsteadiness": 1
     }
   },
@@ -871,9 +871,9 @@
       "scurring"
     ],
     "symptomWeights": {
-      "skin_rash": 1,
-      "pus_filled_pimples": 1,
-      "blackheads": 1,
+      "skin_rash": 4,
+      "pus_filled_pimples": 3,
+      "blackheads": 2,
       "scurring": 1
     }
   },
@@ -886,9 +886,9 @@
       "continuous_feel_of_urine"
     ],
     "symptomWeights": {
-      "burning_micturition": 1,
-      "bladder_discomfort": 1,
-      "foul_smell_of urine": 1,
+      "burning_micturition": 4,
+      "bladder_discomfort": 3,
+      "foul_smell_of urine": 2,
       "continuous_feel_of_urine": 1
     }
   },
@@ -903,11 +903,11 @@
       "inflammatory_nails"
     ],
     "symptomWeights": {
-      "skin_rash": 1,
-      "joint_pain": 1,
-      "skin_peeling": 1,
-      "silver_like_dusting": 1,
-      "small_dents_in_nails": 1,
+      "skin_rash": 6,
+      "joint_pain": 5,
+      "skin_peeling": 4,
+      "silver_like_dusting": 3,
+      "small_dents_in_nails": 2,
       "inflammatory_nails": 1
     }
   },
@@ -921,10 +921,10 @@
       "yellow_crust_ooze"
     ],
     "symptomWeights": {
-      "skin_rash": 1,
-      "high_fever": 1,
-      "blister": 1,
-      "red_sore_around_nose": 1,
+      "skin_rash": 5,
+      "high_fever": 4,
+      "blister": 3,
+      "red_sore_around_nose": 2,
       "yellow_crust_ooze": 1
     }
   }
