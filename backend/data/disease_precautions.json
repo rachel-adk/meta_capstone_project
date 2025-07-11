@@ -1,0 +1,369 @@
+[
+  {
+    "disease": "drug reaction",
+    "precautions": [
+      "stop irritation",
+      "consult nearest hospital",
+      "stop taking drug",
+      "follow up"
+    ]
+  },
+  {
+    "disease": "malaria",
+    "precautions": [
+      "consult nearest hospital",
+      "avoid oily food",
+      "avoid non veg food",
+      "keep mosquitos out"
+    ]
+  },
+  {
+    "disease": "allergy",
+    "precautions": [
+      "apply calamine",
+      "cover area with bandage",
+      "use ice to compress itching"
+    ]
+  },
+  {
+    "disease": "hypothyroidism",
+    "precautions": [
+      "reduce stress",
+      "exercise",
+      "eat healthy",
+      "get proper sleep"
+    ]
+  },
+  {
+    "disease": "psoriasis",
+    "precautions": [
+      "wash hands with warm soapy water",
+      "stop bleeding using pressure",
+      "consult doctor",
+      "salt baths"
+    ]
+  },
+  {
+    "disease": "gerd",
+    "precautions": [
+      "avoid fatty spicy food",
+      "avoid lying down after eating",
+      "maintain healthy weight",
+      "exercise"
+    ]
+  },
+  {
+    "disease": "chronic cholestasis",
+    "precautions": [
+      "cold baths",
+      "anti itch medicine",
+      "consult doctor",
+      "eat healthy"
+    ]
+  },
+  {
+    "disease": "hepatitis a",
+    "precautions": [
+      "consult nearest hospital",
+      "wash hands through",
+      "avoid fatty spicy food",
+      "medication"
+    ]
+  },
+  {
+    "disease": "osteoarthristis",
+    "precautions": [
+      "acetaminophen",
+      "consult nearest hospital",
+      "follow up",
+      "salt baths"
+    ]
+  },
+  {
+    "disease": "(vertigo) paroymsal  positional vertigo",
+    "precautions": [
+      "lie down",
+      "avoid sudden change in body",
+      "avoid abrupt head movment",
+      "relax"
+    ]
+  },
+  {
+    "disease": "hypoglycemia",
+    "precautions": [
+      "lie down on side",
+      "check in pulse",
+      "drink sugary drinks",
+      "consult doctor"
+    ]
+  },
+  {
+    "disease": "acne",
+    "precautions": [
+      "bath twice",
+      "avoid fatty spicy food",
+      "drink plenty of water",
+      "avoid too many products"
+    ]
+  },
+  {
+    "disease": "diabetes",
+    "precautions": [
+      "have balanced diet",
+      "exercise",
+      "consult doctor",
+      "follow up"
+    ]
+  },
+  {
+    "disease": "impetigo",
+    "precautions": [
+      "soak affected area in warm water",
+      "use antibiotics",
+      "remove scabs with wet compressed cloth",
+      "consult doctor"
+    ]
+  },
+  {
+    "disease": "hypertension",
+    "precautions": [
+      "meditation",
+      "salt baths",
+      "reduce stress",
+      "get proper sleep"
+    ]
+  },
+  {
+    "disease": "peptic ulcer diseae",
+    "precautions": [
+      "avoid fatty spicy food",
+      "consume probiotic food",
+      "eliminate milk",
+      "limit alcohol"
+    ]
+  },
+  {
+    "disease": "dimorphic hemmorhoids(piles)",
+    "precautions": [
+      "avoid fatty spicy food",
+      "consume witch hazel",
+      "warm bath with epsom salt",
+      "consume alovera juice"
+    ]
+  },
+  {
+    "disease": "common cold",
+    "precautions": [
+      "drink vitamin c rich drinks",
+      "take vapour",
+      "avoid cold food",
+      "keep fever in check"
+    ]
+  },
+  {
+    "disease": "chicken pox",
+    "precautions": [
+      "use neem in bathing",
+      "consume neem leaves",
+      "take vaccine",
+      "avoid public places"
+    ]
+  },
+  {
+    "disease": "cervical spondylosis",
+    "precautions": [
+      "use heating pad or cold pack",
+      "exercise",
+      "take otc pain reliver",
+      "consult doctor"
+    ]
+  },
+  {
+    "disease": "hyperthyroidism",
+    "precautions": [
+      "eat healthy",
+      "massage",
+      "use lemon balm",
+      "take radioactive iodine treatment"
+    ]
+  },
+  {
+    "disease": "urinary tract infection",
+    "precautions": [
+      "drink plenty of water",
+      "increase vitamin c intake",
+      "drink cranberry juice",
+      "take probiotics"
+    ]
+  },
+  {
+    "disease": "varicose veins",
+    "precautions": [
+      "lie down flat and raise the leg high",
+      "use oinments",
+      "use vein compression",
+      "dont stand still for long"
+    ]
+  },
+  {
+    "disease": "aids",
+    "precautions": [
+      "avoid open cuts",
+      "wear ppe if possible",
+      "consult doctor",
+      "follow up"
+    ]
+  },
+  {
+    "disease": "paralysis (brain hemorrhage)",
+    "precautions": [
+      "massage",
+      "eat healthy",
+      "exercise",
+      "consult doctor"
+    ]
+  },
+  {
+    "disease": "typhoid",
+    "precautions": [
+      "eat high calorie vegitables",
+      "antiboitic therapy",
+      "consult doctor",
+      "medication"
+    ]
+  },
+  {
+    "disease": "hepatitis b",
+    "precautions": [
+      "consult nearest hospital",
+      "vaccination",
+      "eat healthy",
+      "medication"
+    ]
+  },
+  {
+    "disease": "fungal infection",
+    "precautions": [
+      "bath twice",
+      "use detol or neem in bathing water",
+      "keep infected area dry",
+      "use clean cloths"
+    ]
+  },
+  {
+    "disease": "hepatitis c",
+    "precautions": [
+      "consult nearest hospital",
+      "vaccination",
+      "eat healthy",
+      "medication"
+    ]
+  },
+  {
+    "disease": "migraine",
+    "precautions": [
+      "meditation",
+      "reduce stress",
+      "use poloroid glasses in sun",
+      "consult doctor"
+    ]
+  },
+  {
+    "disease": "bronchial asthma",
+    "precautions": [
+      "switch to loose cloothing",
+      "take deep breaths",
+      "get away from trigger",
+      "seek help"
+    ]
+  },
+  {
+    "disease": "alcoholic hepatitis",
+    "precautions": [
+      "stop alcohol consumption",
+      "consult doctor",
+      "medication",
+      "follow up"
+    ]
+  },
+  {
+    "disease": "jaundice",
+    "precautions": [
+      "drink plenty of water",
+      "consume milk thistle",
+      "eat fruits and high fiberous food",
+      "medication"
+    ]
+  },
+  {
+    "disease": "hepatitis e",
+    "precautions": [
+      "stop alcohol consumption",
+      "rest",
+      "consult doctor",
+      "medication"
+    ]
+  },
+  {
+    "disease": "dengue",
+    "precautions": [
+      "drink papaya leaf juice",
+      "avoid fatty spicy food",
+      "keep mosquitos away",
+      "keep hydrated"
+    ]
+  },
+  {
+    "disease": "hepatitis d",
+    "precautions": [
+      "consult doctor",
+      "medication",
+      "eat healthy",
+      "follow up"
+    ]
+  },
+  {
+    "disease": "heart attack",
+    "precautions": [
+      "call ambulance",
+      "chew or swallow asprin",
+      "keep calm"
+    ]
+  },
+  {
+    "disease": "pneumonia",
+    "precautions": [
+      "consult doctor",
+      "medication",
+      "rest",
+      "follow up"
+    ]
+  },
+  {
+    "disease": "arthritis",
+    "precautions": [
+      "exercise",
+      "use hot and cold therapy",
+      "try acupuncture",
+      "massage"
+    ]
+  },
+  {
+    "disease": "gastroenteritis",
+    "precautions": [
+      "stop eating solid food for while",
+      "try taking small sips of water",
+      "rest",
+      "ease back into eating"
+    ]
+  },
+  {
+    "disease": "tuberculosis",
+    "precautions": [
+      "cover mouth",
+      "consult doctor",
+      "medication",
+      "rest"
+    ]
+  }
+]
