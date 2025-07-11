@@ -46,7 +46,7 @@ const MedicalHistory = () => {
   }, []);
 
   return (
-    <div className=" max-w-4x1 mx-auto p-6 bg-cyan-50 min-h-[calc(100vh-10rem)]">
+    <div className="p-6 bg-cyan-50 min-h-screen">
       <h2 className="text-2xl font-bold text-center text-teal-900 border p-4">
         Your Medical History
       </h2>
