@@ -140,7 +140,18 @@ app.get("/me", async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Error fetching user session data" });
   }
+  res.clearCookie("connect.sid")
+  return res.json({ message: "Successfully logged out"})
 });
+
+// Logging out
+app.post("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).json({ error: "Failed to log out" });
+    }
+  })
+})
 
 // Getting user's medical history
 app.get("/med_history", async (req, res) => {

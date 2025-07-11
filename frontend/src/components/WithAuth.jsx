@@ -29,3 +29,4 @@ const WithAuth = (WrappedComponent) => {
     return <WrappedComponent {...props} />;
     };
 }
+export default WithAuth;

@@ -33,6 +33,15 @@ export async function getCurrentUser() {
   return data;
 }
 
+//fetching data from dashboard for user
+export async function getDashboard() {
+  const res = await fetch(`${BASE_URL}/dashboard`, {
+    method: "GET",
+    credentials: "include",
+  });
+  return await res.json();
+}
+
 // fetching medical history for user
 export async function getMedicalHistory() {
   const res = await fetch(`${BASE_URL}/med_history`, {

@@ -31,7 +31,7 @@ const SymptomsPage = () => {
       </h2>
       <LogNewSymptom onCreate={handleCreate} />
       {symptoms.length === 0 ? (
-        <p className="text-center text-teal-900 mt-8">
+        <p className="text-center uppercase text-teal-900 mt-8">
           No symptoms logged yet
         </p>
       ) : (
@@ -41,7 +41,7 @@ const SymptomsPage = () => {
               key={log.id}
               className="bg-yellow-50 w-100 flex-row px-4 py-3 rounded-lg shadow border border-yellow-300 shadow-sm"
             >
-              <p className="text-lg font-semibold mb-2 text-gray-800">
+              <p className="text-lg uppercase font-semibold mb-2 text-gray-800">
                 {log.name}
               </p>
               <p className="text-gray-600 mt-1">
