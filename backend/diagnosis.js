@@ -7,18 +7,32 @@ function computeBMI(weight, height) {
 
 // Grouping bmi into categories based on values
 function groupBMI(bmi) {
-  if (bmi < 18.5) return "underweight";
-  if (bmi < 5) return "normal";
-  if (bmi < 30) return "overweight";
+  if (bmi < 18.5) {
+    return "underweight";
+  }
+  if (bmi < 5) {
+    return "normal";
+  }
+  if (bmi < 30) {
+    return "overweight";
+  }
   return "obese";
 }
 
 // Grouping ages of users according to age groups
 function groupAges(age) {
-  if (age < 20) return "0-19";
-  if (age < 40) return "20-39";
-  if (age < 60) return "40-59";
-  if (age < 80) return "60-79";
+  if (age < 20) {
+    return "0-19";
+  }
+  if (age < 40) {
+    return "20-39";
+  }
+  if (age < 60) {
+    return "40-59";
+  }
+  if (age < 80) {
+    return "60-79";
+  }
   return "80+";
 }
 

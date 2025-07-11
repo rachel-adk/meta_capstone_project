@@ -126,9 +126,6 @@ app.post("/login", async (req, res) => {
 
 // Checking to see if user is logged in
 app.get("/me", async (req, res) => {
-  if (!req.session.userId) {
-    return res.status(401).json({ message: "Not logged in" });
-  }
 
   try {
     const user = await prisma.user.findUnique({
@@ -136,13 +133,15 @@ app.get("/me", async (req, res) => {
       select: { username: true },
     });
 
-    res.json({ id: req.session.userId, username: req.session.username });
+    if (!user) {
+      return res.status(401).json({ message: "User not found" });
+    }
+
+    return res.json({ id: req.session.userId, username: req.session.username });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error fetching user session data" });
   }
-  res.clearCookie("connect.sid")
-  return res.json({ message: "Successfully logged out"})
 });
 
 // Logging out
@@ -157,9 +156,13 @@ app.post("/logout", (req, res) => {
 // Getting user's profile
 app.get("/profile", async (req, res) => {
   try{
+    console.log("session:", req.session)
     const userId = req.session.userId;
+    if (!userId) {
+      return res.status(401).json({error: "Not logged in"})
+    }
     const profile = await prisma.user.findUnique({
-      where: { userId: userId },
+      where: { id: userId },
     })
     if (!profile) {
       return res.status(404).json({error: "Profile not found"})
@@ -172,9 +175,8 @@ app.get("/profile", async (req, res) => {
 })
 
 app.put("/profile", [
-  body("FullName").isString().trim().notEmpty(),
   body("age").isInt({ min: 1, max: 120 }),
-  body("gender").isIn(["Male", "Female", "Other"]),
+  body("gender").isIn(["male", "female", "other"]),
   body("height").isInt({ gt : 0 }),
   body("weight").isInt({ gt : 0 }),
   body("preExistingConditions").optional().isArray(),
@@ -185,13 +187,24 @@ app.put("/profile", [
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() })
   }
+  isAuthenticated,
+  async (req, res) => {
+    console.log(" session:", req.session)
+    console.log("body:", req.body)
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() })
+  }
   const userId = req.session.userId;
-  const { fullName, age, gender, height, weight, preExistingConditions } = req.body;
+  if (!userId) {
+    return res.status(401).json({error: "Not logged in"})
+  }
+
+  const { age, gender, height, weight, preExistingConditions } = req.body;
   try {
-    const profile = await prisma.user.upsert({
+    const profile = await prisma.user.update({
       where: { id: userId },
       update: {
-        fullName,
         age,
         gender,
         height,
@@ -200,7 +213,6 @@ app.put("/profile", [
       },
       create: {
         userId,
-        fullName,
         age,
         gender,
         height,
@@ -210,8 +222,9 @@ app.put("/profile", [
     })
     res.json(profile)
   } catch (error) {
-    console.error(error)
-    res.status(500).json({error: "Error updating user profile"})
+    console.error(error, "Error updating user profile")
+      return res.status(500).json({error: "Error updating user profile"})
+  }
   }
 })
 
