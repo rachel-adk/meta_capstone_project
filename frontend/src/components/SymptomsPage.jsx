@@ -25,7 +25,7 @@ const SymptomsPage = () => {
   }, []);
 
   return (
-    <div className=" max-w-4x1 mx-auto p-6 bg-cyan-50 min-h-[calc(100vh-10rem)]">
+    <div className=" max-w-4x1 mx-auto p-6 bg-cyan-50 h-screen">
       <h2 className="text-2xl font-bold text-center text-teal-900 border p-4">
         Your Symptom Logs
       </h2>
@@ -35,7 +35,7 @@ const SymptomsPage = () => {
           No symptoms logged yet
         </p>
       ) : (
-        <div className="mt-6 space-y-6">
+        <div className="flex flex-wrap gap-4 py-4 justify-center">
           {symptoms.map((log) => (
             <div
               key={log.id}
