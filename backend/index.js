@@ -4,6 +4,7 @@ const { PrismaClient } = require("./src/generated/prisma");
 const session = require("express-session");
 
 const prisma = new PrismaClient();
+const { body, validationResult } = require("express-validator");
 const app = express();
 const cors = require("cors");
 
@@ -152,6 +153,68 @@ app.post("/logout", (req, res) => {
     }
   })
 })
+
+// Getting user's profile
+app.get("/profile", isAuthenticated, async (req, res) => {
+  try{
+    const userId = req.session.userId;
+    const profile = await prisma.user.findUnique({
+      where: { userId },
+    })
+    if (!profile) {
+      return res.status(404).json({error: "Profile not found"})
+    }
+    res.json(profile)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({error: "Error fetching user profile"})
+  }
+})
+
+app.put("/profile", [
+  body("FullName").isString().trim().notEmpty(),
+  body("age").isInt({ min: 1, max: 120 }),
+  body("gender").isIn(["Male", "Female", "Other"]),
+  body("height").isInt({ gt : 0 }),
+  body("weight").isInt({ gt : 0 }),
+  body("preExistingConditions").optional().isArray(),
+  body("preExistingConditions.*").isString(),
+],
+ async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+  const userId = req.session.userId;
+  const { fullName, age, gender, height, weight, preExistingConditions } = req.body;
+  try {
+    const profile = await prisma.user.upsert({
+      where: { id: userId },
+      update: {
+        fullName,
+        age,
+        gender,
+        height,
+        weight,
+        preExistingConditions,
+      },
+      create: {
+        userId,
+        fullName,
+        age,
+        gender,
+        height,
+        weight,
+        preExistingConditions,
+      },
+    })
+    res.json(profile)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({error: "Error updating user profile"})
+  }
+})
+
 
 // Getting user's medical history
 app.get("/med_history", async (req, res) => {
