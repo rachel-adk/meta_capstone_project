@@ -30,9 +30,7 @@ const HomePage = () => {
         >
           Login
         </Link>
-        <div className="grid md:grid-rows-4 gap-4 border-red-900">
-
-        </div>
+        
       </div>
     </div>
   );
