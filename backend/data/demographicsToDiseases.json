@@ -1,0 +1,3530 @@
+{
+  "hypertension": {
+    "0-19": {
+      "male": {
+        "underweight": 0.027,
+        "normal": 0.046,
+        "overweight": 0.033,
+        "obese": 0.028
+      },
+      "female": {
+        "underweight": 0.029,
+        "normal": 0.082,
+        "overweight": 0.086,
+        "obese": 0.043
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.076,
+        "normal": 0.02,
+        "overweight": 0.073,
+        "obese": 0.086
+      },
+      "female": {
+        "underweight": 0.064,
+        "normal": 0.076,
+        "overweight": 0.023,
+        "obese": 0.075
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.048,
+        "normal": 0.093,
+        "overweight": 0.065,
+        "obese": 0.102
+      },
+      "female": {
+        "underweight": 0.074,
+        "normal": 0.057,
+        "overweight": 0.097,
+        "obese": 0.063
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.022,
+        "normal": 0.031,
+        "overweight": 0.061,
+        "obese": 0.168
+      },
+      "female": {
+        "underweight": 0.048,
+        "normal": 0.032,
+        "overweight": 0.14,
+        "obese": 0.223
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.068,
+        "normal": 0.129,
+        "overweight": 0.101,
+        "obese": 0.146
+      },
+      "female": {
+        "underweight": 0.123,
+        "normal": 0.122,
+        "overweight": 0.153,
+        "obese": 0.243
+      }
+    }
+  },
+  "type 2 diabetes": {
+    "0-19": {
+      "male": {
+        "underweight": 0.095,
+        "normal": 0.023,
+        "overweight": 0.021,
+        "obese": 0.05
+      },
+      "female": {
+        "underweight": 0.027,
+        "normal": 0.073,
+        "overweight": 0.097,
+        "obese": 0.079
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.027,
+        "normal": 0.017,
+        "overweight": 0.065,
+        "obese": 0.033
+      },
+      "female": {
+        "underweight": 0.069,
+        "normal": 0.07,
+        "overweight": 0.035,
+        "obese": 0.098
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.078,
+        "normal": 0.068,
+        "overweight": 0.096,
+        "obese": 0.08
+      },
+      "female": {
+        "underweight": 0.036,
+        "normal": 0.041,
+        "overweight": 0.087,
+        "obese": 0.021
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.042,
+        "normal": 0.031,
+        "overweight": 0.133,
+        "obese": 0.164
+      },
+      "female": {
+        "underweight": 0.086,
+        "normal": 0.127,
+        "overweight": 0.161,
+        "obese": 0.104
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.156,
+        "normal": 0.082,
+        "overweight": 0.048,
+        "obese": 0.108
+      },
+      "female": {
+        "underweight": 0.084,
+        "normal": 0.063,
+        "overweight": 0.055,
+        "obese": 0.052
+      }
+    }
+  },
+  "coronary heart disease": {
+    "0-19": {
+      "male": {
+        "underweight": 0.027,
+        "normal": 0.042,
+        "overweight": 0.078,
+        "obese": 0.077
+      },
+      "female": {
+        "underweight": 0.1,
+        "normal": 0.051,
+        "overweight": 0.054,
+        "obese": 0.132
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.035,
+        "normal": 0.093,
+        "overweight": 0.031,
+        "obese": 0.053
+      },
+      "female": {
+        "underweight": 0.063,
+        "normal": 0.026,
+        "overweight": 0.07,
+        "obese": 0.061
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.017,
+        "normal": 0.046,
+        "overweight": 0.068,
+        "obese": 0.068
+      },
+      "female": {
+        "underweight": 0.035,
+        "normal": 0.059,
+        "overweight": 0.021,
+        "obese": 0.053
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.048,
+        "normal": 0.03,
+        "overweight": 0.097,
+        "obese": 0.202
+      },
+      "female": {
+        "underweight": 0.064,
+        "normal": 0.13,
+        "overweight": 0.166,
+        "obese": 0.098
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.148,
+        "normal": 0.033,
+        "overweight": 0.094,
+        "obese": 0.069
+      },
+      "female": {
+        "underweight": 0.036,
+        "normal": 0.084,
+        "overweight": 0.042,
+        "obese": 0.031
+      }
+    }
+  },
+  "stroke": {
+    "0-19": {
+      "male": {
+        "underweight": 0.072,
+        "normal": 0.011,
+        "overweight": 0.098,
+        "obese": 0.103
+      },
+      "female": {
+        "underweight": 0.093,
+        "normal": 0.022,
+        "overweight": 0.056,
+        "obese": 0.094
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.019,
+        "normal": 0.037,
+        "overweight": 0.052,
+        "obese": 0.098
+      },
+      "female": {
+        "underweight": 0.023,
+        "normal": 0.096,
+        "overweight": 0.073,
+        "obese": 0.135
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.048,
+        "normal": 0.056,
+        "overweight": 0.043,
+        "obese": 0.096
+      },
+      "female": {
+        "underweight": 0.046,
+        "normal": 0.012,
+        "overweight": 0.098,
+        "obese": 0.096
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.115,
+        "normal": 0.077,
+        "overweight": 0.142,
+        "obese": 0.14
+      },
+      "female": {
+        "underweight": 0.09,
+        "normal": 0.122,
+        "overweight": 0.119,
+        "obese": 0.136
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.11,
+        "normal": 0.069,
+        "overweight": 0.035,
+        "obese": 0.133
+      },
+      "female": {
+        "underweight": 0.181,
+        "normal": 0.083,
+        "overweight": 0.066,
+        "obese": 0.025
+      }
+    }
+  },
+  "chronic kidney disease": {
+    "0-19": {
+      "male": {
+        "underweight": 0.028,
+        "normal": 0.083,
+        "overweight": 0.052,
+        "obese": 0.021
+      },
+      "female": {
+        "underweight": 0.074,
+        "normal": 0.025,
+        "overweight": 0.075,
+        "obese": 0.075
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.03,
+        "normal": 0.095,
+        "overweight": 0.033,
+        "obese": 0.029
+      },
+      "female": {
+        "underweight": 0.097,
+        "normal": 0.02,
+        "overweight": 0.026,
+        "obese": 0.114
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.056,
+        "normal": 0.087,
+        "overweight": 0.072,
+        "obese": 0.043
+      },
+      "female": {
+        "underweight": 0.098,
+        "normal": 0.032,
+        "overweight": 0.1,
+        "obese": 0.079
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.157,
+        "normal": 0.125,
+        "overweight": 0.084,
+        "obese": 0.141
+      },
+      "female": {
+        "underweight": 0.034,
+        "normal": 0.141,
+        "overweight": 0.141,
+        "obese": 0.278
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.145,
+        "normal": 0.058,
+        "overweight": 0.079,
+        "obese": 0.21
+      },
+      "female": {
+        "underweight": 0.034,
+        "normal": 0.121,
+        "overweight": 0.119,
+        "obese": 0.155
+      }
+    }
+  },
+  "osteoporosis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.094,
+        "normal": 0.049,
+        "overweight": 0.066,
+        "obese": 0.092
+      },
+      "female": {
+        "underweight": 0.086,
+        "normal": 0.047,
+        "overweight": 0.08,
+        "obese": 0.067
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.032,
+        "normal": 0.093,
+        "overweight": 0.015,
+        "obese": 0.015
+      },
+      "female": {
+        "underweight": 0.038,
+        "normal": 0.073,
+        "overweight": 0.067,
+        "obese": 0.09
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.038,
+        "normal": 0.093,
+        "overweight": 0.079,
+        "obese": 0.125
+      },
+      "female": {
+        "underweight": 0.04,
+        "normal": 0.079,
+        "overweight": 0.096,
+        "obese": 0.124
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.113,
+        "normal": 0.061,
+        "overweight": 0.034,
+        "obese": 0.231
+      },
+      "female": {
+        "underweight": 0.021,
+        "normal": 0.145,
+        "overweight": 0.079,
+        "obese": 0.158
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.146,
+        "normal": 0.137,
+        "overweight": 0.036,
+        "obese": 0.023
+      },
+      "female": {
+        "underweight": 0.069,
+        "normal": 0.063,
+        "overweight": 0.08,
+        "obese": 0.131
+      }
+    }
+  },
+  "breast cancer": {
+    "0-19": {
+      "male": {
+        "underweight": 0.078,
+        "normal": 0.087,
+        "overweight": 0.075,
+        "obese": 0.127
+      },
+      "female": {
+        "underweight": 0.042,
+        "normal": 0.027,
+        "overweight": 0.056,
+        "obese": 0.1
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.085,
+        "normal": 0.074,
+        "overweight": 0.072,
+        "obese": 0.034
+      },
+      "female": {
+        "underweight": 0.043,
+        "normal": 0.028,
+        "overweight": 0.049,
+        "obese": 0.029
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.07,
+        "normal": 0.055,
+        "overweight": 0.081,
+        "obese": 0.086
+      },
+      "female": {
+        "underweight": 0.015,
+        "normal": 0.085,
+        "overweight": 0.075,
+        "obese": 0.051
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.138,
+        "normal": 0.063,
+        "overweight": 0.055,
+        "obese": 0.085
+      },
+      "female": {
+        "underweight": 0.028,
+        "normal": 0.105,
+        "overweight": 0.153,
+        "obese": 0.205
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.074,
+        "normal": 0.026,
+        "overweight": 0.027,
+        "obese": 0.185
+      },
+      "female": {
+        "underweight": 0.126,
+        "normal": 0.154,
+        "overweight": 0.062,
+        "obese": 0.102
+      }
+    }
+  },
+  "lung cancer": {
+    "0-19": {
+      "male": {
+        "underweight": 0.069,
+        "normal": 0.059,
+        "overweight": 0.029,
+        "obese": 0.026
+      },
+      "female": {
+        "underweight": 0.061,
+        "normal": 0.079,
+        "overweight": 0.054,
+        "obese": 0.073
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.025,
+        "normal": 0.046,
+        "overweight": 0.097,
+        "obese": 0.055
+      },
+      "female": {
+        "underweight": 0.064,
+        "normal": 0.029,
+        "overweight": 0.036,
+        "obese": 0.093
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.089,
+        "normal": 0.059,
+        "overweight": 0.011,
+        "obese": 0.114
+      },
+      "female": {
+        "underweight": 0.012,
+        "normal": 0.012,
+        "overweight": 0.058,
+        "obese": 0.073
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.14,
+        "normal": 0.03,
+        "overweight": 0.035,
+        "obese": 0.2
+      },
+      "female": {
+        "underweight": 0.115,
+        "normal": 0.094,
+        "overweight": 0.086,
+        "obese": 0.171
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.032,
+        "normal": 0.132,
+        "overweight": 0.095,
+        "obese": 0.225
+      },
+      "female": {
+        "underweight": 0.136,
+        "normal": 0.123,
+        "overweight": 0.036,
+        "obese": 0.164
+      }
+    }
+  },
+  "copd": {
+    "0-19": {
+      "male": {
+        "underweight": 0.063,
+        "normal": 0.031,
+        "overweight": 0.064,
+        "obese": 0.051
+      },
+      "female": {
+        "underweight": 0.038,
+        "normal": 0.053,
+        "overweight": 0.048,
+        "obese": 0.018
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.096,
+        "normal": 0.043,
+        "overweight": 0.037,
+        "obese": 0.027
+      },
+      "female": {
+        "underweight": 0.05,
+        "normal": 0.027,
+        "overweight": 0.029,
+        "obese": 0.036
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.033,
+        "normal": 0.017,
+        "overweight": 0.098,
+        "obese": 0.137
+      },
+      "female": {
+        "underweight": 0.071,
+        "normal": 0.029,
+        "overweight": 0.077,
+        "obese": 0.017
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.087,
+        "normal": 0.098,
+        "overweight": 0.164,
+        "obese": 0.21
+      },
+      "female": {
+        "underweight": 0.02,
+        "normal": 0.164,
+        "overweight": 0.075,
+        "obese": 0.196
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.076,
+        "normal": 0.128,
+        "overweight": 0.126,
+        "obese": 0.18
+      },
+      "female": {
+        "underweight": 0.046,
+        "normal": 0.13,
+        "overweight": 0.025,
+        "obese": 0.05
+      }
+    }
+  },
+  "asthma": {
+    "0-19": {
+      "male": {
+        "underweight": 0.07,
+        "normal": 0.086,
+        "overweight": 0.078,
+        "obese": 0.128
+      },
+      "female": {
+        "underweight": 0.037,
+        "normal": 0.013,
+        "overweight": 0.018,
+        "obese": 0.131
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.028,
+        "normal": 0.018,
+        "overweight": 0.097,
+        "obese": 0.063
+      },
+      "female": {
+        "underweight": 0.02,
+        "normal": 0.031,
+        "overweight": 0.086,
+        "obese": 0.099
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.038,
+        "normal": 0.084,
+        "overweight": 0.012,
+        "obese": 0.104
+      },
+      "female": {
+        "underweight": 0.056,
+        "normal": 0.027,
+        "overweight": 0.025,
+        "obese": 0.095
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.143,
+        "normal": 0.016,
+        "overweight": 0.064,
+        "obese": 0.074
+      },
+      "female": {
+        "underweight": 0.065,
+        "normal": 0.149,
+        "overweight": 0.137,
+        "obese": 0.232
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.082,
+        "normal": 0.136,
+        "overweight": 0.182,
+        "obese": 0.028
+      },
+      "female": {
+        "underweight": 0.129,
+        "normal": 0.085,
+        "overweight": 0.082,
+        "obese": 0.158
+      }
+    }
+  },
+  "depression": {
+    "0-19": {
+      "male": {
+        "underweight": 0.055,
+        "normal": 0.041,
+        "overweight": 0.055,
+        "obese": 0.08
+      },
+      "female": {
+        "underweight": 0.078,
+        "normal": 0.033,
+        "overweight": 0.027,
+        "obese": 0.118
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.05,
+        "normal": 0.012,
+        "overweight": 0.012,
+        "obese": 0.035
+      },
+      "female": {
+        "underweight": 0.046,
+        "normal": 0.075,
+        "overweight": 0.094,
+        "obese": 0.102
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.048,
+        "normal": 0.078,
+        "overweight": 0.093,
+        "obese": 0.111
+      },
+      "female": {
+        "underweight": 0.078,
+        "normal": 0.071,
+        "overweight": 0.047,
+        "obese": 0.037
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.023,
+        "normal": 0.044,
+        "overweight": 0.132,
+        "obese": 0.238
+      },
+      "female": {
+        "underweight": 0.128,
+        "normal": 0.149,
+        "overweight": 0.087,
+        "obese": 0.074
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.096,
+        "normal": 0.049,
+        "overweight": 0.043,
+        "obese": 0.047
+      },
+      "female": {
+        "underweight": 0.087,
+        "normal": 0.099,
+        "overweight": 0.053,
+        "obese": 0.266
+      }
+    }
+  },
+  "alzheimers disease": {
+    "0-19": {
+      "male": {
+        "underweight": 0.033,
+        "normal": 0.059,
+        "overweight": 0.018,
+        "obese": 0.068
+      },
+      "female": {
+        "underweight": 0.031,
+        "normal": 0.098,
+        "overweight": 0.053,
+        "obese": 0.017
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.062,
+        "normal": 0.087,
+        "overweight": 0.019,
+        "obese": 0.109
+      },
+      "female": {
+        "underweight": 0.069,
+        "normal": 0.063,
+        "overweight": 0.051,
+        "obese": 0.086
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.032,
+        "normal": 0.011,
+        "overweight": 0.068,
+        "obese": 0.037
+      },
+      "female": {
+        "underweight": 0.033,
+        "normal": 0.04,
+        "overweight": 0.092,
+        "obese": 0.138
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.053,
+        "normal": 0.161,
+        "overweight": 0.026,
+        "obese": 0.038
+      },
+      "female": {
+        "underweight": 0.134,
+        "normal": 0.112,
+        "overweight": 0.071,
+        "obese": 0.145
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.028,
+        "normal": 0.082,
+        "overweight": 0.13,
+        "obese": 0.164
+      },
+      "female": {
+        "underweight": 0.098,
+        "normal": 0.039,
+        "overweight": 0.079,
+        "obese": 0.053
+      }
+    }
+  },
+  "parkinsons disease": {
+    "0-19": {
+      "male": {
+        "underweight": 0.026,
+        "normal": 0.092,
+        "overweight": 0.065,
+        "obese": 0.037
+      },
+      "female": {
+        "underweight": 0.02,
+        "normal": 0.039,
+        "overweight": 0.035,
+        "obese": 0.015
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.042,
+        "normal": 0.024,
+        "overweight": 0.079,
+        "obese": 0.032
+      },
+      "female": {
+        "underweight": 0.011,
+        "normal": 0.01,
+        "overweight": 0.032,
+        "obese": 0.028
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.075,
+        "normal": 0.098,
+        "overweight": 0.039,
+        "obese": 0.11
+      },
+      "female": {
+        "underweight": 0.054,
+        "normal": 0.067,
+        "overweight": 0.037,
+        "obese": 0.066
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.118,
+        "normal": 0.111,
+        "overweight": 0.049,
+        "obese": 0.114
+      },
+      "female": {
+        "underweight": 0.05,
+        "normal": 0.029,
+        "overweight": 0.119,
+        "obese": 0.12
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.023,
+        "normal": 0.027,
+        "overweight": 0.062,
+        "obese": 0.062
+      },
+      "female": {
+        "underweight": 0.029,
+        "normal": 0.09,
+        "overweight": 0.02,
+        "obese": 0.103
+      }
+    }
+  },
+  "liver cirrhosis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.064,
+        "normal": 0.078,
+        "overweight": 0.063,
+        "obese": 0.051
+      },
+      "female": {
+        "underweight": 0.047,
+        "normal": 0.09,
+        "overweight": 0.097,
+        "obese": 0.103
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.06,
+        "normal": 0.051,
+        "overweight": 0.075,
+        "obese": 0.075
+      },
+      "female": {
+        "underweight": 0.079,
+        "normal": 0.015,
+        "overweight": 0.044,
+        "obese": 0.022
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.031,
+        "normal": 0.053,
+        "overweight": 0.047,
+        "obese": 0.082
+      },
+      "female": {
+        "underweight": 0.018,
+        "normal": 0.093,
+        "overweight": 0.012,
+        "obese": 0.091
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.112,
+        "normal": 0.054,
+        "overweight": 0.151,
+        "obese": 0.159
+      },
+      "female": {
+        "underweight": 0.168,
+        "normal": 0.08,
+        "overweight": 0.168,
+        "obese": 0.093
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.116,
+        "normal": 0.069,
+        "overweight": 0.023,
+        "obese": 0.146
+      },
+      "female": {
+        "underweight": 0.031,
+        "normal": 0.153,
+        "overweight": 0.055,
+        "obese": 0.158
+      }
+    }
+  },
+  "colorectal cancer": {
+    "0-19": {
+      "male": {
+        "underweight": 0.084,
+        "normal": 0.017,
+        "overweight": 0.054,
+        "obese": 0.053
+      },
+      "female": {
+        "underweight": 0.039,
+        "normal": 0.034,
+        "overweight": 0.1,
+        "obese": 0.021
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.062,
+        "normal": 0.085,
+        "overweight": 0.027,
+        "obese": 0.115
+      },
+      "female": {
+        "underweight": 0.085,
+        "normal": 0.041,
+        "overweight": 0.091,
+        "obese": 0.075
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.033,
+        "normal": 0.083,
+        "overweight": 0.082,
+        "obese": 0.136
+      },
+      "female": {
+        "underweight": 0.051,
+        "normal": 0.093,
+        "overweight": 0.02,
+        "obese": 0.037
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.064,
+        "normal": 0.065,
+        "overweight": 0.098,
+        "obese": 0.123
+      },
+      "female": {
+        "underweight": 0.094,
+        "normal": 0.109,
+        "overweight": 0.155,
+        "obese": 0.222
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.15,
+        "normal": 0.024,
+        "overweight": 0.067,
+        "obese": 0.182
+      },
+      "female": {
+        "underweight": 0.157,
+        "normal": 0.17,
+        "overweight": 0.037,
+        "obese": 0.038
+      }
+    }
+  },
+  "prostate cancer": {
+    "0-19": {
+      "male": {
+        "underweight": 0.086,
+        "normal": 0.072,
+        "overweight": 0.071,
+        "obese": 0.088
+      },
+      "female": {
+        "underweight": 0.092,
+        "normal": 0.042,
+        "overweight": 0.036,
+        "obese": 0.121
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.076,
+        "normal": 0.073,
+        "overweight": 0.041,
+        "obese": 0.14
+      },
+      "female": {
+        "underweight": 0.046,
+        "normal": 0.037,
+        "overweight": 0.051,
+        "obese": 0.093
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.01,
+        "normal": 0.059,
+        "overweight": 0.071,
+        "obese": 0.126
+      },
+      "female": {
+        "underweight": 0.022,
+        "normal": 0.064,
+        "overweight": 0.018,
+        "obese": 0.104
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.157,
+        "normal": 0.112,
+        "overweight": 0.05,
+        "obese": 0.184
+      },
+      "female": {
+        "underweight": 0.097,
+        "normal": 0.131,
+        "overweight": 0.15,
+        "obese": 0.159
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.05,
+        "normal": 0.078,
+        "overweight": 0.064,
+        "obese": 0.215
+      },
+      "female": {
+        "underweight": 0.104,
+        "normal": 0.141,
+        "overweight": 0.09,
+        "obese": 0.023
+      }
+    }
+  },
+  "ulcerative colitis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.034,
+        "normal": 0.06,
+        "overweight": 0.063,
+        "obese": 0.082
+      },
+      "female": {
+        "underweight": 0.092,
+        "normal": 0.073,
+        "overweight": 0.056,
+        "obese": 0.071
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.088,
+        "normal": 0.012,
+        "overweight": 0.051,
+        "obese": 0.095
+      },
+      "female": {
+        "underweight": 0.018,
+        "normal": 0.077,
+        "overweight": 0.056,
+        "obese": 0.118
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.087,
+        "normal": 0.069,
+        "overweight": 0.074,
+        "obese": 0.051
+      },
+      "female": {
+        "underweight": 0.093,
+        "normal": 0.038,
+        "overweight": 0.025,
+        "obese": 0.044
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.156,
+        "normal": 0.073,
+        "overweight": 0.188,
+        "obese": 0.051
+      },
+      "female": {
+        "underweight": 0.043,
+        "normal": 0.156,
+        "overweight": 0.039,
+        "obese": 0.084
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.055,
+        "normal": 0.106,
+        "overweight": 0.165,
+        "obese": 0.206
+      },
+      "female": {
+        "underweight": 0.106,
+        "normal": 0.168,
+        "overweight": 0.055,
+        "obese": 0.206
+      }
+    }
+  },
+  "pancreatitis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.069,
+        "normal": 0.085,
+        "overweight": 0.026,
+        "obese": 0.08
+      },
+      "female": {
+        "underweight": 0.034,
+        "normal": 0.034,
+        "overweight": 0.094,
+        "obese": 0.078
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.035,
+        "normal": 0.093,
+        "overweight": 0.052,
+        "obese": 0.034
+      },
+      "female": {
+        "underweight": 0.081,
+        "normal": 0.093,
+        "overweight": 0.051,
+        "obese": 0.118
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.067,
+        "normal": 0.073,
+        "overweight": 0.015,
+        "obese": 0.129
+      },
+      "female": {
+        "underweight": 0.053,
+        "normal": 0.027,
+        "overweight": 0.074,
+        "obese": 0.054
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.084,
+        "normal": 0.121,
+        "overweight": 0.118,
+        "obese": 0.219
+      },
+      "female": {
+        "underweight": 0.136,
+        "normal": 0.096,
+        "overweight": 0.097,
+        "obese": 0.022
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.126,
+        "normal": 0.034,
+        "overweight": 0.147,
+        "obese": 0.207
+      },
+      "female": {
+        "underweight": 0.079,
+        "normal": 0.079,
+        "overweight": 0.021,
+        "obese": 0.065
+      }
+    }
+  },
+  "kidney stones": {
+    "0-19": {
+      "male": {
+        "underweight": 0.036,
+        "normal": 0.084,
+        "overweight": 0.079,
+        "obese": 0.084
+      },
+      "female": {
+        "underweight": 0.03,
+        "normal": 0.029,
+        "overweight": 0.095,
+        "obese": 0.085
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.067,
+        "normal": 0.037,
+        "overweight": 0.098,
+        "obese": 0.051
+      },
+      "female": {
+        "underweight": 0.042,
+        "normal": 0.08,
+        "overweight": 0.055,
+        "obese": 0.057
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.084,
+        "normal": 0.066,
+        "overweight": 0.048,
+        "obese": 0.049
+      },
+      "female": {
+        "underweight": 0.03,
+        "normal": 0.055,
+        "overweight": 0.043,
+        "obese": 0.049
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.122,
+        "normal": 0.131,
+        "overweight": 0.036,
+        "obese": 0.029
+      },
+      "female": {
+        "underweight": 0.118,
+        "normal": 0.099,
+        "overweight": 0.03,
+        "obese": 0.076
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.082,
+        "normal": 0.188,
+        "overweight": 0.161,
+        "obese": 0.171
+      },
+      "female": {
+        "underweight": 0.025,
+        "normal": 0.086,
+        "overweight": 0.074,
+        "obese": 0.185
+      }
+    }
+  },
+  "inflammatory bowel disease": {
+    "0-19": {
+      "male": {
+        "underweight": 0.013,
+        "normal": 0.05,
+        "overweight": 0.031,
+        "obese": 0.038
+      },
+      "female": {
+        "underweight": 0.054,
+        "normal": 0.036,
+        "overweight": 0.051,
+        "obese": 0.072
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.097,
+        "normal": 0.036,
+        "overweight": 0.063,
+        "obese": 0.024
+      },
+      "female": {
+        "underweight": 0.011,
+        "normal": 0.059,
+        "overweight": 0.024,
+        "obese": 0.092
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.075,
+        "normal": 0.089,
+        "overweight": 0.073,
+        "obese": 0.107
+      },
+      "female": {
+        "underweight": 0.012,
+        "normal": 0.043,
+        "overweight": 0.091,
+        "obese": 0.057
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.062,
+        "normal": 0.144,
+        "overweight": 0.066,
+        "obese": 0.121
+      },
+      "female": {
+        "underweight": 0.153,
+        "normal": 0.067,
+        "overweight": 0.064,
+        "obese": 0.053
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.099,
+        "normal": 0.045,
+        "overweight": 0.157,
+        "obese": 0.14
+      },
+      "female": {
+        "underweight": 0.124,
+        "normal": 0.076,
+        "overweight": 0.045,
+        "obese": 0.037
+      }
+    }
+  },
+  "cataracts": {
+    "0-19": {
+      "male": {
+        "underweight": 0.015,
+        "normal": 0.068,
+        "overweight": 0.04,
+        "obese": 0.099
+      },
+      "female": {
+        "underweight": 0.015,
+        "normal": 0.028,
+        "overweight": 0.051,
+        "obese": 0.017
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.064,
+        "normal": 0.064,
+        "overweight": 0.059,
+        "obese": 0.125
+      },
+      "female": {
+        "underweight": 0.063,
+        "normal": 0.013,
+        "overweight": 0.025,
+        "obese": 0.032
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.04,
+        "normal": 0.036,
+        "overweight": 0.063,
+        "obese": 0.038
+      },
+      "female": {
+        "underweight": 0.092,
+        "normal": 0.028,
+        "overweight": 0.017,
+        "obese": 0.065
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.142,
+        "normal": 0.042,
+        "overweight": 0.057,
+        "obese": 0.192
+      },
+      "female": {
+        "underweight": 0.138,
+        "normal": 0.087,
+        "overweight": 0.021,
+        "obese": 0.155
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.028,
+        "normal": 0.037,
+        "overweight": 0.057,
+        "obese": 0.091
+      },
+      "female": {
+        "underweight": 0.059,
+        "normal": 0.119,
+        "overweight": 0.1,
+        "obese": 0.161
+      }
+    }
+  },
+  "skin cancer": {
+    "0-19": {
+      "male": {
+        "underweight": 0.07,
+        "normal": 0.015,
+        "overweight": 0.097,
+        "obese": 0.056
+      },
+      "female": {
+        "underweight": 0.077,
+        "normal": 0.035,
+        "overweight": 0.078,
+        "obese": 0.127
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.015,
+        "normal": 0.048,
+        "overweight": 0.061,
+        "obese": 0.118
+      },
+      "female": {
+        "underweight": 0.052,
+        "normal": 0.028,
+        "overweight": 0.051,
+        "obese": 0.083
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.019,
+        "normal": 0.073,
+        "overweight": 0.026,
+        "obese": 0.016
+      },
+      "female": {
+        "underweight": 0.058,
+        "normal": 0.016,
+        "overweight": 0.07,
+        "obese": 0.036
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.073,
+        "normal": 0.063,
+        "overweight": 0.129,
+        "obese": 0.096
+      },
+      "female": {
+        "underweight": 0.031,
+        "normal": 0.159,
+        "overweight": 0.149,
+        "obese": 0.239
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.155,
+        "normal": 0.063,
+        "overweight": 0.084,
+        "obese": 0.223
+      },
+      "female": {
+        "underweight": 0.142,
+        "normal": 0.082,
+        "overweight": 0.025,
+        "obese": 0.181
+      }
+    }
+  },
+  "atrial fibrillation": {
+    "0-19": {
+      "male": {
+        "underweight": 0.07,
+        "normal": 0.096,
+        "overweight": 0.091,
+        "obese": 0.116
+      },
+      "female": {
+        "underweight": 0.021,
+        "normal": 0.073,
+        "overweight": 0.031,
+        "obese": 0.035
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.022,
+        "normal": 0.098,
+        "overweight": 0.093,
+        "obese": 0.042
+      },
+      "female": {
+        "underweight": 0.036,
+        "normal": 0.06,
+        "overweight": 0.068,
+        "obese": 0.047
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.048,
+        "normal": 0.071,
+        "overweight": 0.083,
+        "obese": 0.079
+      },
+      "female": {
+        "underweight": 0.089,
+        "normal": 0.029,
+        "overweight": 0.09,
+        "obese": 0.135
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.083,
+        "normal": 0.045,
+        "overweight": 0.045,
+        "obese": 0.096
+      },
+      "female": {
+        "underweight": 0.159,
+        "normal": 0.116,
+        "overweight": 0.161,
+        "obese": 0.074
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.106,
+        "normal": 0.046,
+        "overweight": 0.039,
+        "obese": 0.223
+      },
+      "female": {
+        "underweight": 0.087,
+        "normal": 0.155,
+        "overweight": 0.044,
+        "obese": 0.213
+      }
+    }
+  },
+  "dementia": {
+    "0-19": {
+      "male": {
+        "underweight": 0.089,
+        "normal": 0.056,
+        "overweight": 0.017,
+        "obese": 0.042
+      },
+      "female": {
+        "underweight": 0.096,
+        "normal": 0.053,
+        "overweight": 0.059,
+        "obese": 0.022
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.036,
+        "normal": 0.029,
+        "overweight": 0.096,
+        "obese": 0.138
+      },
+      "female": {
+        "underweight": 0.064,
+        "normal": 0.021,
+        "overweight": 0.035,
+        "obese": 0.141
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.055,
+        "normal": 0.074,
+        "overweight": 0.024,
+        "obese": 0.046
+      },
+      "female": {
+        "underweight": 0.042,
+        "normal": 0.086,
+        "overweight": 0.055,
+        "obese": 0.048
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.103,
+        "normal": 0.021,
+        "overweight": 0.099,
+        "obese": 0.073
+      },
+      "female": {
+        "underweight": 0.047,
+        "normal": 0.108,
+        "overweight": 0.056,
+        "obese": 0.04
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.031,
+        "normal": 0.081,
+        "overweight": 0.152,
+        "obese": 0.08
+      },
+      "female": {
+        "underweight": 0.114,
+        "normal": 0.018,
+        "overweight": 0.043,
+        "obese": 0.156
+      }
+    }
+  },
+  "migraine": {
+    "0-19": {
+      "male": {
+        "underweight": 0.056,
+        "normal": 0.062,
+        "overweight": 0.095,
+        "obese": 0.015
+      },
+      "female": {
+        "underweight": 0.07,
+        "normal": 0.036,
+        "overweight": 0.098,
+        "obese": 0.115
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.017,
+        "normal": 0.067,
+        "overweight": 0.098,
+        "obese": 0.109
+      },
+      "female": {
+        "underweight": 0.055,
+        "normal": 0.058,
+        "overweight": 0.019,
+        "obese": 0.118
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.059,
+        "normal": 0.011,
+        "overweight": 0.099,
+        "obese": 0.101
+      },
+      "female": {
+        "underweight": 0.013,
+        "normal": 0.088,
+        "overweight": 0.032,
+        "obese": 0.052
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.062,
+        "normal": 0.086,
+        "overweight": 0.099,
+        "obese": 0.1
+      },
+      "female": {
+        "underweight": 0.065,
+        "normal": 0.025,
+        "overweight": 0.123,
+        "obese": 0.097
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.068,
+        "normal": 0.111,
+        "overweight": 0.072,
+        "obese": 0.03
+      },
+      "female": {
+        "underweight": 0.113,
+        "normal": 0.062,
+        "overweight": 0.058,
+        "obese": 0.231
+      }
+    }
+  },
+  "arthritis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.039,
+        "normal": 0.076,
+        "overweight": 0.073,
+        "obese": 0.021
+      },
+      "female": {
+        "underweight": 0.084,
+        "normal": 0.092,
+        "overweight": 0.027,
+        "obese": 0.038
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.066,
+        "normal": 0.043,
+        "overweight": 0.026,
+        "obese": 0.083
+      },
+      "female": {
+        "underweight": 0.071,
+        "normal": 0.025,
+        "overweight": 0.077,
+        "obese": 0.031
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.027,
+        "normal": 0.079,
+        "overweight": 0.035,
+        "obese": 0.107
+      },
+      "female": {
+        "underweight": 0.047,
+        "normal": 0.057,
+        "overweight": 0.054,
+        "obese": 0.104
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.077,
+        "normal": 0.163,
+        "overweight": 0.048,
+        "obese": 0.034
+      },
+      "female": {
+        "underweight": 0.095,
+        "normal": 0.119,
+        "overweight": 0.067,
+        "obese": 0.051
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.091,
+        "normal": 0.176,
+        "overweight": 0.07,
+        "obese": 0.025
+      },
+      "female": {
+        "underweight": 0.133,
+        "normal": 0.128,
+        "overweight": 0.066,
+        "obese": 0.161
+      }
+    }
+  },
+  "psoriasis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.068,
+        "normal": 0.011,
+        "overweight": 0.08,
+        "obese": 0.115
+      },
+      "female": {
+        "underweight": 0.07,
+        "normal": 0.019,
+        "overweight": 0.087,
+        "obese": 0.065
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.09,
+        "normal": 0.097,
+        "overweight": 0.022,
+        "obese": 0.054
+      },
+      "female": {
+        "underweight": 0.079,
+        "normal": 0.018,
+        "overweight": 0.095,
+        "obese": 0.035
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.016,
+        "normal": 0.04,
+        "overweight": 0.072,
+        "obese": 0.06
+      },
+      "female": {
+        "underweight": 0.1,
+        "normal": 0.076,
+        "overweight": 0.042,
+        "obese": 0.109
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.056,
+        "normal": 0.109,
+        "overweight": 0.064,
+        "obese": 0.179
+      },
+      "female": {
+        "underweight": 0.123,
+        "normal": 0.182,
+        "overweight": 0.111,
+        "obese": 0.096
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.084,
+        "normal": 0.034,
+        "overweight": 0.155,
+        "obese": 0.149
+      },
+      "female": {
+        "underweight": 0.067,
+        "normal": 0.059,
+        "overweight": 0.059,
+        "obese": 0.199
+      }
+    }
+  },
+  "sleep apnea": {
+    "0-19": {
+      "male": {
+        "underweight": 0.073,
+        "normal": 0.047,
+        "overweight": 0.08,
+        "obese": 0.068
+      },
+      "female": {
+        "underweight": 0.044,
+        "normal": 0.02,
+        "overweight": 0.076,
+        "obese": 0.017
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.014,
+        "normal": 0.068,
+        "overweight": 0.066,
+        "obese": 0.05
+      },
+      "female": {
+        "underweight": 0.029,
+        "normal": 0.044,
+        "overweight": 0.09,
+        "obese": 0.074
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.01,
+        "normal": 0.011,
+        "overweight": 0.034,
+        "obese": 0.132
+      },
+      "female": {
+        "underweight": 0.068,
+        "normal": 0.056,
+        "overweight": 0.085,
+        "obese": 0.036
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.15,
+        "normal": 0.089,
+        "overweight": 0.034,
+        "obese": 0.135
+      },
+      "female": {
+        "underweight": 0.029,
+        "normal": 0.123,
+        "overweight": 0.018,
+        "obese": 0.046
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.126,
+        "normal": 0.033,
+        "overweight": 0.066,
+        "obese": 0.177
+      },
+      "female": {
+        "underweight": 0.09,
+        "normal": 0.07,
+        "overweight": 0.144,
+        "obese": 0.035
+      }
+    }
+  },
+  "obesity": {
+    "0-19": {
+      "male": {
+        "underweight": 0.088,
+        "normal": 0.082,
+        "overweight": 0.016,
+        "obese": 0.017
+      },
+      "female": {
+        "underweight": 0.047,
+        "normal": 0.078,
+        "overweight": 0.055,
+        "obese": 0.074
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.03,
+        "normal": 0.026,
+        "overweight": 0.061,
+        "obese": 0.045
+      },
+      "female": {
+        "underweight": 0.029,
+        "normal": 0.045,
+        "overweight": 0.09,
+        "obese": 0.066
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.066,
+        "normal": 0.06,
+        "overweight": 0.095,
+        "obese": 0.02
+      },
+      "female": {
+        "underweight": 0.026,
+        "normal": 0.071,
+        "overweight": 0.013,
+        "obese": 0.064
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.043,
+        "normal": 0.055,
+        "overweight": 0.024,
+        "obese": 0.228
+      },
+      "female": {
+        "underweight": 0.143,
+        "normal": 0.074,
+        "overweight": 0.02,
+        "obese": 0.037
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.164,
+        "normal": 0.083,
+        "overweight": 0.151,
+        "obese": 0.101
+      },
+      "female": {
+        "underweight": 0.068,
+        "normal": 0.136,
+        "overweight": 0.021,
+        "obese": 0.157
+      }
+    }
+  },
+  "anemia": {
+    "0-19": {
+      "male": {
+        "underweight": 0.062,
+        "normal": 0.049,
+        "overweight": 0.075,
+        "obese": 0.088
+      },
+      "female": {
+        "underweight": 0.049,
+        "normal": 0.031,
+        "overweight": 0.08,
+        "obese": 0.035
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.051,
+        "normal": 0.046,
+        "overweight": 0.027,
+        "obese": 0.096
+      },
+      "female": {
+        "underweight": 0.047,
+        "normal": 0.043,
+        "overweight": 0.015,
+        "obese": 0.037
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.076,
+        "normal": 0.081,
+        "overweight": 0.051,
+        "obese": 0.105
+      },
+      "female": {
+        "underweight": 0.09,
+        "normal": 0.059,
+        "overweight": 0.079,
+        "obese": 0.124
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.104,
+        "normal": 0.131,
+        "overweight": 0.091,
+        "obese": 0.126
+      },
+      "female": {
+        "underweight": 0.025,
+        "normal": 0.13,
+        "overweight": 0.15,
+        "obese": 0.085
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.129,
+        "normal": 0.136,
+        "overweight": 0.092,
+        "obese": 0.134
+      },
+      "female": {
+        "underweight": 0.08,
+        "normal": 0.127,
+        "overweight": 0.093,
+        "obese": 0.09
+      }
+    }
+  },
+  "chronic fatigue syndrome": {
+    "0-19": {
+      "male": {
+        "underweight": 0.091,
+        "normal": 0.065,
+        "overweight": 0.081,
+        "obese": 0.12
+      },
+      "female": {
+        "underweight": 0.031,
+        "normal": 0.071,
+        "overweight": 0.036,
+        "obese": 0.075
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.093,
+        "normal": 0.043,
+        "overweight": 0.078,
+        "obese": 0.124
+      },
+      "female": {
+        "underweight": 0.082,
+        "normal": 0.056,
+        "overweight": 0.021,
+        "obese": 0.119
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.028,
+        "normal": 0.061,
+        "overweight": 0.043,
+        "obese": 0.027
+      },
+      "female": {
+        "underweight": 0.033,
+        "normal": 0.085,
+        "overweight": 0.013,
+        "obese": 0.052
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.128,
+        "normal": 0.021,
+        "overweight": 0.052,
+        "obese": 0.037
+      },
+      "female": {
+        "underweight": 0.064,
+        "normal": 0.146,
+        "overweight": 0.125,
+        "obese": 0.191
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.088,
+        "normal": 0.056,
+        "overweight": 0.044,
+        "obese": 0.054
+      },
+      "female": {
+        "underweight": 0.065,
+        "normal": 0.136,
+        "overweight": 0.063,
+        "obese": 0.239
+      }
+    }
+  },
+  "glaucoma": {
+    "0-19": {
+      "male": {
+        "underweight": 0.093,
+        "normal": 0.054,
+        "overweight": 0.095,
+        "obese": 0.119
+      },
+      "female": {
+        "underweight": 0.046,
+        "normal": 0.089,
+        "overweight": 0.071,
+        "obese": 0.088
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.069,
+        "normal": 0.021,
+        "overweight": 0.02,
+        "obese": 0.058
+      },
+      "female": {
+        "underweight": 0.057,
+        "normal": 0.013,
+        "overweight": 0.052,
+        "obese": 0.084
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.057,
+        "normal": 0.039,
+        "overweight": 0.091,
+        "obese": 0.11
+      },
+      "female": {
+        "underweight": 0.046,
+        "normal": 0.072,
+        "overweight": 0.098,
+        "obese": 0.043
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.079,
+        "normal": 0.171,
+        "overweight": 0.109,
+        "obese": 0.079
+      },
+      "female": {
+        "underweight": 0.138,
+        "normal": 0.169,
+        "overweight": 0.141,
+        "obese": 0.113
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.175,
+        "normal": 0.101,
+        "overweight": 0.155,
+        "obese": 0.243
+      },
+      "female": {
+        "underweight": 0.051,
+        "normal": 0.066,
+        "overweight": 0.136,
+        "obese": 0.168
+      }
+    }
+  },
+  "osteoarthritis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.055,
+        "normal": 0.094,
+        "overweight": 0.048,
+        "obese": 0.08
+      },
+      "female": {
+        "underweight": 0.027,
+        "normal": 0.087,
+        "overweight": 0.061,
+        "obese": 0.108
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.092,
+        "normal": 0.041,
+        "overweight": 0.059,
+        "obese": 0.038
+      },
+      "female": {
+        "underweight": 0.067,
+        "normal": 0.041,
+        "overweight": 0.086,
+        "obese": 0.062
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.098,
+        "normal": 0.06,
+        "overweight": 0.032,
+        "obese": 0.037
+      },
+      "female": {
+        "underweight": 0.04,
+        "normal": 0.083,
+        "overweight": 0.034,
+        "obese": 0.082
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.17,
+        "normal": 0.111,
+        "overweight": 0.07,
+        "obese": 0.22
+      },
+      "female": {
+        "underweight": 0.073,
+        "normal": 0.053,
+        "overweight": 0.156,
+        "obese": 0.121
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.049,
+        "normal": 0.021,
+        "overweight": 0.092,
+        "obese": 0.048
+      },
+      "female": {
+        "underweight": 0.095,
+        "normal": 0.126,
+        "overweight": 0.029,
+        "obese": 0.026
+      }
+    }
+  },
+  "eczema": {
+    "0-19": {
+      "male": {
+        "underweight": 0.017,
+        "normal": 0.083,
+        "overweight": 0.033,
+        "obese": 0.081
+      },
+      "female": {
+        "underweight": 0.066,
+        "normal": 0.08,
+        "overweight": 0.026,
+        "obese": 0.126
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.076,
+        "normal": 0.036,
+        "overweight": 0.013,
+        "obese": 0.032
+      },
+      "female": {
+        "underweight": 0.04,
+        "normal": 0.041,
+        "overweight": 0.043,
+        "obese": 0.015
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.023,
+        "normal": 0.018,
+        "overweight": 0.059,
+        "obese": 0.122
+      },
+      "female": {
+        "underweight": 0.091,
+        "normal": 0.017,
+        "overweight": 0.046,
+        "obese": 0.034
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.043,
+        "normal": 0.062,
+        "overweight": 0.149,
+        "obese": 0.215
+      },
+      "female": {
+        "underweight": 0.05,
+        "normal": 0.023,
+        "overweight": 0.183,
+        "obese": 0.104
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.088,
+        "normal": 0.117,
+        "overweight": 0.095,
+        "obese": 0.068
+      },
+      "female": {
+        "underweight": 0.038,
+        "normal": 0.032,
+        "overweight": 0.068,
+        "obese": 0.105
+      }
+    }
+  },
+  "hepatitis b": {
+    "0-19": {
+      "male": {
+        "underweight": 0.089,
+        "normal": 0.047,
+        "overweight": 0.02,
+        "obese": 0.061
+      },
+      "female": {
+        "underweight": 0.048,
+        "normal": 0.095,
+        "overweight": 0.02,
+        "obese": 0.116
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.099,
+        "normal": 0.064,
+        "overweight": 0.019,
+        "obese": 0.039
+      },
+      "female": {
+        "underweight": 0.029,
+        "normal": 0.07,
+        "overweight": 0.079,
+        "obese": 0.116
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.079,
+        "normal": 0.038,
+        "overweight": 0.026,
+        "obese": 0.06
+      },
+      "female": {
+        "underweight": 0.054,
+        "normal": 0.018,
+        "overweight": 0.096,
+        "obese": 0.076
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.12,
+        "normal": 0.157,
+        "overweight": 0.036,
+        "obese": 0.116
+      },
+      "female": {
+        "underweight": 0.085,
+        "normal": 0.149,
+        "overweight": 0.1,
+        "obese": 0.201
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.155,
+        "normal": 0.178,
+        "overweight": 0.072,
+        "obese": 0.126
+      },
+      "female": {
+        "underweight": 0.1,
+        "normal": 0.029,
+        "overweight": 0.034,
+        "obese": 0.041
+      }
+    }
+  },
+  "hepatitis c": {
+    "0-19": {
+      "male": {
+        "underweight": 0.063,
+        "normal": 0.025,
+        "overweight": 0.052,
+        "obese": 0.074
+      },
+      "female": {
+        "underweight": 0.076,
+        "normal": 0.014,
+        "overweight": 0.097,
+        "obese": 0.08
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.038,
+        "normal": 0.027,
+        "overweight": 0.099,
+        "obese": 0.091
+      },
+      "female": {
+        "underweight": 0.056,
+        "normal": 0.013,
+        "overweight": 0.062,
+        "obese": 0.061
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.092,
+        "normal": 0.098,
+        "overweight": 0.087,
+        "obese": 0.032
+      },
+      "female": {
+        "underweight": 0.012,
+        "normal": 0.087,
+        "overweight": 0.044,
+        "obese": 0.134
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.109,
+        "normal": 0.089,
+        "overweight": 0.04,
+        "obese": 0.137
+      },
+      "female": {
+        "underweight": 0.079,
+        "normal": 0.052,
+        "overweight": 0.043,
+        "obese": 0.181
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.087,
+        "normal": 0.036,
+        "overweight": 0.135,
+        "obese": 0.154
+      },
+      "female": {
+        "underweight": 0.033,
+        "normal": 0.13,
+        "overweight": 0.145,
+        "obese": 0.092
+      }
+    }
+  },
+  "tuberculosis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.025,
+        "normal": 0.053,
+        "overweight": 0.089,
+        "obese": 0.073
+      },
+      "female": {
+        "underweight": 0.014,
+        "normal": 0.07,
+        "overweight": 0.087,
+        "obese": 0.086
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.1,
+        "normal": 0.071,
+        "overweight": 0.025,
+        "obese": 0.126
+      },
+      "female": {
+        "underweight": 0.057,
+        "normal": 0.013,
+        "overweight": 0.026,
+        "obese": 0.082
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.049,
+        "normal": 0.044,
+        "overweight": 0.076,
+        "obese": 0.081
+      },
+      "female": {
+        "underweight": 0.039,
+        "normal": 0.029,
+        "overweight": 0.023,
+        "obese": 0.09
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.171,
+        "normal": 0.071,
+        "overweight": 0.149,
+        "obese": 0.066
+      },
+      "female": {
+        "underweight": 0.093,
+        "normal": 0.031,
+        "overweight": 0.103,
+        "obese": 0.053
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.136,
+        "normal": 0.089,
+        "overweight": 0.056,
+        "obese": 0.172
+      },
+      "female": {
+        "underweight": 0.114,
+        "normal": 0.116,
+        "overweight": 0.043,
+        "obese": 0.196
+      }
+    }
+  },
+  "hepatomegaly": {
+    "0-19": {
+      "male": {
+        "underweight": 0.073,
+        "normal": 0.085,
+        "overweight": 0.06,
+        "obese": 0.015
+      },
+      "female": {
+        "underweight": 0.065,
+        "normal": 0.098,
+        "overweight": 0.06,
+        "obese": 0.067
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.076,
+        "normal": 0.065,
+        "overweight": 0.086,
+        "obese": 0.014
+      },
+      "female": {
+        "underweight": 0.077,
+        "normal": 0.046,
+        "overweight": 0.026,
+        "obese": 0.069
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.09,
+        "normal": 0.062,
+        "overweight": 0.015,
+        "obese": 0.143
+      },
+      "female": {
+        "underweight": 0.069,
+        "normal": 0.053,
+        "overweight": 0.054,
+        "obese": 0.033
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.063,
+        "normal": 0.049,
+        "overweight": 0.077,
+        "obese": 0.151
+      },
+      "female": {
+        "underweight": 0.043,
+        "normal": 0.102,
+        "overweight": 0.087,
+        "obese": 0.242
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.12,
+        "normal": 0.148,
+        "overweight": 0.175,
+        "obese": 0.118
+      },
+      "female": {
+        "underweight": 0.078,
+        "normal": 0.091,
+        "overweight": 0.085,
+        "obese": 0.086
+      }
+    }
+  },
+  "bronchitis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.084,
+        "normal": 0.05,
+        "overweight": 0.089,
+        "obese": 0.119
+      },
+      "female": {
+        "underweight": 0.058,
+        "normal": 0.023,
+        "overweight": 0.017,
+        "obese": 0.102
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.024,
+        "normal": 0.092,
+        "overweight": 0.089,
+        "obese": 0.047
+      },
+      "female": {
+        "underweight": 0.069,
+        "normal": 0.097,
+        "overweight": 0.015,
+        "obese": 0.022
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.04,
+        "normal": 0.066,
+        "overweight": 0.024,
+        "obese": 0.08
+      },
+      "female": {
+        "underweight": 0.086,
+        "normal": 0.016,
+        "overweight": 0.1,
+        "obese": 0.051
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.087,
+        "normal": 0.061,
+        "overweight": 0.103,
+        "obese": 0.224
+      },
+      "female": {
+        "underweight": 0.114,
+        "normal": 0.105,
+        "overweight": 0.057,
+        "obese": 0.07
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.118,
+        "normal": 0.041,
+        "overweight": 0.155,
+        "obese": 0.193
+      },
+      "female": {
+        "underweight": 0.124,
+        "normal": 0.027,
+        "overweight": 0.054,
+        "obese": 0.092
+      }
+    }
+  },
+  "allergic rhinitis": {
+    "0-19": {
+      "male": {
+        "underweight": 0.043,
+        "normal": 0.076,
+        "overweight": 0.091,
+        "obese": 0.06
+      },
+      "female": {
+        "underweight": 0.09,
+        "normal": 0.036,
+        "overweight": 0.04,
+        "obese": 0.027
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.043,
+        "normal": 0.084,
+        "overweight": 0.042,
+        "obese": 0.11
+      },
+      "female": {
+        "underweight": 0.019,
+        "normal": 0.098,
+        "overweight": 0.043,
+        "obese": 0.099
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.061,
+        "normal": 0.021,
+        "overweight": 0.046,
+        "obese": 0.128
+      },
+      "female": {
+        "underweight": 0.014,
+        "normal": 0.06,
+        "overweight": 0.1,
+        "obese": 0.134
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.028,
+        "normal": 0.05,
+        "overweight": 0.069,
+        "obese": 0.028
+      },
+      "female": {
+        "underweight": 0.155,
+        "normal": 0.126,
+        "overweight": 0.144,
+        "obese": 0.208
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.1,
+        "normal": 0.151,
+        "overweight": 0.069,
+        "obese": 0.158
+      },
+      "female": {
+        "underweight": 0.028,
+        "normal": 0.049,
+        "overweight": 0.119,
+        "obese": 0.133
+      }
+    }
+  },
+  "peptic ulcer disease": {
+    "0-19": {
+      "male": {
+        "underweight": 0.091,
+        "normal": 0.012,
+        "overweight": 0.035,
+        "obese": 0.043
+      },
+      "female": {
+        "underweight": 0.013,
+        "normal": 0.01,
+        "overweight": 0.082,
+        "obese": 0.044
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.012,
+        "normal": 0.078,
+        "overweight": 0.058,
+        "obese": 0.1
+      },
+      "female": {
+        "underweight": 0.084,
+        "normal": 0.044,
+        "overweight": 0.023,
+        "obese": 0.054
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.079,
+        "normal": 0.055,
+        "overweight": 0.061,
+        "obese": 0.103
+      },
+      "female": {
+        "underweight": 0.021,
+        "normal": 0.016,
+        "overweight": 0.037,
+        "obese": 0.084
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.103,
+        "normal": 0.096,
+        "overweight": 0.122,
+        "obese": 0.158
+      },
+      "female": {
+        "underweight": 0.117,
+        "normal": 0.039,
+        "overweight": 0.066,
+        "obese": 0.064
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.1,
+        "normal": 0.087,
+        "overweight": 0.145,
+        "obese": 0.135
+      },
+      "female": {
+        "underweight": 0.154,
+        "normal": 0.103,
+        "overweight": 0.114,
+        "obese": 0.164
+      }
+    }
+  },
+  "gallstones": {
+    "0-19": {
+      "male": {
+        "underweight": 0.096,
+        "normal": 0.016,
+        "overweight": 0.05,
+        "obese": 0.072
+      },
+      "female": {
+        "underweight": 0.099,
+        "normal": 0.02,
+        "overweight": 0.084,
+        "obese": 0.071
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.054,
+        "normal": 0.055,
+        "overweight": 0.078,
+        "obese": 0.063
+      },
+      "female": {
+        "underweight": 0.046,
+        "normal": 0.01,
+        "overweight": 0.059,
+        "obese": 0.101
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.012,
+        "normal": 0.054,
+        "overweight": 0.091,
+        "obese": 0.04
+      },
+      "female": {
+        "underweight": 0.098,
+        "normal": 0.07,
+        "overweight": 0.035,
+        "obese": 0.065
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.072,
+        "normal": 0.091,
+        "overweight": 0.076,
+        "obese": 0.18
+      },
+      "female": {
+        "underweight": 0.152,
+        "normal": 0.067,
+        "overweight": 0.143,
+        "obese": 0.12
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.113,
+        "normal": 0.073,
+        "overweight": 0.1,
+        "obese": 0.12
+      },
+      "female": {
+        "underweight": 0.079,
+        "normal": 0.071,
+        "overweight": 0.039,
+        "obese": 0.075
+      }
+    }
+  },
+  "hypothyroidism": {
+    "0-19": {
+      "male": {
+        "underweight": 0.053,
+        "normal": 0.096,
+        "overweight": 0.021,
+        "obese": 0.095
+      },
+      "female": {
+        "underweight": 0.013,
+        "normal": 0.062,
+        "overweight": 0.019,
+        "obese": 0.044
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.014,
+        "normal": 0.052,
+        "overweight": 0.035,
+        "obese": 0.104
+      },
+      "female": {
+        "underweight": 0.056,
+        "normal": 0.079,
+        "overweight": 0.027,
+        "obese": 0.119
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.068,
+        "normal": 0.044,
+        "overweight": 0.087,
+        "obese": 0.061
+      },
+      "female": {
+        "underweight": 0.082,
+        "normal": 0.013,
+        "overweight": 0.048,
+        "obese": 0.024
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.055,
+        "normal": 0.111,
+        "overweight": 0.076,
+        "obese": 0.114
+      },
+      "female": {
+        "underweight": 0.043,
+        "normal": 0.038,
+        "overweight": 0.039,
+        "obese": 0.177
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.069,
+        "normal": 0.047,
+        "overweight": 0.121,
+        "obese": 0.159
+      },
+      "female": {
+        "underweight": 0.12,
+        "normal": 0.11,
+        "overweight": 0.079,
+        "obese": 0.224
+      }
+    }
+  },
+  "hyperthyroidism": {
+    "0-19": {
+      "male": {
+        "underweight": 0.087,
+        "normal": 0.069,
+        "overweight": 0.085,
+        "obese": 0.042
+      },
+      "female": {
+        "underweight": 0.04,
+        "normal": 0.012,
+        "overweight": 0.067,
+        "obese": 0.015
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.044,
+        "normal": 0.065,
+        "overweight": 0.088,
+        "obese": 0.091
+      },
+      "female": {
+        "underweight": 0.05,
+        "normal": 0.044,
+        "overweight": 0.08,
+        "obese": 0.014
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.021,
+        "normal": 0.026,
+        "overweight": 0.045,
+        "obese": 0.043
+      },
+      "female": {
+        "underweight": 0.084,
+        "normal": 0.033,
+        "overweight": 0.023,
+        "obese": 0.101
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.036,
+        "normal": 0.157,
+        "overweight": 0.072,
+        "obese": 0.23
+      },
+      "female": {
+        "underweight": 0.061,
+        "normal": 0.065,
+        "overweight": 0.152,
+        "obese": 0.117
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.151,
+        "normal": 0.088,
+        "overweight": 0.128,
+        "obese": 0.173
+      },
+      "female": {
+        "underweight": 0.05,
+        "normal": 0.032,
+        "overweight": 0.1,
+        "obese": 0.122
+      }
+    }
+  },
+  "lymphoma": {
+    "0-19": {
+      "male": {
+        "underweight": 0.097,
+        "normal": 0.025,
+        "overweight": 0.015,
+        "obese": 0.116
+      },
+      "female": {
+        "underweight": 0.058,
+        "normal": 0.067,
+        "overweight": 0.098,
+        "obese": 0.017
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.042,
+        "normal": 0.08,
+        "overweight": 0.068,
+        "obese": 0.114
+      },
+      "female": {
+        "underweight": 0.024,
+        "normal": 0.034,
+        "overweight": 0.077,
+        "obese": 0.023
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.041,
+        "normal": 0.055,
+        "overweight": 0.028,
+        "obese": 0.049
+      },
+      "female": {
+        "underweight": 0.023,
+        "normal": 0.082,
+        "overweight": 0.036,
+        "obese": 0.11
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.049,
+        "normal": 0.076,
+        "overweight": 0.049,
+        "obese": 0.186
+      },
+      "female": {
+        "underweight": 0.153,
+        "normal": 0.081,
+        "overweight": 0.026,
+        "obese": 0.112
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.097,
+        "normal": 0.154,
+        "overweight": 0.096,
+        "obese": 0.137
+      },
+      "female": {
+        "underweight": 0.083,
+        "normal": 0.119,
+        "overweight": 0.065,
+        "obese": 0.045
+      }
+    }
+  },
+  "leukemia": {
+    "0-19": {
+      "male": {
+        "underweight": 0.06,
+        "normal": 0.029,
+        "overweight": 0.03,
+        "obese": 0.037
+      },
+      "female": {
+        "underweight": 0.041,
+        "normal": 0.045,
+        "overweight": 0.039,
+        "obese": 0.1
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.025,
+        "normal": 0.051,
+        "overweight": 0.049,
+        "obese": 0.06
+      },
+      "female": {
+        "underweight": 0.06,
+        "normal": 0.094,
+        "overweight": 0.079,
+        "obese": 0.093
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.051,
+        "normal": 0.014,
+        "overweight": 0.029,
+        "obese": 0.089
+      },
+      "female": {
+        "underweight": 0.057,
+        "normal": 0.097,
+        "overweight": 0.013,
+        "obese": 0.046
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.068,
+        "normal": 0.034,
+        "overweight": 0.033,
+        "obese": 0.083
+      },
+      "female": {
+        "underweight": 0.064,
+        "normal": 0.125,
+        "overweight": 0.057,
+        "obese": 0.165
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.152,
+        "normal": 0.128,
+        "overweight": 0.12,
+        "obese": 0.031
+      },
+      "female": {
+        "underweight": 0.027,
+        "normal": 0.063,
+        "overweight": 0.131,
+        "obese": 0.101
+      }
+    }
+  },
+  "pancreatic cancer": {
+    "0-19": {
+      "male": {
+        "underweight": 0.072,
+        "normal": 0.086,
+        "overweight": 0.054,
+        "obese": 0.023
+      },
+      "female": {
+        "underweight": 0.056,
+        "normal": 0.071,
+        "overweight": 0.031,
+        "obese": 0.052
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.029,
+        "normal": 0.017,
+        "overweight": 0.054,
+        "obese": 0.019
+      },
+      "female": {
+        "underweight": 0.013,
+        "normal": 0.068,
+        "overweight": 0.07,
+        "obese": 0.108
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.022,
+        "normal": 0.042,
+        "overweight": 0.047,
+        "obese": 0.018
+      },
+      "female": {
+        "underweight": 0.056,
+        "normal": 0.057,
+        "overweight": 0.097,
+        "obese": 0.117
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.133,
+        "normal": 0.172,
+        "overweight": 0.047,
+        "obese": 0.101
+      },
+      "female": {
+        "underweight": 0.062,
+        "normal": 0.145,
+        "overweight": 0.172,
+        "obese": 0.167
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.15,
+        "normal": 0.084,
+        "overweight": 0.104,
+        "obese": 0.198
+      },
+      "female": {
+        "underweight": 0.093,
+        "normal": 0.068,
+        "overweight": 0.09,
+        "obese": 0.027
+      }
+    }
+  },
+  "endometrial cancer": {
+    "0-19": {
+      "male": {
+        "underweight": 0.028,
+        "normal": 0.094,
+        "overweight": 0.087,
+        "obese": 0.1
+      },
+      "female": {
+        "underweight": 0.086,
+        "normal": 0.023,
+        "overweight": 0.076,
+        "obese": 0.103
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.074,
+        "normal": 0.052,
+        "overweight": 0.048,
+        "obese": 0.035
+      },
+      "female": {
+        "underweight": 0.018,
+        "normal": 0.059,
+        "overweight": 0.03,
+        "obese": 0.031
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.033,
+        "normal": 0.041,
+        "overweight": 0.061,
+        "obese": 0.029
+      },
+      "female": {
+        "underweight": 0.011,
+        "normal": 0.021,
+        "overweight": 0.055,
+        "obese": 0.035
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.116,
+        "normal": 0.169,
+        "overweight": 0.143,
+        "obese": 0.103
+      },
+      "female": {
+        "underweight": 0.169,
+        "normal": 0.173,
+        "overweight": 0.06,
+        "obese": 0.036
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.172,
+        "normal": 0.107,
+        "overweight": 0.067,
+        "obese": 0.029
+      },
+      "female": {
+        "underweight": 0.091,
+        "normal": 0.13,
+        "overweight": 0.101,
+        "obese": 0.036
+      }
+    }
+  },
+  "cervical cancer": {
+    "0-19": {
+      "male": {
+        "underweight": 0.098,
+        "normal": 0.071,
+        "overweight": 0.014,
+        "obese": 0.112
+      },
+      "female": {
+        "underweight": 0.088,
+        "normal": 0.054,
+        "overweight": 0.047,
+        "obese": 0.027
+      }
+    },
+    "20-39": {
+      "male": {
+        "underweight": 0.03,
+        "normal": 0.054,
+        "overweight": 0.056,
+        "obese": 0.082
+      },
+      "female": {
+        "underweight": 0.017,
+        "normal": 0.093,
+        "overweight": 0.077,
+        "obese": 0.129
+      }
+    },
+    "40-59": {
+      "male": {
+        "underweight": 0.015,
+        "normal": 0.065,
+        "overweight": 0.087,
+        "obese": 0.037
+      },
+      "female": {
+        "underweight": 0.019,
+        "normal": 0.058,
+        "overweight": 0.022,
+        "obese": 0.063
+      }
+    },
+    "60-79": {
+      "male": {
+        "underweight": 0.132,
+        "normal": 0.038,
+        "overweight": 0.031,
+        "obese": 0.164
+      },
+      "female": {
+        "underweight": 0.085,
+        "normal": 0.064,
+        "overweight": 0.022,
+        "obese": 0.127
+      }
+    },
+    "80+": {
+      "male": {
+        "underweight": 0.037,
+        "normal": 0.026,
+        "overweight": 0.118,
+        "obese": 0.147
+      },
+      "female": {
+        "underweight": 0.155,
+        "normal": 0.119,
+        "overweight": 0.094,
+        "obese": 0.15
+      }
+    }
+  }
+}
