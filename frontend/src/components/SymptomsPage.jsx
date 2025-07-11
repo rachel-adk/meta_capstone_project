@@ -42,16 +42,13 @@ const SymptomsPage = () => {
               className="bg-yellow-50 w-100 flex-row px-4 py-3 rounded-lg shadow border border-yellow-300 shadow-sm"
             >
               <p className="text-lg uppercase font-semibold mb-2 text-gray-800">
-                {log.name}
+                {log.symptom}
               </p>
               <p className="text-gray-600 mt-1">
                 Severity: {log.severity}
               </p>
               <p className="text-gray-600 mt-1">
-                Duration: {log.duration || "Null"}
-              </p>
-              <p className="text-gray-600 mt-1">
-                Notes: {log.notes || "No notes provided"}
+                Frequency: {log.frequency || "Null"}
               </p>
               <p className="text-gray-600 my-3">
                 Date Logged:
