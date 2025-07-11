@@ -1,9 +1,27 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useUser } from "../contexts/UserContext";
+import { logout } from "../utils/data";
 
 const Sidebar = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const { user, setUser } = useUser()
+
+  const handleLogout = async () => {
+    try{
+        await logout();
+        setUser(null);
+    } catch(err) {
+        console.error("Logout failed:",err)
+    }
+  }
+
+  useEffect(() => {
+    if (!user) {
+        navigate("/login", { replace: true });
+    }
+  }, [user, navigate])
 
   return (
     <>
@@ -58,6 +76,14 @@ const Sidebar = () => {
           >
             Allergies
           </button>
+
+          <div className="bottom-6 left-6">
+            <button
+                onClick={handleLogout}
+                className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded-lg">
+                    Logout
+                </button>
+          </div>
         </div>
       </div>
     </>

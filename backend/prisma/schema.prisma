@@ -18,6 +18,7 @@ model MedicalHistory {
   medications   String?
   notes         String?
   user          User     @relation(fields: [userId], references: [id])
+  symptoms      Symptoms[] //one to many relation
 }
 
 model Allergies {
@@ -34,11 +35,14 @@ model Allergies {
 model Symptoms {
   id       Int      @id @default(autoincrement())
   userId   Int
+  symptoms String[]
   name     String
-  severity Int // going to be a scale
+  severity Int     // going to be a scale
   duration String
   notes    String?
   date     DateTime @default(now())
+  diagnosis MedicalHistory? @relation(fields: [diagnosisId], references: [id])
+  diagnosisId Int?
   user     User     @relation(fields: [userId], references: [id])
 }
 
@@ -63,7 +67,10 @@ model User {
   location       String?
   age            Int?
   gender         String?
+  weight         Int?
+  height         Int?
   symptoms       Symptoms[]
   allergies      Allergies[]
   medicalHistory MedicalHistory[]
+  preExistingConditions String[]
 }

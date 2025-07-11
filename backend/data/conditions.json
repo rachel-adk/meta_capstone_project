@@ -1,0 +1,931 @@
+[
+  {
+    "condition": "fungal infection",
+    "symptoms": [
+      "itching",
+      "skin_rash",
+      "nodal_skin_eruptions",
+      "dischromic _patches"
+    ],
+    "symptomWeights": {
+      "itching": 1,
+      "skin_rash": 1,
+      "nodal_skin_eruptions": 1,
+      "dischromic _patches": 1
+    }
+  },
+  {
+    "condition": "allergy",
+    "symptoms": [
+      "continuous_sneezing",
+      "shivering",
+      "chills",
+      "watering_from_eyes"
+    ],
+    "symptomWeights": {
+      "continuous_sneezing": 1,
+      "shivering": 1,
+      "chills": 1,
+      "watering_from_eyes": 1
+    }
+  },
+  {
+    "condition": "gerd",
+    "symptoms": [
+      "stomach_pain",
+      "acidity",
+      "ulcers_on_tongue",
+      "vomiting",
+      "cough",
+      "chest_pain"
+    ],
+    "symptomWeights": {
+      "stomach_pain": 1,
+      "acidity": 1,
+      "ulcers_on_tongue": 1,
+      "vomiting": 1,
+      "cough": 1,
+      "chest_pain": 1
+    }
+  },
+  {
+    "condition": "chronic cholestasis",
+    "symptoms": [
+      "itching",
+      "vomiting",
+      "yellowish_skin",
+      "nausea",
+      "loss_of_appetite",
+      "abdominal_pain",
+      "yellowing_of_eyes"
+    ],
+    "symptomWeights": {
+      "itching": 1,
+      "vomiting": 1,
+      "yellowish_skin": 1,
+      "nausea": 1,
+      "loss_of_appetite": 1,
+      "abdominal_pain": 1,
+      "yellowing_of_eyes": 1
+    }
+  },
+  {
+    "condition": "drug reaction",
+    "symptoms": [
+      "itching",
+      "skin_rash",
+      "stomach_pain",
+      "burning_micturition",
+      "spotting_ urination"
+    ],
+    "symptomWeights": {
+      "itching": 1,
+      "skin_rash": 1,
+      "stomach_pain": 1,
+      "burning_micturition": 1,
+      "spotting_ urination": 1
+    }
+  },
+  {
+    "condition": "peptic ulcer diseae",
+    "symptoms": [
+      "vomiting",
+      "loss_of_appetite",
+      "abdominal_pain",
+      "passage_of_gases",
+      "internal_itching",
+      "indigestion"
+    ],
+    "symptomWeights": {
+      "vomiting": 1,
+      "loss_of_appetite": 1,
+      "abdominal_pain": 1,
+      "passage_of_gases": 1,
+      "internal_itching": 1,
+      "indigestion": 1
+    }
+  },
+  {
+    "condition": "aids",
+    "symptoms": [
+      "muscle_wasting",
+      "patches_in_throat",
+      "high_fever",
+      "extra_marital_contacts"
+    ],
+    "symptomWeights": {
+      "muscle_wasting": 1,
+      "patches_in_throat": 1,
+      "high_fever": 1,
+      "extra_marital_contacts": 1
+    }
+  },
+  {
+    "condition": "diabetes",
+    "symptoms": [
+      "fatigue",
+      "weight_loss",
+      "restlessness",
+      "lethargy",
+      "irregular_sugar_level",
+      "blurred_and_distorted_vision",
+      "obesity",
+      "excessive_hunger",
+      "increased_appetite",
+      "polyuria"
+    ],
+    "symptomWeights": {
+      "fatigue": 1,
+      "weight_loss": 1,
+      "restlessness": 1,
+      "lethargy": 1,
+      "irregular_sugar_level": 1,
+      "blurred_and_distorted_vision": 1,
+      "obesity": 1,
+      "excessive_hunger": 1,
+      "increased_appetite": 1,
+      "polyuria": 1
+    }
+  },
+  {
+    "condition": "gastroenteritis",
+    "symptoms": [
+      "vomiting",
+      "sunken_eyes",
+      "dehydration",
+      "diarrhoea"
+    ],
+    "symptomWeights": {
+      "vomiting": 1,
+      "sunken_eyes": 1,
+      "dehydration": 1,
+      "diarrhoea": 1
+    }
+  },
+  {
+    "condition": "bronchial asthma",
+    "symptoms": [
+      "fatigue",
+      "cough",
+      "high_fever",
+      "breathlessness",
+      "family_history",
+      "mucoid_sputum"
+    ],
+    "symptomWeights": {
+      "fatigue": 1,
+      "cough": 1,
+      "high_fever": 1,
+      "breathlessness": 1,
+      "family_history": 1,
+      "mucoid_sputum": 1
+    }
+  },
+  {
+    "condition": "hypertension",
+    "symptoms": [
+      "headache",
+      "chest_pain",
+      "dizziness",
+      "loss_of_balance",
+      "lack_of_concentration"
+    ],
+    "symptomWeights": {
+      "headache": 1,
+      "chest_pain": 1,
+      "dizziness": 1,
+      "loss_of_balance": 1,
+      "lack_of_concentration": 1
+    }
+  },
+  {
+    "condition": "migraine",
+    "symptoms": [
+      "acidity",
+      "indigestion",
+      "headache",
+      "blurred_and_distorted_vision",
+      "excessive_hunger",
+      "stiff_neck",
+      "depression",
+      "irritability",
+      "visual_disturbances"
+    ],
+    "symptomWeights": {
+      "acidity": 1,
+      "indigestion": 1,
+      "headache": 1,
+      "blurred_and_distorted_vision": 1,
+      "excessive_hunger": 1,
+      "stiff_neck": 1,
+      "depression": 1,
+      "irritability": 1,
+      "visual_disturbances": 1
+    }
+  },
+  {
+    "condition": "cervical spondylosis",
+    "symptoms": [
+      "back_pain",
+      "weakness_in_limbs",
+      "neck_pain",
+      "dizziness",
+      "loss_of_balance"
+    ],
+    "symptomWeights": {
+      "back_pain": 1,
+      "weakness_in_limbs": 1,
+      "neck_pain": 1,
+      "dizziness": 1,
+      "loss_of_balance": 1
+    }
+  },
+  {
+    "condition": "paralysis (brain hemorrhage)",
+    "symptoms": [
+      "vomiting",
+      "headache",
+      "weakness_of_one_body_side",
+      "altered_sensorium"
+    ],
+    "symptomWeights": {
+      "vomiting": 1,
+      "headache": 1,
+      "weakness_of_one_body_side": 1,
+      "altered_sensorium": 1
+    }
+  },
+  {
+    "condition": "jaundice",
+    "symptoms": [
+      "itching",
+      "vomiting",
+      "fatigue",
+      "weight_loss",
+      "high_fever",
+      "yellowish_skin",
+      "dark_urine",
+      "abdominal_pain"
+    ],
+    "symptomWeights": {
+      "itching": 1,
+      "vomiting": 1,
+      "fatigue": 1,
+      "weight_loss": 1,
+      "high_fever": 1,
+      "yellowish_skin": 1,
+      "dark_urine": 1,
+      "abdominal_pain": 1
+    }
+  },
+  {
+    "condition": "malaria",
+    "symptoms": [
+      "chills",
+      "vomiting",
+      "high_fever",
+      "sweating",
+      "headache",
+      "nausea",
+      "muscle_pain",
+      "diarrhoea"
+    ],
+    "symptomWeights": {
+      "chills": 1,
+      "vomiting": 1,
+      "high_fever": 1,
+      "sweating": 1,
+      "headache": 1,
+      "nausea": 1,
+      "muscle_pain": 1,
+      "diarrhoea": 1
+    }
+  },
+  {
+    "condition": "chicken pox",
+    "symptoms": [
+      "itching",
+      "skin_rash",
+      "fatigue",
+      "lethargy",
+      "high_fever",
+      "headache",
+      "loss_of_appetite",
+      "mild_fever",
+      "swelled_lymph_nodes",
+      "malaise",
+      "red_spots_over_body"
+    ],
+    "symptomWeights": {
+      "itching": 1,
+      "skin_rash": 1,
+      "fatigue": 1,
+      "lethargy": 1,
+      "high_fever": 1,
+      "headache": 1,
+      "loss_of_appetite": 1,
+      "mild_fever": 1,
+      "swelled_lymph_nodes": 1,
+      "malaise": 1,
+      "red_spots_over_body": 1
+    }
+  },
+  {
+    "condition": "dengue",
+    "symptoms": [
+      "skin_rash",
+      "chills",
+      "joint_pain",
+      "vomiting",
+      "fatigue",
+      "high_fever",
+      "headache",
+      "nausea",
+      "loss_of_appetite",
+      "pain_behind_the_eyes",
+      "back_pain",
+      "muscle_pain",
+      "red_spots_over_body",
+      "malaise"
+    ],
+    "symptomWeights": {
+      "skin_rash": 1,
+      "chills": 1,
+      "joint_pain": 1,
+      "vomiting": 1,
+      "fatigue": 1,
+      "high_fever": 1,
+      "headache": 1,
+      "nausea": 1,
+      "loss_of_appetite": 1,
+      "pain_behind_the_eyes": 1,
+      "back_pain": 1,
+      "muscle_pain": 1,
+      "red_spots_over_body": 1,
+      "malaise": 1
+    }
+  },
+  {
+    "condition": "typhoid",
+    "symptoms": [
+      "chills",
+      "vomiting",
+      "fatigue",
+      "high_fever",
+      "nausea",
+      "constipation",
+      "abdominal_pain",
+      "diarrhoea",
+      "toxic_look_(typhos)",
+      "belly_pain",
+      "headache"
+    ],
+    "symptomWeights": {
+      "chills": 1,
+      "vomiting": 1,
+      "fatigue": 1,
+      "high_fever": 1,
+      "nausea": 1,
+      "constipation": 1,
+      "abdominal_pain": 1,
+      "diarrhoea": 1,
+      "toxic_look_(typhos)": 1,
+      "belly_pain": 1,
+      "headache": 1
+    }
+  },
+  {
+    "condition": "hepatitis a",
+    "symptoms": [
+      "joint_pain",
+      "vomiting",
+      "yellowish_skin",
+      "dark_urine",
+      "nausea",
+      "loss_of_appetite",
+      "abdominal_pain",
+      "diarrhoea",
+      "mild_fever",
+      "yellowing_of_eyes",
+      "muscle_pain"
+    ],
+    "symptomWeights": {
+      "joint_pain": 1,
+      "vomiting": 1,
+      "yellowish_skin": 1,
+      "dark_urine": 1,
+      "nausea": 1,
+      "loss_of_appetite": 1,
+      "abdominal_pain": 1,
+      "diarrhoea": 1,
+      "mild_fever": 1,
+      "yellowing_of_eyes": 1,
+      "muscle_pain": 1
+    }
+  },
+  {
+    "condition": "hepatitis b",
+    "symptoms": [
+      "itching",
+      "fatigue",
+      "lethargy",
+      "yellowish_skin",
+      "dark_urine",
+      "loss_of_appetite",
+      "abdominal_pain",
+      "yellow_urine",
+      "yellowing_of_eyes",
+      "malaise",
+      "receiving_blood_transfusion",
+      "receiving_unsterile_injections"
+    ],
+    "symptomWeights": {
+      "itching": 1,
+      "fatigue": 1,
+      "lethargy": 1,
+      "yellowish_skin": 1,
+      "dark_urine": 1,
+      "loss_of_appetite": 1,
+      "abdominal_pain": 1,
+      "yellow_urine": 1,
+      "yellowing_of_eyes": 1,
+      "malaise": 1,
+      "receiving_blood_transfusion": 1,
+      "receiving_unsterile_injections": 1
+    }
+  },
+  {
+    "condition": "hepatitis c",
+    "symptoms": [
+      "fatigue",
+      "yellowish_skin",
+      "nausea",
+      "loss_of_appetite",
+      "family_history",
+      "yellowing_of_eyes"
+    ],
+    "symptomWeights": {
+      "fatigue": 1,
+      "yellowish_skin": 1,
+      "nausea": 1,
+      "loss_of_appetite": 1,
+      "family_history": 1,
+      "yellowing_of_eyes": 1
+    }
+  },
+  {
+    "condition": "hepatitis d",
+    "symptoms": [
+      "joint_pain",
+      "vomiting",
+      "fatigue",
+      "yellowish_skin",
+      "dark_urine",
+      "nausea",
+      "loss_of_appetite",
+      "abdominal_pain",
+      "yellowing_of_eyes"
+    ],
+    "symptomWeights": {
+      "joint_pain": 1,
+      "vomiting": 1,
+      "fatigue": 1,
+      "yellowish_skin": 1,
+      "dark_urine": 1,
+      "nausea": 1,
+      "loss_of_appetite": 1,
+      "abdominal_pain": 1,
+      "yellowing_of_eyes": 1
+    }
+  },
+  {
+    "condition": "hepatitis e",
+    "symptoms": [
+      "joint_pain",
+      "vomiting",
+      "fatigue",
+      "high_fever",
+      "yellowish_skin",
+      "dark_urine",
+      "nausea",
+      "loss_of_appetite",
+      "abdominal_pain",
+      "yellowing_of_eyes",
+      "coma",
+      "stomach_bleeding",
+      "acute_liver_failure"
+    ],
+    "symptomWeights": {
+      "joint_pain": 1,
+      "vomiting": 1,
+      "fatigue": 1,
+      "high_fever": 1,
+      "yellowish_skin": 1,
+      "dark_urine": 1,
+      "nausea": 1,
+      "loss_of_appetite": 1,
+      "abdominal_pain": 1,
+      "yellowing_of_eyes": 1,
+      "coma": 1,
+      "stomach_bleeding": 1,
+      "acute_liver_failure": 1
+    }
+  },
+  {
+    "condition": "alcoholic hepatitis",
+    "symptoms": [
+      "vomiting",
+      "yellowish_skin",
+      "abdominal_pain",
+      "swelling_of_stomach",
+      "distention_of_abdomen",
+      "history_of_alcohol_consumption",
+      "fluid_overload"
+    ],
+    "symptomWeights": {
+      "vomiting": 1,
+      "yellowish_skin": 1,
+      "abdominal_pain": 1,
+      "swelling_of_stomach": 1,
+      "distention_of_abdomen": 1,
+      "history_of_alcohol_consumption": 1,
+      "fluid_overload": 1
+    }
+  },
+  {
+    "condition": "tuberculosis",
+    "symptoms": [
+      "chills",
+      "vomiting",
+      "fatigue",
+      "weight_loss",
+      "cough",
+      "high_fever",
+      "breathlessness",
+      "sweating",
+      "loss_of_appetite",
+      "mild_fever",
+      "yellowing_of_eyes",
+      "swelled_lymph_nodes",
+      "malaise",
+      "phlegm",
+      "chest_pain",
+      "blood_in_sputum"
+    ],
+    "symptomWeights": {
+      "chills": 1,
+      "vomiting": 1,
+      "fatigue": 1,
+      "weight_loss": 1,
+      "cough": 1,
+      "high_fever": 1,
+      "breathlessness": 1,
+      "sweating": 1,
+      "loss_of_appetite": 1,
+      "mild_fever": 1,
+      "yellowing_of_eyes": 1,
+      "swelled_lymph_nodes": 1,
+      "malaise": 1,
+      "phlegm": 1,
+      "chest_pain": 1,
+      "blood_in_sputum": 1
+    }
+  },
+  {
+    "condition": "common cold",
+    "symptoms": [
+      "continuous_sneezing",
+      "chills",
+      "fatigue",
+      "cough",
+      "high_fever",
+      "headache",
+      "swelled_lymph_nodes",
+      "malaise",
+      "phlegm",
+      "throat_irritation",
+      "redness_of_eyes",
+      "sinus_pressure",
+      "runny_nose",
+      "congestion",
+      "chest_pain",
+      "loss_of_smell",
+      "muscle_pain"
+    ],
+    "symptomWeights": {
+      "continuous_sneezing": 1,
+      "chills": 1,
+      "fatigue": 1,
+      "cough": 1,
+      "high_fever": 1,
+      "headache": 1,
+      "swelled_lymph_nodes": 1,
+      "malaise": 1,
+      "phlegm": 1,
+      "throat_irritation": 1,
+      "redness_of_eyes": 1,
+      "sinus_pressure": 1,
+      "runny_nose": 1,
+      "congestion": 1,
+      "chest_pain": 1,
+      "loss_of_smell": 1,
+      "muscle_pain": 1
+    }
+  },
+  {
+    "condition": "pneumonia",
+    "symptoms": [
+      "chills",
+      "fatigue",
+      "cough",
+      "high_fever",
+      "breathlessness",
+      "sweating",
+      "malaise",
+      "chest_pain",
+      "fast_heart_rate",
+      "rusty_sputum",
+      "phlegm"
+    ],
+    "symptomWeights": {
+      "chills": 1,
+      "fatigue": 1,
+      "cough": 1,
+      "high_fever": 1,
+      "breathlessness": 1,
+      "sweating": 1,
+      "malaise": 1,
+      "chest_pain": 1,
+      "fast_heart_rate": 1,
+      "rusty_sputum": 1,
+      "phlegm": 1
+    }
+  },
+  {
+    "condition": "dimorphic hemmorhoids(piles)",
+    "symptoms": [
+      "constipation",
+      "pain_during_bowel_movements",
+      "pain_in_anal_region",
+      "bloody_stool",
+      "irritation_in_anus"
+    ],
+    "symptomWeights": {
+      "constipation": 1,
+      "pain_during_bowel_movements": 1,
+      "pain_in_anal_region": 1,
+      "bloody_stool": 1,
+      "irritation_in_anus": 1
+    }
+  },
+  {
+    "condition": "heart attack",
+    "symptoms": [
+      "vomiting",
+      "breathlessness",
+      "sweating",
+      "chest_pain"
+    ],
+    "symptomWeights": {
+      "vomiting": 1,
+      "breathlessness": 1,
+      "sweating": 1,
+      "chest_pain": 1
+    }
+  },
+  {
+    "condition": "varicose veins",
+    "symptoms": [
+      "fatigue",
+      "cramps",
+      "bruising",
+      "obesity",
+      "swollen_legs",
+      "swollen_blood_vessels",
+      "prominent_veins_on_calf"
+    ],
+    "symptomWeights": {
+      "fatigue": 1,
+      "cramps": 1,
+      "bruising": 1,
+      "obesity": 1,
+      "swollen_legs": 1,
+      "swollen_blood_vessels": 1,
+      "prominent_veins_on_calf": 1
+    }
+  },
+  {
+    "condition": "hypothyroidism",
+    "symptoms": [
+      "fatigue",
+      "weight_gain",
+      "cold_hands_and_feets",
+      "mood_swings",
+      "lethargy",
+      "dizziness",
+      "puffy_face_and_eyes",
+      "enlarged_thyroid",
+      "brittle_nails",
+      "swollen_extremeties",
+      "depression",
+      "irritability",
+      "abnormal_menstruation"
+    ],
+    "symptomWeights": {
+      "fatigue": 1,
+      "weight_gain": 1,
+      "cold_hands_and_feets": 1,
+      "mood_swings": 1,
+      "lethargy": 1,
+      "dizziness": 1,
+      "puffy_face_and_eyes": 1,
+      "enlarged_thyroid": 1,
+      "brittle_nails": 1,
+      "swollen_extremeties": 1,
+      "depression": 1,
+      "irritability": 1,
+      "abnormal_menstruation": 1
+    }
+  },
+  {
+    "condition": "hyperthyroidism",
+    "symptoms": [
+      "fatigue",
+      "mood_swings",
+      "weight_loss",
+      "restlessness",
+      "sweating",
+      "diarrhoea",
+      "fast_heart_rate",
+      "excessive_hunger",
+      "muscle_weakness",
+      "irritability",
+      "abnormal_menstruation"
+    ],
+    "symptomWeights": {
+      "fatigue": 1,
+      "mood_swings": 1,
+      "weight_loss": 1,
+      "restlessness": 1,
+      "sweating": 1,
+      "diarrhoea": 1,
+      "fast_heart_rate": 1,
+      "excessive_hunger": 1,
+      "muscle_weakness": 1,
+      "irritability": 1,
+      "abnormal_menstruation": 1
+    }
+  },
+  {
+    "condition": "hypoglycemia",
+    "symptoms": [
+      "vomiting",
+      "fatigue",
+      "anxiety",
+      "sweating",
+      "headache",
+      "nausea",
+      "blurred_and_distorted_vision",
+      "excessive_hunger",
+      "slurred_speech",
+      "irritability",
+      "palpitations",
+      "drying_and_tingling_lips"
+    ],
+    "symptomWeights": {
+      "vomiting": 1,
+      "fatigue": 1,
+      "anxiety": 1,
+      "sweating": 1,
+      "headache": 1,
+      "nausea": 1,
+      "blurred_and_distorted_vision": 1,
+      "excessive_hunger": 1,
+      "slurred_speech": 1,
+      "irritability": 1,
+      "palpitations": 1,
+      "drying_and_tingling_lips": 1
+    }
+  },
+  {
+    "condition": "osteoarthristis",
+    "symptoms": [
+      "joint_pain",
+      "neck_pain",
+      "knee_pain",
+      "hip_joint_pain",
+      "swelling_joints",
+      "painful_walking"
+    ],
+    "symptomWeights": {
+      "joint_pain": 1,
+      "neck_pain": 1,
+      "knee_pain": 1,
+      "hip_joint_pain": 1,
+      "swelling_joints": 1,
+      "painful_walking": 1
+    }
+  },
+  {
+    "condition": "arthritis",
+    "symptoms": [
+      "muscle_weakness",
+      "stiff_neck",
+      "swelling_joints",
+      "movement_stiffness",
+      "painful_walking"
+    ],
+    "symptomWeights": {
+      "muscle_weakness": 1,
+      "stiff_neck": 1,
+      "swelling_joints": 1,
+      "movement_stiffness": 1,
+      "painful_walking": 1
+    }
+  },
+  {
+    "condition": "(vertigo) paroymsal  positional vertigo",
+    "symptoms": [
+      "vomiting",
+      "headache",
+      "nausea",
+      "spinning_movements",
+      "loss_of_balance",
+      "unsteadiness"
+    ],
+    "symptomWeights": {
+      "vomiting": 1,
+      "headache": 1,
+      "nausea": 1,
+      "spinning_movements": 1,
+      "loss_of_balance": 1,
+      "unsteadiness": 1
+    }
+  },
+  {
+    "condition": "acne",
+    "symptoms": [
+      "skin_rash",
+      "pus_filled_pimples",
+      "blackheads",
+      "scurring"
+    ],
+    "symptomWeights": {
+      "skin_rash": 1,
+      "pus_filled_pimples": 1,
+      "blackheads": 1,
+      "scurring": 1
+    }
+  },
+  {
+    "condition": "urinary tract infection",
+    "symptoms": [
+      "burning_micturition",
+      "bladder_discomfort",
+      "foul_smell_of urine",
+      "continuous_feel_of_urine"
+    ],
+    "symptomWeights": {
+      "burning_micturition": 1,
+      "bladder_discomfort": 1,
+      "foul_smell_of urine": 1,
+      "continuous_feel_of_urine": 1
+    }
+  },
+  {
+    "condition": "psoriasis",
+    "symptoms": [
+      "skin_rash",
+      "joint_pain",
+      "skin_peeling",
+      "silver_like_dusting",
+      "small_dents_in_nails",
+      "inflammatory_nails"
+    ],
+    "symptomWeights": {
+      "skin_rash": 1,
+      "joint_pain": 1,
+      "skin_peeling": 1,
+      "silver_like_dusting": 1,
+      "small_dents_in_nails": 1,
+      "inflammatory_nails": 1
+    }
+  },
+  {
+    "condition": "impetigo",
+    "symptoms": [
+      "skin_rash",
+      "high_fever",
+      "blister",
+      "red_sore_around_nose",
+      "yellow_crust_ooze"
+    ],
+    "symptomWeights": {
+      "skin_rash": 1,
+      "high_fever": 1,
+      "blister": 1,
+      "red_sore_around_nose": 1,
+      "yellow_crust_ooze": 1
+    }
+  }
+]

@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { useAuthContext } from "../context/AuthContext";
+import { useUser } from "../contexts/UserContext"; 
+
 
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [message, setMessage] = useState("");
+  const { setUser } = useUser()
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -31,8 +33,9 @@ const LoginForm = () => {
       const data = await response.json();
 
       if (response.ok) {
+        setUser(data);
         setMessage({ type: "success", text: "Login successful!" });
-        navigate("/med_history");
+        navigate("/dashboard");
       } else {
         setMessage({ type: "error", text: data.error || "Login failed." });
       }
