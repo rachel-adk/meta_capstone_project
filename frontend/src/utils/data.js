@@ -129,3 +129,47 @@ export async function newAllergyLog(log) {
   }
   return await res.json();
 }
+
+// fetching member profile for user
+export async function getUserProfile() {
+  const res = await fetch(`${BASE_URL}/profile`, {
+    method: "GET",
+    credentials: "include",
+  });
+  if (!res.ok) {
+    throw new Error(`Something went wrong: ${res.status}`);
+  }
+  return await res.json();
+}
+
+// adding/updating entries to member profile
+export async function saveProfile(data) {
+  const res = await fetch(`${BASE_URL}/profile`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "include",
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) {
+    throw new Error(`Something went wrong: ${res.status}`);
+  }
+  return await res.json();
+}
+
+// updating entries to member profile
+export async function patchProfile(data) {
+  const res = await fetch(`${BASE_URL}/profile`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "include",
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) {
+    throw new Error(`Something went wrong: ${res.status}`);
+  }
+  return await res.json();
+}

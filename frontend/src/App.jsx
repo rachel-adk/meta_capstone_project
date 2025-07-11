@@ -8,7 +8,7 @@ import SymptomsPage from "./components/SymptomsPage";
 import AllergiesPage from "./components/AllergiesPage";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
-import WithAuth from "./components/WithAuth";
+import ProfilePage from "./components/ProfilePage";
 
 
 const App = () => {
@@ -39,6 +39,8 @@ const App = () => {
             <Route path="/symptoms" element={<SymptomsPage />} />
             <Route path="/allergies" element={<AllergiesPage />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<ProfilePage />} />
+
           </Routes>
           <div className="bg-teal-700 text-white py-2 px-3 text-left sticky bottom-0">
             <p>©2025 HealthConnect</p>

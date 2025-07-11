@@ -155,11 +155,11 @@ app.post("/logout", (req, res) => {
 })
 
 // Getting user's profile
-app.get("/profile", isAuthenticated, async (req, res) => {
+app.get("/profile", async (req, res) => {
   try{
     const userId = req.session.userId;
     const profile = await prisma.user.findUnique({
-      where: { userId },
+      where: { userId: userId },
     })
     if (!profile) {
       return res.status(404).json({error: "Profile not found"})
