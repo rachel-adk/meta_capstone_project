@@ -4,6 +4,7 @@ const { PrismaClient } = require("./src/generated/prisma");
 const session = require("express-session");
 
 const prisma = new PrismaClient();
+const { body, validationResult } = require("express-validator");
 const app = express();
 const cors = require("cors");
 
@@ -125,9 +126,6 @@ app.post("/login", async (req, res) => {
 
 // Checking to see if user is logged in
 app.get("/me", async (req, res) => {
-  if (!req.session.userId) {
-    return res.status(401).json({ message: "Not logged in" });
-  }
 
   try {
     const user = await prisma.user.findUnique({
@@ -135,12 +133,101 @@ app.get("/me", async (req, res) => {
       select: { username: true },
     });
 
-    res.json({ id: req.session.userId, username: req.session.username });
+    if (!user) {
+      return res.status(401).json({ message: "User not found" });
+    }
+
+    return res.json({ id: req.session.userId, username: req.session.username });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error fetching user session data" });
   }
 });
+
+// Logging out
+app.post("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).json({ error: "Failed to log out" });
+    }
+  })
+})
+
+// Getting user's profile
+app.get("/profile", async (req, res) => {
+  try{
+    console.log("session:", req.session)
+    const userId = req.session.userId;
+    if (!userId) {
+      return res.status(401).json({error: "Not logged in"})
+    }
+    const profile = await prisma.user.findUnique({
+      where: { id: userId },
+    })
+    if (!profile) {
+      return res.status(404).json({error: "Profile not found"})
+    }
+    res.json(profile)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({error: "Error fetching user profile"})
+  }
+})
+
+app.put("/profile", [
+  body("age").isInt({ min: 1, max: 120 }),
+  body("gender").isIn(["male", "female", "other"]),
+  body("height").isInt({ gt : 0 }),
+  body("weight").isInt({ gt : 0 }),
+  body("preExistingConditions").optional().isArray(),
+  body("preExistingConditions.*").isString(),
+],
+ async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+  isAuthenticated,
+  async (req, res) => {
+    console.log(" session:", req.session)
+    console.log("body:", req.body)
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() })
+  }
+  const userId = req.session.userId;
+  if (!userId) {
+    return res.status(401).json({error: "Not logged in"})
+  }
+
+  const { age, gender, height, weight, preExistingConditions } = req.body;
+  try {
+    const profile = await prisma.user.update({
+      where: { id: userId },
+      update: {
+        age,
+        gender,
+        height,
+        weight,
+        preExistingConditions,
+      },
+      create: {
+        userId,
+        age,
+        gender,
+        height,
+        weight,
+        preExistingConditions,
+      },
+    })
+    res.json(profile)
+  } catch (error) {
+    console.error(error, "Error updating user profile")
+      return res.status(500).json({error: "Error updating user profile"})
+  }
+  }
+})
+
 
 // Getting user's medical history
 app.get("/med_history", async (req, res) => {
@@ -162,15 +249,15 @@ app.get("/med_history", async (req, res) => {
 
 // Adding more entries to medical history
 app.post("/med_history", isAuthenticated, async (req, res) => {
-  const { condition, notes, diagnosisDate, medication } = req.body;
+  const { condition, notes, diagnosisDate, medications } = req.body;
 
   try {
     const newEntry = await prisma.medicalHistory.create({
       data: {
         condition,
         notes,
-        diagnosisDate: new Date(diagnosisDate),
-        medication,
+        diagnosisDate,
+        medications,
         userId: req.session.userId,
       },
     });
@@ -182,6 +269,90 @@ app.post("/med_history", isAuthenticated, async (req, res) => {
     .status(500)
     .json({ error: "Error adding to your medical history" });
 });
+
+// Getting user's symptom logs
+app.get("/symptoms", async (req, res) => {
+  if (!req.session.userId) {
+    return res.status(401).json({ error: "Not logged in" });
+  }
+  try {
+    const userId = req.session.userId;
+
+    const entries = await prisma.symptoms.findMany({
+      where: { userId: userId },
+      orderBy: { date: "desc" },
+    });
+    res.status(200).json(entries);
+  } catch (error) {
+    res.status(500).json({ error: "Error getting your symptom logs" });
+  }
+});
+
+// Adding more entries to symptom logs
+app.post("/symptoms", isAuthenticated, async (req, res) => {
+  const { name, severity, duration, notes } = req.body;
+
+  try {
+    const newEntry = await prisma.symptoms.create({
+      data: {
+        name,
+        severity,
+        duration,
+        notes,
+        userId: req.session.userId,
+      },
+    });
+    return res.status(201).json(newEntry);
+  } catch (error) {
+    console.error("Error adding new log", error);
+  }
+  return res
+    .status(500)
+    .json({ error: "Error adding to your symptom logs" });
+});
+
+// Getting user's allergies logs
+app.get("/allergies", async (req, res) => {
+  if (!req.session.userId) {
+    return res.status(401).json({ error: "Not logged in" });
+  }
+  try {
+    const userId = req.session.userId;
+
+    const entries = await prisma.allergies.findMany({
+      where: { userId: userId },
+      orderBy: { date: "desc" },
+    });
+    res.status(200).json(entries);
+  } catch (error) {
+    res.status(500).json({ error: "Error getting your allergy logs" });
+  }
+});
+
+// Adding more entries to allergy logs
+app.post("/allergies", isAuthenticated, async (req, res) => {
+  const { trigger, severity, reaction, notes } = req.body;
+
+  try {
+    const newEntry = await prisma.allergies.create({
+      data: {
+        trigger,
+        severity,
+        reaction,
+        notes,
+        userId: req.session.userId,
+      },
+    });
+    return res.status(201).json(newEntry);
+  } catch (error) {
+    console.error("Error adding new log", error);
+  }
+  return res
+    .status(500)
+    .json({ error: "Error adding to your allergy logs" });
+});
+
+
 
 // Logging out
 app.post("/logout", (req, res) => {
