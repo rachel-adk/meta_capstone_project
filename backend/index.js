@@ -182,14 +182,11 @@ app.put("/profile", [
   body("preExistingConditions").optional().isArray(),
   body("preExistingConditions.*").isString(),
 ],
- async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() })
-  }
+
+
   isAuthenticated,
   async (req, res) => {
-    console.log(" session:", req.session)
+
     console.log("body:", req.body)
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -202,7 +199,7 @@ app.put("/profile", [
 
   const { age, gender, height, weight, preExistingConditions } = req.body;
   try {
-    const profile = await prisma.user.update({
+    const profile = await prisma.user.upsert({
       where: { id: userId },
       update: {
         age,
@@ -211,8 +208,7 @@ app.put("/profile", [
         weight,
         preExistingConditions,
       },
-      create: {
-        userId,
+      create: { id: userId,
         age,
         gender,
         height,
@@ -221,12 +217,12 @@ app.put("/profile", [
       },
     })
     res.json(profile)
-  } catch (error) {
+  }catch (error) {
     console.error(error, "Error updating user profile")
       return res.status(500).json({error: "Error updating user profile"})
   }
-  }
-})
+}
+)
 
 
 // Getting user's medical history

@@ -144,24 +144,9 @@ export async function getUserProfile() {
 
 // adding/updating entries to member profile
 export async function saveProfile(data) {
+  console.log("data:", data);
   const res = await fetch(`${BASE_URL}/profile`, {
     method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    credentials: "include",
-    body: JSON.stringify(data),
-  });
-  if (!res.ok) {
-    throw new Error(`Something went wrong: ${res.status}`);
-  }
-  return await res.json();
-}
-
-// updating entries to member profile
-export async function patchProfile(data) {
-  const res = await fetch(`${BASE_URL}/profile`, {
-    method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },

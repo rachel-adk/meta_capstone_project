@@ -3,7 +3,6 @@ import { getUserProfile, saveProfile } from "../utils/data";
 
 const ProfilePage = () => {
   const [profile, setProfile] = useState({
-    fullName: "",
     gender: "",
     age: 0,
     height: 0,
@@ -48,7 +47,6 @@ const ProfilePage = () => {
     setSuccess(false);
     try {
       const submitData = {
-        fullName: profile.fullName,
         gender: profile.gender,
         age: profile.age,
         height: parseInt(profile.height, 10),
