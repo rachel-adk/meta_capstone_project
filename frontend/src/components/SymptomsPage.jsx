@@ -9,7 +9,8 @@ import ProfilePage from "./ProfilePage";
 import { getSymptomLogs } from "../utils/data";
 
 
-const SymptomsPage = ({ profile, setSymptoms }) => {
+const SymptomsPage = ({ profile }) => {
+  const [symptoms, setSymptoms] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [diagnosisResult, setDiagnosisResult] = useState(null)
 
@@ -20,7 +21,7 @@ const SymptomsPage = ({ profile, setSymptoms }) => {
         gender: profile.gender,
         weight: profile.weight,
         height: profile.height,
-        symptoms: setSymptoms
+        symptoms
       })
       setDiagnosisResult(res)
       setShowModal(true)

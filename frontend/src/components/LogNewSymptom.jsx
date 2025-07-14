@@ -4,6 +4,7 @@ import DropdownMenu from "./DropdownMenu";
 
 const LogNewSymptom = ({ onCreate }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [symptom, setSymptom] = useState("")
   const [severity, setSeverity] = useState(1)
   const [frequency, setFrequency] = useState("daily");
 
