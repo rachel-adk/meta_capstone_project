@@ -12,9 +12,20 @@ import ProfilePage from "./components/ProfilePage";
 
 
 const App = () => {
+  const [profile, setProfile] = useState({
+    age: 0,
+    weight: 0,
+    height: 0,
+    gender: "",
+  })
 
   const [isOpen, setIsOpen] = useState(false);
   return (
+    <>
+    <div>
+      <ProfilePage profile={profile} setProfile={setProfile} />
+      <SymptomsPage profile={profile} />
+    </div>
     <div className="flex flex-col w-full">
       <Router>
         <header className="bg-teal-700 flex justify-center items-center p-8">
@@ -50,10 +61,8 @@ const App = () => {
       </Router>
       </div>
     );
+    }
+    </>
 
-
-
-
-};
 
 export default App;

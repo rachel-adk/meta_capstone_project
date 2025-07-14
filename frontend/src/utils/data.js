@@ -173,3 +173,18 @@ export async function patchProfile(data) {
   }
   return await res.json();
 }
+
+// Getting medical diagnosis for the user
+export async function getDiagnosis() {
+  const res = await fetch(`${BASE_URL}/diagnosis`, {
+    method: "POST",
+    headers: { "Content-type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({ age, gender, weight, height }),
+  });
+  if (!res.ok) {
+    const err = await res.json()
+    throw new Error(err.error || "Something went wrong");
+  }
+  return await res.json();
+}
