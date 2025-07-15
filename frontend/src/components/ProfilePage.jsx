@@ -1,15 +1,7 @@
 import { useState, useEffect } from "react";
-import { getUserProfile, saveProfile } from "../utils/data";
+import { getUserProfile, saveProfile } from "../utils/data.js";
 
-const ProfilePage = () => {
-  const [profile, setProfile] = useState({
-    fullName: "",
-    gender: "",
-    age: 0,
-    height: 0,
-    weight: 0,
-    preExistingConditions: [],
-  });
+const ProfilePage = ({ profile, setProfile }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
