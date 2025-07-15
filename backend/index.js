@@ -1,3 +1,5 @@
+require("dotenv").config()
+const apiKey = process.env.VITE_GEOAPIFY_API_KEY
 const express = require("express");
 const bcrypt = require("bcrypt");
 const { PrismaClient } = require("./src/generated/prisma");
@@ -8,7 +10,6 @@ const { body, validationResult } = require("express-validator");
 const app = express();
 const cors = require("cors");
 const { diagnose } = require("./diagnosis");
-const { use } = require("react");
 
 app.use(
   cors({
@@ -177,6 +178,7 @@ app.get("/profile", async (req, res) => {
 
 app.put(
   "/profile",
+  isAuthenticated,
   [
     body("age").isInt({ min: 1, max: 120 }),
     body("gender").isIn(["male", "female", "other"]),
@@ -185,15 +187,8 @@ app.put(
     body("preExistingConditions").optional().isArray(),
     body("preExistingConditions.*").isString(),
   ],
-  async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-    isAuthenticated,
       async (req, res) => {
-        console.log(" session:", req.session);
-        console.log("body:", req.body);
+
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
           return res.status(400).json({ errors: errors.array() });
@@ -205,8 +200,8 @@ app.put(
 
         const { age, gender, height, weight, preExistingConditions } = req.body;
         try {
-          const profile = await prisma.user.update({
-            where: { id: userId },
+          const profile = await prisma.user.upsert({
+            where: { id:userId },
             update: {
               age,
               gender,
@@ -215,7 +210,6 @@ app.put(
               preExistingConditions,
             },
             create: {
-              userId,
               age,
               gender,
               height,
@@ -228,8 +222,8 @@ app.put(
           console.error(error, "Error updating user profile");
           return res.status(500).json({ error: "Error updating user profile" });
         }
-      };
-  }
+      }
+
 );
 
 // Getting user's medical history
@@ -380,6 +374,39 @@ app.post("/diagnosis", async (req, res) => {
     res.status(500).json({ error: "Error getting diagnosis" });
   }
 });
+
+//Getting hospitals nearby
+app.post("/hospitals", async(req, res) => {
+  const { latitude, longitude } = req.body;
+
+  if(!latitude || !longitude) {
+    return res.status(400).json({ error: "Missing coordinates" });
+  }
+
+  try {
+    const radius = 100000; // 10000m/10km radius
+    const categories =  "healthcare"
+    const url = `https://api.geoapify.com/v2/places?categories=healthcare&filter=circle:${longitude},${latitude},${radius}&limit=10&apiKey=${apiKey}`
+
+    const response = await fetch(url);
+    console.log("response:", response)
+    const data = await response.json();
+
+  if (!data || !data.features || data.features.length === 0) {
+    return res.status(404).json({error: "No hospitals found"});
+  }
+
+  const hospitals = data.features.map((hospital) => ({
+    address: hospital.properties.formatted,
+  }))
+
+  res.json({ hospitals })
+} catch (error) {
+  console.error(error)
+  res.status(500).json({ error: "Internal server error" })
+}
+})
+
 
 // Logging out
 app.post("/logout", (req, res) => {
