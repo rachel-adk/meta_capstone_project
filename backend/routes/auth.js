@@ -1,6 +1,6 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
-const { PrismaClient } = require("./src/generated/prisma");
+const { PrismaClient } = require("./generated/prisma");
 const prisma = new PrismaClient();
 const app = express();
 

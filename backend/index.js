@@ -1,8 +1,7 @@
-require("dotenv").config()
-const apiKey = process.env.VITE_GEOAPIFY_API_KEY
+require('dotenv').config()
 const express = require("express");
 const bcrypt = require("bcrypt");
-const { PrismaClient } = require("./src/generated/prisma");
+const { PrismaClient } = require("./generated/prisma");
 const session = require("express-session");
 
 const prisma = new PrismaClient();
