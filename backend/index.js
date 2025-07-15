@@ -7,6 +7,8 @@ const prisma = new PrismaClient();
 const { body, validationResult } = require("express-validator");
 const app = express();
 const cors = require("cors");
+const { diagnose } = require("./diagnosis");
+const { use } = require("react");
 
 app.use(
   cors({
@@ -126,7 +128,6 @@ app.post("/login", async (req, res) => {
 
 // Checking to see if user is logged in
 app.get("/me", async (req, res) => {
-
   try {
     const user = await prisma.user.findUnique({
       where: { id: req.session.userId },
@@ -150,84 +151,86 @@ app.post("/logout", (req, res) => {
     if (err) {
       return res.status(500).json({ error: "Failed to log out" });
     }
-  })
-})
+  });
+});
 
 // Getting user's profile
 app.get("/profile", async (req, res) => {
-  try{
-    console.log("session:", req.session)
+  try {
+    console.log("session:", req.session);
     const userId = req.session.userId;
     if (!userId) {
-      return res.status(401).json({error: "Not logged in"})
+      return res.status(401).json({ error: "Not logged in" });
     }
     const profile = await prisma.user.findUnique({
       where: { id: userId },
-    })
+    });
     if (!profile) {
-      return res.status(404).json({error: "Profile not found"})
+      return res.status(404).json({ error: "Profile not found" });
     }
-    res.json(profile)
+    res.json(profile);
   } catch (error) {
-    console.error(error)
-    res.status(500).json({error: "Error fetching user profile"})
+    console.error(error);
+    res.status(500).json({ error: "Error fetching user profile" });
   }
-})
+});
 
-app.put("/profile", [
-  body("age").isInt({ min: 1, max: 120 }),
-  body("gender").isIn(["male", "female", "other"]),
-  body("height").isInt({ gt : 0 }),
-  body("weight").isInt({ gt : 0 }),
-  body("preExistingConditions").optional().isArray(),
-  body("preExistingConditions.*").isString(),
-],
- async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() })
-  }
-  isAuthenticated,
+app.put(
+  "/profile",
+  [
+    body("age").isInt({ min: 1, max: 120 }),
+    body("gender").isIn(["male", "female", "other"]),
+    body("height").isInt({ gt: 0 }),
+    body("weight").isInt({ gt: 0 }),
+    body("preExistingConditions").optional().isArray(),
+    body("preExistingConditions.*").isString(),
+  ],
   async (req, res) => {
-    console.log(" session:", req.session)
-    console.log("body:", req.body)
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() })
-  }
-  const userId = req.session.userId;
-  if (!userId) {
-    return res.status(401).json({error: "Not logged in"})
-  }
+      return res.status(400).json({ errors: errors.array() });
+    }
+    isAuthenticated,
+      async (req, res) => {
+        console.log(" session:", req.session);
+        console.log("body:", req.body);
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+          return res.status(400).json({ errors: errors.array() });
+        }
+        const userId = req.session.userId;
+        if (!userId) {
+          return res.status(401).json({ error: "Not logged in" });
+        }
 
-  const { age, gender, height, weight, preExistingConditions } = req.body;
-  try {
-    const profile = await prisma.user.update({
-      where: { id: userId },
-      update: {
-        age,
-        gender,
-        height,
-        weight,
-        preExistingConditions,
-      },
-      create: {
-        userId,
-        age,
-        gender,
-        height,
-        weight,
-        preExistingConditions,
-      },
-    })
-    res.json(profile)
-  } catch (error) {
-    console.error(error, "Error updating user profile")
-      return res.status(500).json({error: "Error updating user profile"})
+        const { age, gender, height, weight, preExistingConditions } = req.body;
+        try {
+          const profile = await prisma.user.update({
+            where: { id: userId },
+            update: {
+              age,
+              gender,
+              height,
+              weight,
+              preExistingConditions,
+            },
+            create: {
+              userId,
+              age,
+              gender,
+              height,
+              weight,
+              preExistingConditions,
+            },
+          });
+          res.json(profile);
+        } catch (error) {
+          console.error(error, "Error updating user profile");
+          return res.status(500).json({ error: "Error updating user profile" });
+        }
+      };
   }
-  }
-})
-
+);
 
 // Getting user's medical history
 app.get("/med_history", async (req, res) => {
@@ -306,9 +309,7 @@ app.post("/symptoms", isAuthenticated, async (req, res) => {
   } catch (error) {
     console.error("Error adding new log", error);
   }
-  return res
-    .status(500)
-    .json({ error: "Error adding to your symptom logs" });
+  return res.status(500).json({ error: "Error adding to your symptom logs" });
 });
 
 // Getting user's allergies logs
@@ -347,12 +348,38 @@ app.post("/allergies", isAuthenticated, async (req, res) => {
   } catch (error) {
     console.error("Error adding new log", error);
   }
-  return res
-    .status(500)
-    .json({ error: "Error adding to your allergy logs" });
+  return res.status(500).json({ error: "Error adding to your allergy logs" });
 });
 
+// Getting user's diagnosis
+app.post("/diagnosis", async (req, res) => {
+  try {
+    const { age, gender, height, weight, preExistingConditions } = req.body;
 
+    if (
+      !age ||
+      !gender ||
+      !height ||
+      !weight ||
+      !Array.isArray(symptoms) ||
+      symptoms.length === 0
+    ) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
+
+    const userProfile = { age, gender, height, weight, preExistingConditions };
+
+    const result = diagnose(userProfile, symptoms);
+
+    res.json({
+      condition: result[0]?.condition,
+      topConditions: result,
+    });
+  } catch (err) {
+    console.error("Error", err);
+    res.status(500).json({ error: "Error getting diagnosis" });
+  }
+});
 
 // Logging out
 app.post("/logout", (req, res) => {
