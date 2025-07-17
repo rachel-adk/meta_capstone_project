@@ -3,15 +3,12 @@ import LogNewSymptom from "./LogNewSymptom";
 import DiagnosisModal from "./DiagnosisModal";
 import { getDiagnosis, getSymptomLogs } from "../utils/data";
 
-// import { getSymptomLogs } from "../utils/data";
-
 const SymptomsPage = ({ profile }) => {
   const [symptoms, setSymptoms] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [diagnosisResult, setDiagnosisResult] = useState(null);
 
   const handleDiagnosis = async () => {
-    console.log("Getting diagnosis");
     if (
       !profile ||
       !profile.age ||
@@ -22,7 +19,6 @@ const SymptomsPage = ({ profile }) => {
       console.error("Missing profile information");
       return;
     }
-    console.log("symptoms", symptoms);
     try {
       const res = await getDiagnosis({
         age: profile.age,
@@ -32,9 +28,7 @@ const SymptomsPage = ({ profile }) => {
         symptoms: symptoms.map((s) => s.symptom),
       });
       setDiagnosisResult(res);
-      console.log("Got diagnosis", res);
       setShowModal(true);
-      console.log("showModal", showModal);
     } catch (error) {
       console.error("Failed to get diagnosis", error);
     }
