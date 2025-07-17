@@ -1,4 +1,5 @@
 require('dotenv').config()
+const apiKey = process.env.GEOAPIFY_API_KEY
 const express = require("express");
 const bcrypt = require("bcrypt");
 const { PrismaClient } = require("./generated/prisma");
@@ -385,7 +386,7 @@ app.post("/hospitals", async(req, res) => {
   try {
     const radius = 100000; // 10000m/10km radius
     const categories =  "healthcare"
-    const url = `https://api.geoapify.com/v2/places?categories=healthcare&filter=circle:${longitude},${latitude},${radius}&limit=10&apiKey=${apiKey}`
+    const url = `https://api.geoapify.com/v2/places?categories=healthcare&filter=circle:${longitude},${latitude},${radius}&limit=10&apiKey=${process.env.GEOAPIFY_API_KEY}`
 
     const response = await fetch(url);
     console.log("response:", response)
