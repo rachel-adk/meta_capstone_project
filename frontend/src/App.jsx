@@ -2,7 +2,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useNavigate,
 } from "react-router-dom";
 import { useState } from "react";
 import SignupForm from "./components/SignupForm";
@@ -14,6 +13,8 @@ import AllergiesPage from "./components/AllergiesPage";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import ProfilePage from "./components/ProfilePage";
+import { getUserProfile } from "./utils/data";
+//import { useState, useEffect } from "react";
 
 const App = () => {
   const [profile, setProfile] = useState({
@@ -23,13 +24,29 @@ const App = () => {
     gender: "",
   });
 
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   async function getProfile() {
+  //     try{
+  //       const data = await getUserProfile()
+  //       if (data) {
+  //         setProfile(data)
+  //       } else {
+  //         console.error("No profile found")
+  //       }
+  //     } catch (error) {
+  //       console.error("Failed to get profile", error)
+  //     } finally {
+  //       setLoading(false)
+  //     }
+
+  //   }
+  //   getProfile()
+  // }, [])
+
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      {/* <div>
-        <ProfilePage profile={profile} setProfile={setProfile} />
-        <SymptomsPage profile={profile} />
-      </div> */}
       <div className="flex flex-col w-full">
         <Router>
           <header className="bg-teal-700 flex justify-center items-center p-8">
@@ -53,10 +70,10 @@ const App = () => {
                 <Route path="/signup" element={<SignupForm />} />
                 <Route path="/login" element={<LoginForm />} />
                 <Route path="/med_history" element={<MedicalHistory />} />
-                <Route path="/symptoms" element={<SymptomsPage />} />
+                <Route path="/symptoms" element={<SymptomsPage profile={profile}/>} />
                 <Route path="/allergies" element={<AllergiesPage />} />
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/profile" element={<ProfilePage profile={profile} setProfile={setProfile} />} />
               </Routes>
               <div className="bg-teal-700 text-white py-2 px-3 text-left sticky bottom-0">
                 <p>©2025 HealthConnect</p>

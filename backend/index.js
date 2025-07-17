@@ -181,7 +181,7 @@ app.put(
   isAuthenticated,
   [
     body("age").isInt({ min: 1, max: 120 }),
-    body("gender").isIn(["male", "female", "other"]),
+    body("gender").isIn(["Male", "Female", "Other"]),
     body("height").isInt({ gt: 0 }),
     body("weight").isInt({ gt: 0 }),
     body("preExistingConditions").optional().isArray(),
@@ -348,7 +348,7 @@ app.post("/allergies", isAuthenticated, async (req, res) => {
 // Getting user's diagnosis
 app.post("/diagnosis", async (req, res) => {
   try {
-    const { age, gender, height, weight, preExistingConditions } = req.body;
+    const { age, gender, height, weight, symptoms } = req.body;
 
     if (
       !age ||
@@ -361,7 +361,7 @@ app.post("/diagnosis", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const userProfile = { age, gender, height, weight, preExistingConditions };
+    const userProfile = { age, gender, height, weight };
 
     const result = diagnose(userProfile, symptoms);
 
