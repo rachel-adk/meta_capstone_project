@@ -12,7 +12,6 @@ const DiagnosisModal = ({ showModal, onClose, diagnosisResult, symptoms }) => {
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-500"
         >
-
           x
         </button>
         <h2 className="text-xl font-semibold text-teal-900 p-4">Diagnosis</h2>
@@ -21,7 +20,7 @@ const DiagnosisModal = ({ showModal, onClose, diagnosisResult, symptoms }) => {
           <>
             <h3 className="teal-900 text-center">Summary</h3>
             <p className="mb-2 px-2">Symptoms: </p>
-             <ul className="list-disc ml-6">
+            <ul className="list-disc ml-6">
               {symptoms.map((symptom, index) => (
                 <li key={index}>{symptom}</li>
               ))}

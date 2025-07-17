@@ -3,7 +3,6 @@ import LogNewSymptom from "./LogNewSymptom";
 import DiagnosisModal from "./DiagnosisModal";
 import { getDiagnosis, getSymptomLogs } from "../utils/data";
 
-
 // import { getSymptomLogs } from "../utils/data";
 
 const SymptomsPage = ({ profile }) => {
@@ -11,14 +10,19 @@ const SymptomsPage = ({ profile }) => {
   const [showModal, setShowModal] = useState(false);
   const [diagnosisResult, setDiagnosisResult] = useState(null);
 
-
   const handleDiagnosis = async () => {
     console.log("Getting diagnosis");
-    if (!profile || !profile.age || !profile.gender || !profile.weight || !profile.height) {
+    if (
+      !profile ||
+      !profile.age ||
+      !profile.gender ||
+      !profile.weight ||
+      !profile.height
+    ) {
       console.error("Missing profile information");
       return;
     }
-    console.log("symptoms", symptoms)
+    console.log("symptoms", symptoms);
     try {
       const res = await getDiagnosis({
         age: profile.age,
@@ -30,7 +34,7 @@ const SymptomsPage = ({ profile }) => {
       setDiagnosisResult(res);
       console.log("Got diagnosis", res);
       setShowModal(true);
-      console.log("showModal", showModal)
+      console.log("showModal", showModal);
     } catch (error) {
       console.error("Failed to get diagnosis", error);
     }
@@ -92,15 +96,15 @@ const SymptomsPage = ({ profile }) => {
           ))}
         </div>
       )}
-    {showModal && (
-      <DiagnosisModal
-        showModal={showModal}
-        setShowModal={setShowModal}
-        diagnosisResult={diagnosisResult}
-        symptoms={symptoms}
-        onClose={() => setShowModal(false)}
-      />
-    )}
+      {showModal && (
+        <DiagnosisModal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          diagnosisResult={diagnosisResult}
+          symptoms={symptoms}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   );
 };

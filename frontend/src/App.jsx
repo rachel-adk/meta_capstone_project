@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import SignupForm from "./components/SignupForm";
 import LoginForm from "./components/LoginForm";
@@ -70,10 +66,18 @@ const App = () => {
                 <Route path="/signup" element={<SignupForm />} />
                 <Route path="/login" element={<LoginForm />} />
                 <Route path="/med_history" element={<MedicalHistory />} />
-                <Route path="/symptoms" element={<SymptomsPage profile={profile}/>} />
+                <Route
+                  path="/symptoms"
+                  element={<SymptomsPage profile={profile} />}
+                />
                 <Route path="/allergies" element={<AllergiesPage />} />
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/profile" element={<ProfilePage profile={profile} setProfile={setProfile} />} />
+                <Route
+                  path="/profile"
+                  element={
+                    <ProfilePage profile={profile} setProfile={setProfile} />
+                  }
+                />
               </Routes>
               <div className="bg-teal-700 text-white py-2 px-3 text-left sticky bottom-0">
                 <p>©2025 HealthConnect</p>
