@@ -1,5 +1,5 @@
-require('dotenv').config()
-const apiKey = process.env.GEOAPIFY_API_KEY
+require("dotenv").config();
+const apiKey = process.env.GEOAPIFY_API_KEY;
 const express = require("express");
 const bcrypt = require("bcrypt");
 const { PrismaClient } = require("./generated/prisma");
@@ -187,43 +187,41 @@ app.put(
     body("preExistingConditions").optional().isArray(),
     body("preExistingConditions.*").isString(),
   ],
-      async (req, res) => {
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+    const userId = req.session.userId;
+    if (!userId) {
+      return res.status(401).json({ error: "Not logged in" });
+    }
 
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-          return res.status(400).json({ errors: errors.array() });
-        }
-        const userId = req.session.userId;
-        if (!userId) {
-          return res.status(401).json({ error: "Not logged in" });
-        }
-
-        const { age, gender, height, weight, preExistingConditions } = req.body;
-        try {
-          const profile = await prisma.user.upsert({
-            where: { id:userId },
-            update: {
-              age,
-              gender,
-              height,
-              weight,
-              preExistingConditions,
-            },
-            create: {
-              age,
-              gender,
-              height,
-              weight,
-              preExistingConditions,
-            },
-          });
-          res.json(profile);
-        } catch (error) {
-          console.error(error, "Error updating user profile");
-          return res.status(500).json({ error: "Error updating user profile" });
-        }
-      }
-
+    const { age, gender, height, weight, preExistingConditions } = req.body;
+    try {
+      const profile = await prisma.user.upsert({
+        where: { id: userId },
+        update: {
+          age,
+          gender,
+          height,
+          weight,
+          preExistingConditions,
+        },
+        create: {
+          age,
+          gender,
+          height,
+          weight,
+          preExistingConditions,
+        },
+      });
+      res.json(profile);
+    } catch (error) {
+      console.error(error, "Error updating user profile");
+      return res.status(500).json({ error: "Error updating user profile" });
+    }
+  }
 );
 
 // Getting user's medical history
@@ -376,37 +374,36 @@ app.post("/diagnosis", async (req, res) => {
 });
 
 //Getting hospitals nearby
-app.post("/hospitals", async(req, res) => {
+app.post("/hospitals", async (req, res) => {
   const { latitude, longitude } = req.body;
 
-  if(!latitude || !longitude) {
+  if (!latitude || !longitude) {
     return res.status(400).json({ error: "Missing coordinates" });
   }
 
   try {
     const radius = 100000; // 10000m/10km radius
-    const categories =  "healthcare"
-    const url = `https://api.geoapify.com/v2/places?categories=healthcare&filter=circle:${longitude},${latitude},${radius}&limit=10&apiKey=${process.env.GEOAPIFY_API_KEY}`
+    const categories = "healthcare";
+    const url = `https://api.geoapify.com/v2/places?categories=healthcare&filter=circle:${longitude},${latitude},${radius}&limit=10&apiKey=${process.env.GEOAPIFY_API_KEY}`;
 
     const response = await fetch(url);
-    console.log("response:", response)
+    console.log("response:", response);
     const data = await response.json();
 
-  if (!data || !data.features || data.features.length === 0) {
-    return res.status(404).json({error: "No hospitals found"});
+    if (!data || !data.features || data.features.length === 0) {
+      return res.status(404).json({ error: "No hospitals found" });
+    }
+
+    const hospitals = data.features.map((hospital) => ({
+      address: hospital.properties.formatted,
+    }));
+
+    res.json({ hospitals });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
   }
-
-  const hospitals = data.features.map((hospital) => ({
-    address: hospital.properties.formatted,
-  }))
-
-  res.json({ hospitals })
-} catch (error) {
-  console.error(error)
-  res.status(500).json({ error: "Internal server error" })
-}
-})
-
+});
 
 // Logging out
 app.post("/logout", (req, res) => {
