@@ -19,20 +19,20 @@ const DiagnosisModal = ({ showModal, onClose, diagnosisResult, symptoms }) => {
 
         {diagnosisResult ? (
           <>
-            <h3 className="teal-900 text-center">Summary</h3>
-            <p className="mb-2 px-2">Symptoms: </p>
+            <h3 className="teal-900 text-center font-bold">Summary</h3>
+            <p className="mb-2 px-2 font-semibold">Symptoms: </p>
              <ul className="list-disc ml-6">
-              {symptoms.map((symptom, index) => (
-                <li key={index}>{symptom}</li>
+              {symptoms.map((symptomObj, index) => (
+                <li key={index}>{symptomObj.symptom}</li>
               ))}
             </ul>
-            <p className="mb-2 p-4">Disease: {diagnosisResult.condition}</p>
-            <p className="mb-2 p-4">Precautions: </p>
-            {/* <ul className="list-disc ml-6">
-              {diagnosisResult.precaution.map((precaution, index) => (
+            <p className="mb-2 px-2 py-2 font-semibold">Disease: {diagnosisResult.condition}</p>
+            <p className="mb-2 px-2 font-semibold">Precautions: </p>
+            <ul className="list-disc ml-6">
+              {diagnosisResult?.topConditions?.[0]?.precautions?.map((precaution, index) => (
                 <li key={index}>{precaution}</li>
               ))}
-            </ul> */}
+            </ul>
           </>
         ) : (
           <p>Loading...</p>

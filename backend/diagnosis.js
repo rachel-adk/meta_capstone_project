@@ -39,6 +39,7 @@ function groupAges(age) {
 // Getting data from both datasets
 const conditionMap = require("./data/conditions.json");
 const demoMap = require("./data/demographicsToDiseases.json");
+const initialPrecautionsMap = require("./data/disease_precautions.json");
 
 function diagnose(userProfile, userSymptoms) {
   const bmi = computeBMI(userProfile.weight, userProfile.height);
@@ -48,6 +49,14 @@ function diagnose(userProfile, userSymptoms) {
 
   const conditionScore = {};
 
+    const precautionsMap = {}
+
+  // Getting precautions for each condition
+  for (const entry of initialPrecautionsMap) {
+    if (entry.disease && Array.isArray(entry.precautions)) {
+      precautionsMap[entry.disease.toLowerCase().trim()] = entry.precautions
+    }
+  }
   // Condition-symptom matching/scoring
   for (const conditionInfo of conditionMap) {
     const conditionName = conditionInfo.condition;
@@ -72,7 +81,13 @@ function diagnose(userProfile, userSymptoms) {
   return Object.entries(conditionScore)
     .sort(([, aScore], [, bScore]) => bScore - aScore)
     .slice(0, 2)
-    .map(([condition, score]) => ({ condition, score }));
+    .map(([condition, score]) => ({
+      condition,
+      score,
+    precautions: [
+      "Seek medical attention if symptoms worsen",
+      ...(precautionsMap[condition.toLowerCase()] || [])
+    ] }));
 }
 
 module.exports = { diagnose };
