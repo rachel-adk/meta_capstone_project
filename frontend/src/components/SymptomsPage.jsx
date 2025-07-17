@@ -11,18 +11,26 @@ const SymptomsPage = ({ profile }) => {
   const [showModal, setShowModal] = useState(false);
   const [diagnosisResult, setDiagnosisResult] = useState(null);
 
- 
+
   const handleDiagnosis = async () => {
+    console.log("Getting diagnosis");
+    if (!profile || !profile.age || !profile.gender || !profile.weight || !profile.height) {
+      console.error("Missing profile information");
+      return;
+    }
+    console.log("symptoms", symptoms)
     try {
       const res = await getDiagnosis({
         age: profile.age,
         gender: profile.gender,
         weight: profile.weight,
         height: profile.height,
-        symptoms,
+        symptoms: symptoms.map((s) => s.symptom),
       });
       setDiagnosisResult(res);
+      console.log("Got diagnosis", res);
       setShowModal(true);
+      console.log("showModal", showModal)
     } catch (error) {
       console.error("Failed to get diagnosis", error);
     }
@@ -84,12 +92,15 @@ const SymptomsPage = ({ profile }) => {
           ))}
         </div>
       )}
-
+    {showModal && (
       <DiagnosisModal
-        open={showModal}
-        onClose={() => setShowModal(false)}
+        showModal={showModal}
+        setShowModal={setShowModal}
         diagnosisResult={diagnosisResult}
+        symptoms={symptoms}
+        onClose={() => setShowModal(false)}
       />
+    )}
     </div>
   );
 };
