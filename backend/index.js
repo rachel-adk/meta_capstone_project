@@ -1,4 +1,5 @@
 require('dotenv').config()
+const apiKey = process.env.GEOAPIFY_API_KEY
 const express = require("express");
 const bcrypt = require("bcrypt");
 const { PrismaClient } = require("./generated/prisma");
@@ -180,7 +181,7 @@ app.put(
   isAuthenticated,
   [
     body("age").isInt({ min: 1, max: 120 }),
-    body("gender").isIn(["male", "female", "other"]),
+    body("gender").isIn(["Male", "Female", "Other"]),
     body("height").isInt({ gt: 0 }),
     body("weight").isInt({ gt: 0 }),
     body("preExistingConditions").optional().isArray(),
@@ -347,7 +348,7 @@ app.post("/allergies", isAuthenticated, async (req, res) => {
 // Getting user's diagnosis
 app.post("/diagnosis", async (req, res) => {
   try {
-    const { age, gender, height, weight, preExistingConditions } = req.body;
+    const { age, gender, height, weight, symptoms } = req.body;
 
     if (
       !age ||
@@ -360,7 +361,7 @@ app.post("/diagnosis", async (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const userProfile = { age, gender, height, weight, preExistingConditions };
+    const userProfile = { age, gender, height, weight };
 
     const result = diagnose(userProfile, symptoms);
 
@@ -385,7 +386,7 @@ app.post("/hospitals", async(req, res) => {
   try {
     const radius = 100000; // 10000m/10km radius
     const categories =  "healthcare"
-    const url = `https://api.geoapify.com/v2/places?categories=healthcare&filter=circle:${longitude},${latitude},${radius}&limit=10&apiKey=${apiKey}`
+    const url = `https://api.geoapify.com/v2/places?categories=healthcare&filter=circle:${longitude},${latitude},${radius}&limit=10&apiKey=${process.env.GEOAPIFY_API_KEY}`
 
     const response = await fetch(url);
     console.log("response:", response)
