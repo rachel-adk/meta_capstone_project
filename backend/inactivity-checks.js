@@ -18,9 +18,6 @@ cron.schedule("0 8 * * *", async () => {
   for (const user of inactiveUsers) {
     await sendEmailNotification(
       user.email,
-      {
-        inactivityReminder: true,
-      },
       "You haven't logged into your account in a while. Check your health logs!"
     );
   }
@@ -37,9 +34,6 @@ cron.schedule("0 8 * * *", async () => {
   for (const user of usersWithNoSymptoms) {
     await sendEmailNotification(
       user.email,
-      {
-        noRecentSymptomLogs: true,
-      },
       "You haven't reported any symptoms in a while. Check your health logs!"
     );
   }
