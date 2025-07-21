@@ -76,3 +76,5 @@ cron.schedule("0 8 * * *", async () => {
 
   console.log("Inactivity check complete");
 });
+
+module.exports = verifySendEmailNotification;

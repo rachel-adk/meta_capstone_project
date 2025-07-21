@@ -3,7 +3,7 @@ require("dotenv").config();
 const sendEmailNotifications = require("./email-notifications");
 const sendEmailNotification = require("./email-notifications");
 
-const testRecepient = "jasyn.j.64@gmail.com";
+const testRecepient = "radorkor@meta.com";
 
 sendEmailNotifications(
   testRecepient, {
