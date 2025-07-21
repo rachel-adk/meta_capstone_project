@@ -17,8 +17,8 @@ async function sendEmailNotifications(toEmail, conditions) {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: toEmail,
-    subject: "Health Alert",
-    text: `We noticed concerning trends in your logs: \n\n${conditionMessages}\n\nPlease consult a doctor if needed`,
+    subject: "Health Reminder from HealthConnect",
+    text: `Stay consistent in tracking your health!: \n\n${conditionMessages}\n\nPlease consult a doctor if needed`,
   };
 
   await transporter.sendMail(mailOptions);
