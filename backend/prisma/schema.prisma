@@ -81,3 +81,9 @@ model Conditions {
   symptoms       String[]
   symptomweights Json
 }
+
+model Precautions {
+  id             Int              @id @default(autoincrement())
+  condition      String
+  precautions   String[]
+}
