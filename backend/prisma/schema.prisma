@@ -68,6 +68,10 @@ model User {
   gender                String?
   id                    Int              @id @default(autoincrement())
   email                 String?          @unique
+  preferredNotification String @default("email")
+  reminderFrequency     Int @default(3)
+  snoozeUntil           DateTime?
+  lastNotifiedAt        DateTime?
   height                Int?
   weight                Int?
   preExistingConditions String[]

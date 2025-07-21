@@ -3,9 +3,11 @@ require("dotenv").config();
 const sendEmailNotifications = require("./email-notifications");
 const sendEmailNotification = require("./email-notifications");
 
-const testRecepient = "racheladksena@gmail.com";
+const testRecepient = "jasyn.j.64@gmail.com";
 
 sendEmailNotifications(
-  testRecepient,
+  testRecepient, {
+    testing: true
+  },
   "✅Testing Email Notifications"
 );
