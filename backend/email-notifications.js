@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 async function sendEmailNotifications(toEmail, conditions) {
   const conditionMessages = Object.keys(conditions)
     .filter((key) => conditions[key])
-    .map((key) => `-${key.replace(/([A-Z])/g, " $1")}`) // Changing keys from camelCase
+    .map((key) => `-${key.replace(/([A-Z])/g, "$1")}`) // Changing keys from camelCase
     .join("\n");
 
   const mailOptions = {

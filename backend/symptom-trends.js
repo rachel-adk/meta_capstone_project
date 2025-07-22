@@ -1,7 +1,8 @@
 const { PrismaClient } = require("prisma/client");
 const sendEmailNotification = require("./email-notifications");
+const verifySendEmailNotification = require("./inactivity-checks")
 const prisma = new PrismaClient();
-require('dotenv').config()
+require("dotenv").config();
 
 // Defining weights for each condition
 const symptomTrends = {
@@ -80,10 +81,17 @@ async function symptomAndAllergyTrends(userId) {
     return sum + (value ? symptomTrends[key] : 0);
   }, 0);
 
-  if (totalWeight >= notificationThreshold) {
-    await sendEmailNotification(user.email, conditions);
+  // Send email notification
+  if (verifySendEmailNotification(user)) {
+    if (totalWeight >= notificationThreshold) {
+      await sendEmailNotification(user.email, conditions);
+    }
+    return { conditions, totalWeight };
   }
-  return { conditions, totalWeight };
+  await prisma.user.update({
+    where: { id: user.id },
+    data: { lastNotifiedAt: new Date() },
+  });
 }
 
 module.exports = symptomAndAllergyTrends;
