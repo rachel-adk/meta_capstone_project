@@ -1,10 +1,12 @@
+require("dotenv").config()
 const nodemailer = require("nodemailer");
+
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -17,8 +19,8 @@ async function sendEmailNotifications(toEmail, conditions) {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: toEmail,
-    subject: "Health Alert",
-    text: `We noticed concerning trends in your logs: \n\n${conditionMessages}\n\nPlease consult a doctor if needed`,
+    subject: "Health Reminder from HealthConnect",
+    text: `Stay consistent in tracking your health!: \n\n${conditionMessages}\n\nPlease consult a doctor if needed\n\n-HealthConnect Team`,
   };
 
   await transporter.sendMail(mailOptions);
