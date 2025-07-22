@@ -87,6 +87,15 @@ model Conditions {
   symptomweights Json
 }
 
+model DemographicsToDiseases {
+  condition     String
+  agegroup      String
+  gender         String
+  bmicategory   String
+  prevalence     Float
+  @@id([condition, agegroup, gender, bmicategory])
+}
+
 model Precautions {
   id          Int      @id @default(autoincrement())
   condition   String
