@@ -1,3 +1,14 @@
+require("dotenv").config()
+console.log("Connecting to:", process.env.DATABASE_URL)
+const { Pool } = require("pg");
+const pool = new Pool({
+  host: process.env.PG_HOST,
+  port: process.env.PG_PORT,
+  database: process.env.PG_DATABASE,
+  user: process.env.PG_USER,
+  password: process.env.PG_PASSWORD,
+});
+
 // Computing Body Mass Index of User to help with diagnosis
 function computeBMI(weight, height) {
   const heightInMeters = height / 100;
@@ -36,43 +47,51 @@ function groupAges(age) {
   return "80+";
 }
 
-// Getting data from both datasets
-const conditionMap = require("./data/conditions.json");
-const demoMap = require("./data/demographicsToDiseases.json");
+async function diagnose(userProfile, userSymptoms) {
+  const client = await pool.connect();
+  try {
+    const bmi = computeBMI(userProfile.weight, userProfile.height);
+    const bmiCategory = groupBMI(bmi);
+    const ageGroup = groupAges(userProfile.age);
 
-function diagnose(userProfile, userSymptoms) {
-  const bmi = computeBMI(userProfile.weight, userProfile.height);
-  const bmiCategory = groupBMI(bmi);
+    // Fetching data from the database
+    const conditionsData = await client.query(`
+      SELECT condition AS condition,
+      symptoms AS symptoms,
+      symptomweights AS symptomweights
+      FROM Conditions`);
 
-  const ageGroup = groupAges(userProfile.age);
+    const riskScoresData = await client.query(
+      `
+      SELECT condition, prevalence
+      FROM demographicsToDisease
+      WHERE agegroup = $1,
+      AND gender = $2
+      AND bmicategory = $3`,
+      [ageGroup, userProfile.gender, bmiCategory]
+    );
 
-  const conditionScore = {};
+    const riskMap = {};
+    for (const { condition, prevalence } of riskScoresData.rows) {
+      riskMap[condition] = prevalence;
+    }
 
-  // Condition-symptom matching/scoring
-  for (const conditionInfo of conditionMap) {
-    const conditionName = conditionInfo.condition;
-    const weights = conditionInfo.symptomWeights;
-    let totalScore = 0;
-
-    userSymptoms.forEach((symptom) => {
-      const w = weights[symptom] || 0;
-      totalScore += w;
+    const conditionScore = conditionsData.rows.map((row) => {
+      let score = 0;
+      for (const symptom of userSymptoms) {
+        score += row.weights[symptom] || 0;
+      }
+      score *= riskMap[row.condition] ?? 1.0;
+      return { condition: row.condition, score: conditionScore };
     });
-    conditionScore[conditionName] = totalScore;
+
+    return conditionScore
+      .sort((a, b) => b.conditionScore - a.conditionScore)
+      .slice(0, 2)
+      .map(([condition, conditionScore]) => ({ condition, conditionScore }));
+  } finally {
+    client.release();
   }
-
-  for (const conditionName of Object.keys(conditionScore)) {
-    const demographicSlice = (demoMap[conditionName] || {})[ageGroup] || {};
-    const genderSlice = demographicSlice[userProfile.gender] || {};
-    const riskScore = genderSlice[bmiCategory] || 1.0;
-
-    conditionScore[conditionName] *= riskScore;
-  }
-
-  return Object.entries(conditionScore)
-    .sort(([, aScore], [, bScore]) => bScore - aScore)
-    .slice(0, 2)
-    .map(([condition, score]) => ({ condition, score }));
 }
 
 module.exports = { diagnose };
