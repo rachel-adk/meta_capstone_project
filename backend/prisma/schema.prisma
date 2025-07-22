@@ -60,7 +60,6 @@ model Hospital {
 model User {
   createdAt             DateTime         @default(now())
   updatedAt             DateTime         @default(now())
-  lastLoginAt           DateTime?
   username              String?          @unique
   password              String?
   location              String?
@@ -71,6 +70,11 @@ model User {
   height                Int?
   weight                Int?
   preExistingConditions String[]
+  lastLoginAt           DateTime?
+  lastNotifiedAt        DateTime?
+  preferredNotification String           @default("email")
+  reminderFrequency     Int              @default(3)
+  snoozeUntil           DateTime?
   allergies             Allergies[]
   medicalHistory        MedicalHistory[]
   symptoms              Symptoms[]

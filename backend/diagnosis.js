@@ -1,3 +1,14 @@
+require("dotenv").config()
+console.log("Connecting to:", process.env.DATABASE_URL)
+const { Pool } = require("pg");
+const pool = new Pool({
+  host: process.env.PG_HOST,
+  port: process.env.PG_PORT,
+  database: process.env.PG_DATABASE,
+  user: process.env.PG_USER,
+  password: process.env.PG_PASSWORD,
+});
+
 // Computing Body Mass Index of User to help with diagnosis
 function computeBMI(weight, height) {
   const heightInMeters = height / 100;
