@@ -27,11 +27,11 @@ const DiagnosisModal = ({ showModal, onClose, diagnosisResult, symptoms }) => {
             </ul>
             <p className="mb-2 p-4">Disease: {diagnosisResult.condition}</p>
             <p className="mb-2 p-4">Precautions: </p>
-            {/* <ul className="list-disc ml-6">
+            <ul className="list-disc ml-6">
               {diagnosisResult.precaution.map((precaution, index) => (
                 <li key={index}>{precaution}</li>
               ))}
-            </ul> */}
+            </ul>
           </>
         ) : (
           <p>Loading...</p>
