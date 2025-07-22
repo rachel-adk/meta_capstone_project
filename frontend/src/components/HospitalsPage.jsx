@@ -31,13 +31,13 @@ export default function HospitalsPage() {
 
   if (!asked) {
     return (
-      <div className="flex item-center justify-center h-screen">
-        <div className="text-center p-6 bg-white rounded shadow">
-          <h2 className="text-2xl font-bold">Find Nearby Hospitals</h2>
-          <p className="text-lg">We would like to use your locatiom</p>
+      <div className="flex item-center justify-center min-h-screen">
+        <div className="text-center p-6">
+          <h2 className="text-3xl font-bold text-teal-800 py-5">Find Hospitals Near Your Location</h2>
+          <p className="text-lg text-teal-900 py-3">We would like to use your location</p>
           <button
             onClick={handleUseLocation}
-            className="bg-teal-500 px-3 py -2 text-white"
+            className="bg-teal-500 px-3 py-2 text-white"
           >
             Use my location
           </button>
@@ -55,12 +55,12 @@ export default function HospitalsPage() {
   return (
     <div className="flex h-screen">
       <aside className="w-1/3 overflow-y-auto p-4 bg-gray-50">
-        {hospitals.map((h) => (
-          <HospitalCard key={h.id} hospital={h} />
+        {hospitals.map((h, index) => (
+          <HospitalCard key={index} hospital={h} />
         ))}
       </aside>
       <main className="flex-1">
-        <MapView hospitals={hospitals} center={loc} />
+        <MapView hospitals={hospitals} />
       </main>
     </div>
   );

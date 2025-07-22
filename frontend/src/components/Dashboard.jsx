@@ -54,6 +54,12 @@ const Dashboard = () => {
         >
           Allergies
         </button>
+         <button
+          onClick={() => navigate("/hospitals")}
+          className="bg-teal-600 text-white p-4 rounded-xl shadow hover:bg-teal-700"
+        >
+          Hospitals
+        </button>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
-import { PureComponent } from "react";
-import { Map, TileLayer, Marker, Popup, MapContainer } from "react-leaflet";
+import { TileLayer, Marker, Popup, MapContainer } from "react-leaflet";
 
-export default function MapView() {
+export default function MapView({ hospitals, center }) {
   if (!center) return null;
 
   return (
@@ -18,8 +17,8 @@ export default function MapView() {
       </Marker>
 
       {/* Hospital markers */}
-      {hospitals.map((h) => (
-        <Marker key={h.id} position={[h.latitude, h.longitude]}>
+      {hospitals.map((h, index) => (
+        <Marker key={index} position={[h.latitude, h.longitude]}>
           <Popup>
             <strong>{h.name}</strong>
             <br />

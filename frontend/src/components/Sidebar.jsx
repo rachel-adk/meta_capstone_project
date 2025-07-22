@@ -17,11 +17,6 @@ const Sidebar = () => {
     }
   }
 
-//   useEffect(() => {
-//     if (!user) {
-//         navigate("/signup", { replace: true });
-//     }
-//   }, [user, navigate])
 
   return (
     <>
@@ -77,6 +72,15 @@ const Sidebar = () => {
             Allergies
           </button>
 
+           <button
+            onClick={() => {
+              navigate("/hospitals");
+              setIsOpen(false);
+            }}
+            className="text-left text-teal-700 hover:bg-teal-100 px-3 py-2 rounded"
+          >
+            Hospitals Nearby
+          </button>
           <div className="bottom-6 left-6">
             <button
                 onClick={handleLogout}
