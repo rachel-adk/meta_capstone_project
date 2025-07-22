@@ -74,3 +74,10 @@ model User {
   medicalHistory MedicalHistory[]
   preExistingConditions String[]
 }
+
+model Conditions {
+  id             Int              @id @default(autoincrement())
+  condition      String
+  symptoms       String[]
+  symptomWeights Json
+}
