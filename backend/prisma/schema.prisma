@@ -88,3 +88,12 @@ model Precautions {
   condition   String
   precautions String[]
 }
+
+model DemographicsToDiseases {
+  condition     String
+  agegroup      String
+  gender         String
+  bmicategory   String
+  prevalence     Float
+  @@id([condition, agegroup, gender, bmicategory])
+}
