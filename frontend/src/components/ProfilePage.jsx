@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { getUserProfile, saveProfile } from "../utils/data.js";
 
 const ProfilePage = ({ profile, setProfile }) => {
   const [loading, setLoading] = useState(true);

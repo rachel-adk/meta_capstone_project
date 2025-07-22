@@ -30,17 +30,17 @@ const SymptomsPage = ({ profile }) => {
     }
     }
   const handleCreate = async (newLog) => {
-      setSymptoms((prev) => [newLog, ...prev]);
-    }
+    setSymptoms((prev) => [newLog, ...prev]);
+  };
 
   useEffect(() => {
     const getSymptoms = async () => {
-        try {
-            const info = await getSymptomLogs();
-            setSymptoms(info);
-            } catch(error) {
-            console.error("Failed to get logs", error);
-            }
+      try {
+        const info = await getSymptomLogs();
+        setSymptoms(info);
+      } catch (error) {
+        console.error("Failed to get logs", error);
+      }
     };
     getSymptoms();
   }, []);
@@ -55,6 +55,7 @@ const SymptomsPage = ({ profile }) => {
       Get a Diagnosis
       </button>
       <LogNewSymptom onCreate={handleCreate} />
+
       {symptoms.length === 0 ? (
         <p className="text-center uppercase text-teal-900 mt-8">
           No symptoms logged yet
@@ -69,17 +70,13 @@ const SymptomsPage = ({ profile }) => {
               <p className="text-lg uppercase font-semibold mb-2 text-gray-800">
                 {log.symptom}
               </p>
-              <p className="text-gray-600 mt-1">
-                Severity: {log.severity}
-              </p>
+              <p className="text-gray-600 mt-1">Severity: {log.severity}</p>
               <p className="text-gray-600 mt-1">
                 Frequency: {log.frequency || "Null"}
               </p>
               <p className="text-gray-600 my-3">
                 Date Logged:
-                {log.date
-                  ? new Date(log.date).toLocaleDateString()
-                  : "Unknown"}
+                {log.date ? new Date(log.date).toLocaleDateString() : "Unknown"}
               </p>
             </div>
 
@@ -88,7 +85,16 @@ const SymptomsPage = ({ profile }) => {
           <DiagnosisModal />
         </div>
       )}
+      {showModal && (
+        <DiagnosisModal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          diagnosisResult={diagnosisResult}
+          symptoms={symptoms}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
-)};
-
+  );
+};
 export default SymptomsPage;
