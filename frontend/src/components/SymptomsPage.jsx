@@ -3,23 +3,29 @@ import LogNewSymptom from "./LogNewSymptom";
 import DiagnosisModal from "./DiagnosisModal";
 import { getDiagnosis, getSymptomLogs } from "../utils/data";
 
-
-// import { getSymptomLogs } from "../utils/data";
-
 const SymptomsPage = ({ profile }) => {
   const [symptoms, setSymptoms] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [diagnosisResult, setDiagnosisResult] = useState(null);
 
- 
   const handleDiagnosis = async () => {
+    if (
+      !profile ||
+      !profile.age ||
+      !profile.gender ||
+      !profile.weight ||
+      !profile.height
+    ) {
+      console.error("Missing profile information");
+      return;
+    }
     try {
       const res = await getDiagnosis({
         age: profile.age,
         gender: profile.gender,
         weight: profile.weight,
         height: profile.height,
-        symptoms,
+        symptoms: symptoms.map((s) => s.symptom),
       });
       setDiagnosisResult(res);
       setShowModal(true);
@@ -84,12 +90,15 @@ const SymptomsPage = ({ profile }) => {
           ))}
         </div>
       )}
-
-      <DiagnosisModal
-        open={showModal}
-        onClose={() => setShowModal(false)}
-        diagnosisResult={diagnosisResult}
-      />
+      {showModal && (
+        <DiagnosisModal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          diagnosisResult={diagnosisResult}
+          symptoms={symptoms}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   );
 };
