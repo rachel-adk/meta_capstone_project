@@ -20,7 +20,7 @@ const userSymptoms2 = ["bleeding", "vomiting", "diarrhea", "fever", "chills"];
     try {
       const result1 = await diagnose(userProfile1, userSymptoms);
       console.log("Diagnosis for user 1", result1);
-      const result2 = await diagnose(userProfile1, userSymptoms2);
+      const result2 = await diagnose(userProfile2, userSymptoms2);
       console.log("Diagnosis for user 2", result2);
     } catch (err) {
       console.error(err);

@@ -59,14 +59,14 @@ async function diagnose(userProfile, userSymptoms) {
       SELECT condition AS condition,
       symptoms AS symptoms,
       symptomweights AS symptomweights
-      FROM Conditions`);
+      FROM "Conditions"`);
 
     const riskScoresData = await client.query(
       `
       SELECT condition, prevalence
       FROM demographicsToDisease
       WHERE agegroup = $1,
-      AND gender = $2
+      AND gender = $2,
       AND bmicategory = $3`,
       [ageGroup, userProfile.gender, bmiCategory]
     );
