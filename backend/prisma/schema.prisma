@@ -9,16 +9,16 @@ datasource db {
 }
 
 model MedicalHistory {
-  id            Int      @id @default(autoincrement())
-  createdAt      DateTime         @default(now())
-  updatedAt      DateTime         @default(now())
+  id            Int        @id @default(autoincrement())
   userId        Int
   condition     String
   diagnosisDate DateTime
   medications   String?
   notes         String?
-  user          User     @relation(fields: [userId], references: [id])
-  symptoms      Symptoms[] //one to many relation
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @default(now())
+  user          User       @relation(fields: [userId], references: [id])
+  symptoms      Symptoms[]
 }
 
 model Allergies {
@@ -33,46 +33,60 @@ model Allergies {
 }
 
 model Symptoms {
-  id       Int      @id @default(autoincrement())
-  userId   Int
-  symptoms String[]
-  name     String
-  severity Int     // going to be a scale
-  duration String
-  notes    String?
-  date     DateTime @default(now())
-  diagnosis MedicalHistory? @relation(fields: [diagnosisId], references: [id])
+  id          Int             @id @default(autoincrement())
+  userId      Int
+  name        String
+  severity    Int
+  duration    String
+  notes       String?
+  date        DateTime        @default(now())
   diagnosisId Int?
-  user     User     @relation(fields: [userId], references: [id])
+  symptoms    String[]
+  diagnosis   MedicalHistory? @relation(fields: [diagnosisId], references: [id])
+  user        User            @relation(fields: [userId], references: [id])
 }
 
 model Hospital {
-  id             Int              @id @default(autoincrement())
-  name           String
-  address        String
-  region         String
-  latitude       Float?
-  longitude      Float?
-  phone          String?
+  id              Int      @id @default(autoincrement())
+  name            String
+  address         String
+  region          String
+  latitude        Float?
+  longitude       Float?
+  phone           String?
   specializations String[]
 }
 
 model User {
-  id             Int              @id @default(autoincrement())
-  createdAt      DateTime         @default(now())
-  updatedAt      DateTime         @default(now())
-  username       String?          @unique
-  password       String?
-  email          String?           @unique
-  location       String?
-  age            Int?
-  gender         String?
-  weight         Int?
-  height         Int?
-  symptoms       Symptoms[]
-  allergies      Allergies[]
-  medicalHistory MedicalHistory[]
+  createdAt             DateTime         @default(now())
+  updatedAt             DateTime         @default(now())
+  lastLoginAt           DateTime?
+  username              String?          @unique
+  password              String?
+  location              String?
+  age                   Int?
+  gender                String?
+  id                    Int              @id @default(autoincrement())
+  email                 String?          @unique
+  height                Int?
+  weight                Int?
   preExistingConditions String[]
+  allergies             Allergies[]
+  medicalHistory        MedicalHistory[]
+  symptoms              Symptoms[]
+}
+
+model Conditions {
+  id             Int      @id @default(autoincrement())
+  condition      String
+  symptoms       String[]
+  symptomweights Json
+}
+
+model Precautions {
+  id          Int      @id @default(autoincrement())
+  condition   String
+  precautions String[]
 }
 
 model Conditions {

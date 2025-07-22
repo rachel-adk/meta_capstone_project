@@ -14,18 +14,14 @@ const pool = new Pool({
 });
 
 async function seed() {
-    console.log("connecting to...")
   const client = await pool.connect();
   try {
     const filePath = path.join(__dirname, '../data/conditions.json')
     const conditions = JSON.parse(fs.readFileSync(filePath, 'utf8'))
 
-    await client.query("BEGIN");
-    await client.query('TRUNCATE medical_conditions CASCADE')
-
     const text = `
-        INSERT INTO my_table
-        (condition_name, symptoms, symptom_weights)
+        INSERT INTO "Conditions"
+        (condition, symptoms, symptomweights)
         VALUES
             ($1, $2, $3)
         `;
