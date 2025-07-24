@@ -20,8 +20,7 @@ function selectEmailTemplate(conditions, riskScore = 0) {
     return {
       name: "urgent",
       type: "severity_alert",
-      priority: "high",
-      color: "#ff5252",
+      priority: "high"
     };
   }
   // Behavioral changees
@@ -29,8 +28,7 @@ function selectEmailTemplate(conditions, riskScore = 0) {
     return {
       name: "reminder",
       type: "behavioral",
-      priority: "low",
-      color: "#4caf50",
+      priority: "low"
     };
   }
   //Pattern-based conditions
@@ -42,15 +40,13 @@ function selectEmailTemplate(conditions, riskScore = 0) {
     return {
       name: "pattern",
       type: "pattern_detected",
-      priority: "medium",
-      color: "#ff9800",
+      priority: "medium"
     };
   }
   return {
     name: "standard",
     type: "health_update",
     priority: "medium",
-    color: "#2196f3",
   };
 }
 // Building personalized email content
@@ -58,8 +54,6 @@ function buildEmailContent(template, conditions, analysisData) {
   const {
     patterns = [],
     recommendations = [],
-    hospitals = [],
-    symptomSummary = {},
   } = analysisData;
 
   //Subject line
