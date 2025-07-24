@@ -56,6 +56,8 @@ model Hospital {
   longitude       Float?
   phone           String?
   specializations String[]
+  metadata        Json?
+  lastUpdated     DateTime @default(now())
 }
 
 model User {
@@ -84,6 +86,9 @@ model User {
   allergies             Allergies[]
   medicalHistory        MedicalHistory[]
   symptoms              Symptoms[]
+  notifications         NotificationLog[]
+  notificationSettings  Json?
+  lastPattern           DateTime?
 }
 
 model Conditions {
@@ -106,4 +111,18 @@ model Precautions {
   id          Int      @id @default(autoincrement())
   condition   String
   precautions String[]
+}
+
+model NotificationLog {
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  type         String
+  triggerData  Json
+  emailContent Json
+  status       String
+  sentAt       DateTime?
+  createdAt    DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id])
+  @@index([userId, createdAt])
+  @@index([type])
 }
