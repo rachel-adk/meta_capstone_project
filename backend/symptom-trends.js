@@ -1,8 +1,9 @@
-const { PrismaClient } = require("prisma/client");
-const sendEmailNotification = require("./email-notifications");
-const { verifySendEmailNotification } = require("./inactivity-checks");
+import { PrismaClient } from "./generated/prisma/index.js";
+import sendEmailNotifications from "./email-notifications.js";
+import { verifySendEmailNotifications } from "./inactivity-checks.js"
 const prisma = new PrismaClient();
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 // Defining weights for each condition
 const symptomTrends = {
@@ -15,9 +16,9 @@ const symptomTrends = {
 };
 
 const TrendDays = 14;
-const notificationThreshold = 4;
+const notificationThreshold = 0;
 
-async function symptomAndAllergyTrends(userId) {
+export default async function symptomAndAllergyTrends(userId) {
   try {
     // Getting the range of days
     const today = new Date();
@@ -70,10 +71,17 @@ async function symptomAndAllergyTrends(userId) {
     const weightedSymptoms = applyTimeDecay(user.symptoms);
 
     const symptomAnalysis = analyzeSymptomPatterns(weightedSymptoms);
+    conditions.repeatedSymptom = symptomAnalysis.conditions.repeatedSymptom;
+    conditions.severeSymptom = symptomAnalysis.conditions.severeSymptom;
+    conditions.escalating = symptomAnalysis.conditions.escalating;
+    conditions.multipleSymptoms = symptomAnalysis.conditions.multipleSymptoms;
+    if (symptomAnalysis.patterns.length > 0) {
+      analysisData.patterns.push(...symptomAnalysis.patterns);
+    }
 
     // analyze allergy patterns
     const allergyAnalysis = analyzeAllergyPatterns(user.allergies);
-    conditions.repeatedAllergy = allergyAnalysis.repeatedAllergy;
+    conditions.repeatedAllergy = allergyAnalysis.hasRepeatedAllergy;
     if (allergyAnalysis.patterns.length > 0) {
       analysisData.patterns.push(...allergyAnalysis.patterns);
     }
@@ -90,9 +98,9 @@ async function symptomAndAllergyTrends(userId) {
     );
 
     // Sending notifications if threshold is reached
-    if (verifySendEmailNotification(user)) {
+    if (verifySendEmailNotifications(user)) {
       if (totalWeight >= notificationThreshold) {
-        await sendEmailNotification(user.email, conditions, analysisData);
+        await sendEmailNotifications(user.email, conditions, analysisData);
 
         //update last notified at
         await prisma.user.update({
@@ -163,7 +171,7 @@ function analyzeSymptomPatterns(weightedSymptoms) {
         dates: [],
       };
     }
-    symptomGroups[name].occurences++;
+    symptomGroups[name].occurrences++;
     symptomGroups[name].totalWeightedSeverity += s.weightedSeverity;
     symptomGroups[name].severities.push(s.severity);
     symptomGroups[name].weightedSeverities.push(s.weightedSeverity);
@@ -182,10 +190,12 @@ function analyzeSymptomPatterns(weightedSymptoms) {
       });
     }
     if (data.totalWeightedSeverity / data.occurrences >= 3.5) {
-      analysis.patterns.push({
+        conditions.severeSymptom = true;
+        patterns.push({
         type: "severe",
         symptom: symptomName,
         averageSeverity: data.totalWeightedSeverity / data.occurrences,
+        message: `${symptomName} has been been reported with high severity`,
       });
     }
 
@@ -279,7 +289,7 @@ function analyzeAllergyPatterns(allergies) {
 // Calculate risk score
 function calculateRiskScore(conditions, weights) {
   return Object.entries(conditions).reduce((total, [condition, value]) => {
-    return sum + (value ? weights[condition] : 0);
+    return total + (value ? weights[condition] : 0);
   }, 0);
 }
 
@@ -324,6 +334,5 @@ function generateRecommendations(conditions, riskScore) {
       "Please visit a doctor if you have any concerns or if your symptoms worsen"
     );
   }
+  return recommendations;
 }
-
-module.exports = symptomAndAllergyTrends;

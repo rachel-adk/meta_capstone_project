@@ -1,6 +1,7 @@
-require("dotenv").config();
+import dotenv from "dotenv"
+dotenv.config();
 import { createTransport } from "nodemailer";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "./generated/prisma/index.js";
 const prisma = new PrismaClient();
 
 const transporter = createTransport({
@@ -184,14 +185,15 @@ function formatPattern(pattern) {
   };
   const label = typeLabels[pattern.type] || `[${pattern.type.toUpperCase()}] `;
   return `${label}${pattern.message}`;
+}
 
   // Generate footer
   function generateFooter() {
     return "For more information, please visit the HealthConnect website.";
   }
-}
 
-async function sendEmailNotifications(toEmail, conditions, analysisData = {}) {
+
+export default async function sendEmailNotifications(toEmail, conditions, analysisData = {}) {
   try {
     const template = selectEmailTemplate(conditions, analysisData.riskScore);
     const emailContent = buildEmailContent(template, conditions, analysisData);
@@ -201,8 +203,7 @@ async function sendEmailNotifications(toEmail, conditions, analysisData = {}) {
       from: process.env.EMAIL_USER,
       to: toEmail,
       subject: emailContent.subject,
-      html: emailContent.html,
-      text: emailContent.text,
+      text: emailContent.body,
       headers: {
         "X-Priority": template.priority === "high" ? "1" : "3",
         "X-Tracking-ID": trackingId,
@@ -221,14 +222,12 @@ async function sendEmailNotifications(toEmail, conditions, analysisData = {}) {
       emailContent: {
         template: template.name,
         subject: emailContent.subject,
-        body: emailContent.body.length,
+        bodyLength: emailContent.body.length,
+        body: emailContent.body,
       },
       status: "sent",
       sentAt: new Date(),
-      metrics: {
-        messageId: info.messageId,
-        trackingId,
-      },
+      trackingId,
     });
 
     console.log(`Email sent to ${toEmail} -  Type: ${template.type}`);
@@ -244,10 +243,13 @@ async function sendEmailNotifications(toEmail, conditions, analysisData = {}) {
         conditions,
         ...analysisData,
       },
-      status: "failed",
-      metrics: {
-        error: error.message,
+      emailContent: {
+        template: "failed",
+        subject: "Failed to send email",
+        body: 0,
       },
+      status: "failed",
+      error: error.message,
     });
     return { success: false, error: error.message };
   }
@@ -293,5 +295,3 @@ async function logNotification(data) {
     console.error("Failed to log notification:", error);
   }
 }
-
-module.exports = sendEmailNotifications;

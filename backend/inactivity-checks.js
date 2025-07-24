@@ -1,11 +1,11 @@
-const cron = require("node-cron");
-const { PrismaClient } = require("@prisma/client");
-const sendEmailNotification = require("./email-notifications.js");
-const symptomAndAllergyTrends = require("./symptom-trends.js");
+import cron from "node-cron"
+import { PrismaClient } from "./generated/prisma/index.js";
+import sendEmailNotifications  from "./email-notifications.js"
+import symptomAndAllergyTrends from "./symptom-trends.js"
 const prisma = new PrismaClient();
 
 // Check if user should receive email notifications
-function verifySendEmailNotification() {
+export function verifySendEmailNotifications(user) {
   const now = new Date();
 
   if (user.preferredNotification !== "email") {
@@ -25,7 +25,7 @@ function verifySendEmailNotification() {
 }
 
 // Notification check function
-async function notificationCheck() {
+export async function notificationCheck() {
   console.log("Notification check started");
   try {
     await checkInactiveUsers();
@@ -39,6 +39,7 @@ async function notificationCheck() {
 
 // Check for inactive users
 async function checkInactiveUsers() {
+    const now = new Date();
   const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
   const inactiveUsers = await prisma.user.findMany({
     where: {
@@ -48,7 +49,7 @@ async function checkInactiveUsers() {
 
   for (const user of inactiveUsers) {
     if (verifySendEmailNotification(user)) {
-      await sendEmailNotification(
+      await sendEmailNotifications(
         user.email,
         {
           inactive: true,
@@ -72,6 +73,7 @@ async function checkInactiveUsers() {
 
 // Check for users with no symptoms
 async function checkUsersWithNoSymptoms() {
+    const now = new Date();
   const fiveDaysAgo = new Date(now.getTime() - 5 * 24 * 60 * 60 * 1000);
 
   const usersWithNoSymptoms = await prisma.user.findMany({
@@ -85,7 +87,7 @@ async function checkUsersWithNoSymptoms() {
   });
   for (const user of usersWithNoSymptoms) {
     if (verifySendEmailNotification(user)) {
-      await sendEmailNotification(
+      await sendEmailNotifications(
         user.email,
         {
           noSymptoms: true,
@@ -107,7 +109,7 @@ async function checkUsersWithNoSymptoms() {
 
 // Check for symptom patterns
 async function checkSymptomPatterns() {
-  const users = await prisma.user.findMany()({
+  const users = await prisma.user.findMany({
     where: {
       symptoms: {
         some: {
@@ -123,16 +125,10 @@ async function checkSymptomPatterns() {
 }
 
 // Initialize scheduler
-function initializeScheduler() {
+export function initializeScheduler() {
   // Run every hour
   cron.schedule("0 * * * *", notificationCheck);
   // Run every day at 8am
   cron.schedule("0 8 * * *", notificationCheck);
   console.log("Scheduler initialized");
 }
-
-module.exports = {
-  verifySendEmailNotification,
-  initializeScheduler,
-  notificationCheck,
-};
