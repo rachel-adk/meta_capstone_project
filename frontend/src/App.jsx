@@ -25,7 +25,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    },500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -33,7 +33,7 @@ const App = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen bg-teal-50">
-        <p className="text-4xl font-bold text-teal-600 text-center> LOADING..."></p>
+        <p className="text-4xl font-bold text-teal-600 text-center"> ⏳ LOADING...</p>
       </div>
     );
   }
