@@ -1,20 +1,42 @@
 import { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
+import { newSymptomLog } from "../utils/data";
 
 const LogNewSymptom = ({ onCreate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [symptom, setSymptom] = useState("");
   const [severity, setSeverity] = useState(1);
-  const [frequency, setFrequency] = useState("daily");
+  const [duration, setDuration] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!symptom) return alert("Symptom cannot be empty");
-    onCreate({ symptom: symptom, severity, frequency });
-    setSymptom("");
-    setSeverity(1);
-    setFrequency("daily");
-    setIsOpen(false);
+
+    setIsSubmitting(true);
+
+    try {
+      const newSymptom = {
+        name: symptom,
+        severity,
+        duration,
+        notes: "",
+      };
+      const savedSymptom = await newSymptomLog(newSymptom);
+
+      onCreate(savedSymptom);
+
+      // Resetting form
+      setSymptom("");
+      setSeverity(1);
+      setDuration(0);
+      setIsOpen(false);
+    } catch (error) {
+      console.error("Failed to save symptom:", error);
+      alert("Failed to save symptom. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -61,16 +83,15 @@ const LogNewSymptom = ({ onCreate }) => {
                 />
               </div>
               <div>
-                <label className="block mb-1">Frequency: {frequency}</label>
-                <select
-                  value={frequency}
-                  onChange={(e) => setFrequency(e.target.value)}
-                  className="border rounded p-2 w-full"
-                >
-                  <option value="daily">Daily</option>
-                  <option value="weekly">Weekly</option>
-                  <option value="monthly">Monthly</option>
-                </select>
+                <label className="block mb-1">Duration: {duration}</label>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value={duration}
+                  onChange={(e) => setDuration(+e.target.value)}
+                  className="w-full"
+                />
               </div>
               <button
                 type="submit"

@@ -241,7 +241,7 @@ app.post("/med_history", isAuthenticated, async (req, res) => {
       data: {
         condition,
         notes,
-        diagnosisDate,
+        diagnosisDate: new Date(diagnosisDate),
         medications,
         userId: req.session.userId,
       },

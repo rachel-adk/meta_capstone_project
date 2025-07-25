@@ -6,42 +6,25 @@ import CreateNewEntry from "./CreateNewEntry";
 const MedicalHistory = () => {
   const [entries, setEntries] = useState([]);
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  //   const handleDelete = (id) => {
-  //     try {
-  //         await deleteEntry(id);
-  //         setEntries(entries.filter((entry) => entry.id !== id));
-  //     } catch (error) {
-  //         console.error(error);
-  //     }
-
-  const handleCreate = async (newEntry, userId) => {
+  const handleCreate = async (newEntry) => {
     try {
-      await newMedicalEntry(newEntry);
-      const newEntries = await getMedicalHistory(userId);
-      setEntries(newEntries);
+      const savedEntry = await newMedicalEntry(newEntry);
+      setEntries((prev) => [savedEntry, ...prev])
     } catch (error) {
       console.error(error);
     }
   };
 
-  //     const handleUpdate = async (newEntry) => {
-  //         setEntries((prev) =>
-  //             prev.map(entry => entry.id === newEntry.id ? newEntry : entry))
-  //     }
 
   useEffect(() => {
     const getEntries = async () => {
+      try {
       const info = await getMedicalHistory();
       setEntries(info);
-    };
+    } catch (error) {
+      console.error("Failed to get entries", error);
+    }
+  }
     getEntries();
   }, []);
 
