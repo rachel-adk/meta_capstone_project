@@ -1,14 +1,15 @@
-require("dotenv").config();
-const express = require("express");
-const bcrypt = require("bcrypt");
-const { PrismaClient } = require("./generated/prisma");
-const session = require("express-session");
+import dotenv from "dotenv"
+dotenv.config()
+import express from "express";
+import bcrypt from "bcrypt";
+import { PrismaClient } from "./generated/prisma/index.js";
+import session from "express-session";
 
 const prisma = new PrismaClient();
-const { body, validationResult } = require("express-validator");
+import { body, validationResult } from "express-validator";
 const app = express();
-const cors = require("cors");
-const { diagnose } = require("./diagnosis");
+import cors from "cors";
+import { diagnose } from "./diagnosis.js";
 
 app.use(
   cors({
@@ -415,4 +416,4 @@ app.post("/logout", (req, res) => {
   });
 });
 
-module.exports = app;
+export default app;

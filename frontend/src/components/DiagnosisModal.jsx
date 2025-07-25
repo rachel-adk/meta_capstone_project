@@ -28,13 +28,13 @@ const DiagnosisModal = ({ showModal, onClose, diagnosisResult, symptoms }) => {
             <p className="mb-2 px-2 py-2 font-semibold">Disease: {diagnosisResult.condition}</p>
             <p className="mb-2 px-2 font-semibold">Precautions: </p>
             <ul className="list-disc ml-6">
-              {diagnosisResult?.topConditions?.[0]?.precautions?.map((precaution, index) => (
-                <li key={index}>{precaution}</li>
+              {diagnosisResult?.recommendedAction?.[0]?.recommendedAction?.map((action, index) => (
+                <li key={index}>{action}</li>
               ))}
             </ul>
           </>
         ) : (
-          <p>Loading...</p>
+          <p>Loading diagnosis results...</p>
         )}
       </div>
     </div>

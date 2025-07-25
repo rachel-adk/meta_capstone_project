@@ -5,21 +5,49 @@ const ProfilePage = ({ profile, setProfile }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
+    if (!profile || !profile.age) {
     async function fetchProfile() {
       try {
         const data = await getUserProfile();
         setProfile({
-          ...data,
+          gender: data.gender || "",
+          age: data.age || "",
+          height: data.height || "",
+          weight: data.weight || "",
+          preExistingConditions: data.preExistingConditions || [],
+          weeklyExercise: data.weeklyExercise || 0,
+          stressLevel: data.stressLevel || 2,
+          sleepQuality: data.sleepQuality || 3,
+          smoking: data.smoking || "never",
+          AlcoholPerWeek: data.AlcoholPerWeek || 0,
+
         });
       } catch (err) {
+        console.error("Error fetching profile", err);
         setError(err.message);
+        setProfile({
+          gender: "",
+          age: "",
+          height: "",
+          weight: "",
+          preExistingConditions: [],
+          weeklyExercise: 0,
+          stressLevel: 2,
+          sleepQuality: 3,
+          smoking: "never",
+          AlcoholPerWeek: 0,
+        })
       } finally {
         setLoading(false);
       }
     }
     fetchProfile();
+  } else {
+    setLoading(false);
+  }
   }, []);
 
   const handleChange = (e) => {
@@ -28,7 +56,7 @@ const ProfilePage = ({ profile, setProfile }) => {
       const updated = checked
         ? [...profile.preExistingConditions, value]
         : profile.preExistingConditions.filter((item) => item !== value);
-      setProfile((prev) => ({ ...prev, preExistingConditions: updated }));
+      setProfile((prev) => ({ ...prev, [name]: parseInt(value, 10) || 0 }));
     } else {
       setProfile((prev) => ({ ...prev, [name]: value }));
     }
@@ -40,18 +68,24 @@ const ProfilePage = ({ profile, setProfile }) => {
     setSuccess(false);
     try {
       const submitData = {
-        fullName: profile.fullName,
         gender: profile.gender,
         age: profile.age,
         height: parseInt(profile.height, 10),
         weight: parseInt(profile.weight, 10),
-        preExistingConditions: profile.preExistingConditions,
+        preExistingConditions: profile.preExistingConditions || [],
+        weeklyExercise: parseInt(profile.weeklyExercise, 10) || 0,
+        stressLevel: parseInt(profile.stressLevel, 10) || 0,
+        sleepQuality: parseInt(profile.sleepQuality, 10) || 3,
+        smoking: profile.smoking || "never",
+        AlcoholPerWeek: parseInt(profile.AlcoholPerWeek, 10) || 0,
       };
-      await saveProfile(submitData);
+      console.log("Submitting data: ", submitData)
+      const response = await saveProfile(submitData);
       setSuccess(true);
     } catch (err) {
       setError(err.message);
-    }
+    } finally {
+      setIsSaving(false);
   };
   if (loading) return <div className="p-4"> Loading...</div>;
   if (error) return <div className="p-4 text-red-600">Error: {error}</div>;
@@ -149,4 +183,5 @@ const ProfilePage = ({ profile, setProfile }) => {
     </div>
   );
 };
+}
 export default ProfilePage;
