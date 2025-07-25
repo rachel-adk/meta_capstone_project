@@ -13,7 +13,6 @@ import HospitalsPage from "./components/HospitalsPage";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState({
     age: 0,
     weight: 0,
@@ -21,23 +20,6 @@ const App = () => {
     gender: "",
     preExistingConditions: [],
   });
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen bg-teal-50">
-        <p className="text-4xl font-bold text-teal-600 text-center> LOADING..."></p>
-      </div>
-    );
-  }
-
 
   return (
     <>
