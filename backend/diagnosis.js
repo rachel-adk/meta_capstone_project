@@ -10,6 +10,92 @@ const pool = new Pool({
   password: process.env.PG_PASSWORD,
 });
 
+/**
+ *
+ * Medical Diagnosis System
+ *
+ * This system implements a medical diagnosis system that takes in user symptoms and demographics and returns a list of possible diagnoses along with their scores and confidence
+ *
+ * 1. User Input Processing
+ * - Taked user profile(age, gender, height, weight, etc)
+ * - Take user symptoms and their severity and duration
+ *
+ * 2. Risk Factor Calculation
+ * - Calculate BMI and group it into categories
+ * - Age group classification for demographic risk assessment
+ * - Calculate lifestyle risk based on user profile
+ *
+ * 3. Diagnosis Algorithm
+ * - Fetches all conditions and their symptom weights from the database
+ * - Matches user's symptoms against condition-symptom database
+ * -Applies temporal decay to symptoms based on their duration
+ * - Calculates ensemble score for each condition
+ * - Calculates demographic risk based on user's demographics
+ * - Generates confidence score using a Bayesian approach
+ *
+ * 4. Results:
+ * - Returns top 3 most likely diagnoses ranked by their scores
+ * - Provides confidence percentage for each diagnosis
+ * - Provides recommended actions for each diagnosis based on risk score
+ *
+ * The scoring system combines symptom matching, demographic risk factors, and lifestyle risk factors to provide a comprehensive assessment of the user's medical condition.
+ *
+
+ */
+
+// Lifestyle Risk Multiplier Constants
+//Exercise Mulipliers
+const exerciseMultiplier = {
+  lowExerciseThreshold: 2, // Less than 2 days of exercise per week
+  lowExerciseRisk: 1.4, // Risk multiplier for low exercise
+  highExerciseThreshold: 4, // More than 4 days of exercise per week
+  highExerciseRisk: 0.8, // Risk multiplier for high exercise(20% reduction for regualr exercise)
+};
+
+// Stress Level Multipliers
+const stressLevelMultiplier = {
+  baseStressLevel: 2, // Neutral stress level
+  stressIncrement: 0.15, // 15% increase in risk level above baseline
+};
+
+// Sleep Quality Multipliers
+const sleepQualityMultiplier = {
+  baseSleepQuality: 3, // Average sleep quality
+  sleepFactorMin: 0.7, // Minimum multiplier for good sleep quality
+  sleepFactorRange: 0.1, //Range of sleep impact on health
+};
+
+// Smoking Multipliers
+const smokingMultiplier = {
+  currentSmokerRisk: 1.2, // 20% increased risk for current smokers
+  pastSmokerRisk: 0.8, // 20% reduced risk for past smokers
+};
+
+// Alcohol Consumption Multipliers
+const alcoholConsumptionMultiplier = {
+  moderateThreshold: 7, // 7 drinks per week - CDC moderate drinking
+  moderateRisk: 1.1, // 10% increased risk for moderate drinking
+  highThreshold: 14, // 14 drinks per week - heavy drinking
+  highRisk: 1.4, // 40% increased risk for heavy drinking
+};
+
+// Confidence Weights
+const confidenceWeights = {
+  symptomCoverage: 0.4, // 40% weight for symptom coverage
+  normalizedScore: 0.4, // 40% weight for score magnitude
+  demographicFactor: 0.2, // 20% risk for demographic factor
+  maxConfidence: 0.95, // Maximum confidence level
+};
+
+// Temporal Decay Constants
+const temporalDecay = {
+  acute: { maxDays: 1, weight: 1.0 }, // very recent symptoms
+  recent: { maxDays: 7, weight: 1.2 }, // recent symptoms get highest weight
+  subacute: { maxDays: 14, weight: 0.9 }, // symptoms in the past week -  moderate duration
+  moderate: { maxDays: 30, weight: 0.7 }, // symptoms in the past month -  longer duration
+  chronic: { weight: 0.5 }, // symptoms in the past month
+};
+
 // Computing Body Mass Index of User to help with diagnosis
 function computeBMI(weight, height) {
   const heightInMeters = height / 100;
@@ -51,19 +137,19 @@ function groupAges(age) {
 // Temporal decay function for symptom duration
 function calculateTemporalDecay(symptomDuration) {
   if (symptomDuration <= 1) {
-    return 1.0;
+    return temporalDecay.acute.weight;
   }
   if (symptomDuration <= 7) {
     // More weight to recent symptoms
-    return 1.2;
+    return temporalDecay.recent.weight;
   }
   if (symptomDuration <= 14) {
-    return 0.9;
+    return temporalDecay.subacute.weight;
   }
   if (symptomDuration <= 30) {
-    return 0.7;
+    return temporalDecay.moderate.weight;
   }
-  return 0.5; // for chronic symptoms
+  return temporalDecay.chronic.weight; // for chronic symptoms
 }
 
 // Using Bayes' Theorem to calculate the probability of a condition given the symptoms and demographics
@@ -78,8 +164,10 @@ function calculateConfidence(
   const demographicConfidence = Math.log(demographicFactor + 1) / 2;
 
   return Math.min(
-    0.95,
-    symptomCoverage * 0.4 + normalizedScore * 0.4 + demographicConfidence * 0.2
+    confidenceWeights.maxConfidence,
+    symptomCoverage * confidenceWeights.symptomCoverage +
+      normalizedScore * confidenceWeights.normalizedScore +
+      demographicConfidence * confidenceWeights.demographicFactor
   );
 }
 
@@ -89,35 +177,44 @@ function calculateLifestyleRisk(userProfile) {
 
   // Exercise factor
   const exerciseFrequency = userProfile.weeklyExercise || 0;
-  if (exerciseFrequency < 2) {
-    riskMultiplier *= 1.4;
-  } else if (exerciseFrequency > 4) {
-    riskMultiplier *= 0.8;
+  if (exerciseFrequency < exerciseMultiplier.lowExerciseThreshold) {
+    riskMultiplier *= exerciseMultiplier.lowExerciseRisk;
+  } else if (exerciseFrequency > exerciseMultiplier.highExerciseThreshold) {
+    riskMultiplier *= exerciseMultiplier.highExerciseRisk;
   }
 
   // Stress level factor
-  const stressLevel = userProfile.stressLevel || 2;
-  riskMultiplier *= 1 + (stressLevel - 2) * 0.15;
+  const stressLevel =
+    userProfile.stressLevel || stressLevelMultiplier.baseStressLevel;
+  riskMultiplier *=
+    1 +
+    (stressLevel - stressLevelMultiplier.baseStressLevel) *
+      stressLevelMultiplier.stressIncrement;
 
   // Sleep quality factor
-  const sleepQuality = userProfile.sleepQuality || 3;
-  riskMultiplier *= (6 - sleepQuality) * 0.1 + 0.7;
+  const sleepQuality =
+    userProfile.sleepQuality || sleepQualityMultiplier.baseSleepQuality;
+  riskMultiplier *=
+    (6 - sleepQuality) * sleepQualityMultiplier.sleepFactorRange +
+    sleepQualityMultiplier.sleepFactorMin;
 
   // Smoking factor
   if (userProfile.smoking === "current") {
-    riskMultiplier *= 1.2;
+    riskMultiplier *= smokingMultiplier.currentSmokerRisk;
   }
   if (userProfile.smoking === "past") {
-    riskMultiplier *= 0.8;
+    riskMultiplier *= smokingMultiplier.pastSmokerRisk;
   }
 
   // Alcohol consumption factor
   const weeklyAlcoholConsumption = userProfile.AlcoholPerWeek || 0;
-  if (weeklyAlcoholConsumption > 7) {
-    riskMultiplier *= 1.1;
+  if (
+    weeklyAlcoholConsumption > alcoholConsumptionMultiplier.moderateThreshold
+  ) {
+    riskMultiplier *= alcoholConsumptionMultiplier.moderateRisk;
   }
-  if (weeklyAlcoholConsumption > 14) {
-    riskMultiplier *= 1.4;
+  if (weeklyAlcoholConsumption > alcoholConsumptionMultiplier.highThreshold) {
+    riskMultiplier *= highRisk;
   }
   return riskMultiplier;
 }
@@ -257,29 +354,27 @@ async function diagnose(userProfile, userSymptoms) {
             : "Monitor your symptoms",
       }));
 
-    const topCondition = topDiagnoses[0]?.condition
-      let precautions = []
-      if (topCondition) {
-        const precautionsMap = await client.query(
+    const topCondition = topDiagnoses[0]?.condition;
+    let precautions = [];
+    if (topCondition) {
+      const precautionsMap = await client.query(
         'SELECT precautions FROM "Precautions" WHERE condition = $1',
         [topCondition]
-        )
-        precautions = precautionsMap.rows[0]?.precautions
-      }
+      );
+      precautions = precautionsMap.rows[0]?.precautions;
+    }
 
-      if (topDiagnoses[0]) {
-        topDiagnoses[0].precautions = precautions
-      }
+    if (topDiagnoses[0]) {
+      topDiagnoses[0].precautions = precautions;
+    }
 
     return {
       diagnoses: topDiagnoses,
-      topDiagnosis: topDiagnoses[0]
+      topDiagnosis: topDiagnoses[0],
     };
   } finally {
     client.release();
   }
-  }
-
-
+}
 
 export { diagnose };
