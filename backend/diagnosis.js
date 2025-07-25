@@ -1,7 +1,7 @@
-import dotenv from "dotenv"
-dotenv.config()
-
-import { Pool } from "pg"
+import dotenv from "dotenv";
+import pkg from "pg";
+const { Pool } = pkg;
+dotenv.config();
 const pool = new Pool({
   host: process.env.PG_HOST,
   port: process.env.PG_PORT,
@@ -122,7 +122,6 @@ function calculateLifestyleRisk(userProfile) {
   return riskMultiplier;
 }
 
-
 // Getting final score
 function calculateEnsembleScore(baseScore, symptomData) {
   const scores = [];
@@ -141,7 +140,6 @@ function calculateEnsembleScore(baseScore, symptomData) {
     scores.push(geometricMean * 2); // Normalizing it and making it more comparable to base score
   }
 
-
   const weightsArray = Object.values(symptomData.weights || {});
   const maxWeight = Math.max(...weightsArray);
 
@@ -154,7 +152,7 @@ function calculateEnsembleScore(baseScore, symptomData) {
   return scores.reduce((sum, score, i) => sum + score * weights[i], 0);
 }
 
-export async function diagnose(userProfile, userSymptoms) {
+async function diagnose(userProfile, userSymptoms) {
   const client = await pool.connect();
   try {
     const bmi = computeBMI(userProfile.weight, userProfile.height);
@@ -183,12 +181,10 @@ export async function diagnose(userProfile, userSymptoms) {
       [ageGroup, userProfile.gender, bmiCategory]
     );
 
-    let totalScore = 0;
-    let RiskMap = {}
+    const riskMap = {};
     for (const { condition, prevalence } of riskScoresData.rows) {
-      RiskMap[condition] = prevalence;
+      riskMap[condition] = prevalence;
     }
-
 
     // Extracting user's symptoms, their severity and duration
     const symptomNames = userSymptoms.map((s) =>
@@ -220,7 +216,7 @@ export async function diagnose(userProfile, userSymptoms) {
           baseScore += weight * severityMultiplier * temporalDecay;
         }
       }
-      const demographicRisk = RiskMap[row.condition] ?? 1.0;
+      const demographicRisk = riskMap[row.condition] ?? 1.0;
 
       // Getting ensemble score
       const ensembleScore = calculateEnsembleScore(
@@ -248,12 +244,6 @@ export async function diagnose(userProfile, userSymptoms) {
       };
     });
 
-
-    scores[condition] = totalScore;
-
-    const genderSlice = demographicSlice[userProfile.gender] || {};
-    const riskScore = genderSlice[bmiCategory] || 1.0;
-
     const topDiagnoses = scores
       .sort((a, b) => b.score - a.score)
       .slice(0, 3)
@@ -266,25 +256,30 @@ export async function diagnose(userProfile, userSymptoms) {
             ? "Consult a doctor"
             : "Monitor your symptoms",
       }));
-    const topCondition = topDiagnoses[0]?.condition;
-    let precautions = [];
-    if (topCondition) {
-      const precautionsMap = await client.query(`
-        SELECT precautions FROM "Precautions" WHERE condition = $1,
-        [topCondition]
-        `);
-      precautions = precautionsMap.rows[0]?.precautions;
-    }
 
-    if (topDiagnoses[0]) {
-      topDiagnoses[0].precautions = precautions;
-    }
+    const topCondition = topDiagnoses[0]?.condition
+      let precautions = []
+      if (topCondition) {
+        const precautionsMap = await client.query(
+        'SELECT precautions FROM "Precautions" WHERE condition = $1',
+        [topCondition]
+        )
+        precautions = precautionsMap.rows[0]?.precautions
+      }
+
+      if (topDiagnoses[0]) {
+        topDiagnoses[0].precautions = precautions
+      }
 
     return {
       diagnoses: topDiagnoses,
-      topDiagnosis: topDiagnoses[0],
+      topDiagnosis: topDiagnoses[0]
     };
   } finally {
     client.release();
   }
-}
+  }
+
+
+
+export { diagnose };
