@@ -32,10 +32,6 @@ const MedicalHistory = () => {
     }
   };
 
-  //     const handleUpdate = async (newEntry) => {
-  //         setEntries((prev) =>
-  //             prev.map(entry => entry.id === newEntry.id ? newEntry : entry))
-  //     }
 
   useEffect(() => {
     const getEntries = async () => {
