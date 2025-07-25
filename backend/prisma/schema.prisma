@@ -60,7 +60,6 @@ model Hospital {
 model User {
   createdAt             DateTime         @default(now())
   updatedAt             DateTime         @default(now())
-  lastLoginAt           DateTime?
   username              String?          @unique
   password              String?
   location              String?
@@ -68,13 +67,14 @@ model User {
   gender                String?
   id                    Int              @id @default(autoincrement())
   email                 String?          @unique
-  preferredNotification String @default("email")
-  reminderFrequency     Int @default(3)
-  snoozeUntil           DateTime?
-  lastNotifiedAt        DateTime?
   height                Int?
   weight                Int?
   preExistingConditions String[]
+  lastLoginAt           DateTime?
+  lastNotifiedAt        DateTime?
+  preferredNotification String           @default("email")
+  reminderFrequency     Int              @default(3)
+  snoozeUntil           DateTime?
   allergies             Allergies[]
   medicalHistory        MedicalHistory[]
   symptoms              Symptoms[]
@@ -85,6 +85,15 @@ model Conditions {
   condition      String
   symptoms       String[]
   symptomweights Json
+}
+
+model DemographicsToDiseases {
+  condition     String
+  agegroup      String
+  gender         String
+  bmicategory   String
+  prevalence     Float
+  @@id([condition, agegroup, gender, bmicategory])
 }
 
 model Precautions {
