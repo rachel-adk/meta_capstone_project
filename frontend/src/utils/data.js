@@ -188,3 +188,20 @@ export async function getDiagnosis() {
   }
   return await res.json();
 }
+
+// getting hospitals nearby
+export async function getHospitals(latitude, longitude) {
+  const res = await fetch(`${BASE_URL}/hospitals`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "include",
+    body: JSON.stringify({ latitude, longitude }),
+  });
+  if (!res.ok) {
+    throw new Error(`Something went wrong: ${res.status}`);
+  }
+  const { hospitals } = await res.json();
+  return hospitals;
+    }

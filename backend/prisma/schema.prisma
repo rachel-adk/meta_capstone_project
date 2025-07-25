@@ -23,6 +23,7 @@ model MedicalHistory {
 
 model Allergies {
   id       Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
   userId   Int
   trigger  String
   severity Int
@@ -34,10 +35,12 @@ model Allergies {
 
 model Symptoms {
   id          Int             @id @default(autoincrement())
+  createdAt   DateTime        @default(now())
   userId      Int
+  reportedAt  DateTime        @default(now())
   name        String
   severity    Int
-  duration    String
+  duration    Int //in hours
   notes       String?
   date        DateTime        @default(now())
   diagnosisId Int?
@@ -75,9 +78,17 @@ model User {
   preferredNotification String           @default("email")
   reminderFrequency     Int              @default(3)
   snoozeUntil           DateTime?
+  weeklyExercise       Int?
+  sleepQuality         Int?
+  stressLevel          Int?
+  Smoking              String?
+  AlcoholPerWeek       Int?
   allergies             Allergies[]
   medicalHistory        MedicalHistory[]
   symptoms              Symptoms[]
+  notifications         NotificationLog[]
+  notificationSettings  Json?
+  lastPattern           DateTime?
 }
 
 model Conditions {
@@ -87,15 +98,32 @@ model Conditions {
   symptomweights Json
 }
 
+model DemographicsToDiseases {
+  condition     String
+  agegroup      String
+  gender         String
+  bmicategory   String
+  prevalence     Float
+  @@id([condition, agegroup, gender, bmicategory])
+}
+
 model Precautions {
   id          Int      @id @default(autoincrement())
   condition   String
   precautions String[]
 }
 
-model Conditions {
-  id             Int              @id @default(autoincrement())
-  condition      String
-  symptoms       String[]
-  symptomWeights Json
+model NotificationLog {
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  type         String
+  triggerData  Json
+  emailContent Json
+  status       String
+  sentAt       DateTime?
+  createdAt    DateTime @default(now())
+  trackingId   String?
+  user         User     @relation(fields: [userId], references: [id])
+  @@index([userId, createdAt])
+  @@index([type])
 }
