@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { useUser } from "../contexts/UserContext"; 
-
-
+import { useUser } from "../contexts/UserContext";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [message, setMessage] = useState("");
-  const { setUser } = useUser()
+  const { setUser } = useUser();
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -21,6 +20,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     try {
       const response = await fetch("http://localhost:3000/login", {
@@ -44,8 +44,18 @@ const LoginForm = () => {
         type: "error",
         text: "Unable to log in. Please try again.",
       });
+    } finally {
+      setLoading(false);
     }
   };
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen bg-teal-50">
+        <p className="text-4xl font-bold text-teal-600 text-center> ⏳ LOADING..."></p>
+      </div>
+    );
+  }
 
   return (
     <div className="h-screen bg-cyan-50 flex items-center justify-center">
@@ -53,7 +63,7 @@ const LoginForm = () => {
         onSubmit={handleSubmit}
         className="w-full max-w-md bg-white p-8 rounded-xl shadow-xl flex flex-col gap-4 -mt-60"
       >
-         <h1 className="text-8x1 font-semibold uppercase text-teal-700 text-center">
+        <h1 className="text-8x1 font-semibold uppercase text-teal-700 text-center">
           Welcome back!
         </h1>
         <h1 className="text-8x1 font-semibold text-teal-700 text-center">
