@@ -48,6 +48,7 @@ function groupAges(age) {
   return "80+";
 }
 
+
 // Temporal decay function for symptom duration
 function calculateTemporalDecay(symptomDuration) {
   if (symptomDuration <= 1) {
@@ -182,10 +183,22 @@ async function diagnose(userProfile, userSymptoms) {
       [ageGroup, userProfile.gender, bmiCategory]
     );
 
-    const riskMap = {};
-    for (const { condition, prevalence } of riskScoresData.rows) {
-      riskMap[condition] = prevalence;
+  const conditionScore = {};
+
+    const precautionsMap = {}
+
+  // Getting precautions for each condition
+  for (const entry of initialPrecautionsMap) {
+    if (entry.disease && Array.isArray(entry.precautions)) {
+      precautionsMap[entry.disease.toLowerCase().trim()] = entry.precautions
     }
+  }
+  // Condition-symptom matching/scoring
+  for (const conditionInfo of conditionMap) {
+    const conditionName = conditionInfo.condition;
+    const weights = conditionInfo.symptomWeights;
+    let totalScore = 0;
+
 
     // Extracting user's symptoms, their severity and duration
     const symptomNames = userSymptoms.map((s) =>
@@ -222,8 +235,6 @@ async function diagnose(userProfile, userSymptoms) {
       // Getting ensemble score
       const ensembleScore = calculateEnsembleScore(
         baseScore,
-        userProfile,
-        row.condition,
         row
       );
 
@@ -244,14 +255,9 @@ async function diagnose(userProfile, userSymptoms) {
         confidence: parseFloat(confidence.toFixed(2)),
       };
 
-    });
+    })
     conditionScore[conditionName] = totalScore;
-  }
 
-  for (const conditionName of Object.keys(conditionScore)) {
-    const demographicSlice = (demoMap[conditionName] || {})[ageGroup] || {};
-    const genderSlice = demographicSlice[userProfile.gender] || {};
-    const riskScore = genderSlice[bmiCategory] || 1.0;
 
 
     const topDiagnoses = scores
@@ -266,13 +272,30 @@ async function diagnose(userProfile, userSymptoms) {
             ? "Consult a doctor"
             : "Monitor your symptoms",
       }));
+      const topCondition = topDiagnoses[0]?.condition
+      let precautions = []
+      if (topCondition) {
+        const precautionsMap = await client.query(`
+        SELECT precautions FROM "Precautions" WHERE condition = $1,
+        [topCondition]
+        `)
+        precautions = precautionsMap.rows[0]?.precautions
+      }
+
+      if (topDiagnoses[0]) {
+        topDiagnoses[0].precautions = precautions
+      }
 
     return {
       diagnoses: topDiagnoses,
+      topDiagnosis: topDiagnoses[0]
     };
   } finally {
     client.release();
   }
-}
+  }
+
+
+
 
 module.exports = { diagnose };
