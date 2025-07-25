@@ -174,18 +174,17 @@ export async function patchProfile(data) {
   return await res.json();
 }
 
-// getting diagnosis for user
-export async function getDiagnosis(userData) {
+// Getting medical diagnosis for the user
+export async function getDiagnosis() {
   const res = await fetch(`${BASE_URL}/diagnosis`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-type": "application/json" },
     credentials: "include",
-    body: JSON.stringify(userData),
+    body: JSON.stringify({ age, gender, weight, height }),
   });
   if (!res.ok) {
-    throw new Error(`Something went wrong: ${res.status}`);
+    const err = await res.json()
+    throw new Error(err.error || "Something went wrong");
   }
   return await res.json();
 }

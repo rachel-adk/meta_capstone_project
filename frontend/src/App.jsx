@@ -19,6 +19,7 @@ const App = () => {
     weight: 0,
     height: 0,
     gender: "",
+
     preExistingConditions: [],
   });
 
@@ -37,6 +38,7 @@ const App = () => {
       </div>
     );
   }
+
 
 
   return (

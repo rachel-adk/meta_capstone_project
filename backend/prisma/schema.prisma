@@ -113,6 +113,7 @@ model Precautions {
   precautions String[]
 }
 
+
 model NotificationLog {
   id           Int      @id @default(autoincrement())
   userId       Int
@@ -126,4 +127,5 @@ model NotificationLog {
   user         User     @relation(fields: [userId], references: [id])
   @@index([userId, createdAt])
   @@index([type])
+
 }

@@ -60,7 +60,7 @@ export default function HospitalsPage() {
         ))}
       </aside>
       <main className="flex-1">
-        <MapView hospitals={hospitals} />
+        <MapView hospitals={hospitals} center = {loc}/>
       </main>
     </div>
   );

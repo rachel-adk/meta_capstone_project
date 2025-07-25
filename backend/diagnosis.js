@@ -1,4 +1,6 @@
-require("dotenv").config();
+
+require("dotenv").config()
+
 const { Pool } = require("pg");
 const pool = new Pool({
   host: process.env.PG_HOST,
@@ -45,6 +47,7 @@ function groupAges(age) {
   }
   return "80+";
 }
+
 
 // Temporal decay function for symptom duration
 function calculateTemporalDecay(symptomDuration) {
@@ -157,6 +160,7 @@ async function diagnose(userProfile, userSymptoms) {
     const bmiCategory = groupBMI(bmi);
     const ageGroup = groupAges(userProfile.age);
 
+
     // Calculate lifestyle risk multiplier
     const lifestyleRisk = calculateLifestyleRisk(userProfile);
 
@@ -179,10 +183,22 @@ async function diagnose(userProfile, userSymptoms) {
       [ageGroup, userProfile.gender, bmiCategory]
     );
 
-    const riskMap = {};
-    for (const { condition, prevalence } of riskScoresData.rows) {
-      riskMap[condition] = prevalence;
+  const conditionScore = {};
+
+    const precautionsMap = {}
+
+  // Getting precautions for each condition
+  for (const entry of initialPrecautionsMap) {
+    if (entry.disease && Array.isArray(entry.precautions)) {
+      precautionsMap[entry.disease.toLowerCase().trim()] = entry.precautions
     }
+  }
+  // Condition-symptom matching/scoring
+  for (const conditionInfo of conditionMap) {
+    const conditionName = conditionInfo.condition;
+    const weights = conditionInfo.symptomWeights;
+    let totalScore = 0;
+
 
     // Extracting user's symptoms, their severity and duration
     const symptomNames = userSymptoms.map((s) =>
@@ -240,7 +256,16 @@ async function diagnose(userProfile, userSymptoms) {
         score: parseFloat(finalScore.toFixed(2)),
         confidence: parseFloat(confidence.toFixed(2)),
       };
+
     });
+    conditionScore[conditionName] = totalScore;
+  }
+
+  for (const conditionName of Object.keys(conditionScore)) {
+    const demographicSlice = (demoMap[conditionName] || {})[ageGroup] || {};
+    const genderSlice = demographicSlice[userProfile.gender] || {};
+    const riskScore = genderSlice[bmiCategory] || 1.0;
+
 
     const topDiagnoses = scores
       .sort((a, b) => b.score - a.score)
@@ -260,7 +285,19 @@ async function diagnose(userProfile, userSymptoms) {
     };
   } finally {
     client.release();
+
   }
+
+  return Object.entries(conditionScore)
+    .sort(([, aScore], [, bScore]) => bScore - aScore)
+    .slice(0, 2)
+    .map(([condition, score]) => ({
+      condition,
+      score,
+    precautions: [
+      "Seek medical attention if symptoms worsen",
+      ...(precautionsMap[condition.toLowerCase()] || [])
+    ] }));
 }
 
 module.exports = { diagnose };
