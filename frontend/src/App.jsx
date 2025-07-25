@@ -10,7 +10,7 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import ProfilePage from "./components/ProfilePage";
 import { getUserProfile } from "./utils/data";
-//import { useState, useEffect } from "react";
+import HospitalsPage from "./components/HospitalsPage";
 
 const App = () => {
   const [profile, setProfile] = useState({
@@ -52,6 +52,7 @@ const App = () => {
                 />
                 <Route path="/allergies" element={<AllergiesPage />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/hospitals" element={<HospitalsPage />} />
                 <Route
                   path="/profile"
                   element={

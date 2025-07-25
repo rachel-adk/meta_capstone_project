@@ -35,9 +35,10 @@ model Allergies {
 model Symptoms {
   id          Int             @id @default(autoincrement())
   userId      Int
+  reportedAt  DateTime        @default(now())
   name        String
   severity    Int
-  duration    String
+  duration    Int //in hours
   notes       String?
   date        DateTime        @default(now())
   diagnosisId Int?
@@ -75,6 +76,11 @@ model User {
   preferredNotification String           @default("email")
   reminderFrequency     Int              @default(3)
   snoozeUntil           DateTime?
+  weeklyExercise       Int?
+  sleepQuality         Int?
+  stressLevel          Int?
+  Smoking              String?
+  AlcoholPerWeek       Int?
   allergies             Allergies[]
   medicalHistory        MedicalHistory[]
   symptoms              Symptoms[]
@@ -85,6 +91,15 @@ model Conditions {
   condition      String
   symptoms       String[]
   symptomweights Json
+}
+
+model DemographicsToDiseases {
+  condition     String
+  agegroup      String
+  gender         String
+  bmicategory   String
+  prevalence     Float
+  @@id([condition, agegroup, gender, bmicategory])
 }
 
 model Precautions {

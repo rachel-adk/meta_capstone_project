@@ -393,6 +393,8 @@ app.post("/hospitals", async (req, res) => {
 
     const hospitals = data.features.map((hospital) => ({
       address: hospital.properties.formatted,
+      longitude: hospital.properties.lon,
+      latitude: hospital.properties.lat
     }));
 
     res.json({ hospitals });
