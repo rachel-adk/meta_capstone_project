@@ -13,7 +13,7 @@ export async function signup(username, password) {
 
 // logging in user
 export async function login() {
-  const res = await fetch(`${BASE_URL}/signup`, {
+  const res = await fetch(`${BASE_URL}/login`, {
     method: "POST",
     headers: { "Content-type": "application/json" },
     credentials: "include",
@@ -24,10 +24,9 @@ export async function login() {
 
 // confirming user is logged in
 export async function getCurrentUser() {
-  const res = await fetch(`${BASE_URL}/signup`, {
+  const res = await fetch(`${BASE_URL}/me`, {
     method: "GET",
     credentials: "include",
-    body: JSON.stringify({ username, password }),
   });
   data = await res.json();
   return data;
