@@ -1,4 +1,6 @@
-require("dotenv").config();
+
+require("dotenv").config()
+
 const { Pool } = require("pg");
 const pool = new Pool({
   host: process.env.PG_HOST,
@@ -157,6 +159,7 @@ async function diagnose(userProfile, userSymptoms) {
     const bmiCategory = groupBMI(bmi);
     const ageGroup = groupAges(userProfile.age);
 
+
     // Calculate lifestyle risk multiplier
     const lifestyleRisk = calculateLifestyleRisk(userProfile);
 
@@ -240,7 +243,16 @@ async function diagnose(userProfile, userSymptoms) {
         score: parseFloat(finalScore.toFixed(2)),
         confidence: parseFloat(confidence.toFixed(2)),
       };
+
     });
+    conditionScore[conditionName] = totalScore;
+  }
+
+  for (const conditionName of Object.keys(conditionScore)) {
+    const demographicSlice = (demoMap[conditionName] || {})[ageGroup] || {};
+    const genderSlice = demographicSlice[userProfile.gender] || {};
+    const riskScore = genderSlice[bmiCategory] || 1.0;
+
 
     const topDiagnoses = scores
       .sort((a, b) => b.score - a.score)
