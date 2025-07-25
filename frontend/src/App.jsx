@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SignupForm from "./components/SignupForm";
 import LoginForm from "./components/LoginForm";
 import HomePage from "./components/HomePage";
@@ -9,18 +9,38 @@ import AllergiesPage from "./components/AllergiesPage";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import ProfilePage from "./components/ProfilePage";
-import { getUserProfile } from "./utils/data";
 import HospitalsPage from "./components/HospitalsPage";
 
 const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState({
     age: 0,
     weight: 0,
     height: 0,
     gender: "",
-  })
 
-  const [isOpen, setIsOpen] = useState(false);
+    preExistingConditions: [],
+  });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    },500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen bg-teal-50">
+        <p className="text-4xl font-bold text-teal-600 text-center"> ⏳ LOADING...</p>
+      </div>
+    );
+  }
+
+
+
   return (
     <>
       <div className="flex flex-col w-full">
