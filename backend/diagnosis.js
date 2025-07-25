@@ -1,7 +1,7 @@
+import dotenv from "dotenv"
+dotenv.config()
 
-require("dotenv").config()
-
-const { Pool } = require("pg");
+import { Pool } from "pg"
 const pool = new Pool({
   host: process.env.PG_HOST,
   port: process.env.PG_PORT,
@@ -47,7 +47,6 @@ function groupAges(age) {
   }
   return "80+";
 }
-
 
 // Temporal decay function for symptom duration
 function calculateTemporalDecay(symptomDuration) {
@@ -123,6 +122,7 @@ function calculateLifestyleRisk(userProfile) {
   return riskMultiplier;
 }
 
+
 // Getting final score
 function calculateEnsembleScore(baseScore, symptomData) {
   const scores = [];
@@ -141,6 +141,7 @@ function calculateEnsembleScore(baseScore, symptomData) {
     scores.push(geometricMean * 2); // Normalizing it and making it more comparable to base score
   }
 
+
   const weightsArray = Object.values(symptomData.weights || {});
   const maxWeight = Math.max(...weightsArray);
 
@@ -153,13 +154,12 @@ function calculateEnsembleScore(baseScore, symptomData) {
   return scores.reduce((sum, score, i) => sum + score * weights[i], 0);
 }
 
-async function diagnose(userProfile, userSymptoms) {
+export async function diagnose(userProfile, userSymptoms) {
   const client = await pool.connect();
   try {
     const bmi = computeBMI(userProfile.weight, userProfile.height);
     const bmiCategory = groupBMI(bmi);
     const ageGroup = groupAges(userProfile.age);
-
 
     // Calculate lifestyle risk multiplier
     const lifestyleRisk = calculateLifestyleRisk(userProfile);
@@ -183,21 +183,11 @@ async function diagnose(userProfile, userSymptoms) {
       [ageGroup, userProfile.gender, bmiCategory]
     );
 
-  const conditionScore = {};
-
-    const precautionsMap = {}
-
-  // Getting precautions for each condition
-  for (const entry of initialPrecautionsMap) {
-    if (entry.disease && Array.isArray(entry.precautions)) {
-      precautionsMap[entry.disease.toLowerCase().trim()] = entry.precautions
-    }
-  }
-  // Condition-symptom matching/scoring
-  for (const conditionInfo of conditionMap) {
-    const conditionName = conditionInfo.condition;
-    const weights = conditionInfo.symptomWeights;
     let totalScore = 0;
+    let RiskMap = {}
+    for (const { condition, prevalence } of riskScoresData.rows) {
+      RiskMap[condition] = prevalence;
+    }
 
 
     // Extracting user's symptoms, their severity and duration
@@ -230,11 +220,13 @@ async function diagnose(userProfile, userSymptoms) {
           baseScore += weight * severityMultiplier * temporalDecay;
         }
       }
-      const demographicRisk = riskMap[row.condition] ?? 1.0;
+      const demographicRisk = RiskMap[row.condition] ?? 1.0;
 
       // Getting ensemble score
       const ensembleScore = calculateEnsembleScore(
         baseScore,
+        userProfile,
+        row.condition,
         row
       );
 
@@ -254,11 +246,13 @@ async function diagnose(userProfile, userSymptoms) {
         score: parseFloat(finalScore.toFixed(2)),
         confidence: parseFloat(confidence.toFixed(2)),
       };
-
-    })
-    conditionScore[conditionName] = totalScore;
+    });
 
 
+    scores[condition] = totalScore;
+
+    const genderSlice = demographicSlice[userProfile.gender] || {};
+    const riskScore = genderSlice[bmiCategory] || 1.0;
 
     const topDiagnoses = scores
       .sort((a, b) => b.score - a.score)
@@ -272,30 +266,25 @@ async function diagnose(userProfile, userSymptoms) {
             ? "Consult a doctor"
             : "Monitor your symptoms",
       }));
-      const topCondition = topDiagnoses[0]?.condition
-      let precautions = []
-      if (topCondition) {
-        const precautionsMap = await client.query(`
+    const topCondition = topDiagnoses[0]?.condition;
+    let precautions = [];
+    if (topCondition) {
+      const precautionsMap = await client.query(`
         SELECT precautions FROM "Precautions" WHERE condition = $1,
         [topCondition]
-        `)
-        precautions = precautionsMap.rows[0]?.precautions
-      }
+        `);
+      precautions = precautionsMap.rows[0]?.precautions;
+    }
 
-      if (topDiagnoses[0]) {
-        topDiagnoses[0].precautions = precautions
-      }
+    if (topDiagnoses[0]) {
+      topDiagnoses[0].precautions = precautions;
+    }
 
     return {
       diagnoses: topDiagnoses,
-      topDiagnosis: topDiagnoses[0]
+      topDiagnosis: topDiagnoses[0],
     };
   } finally {
     client.release();
   }
-  }
-
-
-
-
-module.exports = { diagnose };
+}
