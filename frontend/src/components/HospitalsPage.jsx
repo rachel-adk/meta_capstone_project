@@ -2,7 +2,7 @@ import { useState } from "react";
 import { getHospitals } from "../utils/data";
 import HospitalCard from "./HospitalCard";
 import MapView from "./MapView";
-
+import CustomCursorTooltip from "./CustomCursorTooltip";
 
 export default function HospitalsPage() {
   const [hospitals, setHospitals] = useState([]);
@@ -33,14 +33,20 @@ export default function HospitalsPage() {
     return (
       <div className="flex item-center justify-center min-h-screen">
         <div className="text-center p-6">
-          <h2 className="text-3xl font-bold text-teal-800 py-5">Find Hospitals Near Your Location</h2>
-          <p className="text-lg text-teal-900 py-3">We would like to use your location</p>
-          <button
-            onClick={handleUseLocation}
-            className="bg-teal-500 px-3 py-2 text-white"
-          >
-            Use my location
-          </button>
+          <h2 className="text-3xl font-bold text-teal-800 py-5">
+            Hospital Recommendations
+          </h2>
+          <p className="text-lg text-teal-900 py-3">
+            We would like to use your location
+          </p>
+          <CustomCursorTooltip tooltipText="Find hospitals near your current location">
+            <button
+              onClick={handleUseLocation}
+              className="bg-teal-500 px-3 py-2 text-white cursor-help hover:bg-teal-800"
+            >
+              Use my location
+            </button>
+          </CustomCursorTooltip>
         </div>
       </div>
     );
@@ -60,7 +66,7 @@ export default function HospitalsPage() {
         ))}
       </aside>
       <main className="flex-1">
-        <MapView hospitals={hospitals} center = {loc}/>
+        <MapView hospitals={hospitals} center={loc} />
       </main>
     </div>
   );
