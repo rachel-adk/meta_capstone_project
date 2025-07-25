@@ -18,27 +18,7 @@ const App = () => {
     weight: 0,
     height: 0,
     gender: "",
-  });
-
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   async function getProfile() {
-  //     try{
-  //       const data = await getUserProfile()
-  //       if (data) {
-  //         setProfile(data)
-  //       } else {
-  //         console.error("No profile found")
-  //       }
-  //     } catch (error) {
-  //       console.error("Failed to get profile", error)
-  //     } finally {
-  //       setLoading(false)
-  //     }
-
-  //   }
-  //   getProfile()
-  // }, [])
+  })
 
   const [isOpen, setIsOpen] = useState(false);
   return (
