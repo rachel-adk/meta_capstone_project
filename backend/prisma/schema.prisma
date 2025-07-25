@@ -101,3 +101,10 @@ model Precautions {
   condition   String
   precautions String[]
 }
+
+model Conditions {
+  id             Int              @id @default(autoincrement())
+  condition      String
+  symptoms       String[]
+  symptomWeights Json
+}

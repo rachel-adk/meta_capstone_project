@@ -46,12 +46,11 @@ function groupAges(age) {
   return "80+";
 }
 
-async function diagnose(userProfile, userSymptoms) {
-  const client = await pool.connect();
-  try {
-    const bmi = computeBMI(userProfile.weight, userProfile.height);
-    const bmiCategory = groupBMI(bmi);
-    const ageGroup = groupAges(userProfile.age);
+// Getting data from both datasets
+const conditionMap = require("./data/conditions.json");
+const demoMap = require("./data/demographicsToDiseases.json");
+const initialPrecautionsMap = require("./data/disease_precautions.json");
+
 
     // Fetching data from the database
     const conditionsData = await client.query(`
@@ -70,27 +69,47 @@ async function diagnose(userProfile, userSymptoms) {
       [ageGroup, userProfile.gender, bmiCategory]
     );
 
-    const riskMap = {};
-    for (const { condition, prevalence } of riskScoresData.rows) {
-      riskMap[condition] = prevalence;
+  const conditionScore = {};
+
+    const precautionsMap = {}
+
+  // Getting precautions for each condition
+  for (const entry of initialPrecautionsMap) {
+    if (entry.disease && Array.isArray(entry.precautions)) {
+      precautionsMap[entry.disease.toLowerCase().trim()] = entry.precautions
     }
-
-    const conditionScore = conditionsData.rows.map((row) => {
-      let score = 0;
-      for (const symptom of userSymptoms) {
-        score += row.weights[symptom] || 0;
-      }
-      score *= riskMap[row.condition] ?? 1.0;
-      return { condition: row.condition, score: conditionScore };
-    });
-
-    return conditionScore
-      .sort((a, b) => b.conditionScore - a.conditionScore)
-      .slice(0, 2)
-      .map(([condition, conditionScore]) => ({ condition, conditionScore }));
-  } finally {
-    client.release();
   }
+  // Condition-symptom matching/scoring
+  for (const conditionInfo of conditionMap) {
+    const conditionName = conditionInfo.condition;
+    const weights = conditionInfo.symptomWeights;
+    let totalScore = 0;
+
+    userSymptoms.forEach((symptom) => {
+      const w = weights[symptom] || 0;
+      totalScore += w;
+    });
+    conditionScore[conditionName] = totalScore;
+  }
+
+  for (const conditionName of Object.keys(conditionScore)) {
+    const demographicSlice = (demoMap[conditionName] || {})[ageGroup] || {};
+    const genderSlice = demographicSlice[userProfile.gender] || {};
+    const riskScore = genderSlice[bmiCategory] || 1.0;
+
+    conditionScore[conditionName] *= riskScore;
+  }
+
+  return Object.entries(conditionScore)
+    .sort(([, aScore], [, bScore]) => bScore - aScore)
+    .slice(0, 2)
+    .map(([condition, score]) => ({
+      condition,
+      score,
+    precautions: [
+      "Seek medical attention if symptoms worsen",
+      ...(precautionsMap[condition.toLowerCase()] || [])
+    ] }));
 }
 
 module.exports = { diagnose };
