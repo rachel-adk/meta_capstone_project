@@ -12,6 +12,8 @@ const Sidebar = () => {
     try{
         await logout();
         setUser(null);
+        navigate("/", { replace: true })
+        setIsOpen(false)
     } catch(err) {
         console.error("Logout failed:",err)
     }
@@ -81,7 +83,7 @@ const Sidebar = () => {
           >
             Hospitals Nearby
           </button>
-          <div className="bottom-6 left-6">
+          <div className="mt-auto">
             <button
                 onClick={handleLogout}
                 className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded-lg">
