@@ -12,6 +12,8 @@ const Sidebar = () => {
     try{
         await logout();
         setUser(null);
+        navigate("/", { replace: true })
+        setIsOpen(false)
     } catch(err) {
         console.error("Logout failed:",err)
     }
@@ -36,7 +38,7 @@ const Sidebar = () => {
         <div className="p-6 flex flex-col gap-4">
           <button
             onClick={() => {
-              navigate("/");
+              navigate("/dashboard");
               setIsOpen(false);
             }}
             className="text-left text-teal-700 hover:bg-teal-100 px-3 py-2 rounded"
@@ -81,7 +83,7 @@ const Sidebar = () => {
           >
             Hospitals Nearby
           </button>
-          <div className="bottom-6 left-6">
+          <div className="mt-auto">
             <button
                 onClick={handleLogout}
                 className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded-lg">
