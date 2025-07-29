@@ -13,13 +13,13 @@ const Dashboard = () => {
         <h2 className="text-2xl mb-2 font-semibold text-center text-teal-800">Your Health Summary</h2>
         <ul className="text-teal-800 text-center align-left">
           <li>
-            <strong>Age:</strong> {user?.age || "Not set"}
+            <strong>Age:</strong> {user.age || "Not set"}
           </li>
           <li>
-            <strong>Height:</strong> {user?.height || "Not set"} cm
+            <strong>Height:</strong> {user.height || "Not set"} cm
           </li>
           <li>
-            <strong>Weight:</strong> {user?.weight || "Not set"} kg
+            <strong>Weight:</strong> {user.weight || "Not set"} kg
           </li>
           <li>
             <strong>Pre-existing Conditions:</strong>{" "}

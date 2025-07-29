@@ -14,13 +14,6 @@ const MedicalHistory = () => {
     }));
   };
 
-  //   const handleDelete = (id) => {
-  //     try {
-  //         await deleteEntry(id);
-  //         setEntries(entries.filter((entry) => entry.id !== id));
-  //     } catch (error) {
-  //         console.error(error);
-  //     }
 
   const handleCreate = async (newEntry, userId) => {
     try {
