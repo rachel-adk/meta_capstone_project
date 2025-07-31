@@ -6,20 +6,10 @@ import CreateNewEntry from "./CreateNewEntry";
 const MedicalHistory = () => {
   const [entries, setEntries] = useState([]);
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-
-  const handleCreate = async (newEntry, userId) => {
+  const handleCreate = async (newEntry) => {
     try {
-      await newMedicalEntry(newEntry);
-      const newEntries = await getMedicalHistory(userId);
-      setEntries(newEntries);
+      const savedEntry = await newMedicalEntry(newEntry);
+      setEntries((prev) => [savedEntry, ...prev])
     } catch (error) {
       console.error(error);
     }

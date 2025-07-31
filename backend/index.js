@@ -354,10 +354,7 @@ app.post("/diagnosis", async (req, res) => {
 
     const result = await diagnose(userProfile, symptoms || []);
 
-    res.json({
-      diagnoses: result.diagnoses,
-      topDiagnosis: result.topDiagnosis,
-    });
+    res.json(result);
   } catch (err) {
     console.error("Error", err);
     res.status(500).json({ error: "Error getting diagnosis" });

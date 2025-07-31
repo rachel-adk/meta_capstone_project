@@ -1,7 +1,13 @@
-require("dotenv").config();
-const fs = require("fs");
-const path = require("path");
-const { Pool } = require("pg");
+import dotenv from "dotenv"
+dotenv.config()
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { Pool } from "pg";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const pool = new Pool({
   host: process.env.PG_HOST,
