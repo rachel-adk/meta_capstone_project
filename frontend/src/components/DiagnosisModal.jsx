@@ -30,7 +30,8 @@ const DiagnosisModal = ({ showModal, onClose, diagnosisResult, symptoms }) => {
               ))}
             </ul>
             </div>
-            <p className="mb-2 px-2 py-2 font-semibold">Possible Conditions: {diagnosisResult.diagnoses.map((diagnosis, index) =>
+            <p className="mb-2 px-2 py-2 font-semibold">Possible Conditions: </p>
+            {diagnosisResult.diagnoses.map((diagnosis, index) =>
             (<div key={index} className="mb-4 p-3 bg-white rounded-lg shadow-sm">
                 <h4 className="font-semibold text-teal-900">{index+ 1}{diagnosis.condition}</h4>
                 <div className="mt-2 text-sm">

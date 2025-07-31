@@ -19,7 +19,13 @@ const SymptomsPage = ({ profile }) => {
         weight: profile.weight,
         height: profile.height,
         symptoms,
+        weeklyExercise: profile.weeklyExercise,
+        stressLevel: profile.stressLevel,
+        sleepQuality: profile.sleepQuality,
+        smoking: profile.smoking,
+        AlcoholPerWeek: profile.AlcoholPerWeek
       });
+      console.log("Diagnosis results:", JSON.stringify(res, null, 2))
       setDiagnosisResult(res);
       setShowModal(true);
     } catch (error) {
