@@ -28,9 +28,13 @@ const MedicalHistory = () => {
 
   useEffect(() => {
     const getEntries = async () => {
+      try {
       const info = await getMedicalHistory();
       setEntries(info);
-    };
+    } catch (error) {
+      console.error("Failed to get entries", error);
+    }
+  }
     getEntries();
   }, []);
 
