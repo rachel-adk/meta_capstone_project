@@ -174,12 +174,12 @@ export async function patchProfile(data) {
 }
 
 // Getting medical diagnosis for the user
-export async function getDiagnosis({age, gender, weight, height, symptoms, weeklyExercise, stressLevel, sleepQuality, smoking, AlcoholPerWeek}) {
+export async function getDiagnosis(data) {
   const res = await fetch(`${BASE_URL}/diagnosis`, {
     method: "POST",
     headers: { "Content-type": "application/json" },
     credentials: "include",
-    body: JSON.stringify({ age, gender, weight, height, symptoms, weeklyExercise, stressLevel, sleepQuality, smoking, AlcoholPerWeek }),
+    body: JSON.stringify(data),
   });
   if (!res.ok) {
     const err = await res.json()

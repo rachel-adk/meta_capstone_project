@@ -12,13 +12,26 @@ const SymptomsPage = ({ profile }) => {
   const [diagnosisResult, setDiagnosisResult] = useState(null);
 
   const handleDiagnosis = async () => {
+    const formattedSymptoms = symptoms.map((symptom) => ({
+      name: symptom.name,
+      severity: symptom.severity || 3,
+      duration: symptom.duration || 1
+    }));
+
+    console.log("Sending request to get diagnosis", {
+      age: profile.age,
+      gender: profile.gender,
+      weight: profile.weight,
+      height: profile.height,
+      symptoms: formattedSymptoms
+    })
     try {
       const res = await getDiagnosis({
         age: profile.age,
         gender: profile.gender,
         weight: profile.weight,
         height: profile.height,
-        symptoms,
+        symptoms: formattedSymptoms,
         weeklyExercise: profile.weeklyExercise,
         stressLevel: profile.stressLevel,
         sleepQuality: profile.sleepQuality,

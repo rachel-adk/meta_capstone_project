@@ -352,11 +352,11 @@ app.post("/diagnosis", async (req, res) => {
 
     const userProfile = { age, gender, height, weight, weeklyExercise, stressLevel, sleepQuality, smoking, AlcoholPerWeek };
 
-    const result = diagnose(userProfile, symptoms || []);
+    const result = await diagnose(userProfile, symptoms || []);
 
     res.json({
-      condition: result[0]?.condition,
-      topConditions: result,
+      diagnoses: result.diagnoses,
+      topDiagnosis: result.topDiagnosis,
     });
   } catch (err) {
     console.error("Error", err);
