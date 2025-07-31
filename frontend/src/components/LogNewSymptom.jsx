@@ -43,7 +43,7 @@ const LogNewSymptom = ({ onCreate }) => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="bg-teal-600 text-white oy-2 px-4 rounded"
+        className="bg-teal-600 text-white py-2 px-4 rounded"
       >
         + Log Symptom
       </button>
@@ -60,7 +60,7 @@ const LogNewSymptom = ({ onCreate }) => {
           >
             <button
               className="absolute top-2 right-2 text-teal-900 hover:text-teal-600"
-              onClick={() => setIsOpen}
+              onClick={() => setIsOpen(false)}
               aria-label="Close modal"
             >
               x
