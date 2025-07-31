@@ -43,7 +43,7 @@ const LogNewSymptom = ({ onCreate }) => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="bg-teal-600 text-white py-2 px-4 rounded"
+        className="bg-teal-700 text-white py-2 px-4 rounded"
       >
         + Log Symptom
       </button>

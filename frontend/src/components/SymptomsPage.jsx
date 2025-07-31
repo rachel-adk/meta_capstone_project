@@ -75,7 +75,7 @@ const SymptomsPage = ({ profile }) => {
             {symptoms.map((log) => (
               <div
                 key={log.id}
-                className="bg-yellow-50 rounded-lg borderline-yellow-200 p-6 hover:shadow-lg hover:border-yellow-300 transition-all"
+                className="bg-yellow-50 rounded-lg border-yellow-200 p-6 hover:shadow-lg hover:border-yellow-300 transition-all"
               >
                 <h3 className="text-lg uppercase font-semibold mb-3 text-yellow-900">
                   {log.name}
